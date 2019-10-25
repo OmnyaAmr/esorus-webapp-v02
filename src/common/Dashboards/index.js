@@ -26,7 +26,6 @@ const Dashboards = ({ match }) => (
                 <div className='app-main__inner'>
                     <Route path={`${match.url}/login`} component={Login} />
                     <Route path={`${match.url}/signup`} component={SignUp} />
-                    {/* <Route path={`${match.url}/home`} component={Home} /> */}
                 </div>
                 <AppFooter />
             </div>
