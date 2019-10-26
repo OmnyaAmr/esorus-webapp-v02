@@ -39,6 +39,7 @@ class Login extends React.Component {
         };
         this.onSubmit = this.onSubmit.bind(this);
         this.onChange = this.onChange.bind(this);
+        this.onSignupClick = this.onSignupClick.bind(this);
         this.onForgetPasswordClick = this.onForgetPasswordClick.bind(this);
     }
     componentWillMount() {
@@ -59,6 +60,10 @@ class Login extends React.Component {
             }
         }
     }
+    onSignupClick(e) {
+        e.preventDefault();
+        this.props.history.push('/dashboard/signup');
+    }
     onForgetPasswordClick(e) {
         e.preventDefault();
         console.log('forget password');
@@ -67,22 +72,7 @@ class Login extends React.Component {
     componentWillReceiveProps(nextProps) {
         if (nextProps.prev) {
             let { prev } = nextProps;
-            if (prev === ADMIN_PREV || prev === MOD_PREV) {
-                this.props.history.push('/dashboard/attendance');
-            } else if (prev === COMPLETION_REQUIRED) {
-                this.props.history.push('/dashboard/completesignup');
-            } else if (prev === CONFIRMATION_REQUIRED) {
-                this.props.history.push('/dashboard/confirm');
-            } else if (prev === USER_PREV) {
-                this.props.history.push('/dashboard/application');
-            } else if (prev === STUDENT_PREV) {
-                this.props.history.push('/dashboard/application');
-            } else {
-                this.props.history.push('/dashboard/aboutus');
-            }
-        }
-        if (nextProps.errors) {
-            this.setState({ errors: nextProps.errors });
+            //HANDLE NAVIGATION PREV
         }
     }
 
@@ -103,6 +93,9 @@ class Login extends React.Component {
         if (loading) return <Spinner />;
         //HANDLE errors
         let { errors } = this.state;
+
+        let required = <small className='required'>*</small>;
+
         return (
             <Fragment>
                 <ReactCSSTransitionGroup
@@ -116,24 +109,26 @@ class Login extends React.Component {
                     <Row>
                         <Col md={2}></Col>
                         <Col md={8}>
-                            <Card className='main-card mb-3'>
+                            <Card className='container'>
                                 <CardBody>
                                     <CardTitle className='text-center'>
-                                        Login
+                                        esorus
                                     </CardTitle>
-                                    <Form onSubmit={this.onSubmit}>
+                                    <Form
+                                        onSubmit={this.onSubmit}
+                                        className='form-esorus m-auto'
+                                    >
                                         <Row>
-                                            {/* <Col md={3}></Col> */}
                                             <Col md={12}>
                                                 <FormGroup>
                                                     <Label for='exampleEmail11'>
-                                                        Email
+                                                        Email{required}
                                                     </Label>
                                                     <Input
+                                                        className='form-control-escrus'
                                                         type='text'
                                                         name='email'
                                                         id='exampleEmail11'
-                                                        placeholder='Your username or email'
                                                         value={this.state.email}
                                                         onChange={this.onChange}
                                                         invalid={
@@ -147,20 +142,18 @@ class Login extends React.Component {
                                                     </FormFeedback>
                                                 </FormGroup>
                                             </Col>
-                                            {/* <Col md={3}></Col> */}
                                         </Row>
                                         <Row>
-                                            {/* <Col md={3}></Col> */}
                                             <Col md={12}>
                                                 <FormGroup>
                                                     <Label for='examplePassword11'>
-                                                        Password
+                                                        Password{required}
                                                     </Label>
                                                     <Input
+                                                        className='form-control-escrus'
                                                         type='password'
                                                         name='password'
                                                         id='examplePassword11'
-                                                        placeholder='Your password'
                                                         value={
                                                             this.state.password
                                                         }
@@ -176,26 +169,29 @@ class Login extends React.Component {
                                                     </FormFeedback>
                                                 </FormGroup>
                                             </Col>
-                                            {/* <Col md={3}></Col> */}
                                         </Row>
-                                        <Row>
-                                            <Col md={3}></Col>
-                                            <Col md={6}>
-                                                <Button
-                                                    color='primary'
-                                                    className='mt-2'
-                                                    block
-                                                >
-                                                    Sign in
+                                        <FormGroup row>
+                                            <Col>
+                                                <Button className='btn-escrus block'>
+                                                    LOG IN
                                                 </Button>
                                             </Col>
-                                            <Col md={3}></Col>
-                                        </Row>
-                                        <div className='d-flex justify-content-center'>
+                                        </FormGroup>
+                                        {/* <div className='d-flex justify-content-center'>
                                             <Link to='/forget'>
                                                 forget password ?
                                             </Link>
-                                        </div>
+                                        </div> */}
+                                        <FormGroup row>
+                                            <Col>
+                                                <Button
+                                                    className='btn-escrus-inv block'
+                                                    onClick={this.onSignupClick}
+                                                >
+                                                    SIGN UP
+                                                </Button>
+                                            </Col>
+                                        </FormGroup>
                                     </Form>
                                 </CardBody>
                             </Card>

@@ -12448,27 +12448,62 @@ body {
   left: 50%;
 }
 
-.btn-escrus {
+.btn-escrus-inv{
   display: inline-block;
   font-weight: 500;
   font-size: 1.2rem;
+  border-radius: 0rem;
   font-family: 'Poppins-Bold', sans-serif;
-  color: #000;  
+  color: #000;
+  background: #ffffff linear-gradient(180deg, #e2e2e2, #ffffff) repeat-x;
+  border-color: #cecece;
+}
+
+.btn-escrus-inv:hover {
+  color: rgb(255, 174, 0);  
+  border-color: rgb(255, 174, 0);
+  border-radius: 0.5rem;
+  background: #e2e2e2 linear-gradient(180deg, #dbdbdb, #ffffff) repeat-x;
+}
+
+  .btn-escrus-inv.disabled, .btn-escrus-inv:disabled {
+    color: #000;
+    background-color: #b8b8b8;
+    border-color: #838383;
+    background-image: none; }
+  .btn-escrus-inv:not(:disabled):not(.disabled):active, .btn-escrus-inv:not(:disabled):not(.disabled).active, .show > .btn-escrus-inv.dropdown-toggle {
+    color: #000;
+    background-color: #ffffff;
+    background-image: none;
+    border-color: #ffd500; }
+    .btn-escrus-inv:not(:disabled):not(.disabled):active:escrus, .btn-escrus-inv:not(:disabled):not(.disabled).active:escrus, .show > .btn-focus.dropdown-toggle:focus {
+      box-shadow: 0 0 0 0 rgba(125, 52, 244, 0.5); }
+
+
+.btn-escrus {
+  display: inline-block;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 1.2rem;
+  border-radius: 0rem;
+  font-family: 'Poppins-Bold', sans-serif;
+  color: rgb(255, 255, 255);  
   background: #eef108 linear-gradient(180deg, #ecc503, #ffe600) repeat-x;
   border-color: #eef108; }
   .btn-escrus:hover {
-    color: #000;
+    color: rgb(255, 255, 255);
+    border-radius: 0.5rem;
     background: #ece904 linear-gradient(180deg, #e0e400, #e8ec03) repeat-x;
     border-color: #dbd800; }
   .btn-escrus:escrus, .btn-escrus.escrus {
     box-shadow: 0 0 0 0 rgba(125, 52, 244, 0.5); }
   .btn-escrus.disabled, .btn-escrus:disabled {
-    color: #000;
+    color: rgb(14, 14, 14);
     background-color: #fbff1f;
     border-color: #fbff00;
     background-image: none; }
   .btn-escrus:not(:disabled):not(.disabled):active, .btn-escrus:not(:disabled):not(.disabled).active, .show > .btn-escrus.dropdown-toggle {
-    color: #000;
+    color: rgb(255, 255, 255);
     background-color: #ffe81b;
     background-image: none;
     border-color: #ffd500; }
@@ -12487,7 +12522,7 @@ body {
         background-color: #fff;
         background-clip: padding-box;
         border: 1px solid #f0e797;
-        border-radius: 0.25rem;
+        border-radius: 0rem;
         transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
         @media screen and (prefers-reduced-motion: reduce) {
           .form-control-escrus {
@@ -12513,7 +12548,7 @@ body {
             padding: 0.5rem 1rem;
             font-size: 1.25rem;
             line-height: 1.5;
-            border-radius: 0.3rem; }
+            border-radius: 0rem; }
 
             .handsome-background-escrus {
               background-color: #fcd307;
@@ -12730,4 +12765,14 @@ body {
   font-size: 40px;
   font-weight: 500;
   color: #000;
+}
+
+.form-esorus{
+  width: 400px;
+}
+
+.required{
+  font-size: 20px;
+  color: rgb(247, 9, 9);
+  font-weight: 100;
 }
