@@ -22,26 +22,27 @@ class Buyers extends Component {
                     transitionLeave={false}
                 >
                     <div>
-                        <h4>
-                            FF&E Personal Assistant for intrior designers and
+                        <h2>
+                            FF&E Personal Assistant for intrior designers and{' '}
+                            <br />
                             Professional Buyers{' '}
-                        </h4>
-                        <p>
-                            single place to find furniture materials, get qoutes
-                            and purchase from over a 1000 different qualified
-                            suppliers{' '}
+                        </h2>
+                        <p className='supplier-text'>
+                            single place to find furniture materials,
+                            <br /> get qoutes and purchase from over a 1000{' '}
+                            <br /> different qualified suppliers{' '}
                         </p>
                         <input
                             type='button'
-                            className='btn-escrus'
+                            className='btn-escrus mt-2'
                             value='Join Now'
                             onClick={this.onClick}
                         />
-                        <Row>
-                            <Col className='border'>Smart Sourcing</Col>
-                            <Col className='border'>Recommendations</Col>
-                            <Col className='border'> Follow-up</Col>
-                            <Col className='border'>Best Price</Col>
+                        <Row className='pt-4 pb-5'>
+                            <Col className='supplier-text'>Smart Sourcing</Col>
+                            <Col className='supplier-text'>Recommendations</Col>
+                            <Col className='supplier-text'> Follow-up</Col>
+                            <Col className='supplier-text'>Best Price</Col>
                         </Row>
                     </div>
                 </ReactCSSTransitionGroup>
