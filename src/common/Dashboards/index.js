@@ -8,6 +8,8 @@ import SignUp from '../SignUp';
 
 //HOME
 import Home from '../Home';
+import Suppliers from '../Suppliers';
+import Buyers from '../Buyers';
 //params ALL THE APP ROUTES WILL BE HERE
 
 // Layout
@@ -26,6 +28,11 @@ const Dashboards = ({ match }) => (
                 <div className='app-main__inner'>
                     <Route path={`${match.url}/login`} component={Login} />
                     <Route path={`${match.url}/signup`} component={SignUp} />
+                    <Route
+                        path={`${match.url}/suppliers`}
+                        component={Suppliers}
+                    />
+                    <Route path={`${match.url}/buyers`} component={Buyers} />
                 </div>
                 <AppFooter />
             </div>

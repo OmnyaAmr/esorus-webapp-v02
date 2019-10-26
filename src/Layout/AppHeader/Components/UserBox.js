@@ -21,7 +21,7 @@ import {
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import unknownUser from '../../../assets/utils/images/avatars/unknown.jpg';
+import unknownUser from '../../../assets/utils/images/avatars/user.svg';
 
 import { connect } from 'react-redux';
 import { logoutUser } from '../../../actions/authActions';
@@ -169,95 +169,31 @@ class UserBox extends React.Component {
                     <div className='widget-content p-0'>
                         <div className='widget-content-wrapper'>
                             <div className='widget-content-left'>
-                                <UncontrolledButtonDropdown>
-                                    <DropdownToggle
-                                        color='link'
-                                        className='p-0'
+                                <div className='d-flex justify-content-center align-items-center mt-2'>
+                                    <Link
+                                        className='btn custom-signin-btn mt-2 ml-4'
+                                        to='/dashboard/suppliers'
                                     >
-                                        <img
-                                            width={42}
-                                            className='rounded-circle'
-                                            src={unknownUser}
-                                            alt=''
-                                        />
-                                        <FontAwesomeIcon
-                                            className='ml-2 opacity-8'
-                                            icon={faAngleDown}
-                                        />
-                                    </DropdownToggle>
-                                    <DropdownMenu
-                                        right
-                                        className='rm-pointers dropdown-menu-lg'
+                                        Suppliers
+                                    </Link>
+                                    <Link
+                                        className='btn custom-signin-btn mt-2 ml-4 mr-4'
+                                        to='/dashboard/buyers'
                                     >
-                                        <Nav vertical>
-                                            <NavItem className='nav-item-header'>
-                                                Join us
-                                                <FontAwesomeIcon
-                                                    className='ml-2 opacity-8'
-                                                    icon={faAngleDown}
-                                                />
-                                            </NavItem>
-                                            <NavItem>
-                                                <NavLink href='#/dashboard/signup'>
-                                                    <FontAwesomeIcon
-                                                        className='ml-2 opacity-8 mr-1'
-                                                        icon={faUpload}
-                                                    />
-                                                    Sign up
-                                                </NavLink>
-                                            </NavItem>
-                                            <NavItem className='nav-item-header'>
-                                                Already have account
-                                            </NavItem>
-                                            <NavItem>
-                                                <NavLink href='#/dashboard/login'>
-                                                    <FontAwesomeIcon
-                                                        className='ml-2 opacity-8 mr-1'
-                                                        icon={faSignInAlt}
-                                                    />
-                                                    Login
-                                                </NavLink>
-                                            </NavItem>
-
-                                            <NavItem>
-                                                <NavLink>
-                                                    <FontAwesomeIcon
-                                                        className='ml-2 opacity-8 mr-1'
-                                                        icon={faInfo}
-                                                    />
-                                                    About Us
-                                                </NavLink>
-                                            </NavItem>
-                                        </Nav>
-                                    </DropdownMenu>
-                                </UncontrolledButtonDropdown>
-                            </div>
-
-                            <div className='widget-content-left  ml-3 header-user-info'>
-                                <div className='widget-heading'>
-                                    {user ? user.name : ''}
-                                </div>
-                            </div>
-
-                            <div className='widget-content-right header-user-info ml-3'>
-                                <Link
-                                    className='btn-shadow p-1 btn-info'
-                                    size='sm'
-                                    to='/dashboard/signup'
-                                    color='info'
-                                    id='Tooltip-1'
-                                >
-                                    <FontAwesomeIcon
-                                        className='mr-2 ml-2'
-                                        icon={faUpload}
+                                        Professional Buyers
+                                    </Link>
+                                    <img
+                                        src={unknownUser}
+                                        width='40'
+                                        height='40'
                                     />
-                                </Link>
-                                <UncontrolledTooltip
-                                    placement='bottom'
-                                    target={'Tooltip-1'}
-                                >
-                                    It's pleasure to join us
-                                </UncontrolledTooltip>
+                                    <Link
+                                        className='btn ml-1 custom-signin-btn mt-2'
+                                        to='/dashboard/login'
+                                    >
+                                        Sign In
+                                    </Link>
+                                </div>
                             </div>
                         </div>
                     </div>

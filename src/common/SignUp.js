@@ -48,8 +48,10 @@ class SignUp extends React.Component {
         this.props.SignUpUser(newUser, this.props.history);
     }
     componentWillMount() {
-        let { email } = this.props.location.state;
-        this.setState({ email });
+        if (this.props.location.state) {
+            let { email } = this.props.location.state;
+            this.setState({ email });
+        }
     }
     componentWillReceiveProps(nextProps) {
         if (nextProps.errors) {
