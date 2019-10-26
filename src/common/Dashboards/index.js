@@ -10,13 +10,13 @@ import SignUp from '../SignUp';
 import Home from '../Home';
 import Suppliers from '../Suppliers';
 import Buyers from '../Buyers';
+import Request from '../Request';
 //params ALL THE APP ROUTES WILL BE HERE
 
 // Layout
 
 import AppHeader from '../../Layout/AppHeader/';
 import AppSidebar from '../../Layout/AppSidebar/';
-import AppFooter from '../../Layout/AppFooter/';
 import Footer from '../Footer';
 
 const Dashboards = ({ match }) => (
@@ -34,6 +34,7 @@ const Dashboards = ({ match }) => (
                         component={Suppliers}
                     />
                     <Route path={`${match.url}/buyers`} component={Buyers} />
+                    <Route path={`${match.url}/request`} component={Request} />
                 </div>
             </div>
         </div>

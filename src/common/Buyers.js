@@ -9,6 +9,7 @@ class Buyers extends Component {
     }
     onClick(e) {
         e.preventDefault();
+        this.props.history.push('/dashboard/request');
     }
     render() {
         return (
