@@ -70,7 +70,7 @@ class Home extends Component {
                                 backgroundImage: enableHomeBackground
                                     ? 'url(' + homeBackground + ')'
                                     : null,
-                                height: '660px'
+                                height: '700px'
                             }}
                         >
                             <Row className='slogan-position ml-2'>
@@ -87,7 +87,7 @@ class Home extends Component {
                                         />
                                         <input
                                             type='button'
-                                            className='btn btn-lg btn-escrus ml-1'
+                                            className='btn-escrus ml-1'
                                             value='Join Now'
                                             onClick={this.onClick}
                                         />

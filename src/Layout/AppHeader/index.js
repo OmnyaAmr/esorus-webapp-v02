@@ -31,7 +31,6 @@ class Header extends React.Component {
                     transitionEnter={false}
                     transitionLeave={false}
                 >
-                    <HeaderLogo />
                     <div
                         className={cx('app-header__content', {
                             'header-mobile-open': enableMobileMenuSmall
@@ -39,7 +38,7 @@ class Header extends React.Component {
                     >
                         <div className='app-header-left'>
                             <Link to='/dashboard/home'>
-                                <img src={logo} />
+                                <img src={logo} width='200' heigth='100' />
                             </Link>
                         </div>
                         <div className='app-header-right'>

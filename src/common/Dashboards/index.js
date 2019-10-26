@@ -19,10 +19,10 @@ import AppFooter from '../../Layout/AppFooter/';
 const Dashboards = ({ match }) => (
     <Fragment>
         <AppHeader />
+        <Route path={`${match.url}/home`} component={Home} />
         <div className='app-main'>
             <AppSidebar />
             <div className='app-main__outer'>
-                <Route path={`${match.url}/home`} component={Home} />
                 <div className='app-main__inner'>
                     <Route path={`${match.url}/login`} component={Login} />
                     <Route path={`${match.url}/signup`} component={SignUp} />
