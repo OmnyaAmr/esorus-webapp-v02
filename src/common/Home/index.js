@@ -2,7 +2,7 @@ import React, { Fragment, Component } from 'react';
 import { connect } from 'react-redux';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import PerfectScrollbar from 'react-perfect-scrollbar';
-import { Row, Col, Container } from 'reactstrap';
+import { Row, Col, Container, Card } from 'reactstrap';
 import AnimatedNumber from 'react-animated-number';
 
 class Home extends Component {
@@ -106,128 +106,180 @@ class Home extends Component {
                     </h1>
                 </div>
                 <div className='review-background-escrus'>
-                    <div className='handsome-background-escrus' id='parallex'>
-                        {this.state.count && (
-                            <Container>
-                                <Row>
-                                    <Col className='slogan3-text'>
-                                        <h1>Some</h1>
-                                        <h1>Interesting Facts</h1>
-                                    </Col>
-                                    <Col className='slogan3-text'>
-                                        <AnimatedNumber
-                                            value={1000}
-                                            style={{
-                                                transition: '0.8s ease-out',
-                                                fontSize: 55,
-                                                color: 'white',
-                                                fontWeight: '500',
-                                                transitionProperty:
-                                                    'background-color, color, opacity'
-                                            }}
-                                            frameStyle={perc =>
-                                                perc === 100
-                                                    ? {}
-                                                    : {
-                                                          backgroundColor:
-                                                              'transparent'
-                                                      }
-                                            }
-                                            duration={5000}
-                                            formatValue={value =>
-                                                Number(value).toFixed(0)
-                                            }
-                                        />
-                                        <h4>Suppliers</h4>
-                                    </Col>
-                                    <Col className='slogan3-text'>
-                                        <AnimatedNumber
-                                            value={35}
-                                            style={{
-                                                transition: '0.8s ease-out',
-                                                fontSize: 55,
-                                                color: 'white',
-                                                fontWeight: '500',
-                                                transitionProperty:
-                                                    'background-color, color, opacity'
-                                            }}
-                                            frameStyle={perc =>
-                                                perc === 100
-                                                    ? {}
-                                                    : {
-                                                          backgroundColor:
-                                                              'transparent'
-                                                      }
-                                            }
-                                            duration={5000}
-                                            formatValue={value =>
-                                                Number(value).toFixed(0)
-                                            }
-                                        />
-                                        <h4>Our Projects</h4>
-                                    </Col>
-                                    <Col className='slogan3-text'>
-                                        <AnimatedNumber
-                                            value={10}
-                                            style={{
-                                                transition: '0.8s ease-out',
-                                                fontSize: 55,
-                                                color: 'white',
-                                                fontWeight: '500',
-                                                transitionProperty:
-                                                    'background-color, color, opacity'
-                                            }}
-                                            frameStyle={perc =>
-                                                perc === 100
-                                                    ? {}
-                                                    : {
-                                                          backgroundColor:
-                                                              'transparent'
-                                                      }
-                                            }
-                                            duration={5000}
-                                            formatValue={value =>
-                                                Number(value).toFixed(0)
-                                            }
-                                        />
-                                        <h4>Years Experience</h4>
-                                    </Col>
-                                    <Col className='slogan3-text'>
-                                        <AnimatedNumber
-                                            value={55}
-                                            style={{
-                                                transition: '0.8s ease-out',
-                                                fontSize: 55,
-                                                color: 'white',
-                                                fontWeight: '500',
-                                                transitionProperty:
-                                                    'background-color, color, opacity'
-                                            }}
-                                            frameStyle={perc =>
-                                                perc === 100
-                                                    ? {}
-                                                    : {
-                                                          backgroundColor:
-                                                              'transparent'
-                                                      }
-                                            }
-                                            duration={5000}
-                                            formatValue={value =>
-                                                Number(value).toFixed(0)
-                                            }
-                                        />
-                                        <h4>Successful Matchmaking</h4>
-                                    </Col>
-                                </Row>
-                            </Container>
-                        )}
+                    <div className='handsome-background-escrus ' id='parallex'>
+                        <div className='align-self-center pt-lg-5'>
+                            {this.state.count && (
+                                <Container>
+                                    <Row>
+                                        <Col className='slogan3-text'>
+                                            <h1>Some</h1>
+                                            <h1>Interesting Facts</h1>
+                                        </Col>
+                                        <Col className='slogan3-text'>
+                                            <AnimatedNumber
+                                                value={1000}
+                                                style={{
+                                                    transition: '0.8s ease-out',
+                                                    fontSize: 55,
+                                                    color: 'white',
+                                                    fontWeight: '500',
+                                                    transitionProperty:
+                                                        'background-color, color, opacity'
+                                                }}
+                                                frameStyle={perc =>
+                                                    perc === 100
+                                                        ? {}
+                                                        : {
+                                                              backgroundColor:
+                                                                  'transparent'
+                                                          }
+                                                }
+                                                duration={5000}
+                                                formatValue={value =>
+                                                    Number(value).toFixed(0)
+                                                }
+                                            />
+                                            <h4>Suppliers</h4>
+                                        </Col>
+                                        <Col className='slogan3-text'>
+                                            <AnimatedNumber
+                                                value={35}
+                                                style={{
+                                                    transition: '0.8s ease-out',
+                                                    fontSize: 55,
+                                                    color: 'white',
+                                                    fontWeight: '500',
+                                                    transitionProperty:
+                                                        'background-color, color, opacity'
+                                                }}
+                                                frameStyle={perc =>
+                                                    perc === 100
+                                                        ? {}
+                                                        : {
+                                                              backgroundColor:
+                                                                  'transparent'
+                                                          }
+                                                }
+                                                duration={5000}
+                                                formatValue={value =>
+                                                    Number(value).toFixed(0)
+                                                }
+                                            />
+                                            <h4>Our Projects</h4>
+                                        </Col>
+                                        <Col className='slogan3-text'>
+                                            <AnimatedNumber
+                                                value={10}
+                                                style={{
+                                                    transition: '0.8s ease-out',
+                                                    fontSize: 55,
+                                                    color: 'white',
+                                                    fontWeight: '500',
+                                                    transitionProperty:
+                                                        'background-color, color, opacity'
+                                                }}
+                                                frameStyle={perc =>
+                                                    perc === 100
+                                                        ? {}
+                                                        : {
+                                                              backgroundColor:
+                                                                  'transparent'
+                                                          }
+                                                }
+                                                duration={5000}
+                                                formatValue={value =>
+                                                    Number(value).toFixed(0)
+                                                }
+                                            />
+                                            <h4>Years Experience</h4>
+                                        </Col>
+                                        <Col className='slogan3-text'>
+                                            <AnimatedNumber
+                                                value={55}
+                                                style={{
+                                                    transition: '0.8s ease-out',
+                                                    fontSize: 55,
+                                                    color: 'white',
+                                                    fontWeight: '500',
+                                                    transitionProperty:
+                                                        'background-color, color, opacity'
+                                                }}
+                                                frameStyle={perc =>
+                                                    perc === 100
+                                                        ? {}
+                                                        : {
+                                                              backgroundColor:
+                                                                  'transparent'
+                                                          }
+                                                }
+                                                duration={5000}
+                                                formatValue={value =>
+                                                    Number(value).toFixed(0)
+                                                }
+                                            />
+                                            <h4>Successful Matchmaking</h4>
+                                        </Col>
+                                    </Row>
+                                </Container>
+                            )}
+                        </div>
                     </div>
 
-                    <Row>
-                        <Col className='text-center'>
-                            <h2 className='mb-4'>Our satisfied client says</h2>
-                        </Col>
-                    </Row>
+                    <Container>
+                        <Row className='pt-lg-4'>
+                            <Col className='text-center' md={12}>
+                                <h2 className='mb-4 heading-text'>
+                                    Our satisfied client says
+                                </h2>
+                            </Col>
+                        </Row>
+                        <div className='mb-lg-5 pb-lg-5'>
+                            <Row>
+                                <Col md={12}>
+                                    <div className='item'>
+                                        <div className='testimony-wrap p-4 pb-5 text-center'>
+                                            <div className='user-img mb-5'>
+                                                <span className='quote d-flex align-items-center justify-content-center'>
+                                                    <i className='icon-quote-left'></i>
+                                                </span>
+                                            </div>
+                                            <div className='text'>
+                                                <p className='mb-5 review-text'>
+                                                    We have been working with
+                                                    ESORUS for a few months now
+                                                    and growing from strength to
+                                                    strength. Their team of
+                                                    designers and coordinators
+                                                    on site form an essential
+                                                    part of the product we
+                                                    deliver to clients. We found
+                                                    that ESORUS is a very
+                                                    experienced team and they
+                                                    have proved resourceful, are
+                                                    accomplished and very
+                                                    competent at every step of
+                                                    the process. The quality of
+                                                    ESORUS FF&E’s team reflects
+                                                    very positively on the
+                                                    quality of our brand and we
+                                                    are looking forward to
+                                                    working with them on many
+                                                    more projects in the future.
+                                                </p>
+                                                <p className='name'>
+                                                    NORA EL FAKHARANY
+                                                </p>
+                                                <span className='position'>
+                                                    ENCORE INTERIOR DESIGN &
+                                                    CONSTRUCTION
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </Col>
+                            </Row>
+                        </div>
+                    </Container>
                 </div>
             </Fragment>
         );

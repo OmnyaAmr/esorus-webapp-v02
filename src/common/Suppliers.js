@@ -38,7 +38,7 @@ class Suppliers extends Component {
                 >
                     <div>
                         <h2>esorus for suppliers and manufacturers</h2>
-                        <p>
+                        <p className='supplier-text'>
                             We take your brand around the <br /> World and
                             expose you to a wide <br />
                             network of professional buyers.
@@ -64,21 +64,22 @@ class Suppliers extends Component {
                             <Col />
                         </Row>
 
-                        <Row className='border ml-1'>
-                            <Col className='border' lg={6}>
+                        <Row className='supplier-text pb-lg-5'>
+                            <Col className='' lg={6}>
                                 <p>
-                                    Gain access to our worldwide network of
-                                    professional buyers
+                                    Gain access to our <br /> worldwide network{' '}
+                                    <br />
+                                    of professional buyers
                                 </p>
                             </Col>
-                            <Col className='border' lg={6}>
-                                You deciede who buyes your product
+                            <Col className='' lg={6}>
+                                You deciede <br /> who buyes your <br /> product
                             </Col>
-                            <Col className='border' lg={6}>
-                                manage your brand and product easily
+                            <Col className='' lg={6}>
+                                manage your brand <br /> and product easily
                             </Col>
-                            <Col className='border' lg={6}>
-                                You can manage your orders
+                            <Col className='' lg={6}>
+                                You can manage <br /> your orders
                             </Col>
                         </Row>
                     </div>

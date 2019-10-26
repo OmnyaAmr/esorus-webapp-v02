@@ -17,6 +17,7 @@ import Buyers from '../Buyers';
 import AppHeader from '../../Layout/AppHeader/';
 import AppSidebar from '../../Layout/AppSidebar/';
 import AppFooter from '../../Layout/AppFooter/';
+import Footer from '../Footer';
 
 const Dashboards = ({ match }) => (
     <Fragment>
@@ -34,9 +35,9 @@ const Dashboards = ({ match }) => (
                     />
                     <Route path={`${match.url}/buyers`} component={Buyers} />
                 </div>
-                <AppFooter />
             </div>
         </div>
+        <Footer />
     </Fragment>
 );
 

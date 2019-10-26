@@ -172,20 +172,21 @@ class UserBox extends React.Component {
                                 <div className='d-flex justify-content-center align-items-center mt-2'>
                                     <Link
                                         className='btn custom-signin-btn mt-2 ml-4'
-                                        to='/dashboard/suppliers'
-                                    >
-                                        Suppliers
-                                    </Link>
-                                    <Link
-                                        className='btn custom-signin-btn mt-2 ml-4 mr-4'
                                         to='/dashboard/buyers'
                                     >
                                         Professional Buyers
                                     </Link>
+                                    <Link
+                                        className='btn custom-signin-btn mt-2 ml-4 mr-4'
+                                        to='/dashboard/suppliers'
+                                    >
+                                        Suppliers
+                                    </Link>
                                     <img
                                         src={unknownUser}
-                                        width='40'
-                                        height='40'
+                                        width='25'
+                                        height='25'
+                                        className='mb-2'
                                     />
                                     <Link
                                         className='btn ml-1 custom-signin-btn mt-2'

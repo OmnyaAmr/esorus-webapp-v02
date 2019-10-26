@@ -38,7 +38,7 @@ class Header extends React.Component {
                     >
                         <div className='app-header-left'>
                             <Link to='/dashboard/home'>
-                                <img src={logo} width='180' heigth='100' />
+                                <img src={logo} width='160' heigth='100' />
                             </Link>
                         </div>
                         <div className='app-header-right'>
