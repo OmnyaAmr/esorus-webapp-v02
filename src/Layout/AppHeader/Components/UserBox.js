@@ -175,7 +175,7 @@ class UserBox extends React.Component {
                                         to='/dashboard/buyers'
                                     >
                                         <button className="btn-navBar">
-                                            Professional Buyers
+                                            Interior designers
                                         </button>
 
                                     </Link>
@@ -187,17 +187,18 @@ class UserBox extends React.Component {
                                             Suppliers
                                         </button>
                                     </Link>
-                                    <img
-                                        src={unknownUser}
-                                        width='25'
-                                        height='25'
-                                        className='mb-2'
-                                    />
+
                                     <Link
                                         className='btn ml-1 custom-signin-btn mt-2'
                                         to='/dashboard/login'
                                     >
                                         <button className="btn-navBar">
+                                            <img
+                                                src={unknownUser}
+                                                width='25'
+                                                height='25'
+                                                className='mb-2'
+                                            />
                                             Sign In
                                         </button>
                                     </Link>
