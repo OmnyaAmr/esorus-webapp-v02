@@ -174,13 +174,18 @@ class UserBox extends React.Component {
                                         className='btn custom-signin-btn mt-2 ml-4'
                                         to='/dashboard/buyers'
                                     >
-                                        Professional Buyers
+                                        <button className="btn-navBar">
+                                            Professional Buyers
+                                        </button>
+
                                     </Link>
                                     <Link
                                         className='btn custom-signin-btn mt-2 ml-4 mr-4'
                                         to='/dashboard/suppliers'
                                     >
-                                        Suppliers
+                                        <button className="btn-navBar">
+                                            Suppliers
+                                        </button>
                                     </Link>
                                     <img
                                         src={unknownUser}
@@ -192,7 +197,9 @@ class UserBox extends React.Component {
                                         className='btn ml-1 custom-signin-btn mt-2'
                                         to='/dashboard/login'
                                     >
-                                        Sign In
+                                        <button className="btn-navBar">
+                                            Sign In
+                                        </button>
                                     </Link>
                                 </div>
                             </div>

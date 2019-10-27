@@ -8,9 +8,7 @@ class AppFooter extends React.Component {
                     <div className='app-footer__inner'>
                         <div className='app-footer-left'>
                             <ul className='nav'>
-                                <li className='nav-item'>
-                                    <a className='nav-link'>Footer Link 1</a>
-                                </li>
+
                                 <li className='nav-item'>
                                     <a className='nav-link'>Footer Link 2</a>
                                 </li>

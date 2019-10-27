@@ -75,9 +75,8 @@ class Home extends Component {
                         >
                             <Row className='slogan-position ml-2'>
                                 <Col>
-                                    <h1 className='slogan-text'>Interior</h1>
-                                    <h1 className='slogan-text'>Sourcing</h1>
-                                    <h1 className='slogan-text'>Made Easy</h1>
+                                    <h2 className='slogan-text'>Interior Sourcing</h2>
+                                    <h2 className='slogan-text'>Made Easy</h2>
                                     <div className='d-flex justify-content-center mt-4'>
                                         <input
                                             className='form-control-escrus form-control-lg-escrus ml-1'
@@ -98,12 +97,12 @@ class Home extends Component {
                     </PerfectScrollbar>
                 </div>
                 <div className='mt-5 ml-2'>
-                    <h1 className='slogan2-text'>
+                    <h2 className='slogan2-text'>
                         We are <strong>reinventing</strong>
-                    </h1>
-                    <h1 className='slogan2-text'>
+                    </h2>
+                    <h2 className='slogan2-text'>
                         the interior sourcing process!
-                    </h1>
+                    </h2>
                 </div>
                 <div className='review-background-escrus'>
                     <div className='handsome-background-escrus ' id='parallex'>
@@ -238,13 +237,11 @@ class Home extends Component {
                                 <Col md={12}>
                                     <div className='item'>
                                         <div className='testimony-wrap p-4 pb-5 text-center'>
-                                            <div className='user-img mb-5'>
-                                                <span className='quote d-flex align-items-center justify-content-center'>
-                                                    <i className='icon-quote-left'></i>
-                                                </span>
-                                            </div>
+                                            <img className='user-img mb-5' src={require('../../assets/utils/images/person_1.jpeg')}>
+
+                                            </img>
                                             <div className='text'>
-                                                <p className='mb-5 review-text'>
+                                                <p className='mb-5'>
                                                     We have been working with
                                                     ESORUS for a few months now
                                                     and growing from strength to

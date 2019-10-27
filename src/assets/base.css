@@ -12406,24 +12406,22 @@ body {
 
 .slogan-position{
   position: absolute;
-  top:10%;
-  left: 2%;
+  top:20%;
+  left: 4%;
 }
 
 .slogan-text{
   font-weight: 800;
   font-family: 'Poppins-Bold', sans-serif;
   color: black;
-  line-height: 1.1;
-  font-size: 70px;
+  
+  
 }
 
 .slogan2-text{
-  font-weight: 500;
+  font-weight: 800;
   font-family: 'Poppins-Bold', sans-serif;
-  color: #ecc503;
-  line-height: 1.1;
-  font-size: 60px;
+  color: #fcd307;
 }
 
 .slogan3-text{
@@ -12466,20 +12464,16 @@ body {
   border-color: #ecc503; }
 
 .btn-escrus {
-  display: inline-block;
-  cursor: pointer;
-  font-weight: 500;
-  font-size: 1.2rem;
-  border-radius: 0rem;
-  font-family: 'Poppins-Bold', sans-serif;
-  color: rgb(255, 255, 255);  
-  background: #ecc503;
-  border-color: #ecc503; }
+  border: 0;
+  background: #fcd307;
+  box-shadow: none;
+  border-radius: 0px;
+  height: 45px;
+  width: 90px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600; }
   .btn-escrus:hover {
-    color: rgb(255, 255, 255);
-    border-radius: 0rem;
-    background: #ecc503;
-    border-color: #ecc503; }
+    background:rgb(153, 133, 0); }
   .btn-escrus:escrus, .btn-escrus.escrus {
     box-shadow: 0 0 0 0 rgba(125, 52, 244, 0.5); }
   .btn-escrus.disabled, .btn-escrus:disabled {
@@ -12496,6 +12490,7 @@ body {
       box-shadow: 0 0 0 0 rgba(125, 52, 244, 0.5); }
 
       .form-control-escrus {
+        font-family:  'Poppins', sans-serif;;
         display: block;
         width: 100%;
         height: calc(2.25rem + 2px);
@@ -12591,6 +12586,7 @@ body {
   color: rgba(0, 0, 0, 0.8);
 }
 .testimony-wrap .user-img {
+  
   width: 100px;
   height: 100px;
   border-radius: 50%;
@@ -12599,6 +12595,7 @@ body {
   margin: 0 auto;
 }
 .testimony-wrap .user-img .quote {
+  
   position: absolute;
   bottom: -10px;
   right: 0;
@@ -12760,4 +12757,20 @@ body {
   font-size: 20px;
   color: rgb(247, 9, 9);
   font-weight: 100;
+}
+
+.btn-navBar{
+  background-color:transparent;   
+  cursor: pointer;
+  border-style: none;
+  border-radius: 0;
+  border: none ;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+ 
+}
+.btn-navBar:hover {
+  background-color: transparent;
+  color: #fcd307;
+
 }
