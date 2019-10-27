@@ -12553,9 +12553,10 @@ body {
                 }
 
   .left-side {
+    margin-top: 60px;
     height: 100%;
     width: 4%;
-    background-color: #fcd307;
+    background-color: #ecc503;
     min-width: 45px;
     position: fixed;
     z-index: 1;
@@ -12760,4 +12761,43 @@ body {
   font-size: 20px;
   color: rgb(247, 9, 9);
   font-weight: 100;
+}
+
+.bm-burger-button {
+  position: fixed;
+  width: 36px;
+  height: 90%;
+  left: 10px;
+  top: 36px;
+}
+
+.bm-menu {
+  background: #ecc503;
+  padding: 2.7em 1.5em 0;
+  font-size: 1.15em;
+}
+
+.bm-morph-shape {
+  fill: #373a47;
+}
+
+.bm-item-list {
+  color: #b8b7ad;
+  padding: 0.8em;
+}
+
+.bm-item {
+  display: inline-block;
+}
+
+.app-main-enhanced{
+  padding-top:90px;
+  padding-bottom: 40px;
+  padding-left:90px;
+}
+
+.center-footer {
+  margin: auto;
+  width: 60%;
+  padding: 10px;
 }

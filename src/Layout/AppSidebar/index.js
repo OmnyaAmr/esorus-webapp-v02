@@ -22,7 +22,6 @@ class AppSidebar extends Component {
 
     render() {
         let {
-            enableClosedSidebar,
             backgroundColor,
             enableBackgroundImage,
             enableSidebarShadow,
@@ -38,7 +37,7 @@ class AppSidebar extends Component {
                 />
                 <ReactCSSTransitionGroup
                     component='div'
-                    className={cx('app-sidebar', backgroundColor, {
+                    className={cx('app-sidebar mt-lg-5', backgroundColor, {
                         'sidebar-shadow': enableSidebarShadow
                     })}
                     transitionName='SidebarAnimation'

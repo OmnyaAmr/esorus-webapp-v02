@@ -36,7 +36,7 @@ class Suppliers extends Component {
                     transitionEnter={false}
                     transitionLeave={false}
                 >
-                    <div>
+                    <div className='app-main-enhanced'>
                         <h2>esorus for suppliers and manufacturers</h2>
                         <p className='supplier-text'>
                             We take your brand around the <br /> World and

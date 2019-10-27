@@ -78,6 +78,7 @@
         "react-animated-number": "^0.4.4",
         "react-anime": "^2.2.0",
         "react-bootstrap": "^0.32.4",
+        "react-burger-menu": "^2.6.11",
         "react-chartjs-2": "^2.7.4",
         "react-datepicker": "^2.9.6",
         "react-dev-utils": "^4.2.3",

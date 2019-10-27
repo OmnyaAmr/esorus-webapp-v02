@@ -2,6 +2,7 @@ import React, { Fragment } from 'react';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import {
     Col,
+    Row,
     Card,
     CardBody,
     CardTitle,
@@ -153,145 +154,180 @@ class SignUp extends React.Component {
                     transitionEnter={false}
                     transitionLeave={false}
                 >
-                    <Card className='container'>
-                        <CardBody>
-                            <CardTitle className='text-center'>
-                                Sign up to esorus: become a community member
-                            </CardTitle>
-                            <Form
-                                onSubmit={this.onSubmit}
-                                className='form-esorus m-auto'
-                            >
-                                <FormGroup row>
-                                    <Label for='name'>Name{required}</Label>
-                                    <Input
-                                        className='form-control-escrus'
-                                        type='text'
-                                        name='name'
-                                        id='name'
-                                        value={this.state.name}
-                                        onChange={this.onChange}
-                                        invalid={!isEmpty(errors.name)}
-                                    />
-                                    <FormFeedback>{errors.name}</FormFeedback>
-                                </FormGroup>
-                                <FormGroup row>
-                                    <Label for='email'>Email{required}</Label>
-                                    <Input
-                                        className='form-control-escrus'
-                                        type='email'
-                                        name='email'
-                                        id='email'
-                                        value={this.state.email}
-                                        onChange={this.onChange}
-                                        invalid={!isEmpty(errors.email)}
-                                    />
-                                    <FormFeedback>{errors.email}</FormFeedback>
-                                </FormGroup>
-                                <FormGroup row>
-                                    <Label for='password'>
-                                        Password{required}
-                                    </Label>
-                                    <Input
-                                        className='form-control-escrus'
-                                        type='password'
-                                        name='password'
-                                        id='password'
-                                        value={this.state.password}
-                                        onChange={this.onChange}
-                                        invalid={!isEmpty(errors.password)}
-                                    />
-                                    <FormFeedback>
-                                        {errors.password}
-                                    </FormFeedback>
-                                </FormGroup>
-                                <FormGroup row>
-                                    <Label for='password2'>
-                                        Confirm Password{required}
-                                    </Label>
-                                    <Input
-                                        className='form-control-escrus'
-                                        type='password'
-                                        name='password2'
-                                        id='password2'
-                                        value={this.state.password2}
-                                        onChange={this.onChange}
-                                        invalid={!isEmpty(errors.password2)}
-                                    />
-                                    <FormFeedback>
-                                        {errors.password2}
-                                    </FormFeedback>
-                                </FormGroup>
-                                <FormGroup row>
-                                    <Label for='role'>
-                                        Professional role{required}
-                                    </Label>
-                                    <select
-                                        name='role'
-                                        className={classnames(
-                                            'custom-select custom-select-md form-control-escrus',
-                                            {
-                                                'is-invalid': errors.role
-                                            }
-                                        )}
-                                        onChange={this.onChange}
-                                        value={this.state.role}
-                                    >
-                                        <option value=''>
-                                            Select your role ...
-                                        </option>
-                                        <option value='buyer'>
-                                            Professional Buyer
-                                        </option>
-                                        <option value='supplier'>
-                                            Supplier
-                                        </option>
-                                    </select>
-                                    {errors.role && (
-                                        <FormFeedback>
-                                            {errors.role}
-                                        </FormFeedback>
-                                    )}
-                                </FormGroup>
-                                <div>{content}</div>
-                                <FormGroup row>
-                                    <div class='form-check'>
-                                        <input
-                                            type='checkbox'
-                                            class='form-check-input'
-                                            id='agreed'
-                                            name='agreed'
-                                            defaultchecked={this.state.agreed}
-                                            onChange={this.onCheck}
-                                        />
-                                        <label
-                                            className='form-check-label'
-                                            htmlFor='agreed'
+                    <div className='app-main-enhanced'>
+                        <Row>
+                            <Col md={2} />
+                            <Col>
+                                <Card className='container'>
+                                    <CardBody>
+                                        <CardTitle className='text-center'>
+                                            Sign up to esorus: become a
+                                            community member
+                                        </CardTitle>
+                                        <Form
+                                            onSubmit={this.onSubmit}
+                                            className='form-esorus m-auto'
                                         >
-                                            I agree to Terms & Conditions.
-                                        </label>
-                                    </div>
-                                </FormGroup>
+                                            <FormGroup row>
+                                                <Label for='name'>
+                                                    Name{required}
+                                                </Label>
+                                                <Input
+                                                    className='form-control-escrus'
+                                                    type='text'
+                                                    name='name'
+                                                    id='name'
+                                                    value={this.state.name}
+                                                    onChange={this.onChange}
+                                                    invalid={
+                                                        !isEmpty(errors.name)
+                                                    }
+                                                />
+                                                <FormFeedback>
+                                                    {errors.name}
+                                                </FormFeedback>
+                                            </FormGroup>
+                                            <FormGroup row>
+                                                <Label for='email'>
+                                                    Email{required}
+                                                </Label>
+                                                <Input
+                                                    className='form-control-escrus'
+                                                    type='email'
+                                                    name='email'
+                                                    id='email'
+                                                    value={this.state.email}
+                                                    onChange={this.onChange}
+                                                    invalid={
+                                                        !isEmpty(errors.email)
+                                                    }
+                                                />
+                                                <FormFeedback>
+                                                    {errors.email}
+                                                </FormFeedback>
+                                            </FormGroup>
+                                            <FormGroup row>
+                                                <Label for='password'>
+                                                    Password{required}
+                                                </Label>
+                                                <Input
+                                                    className='form-control-escrus'
+                                                    type='password'
+                                                    name='password'
+                                                    id='password'
+                                                    value={this.state.password}
+                                                    onChange={this.onChange}
+                                                    invalid={
+                                                        !isEmpty(
+                                                            errors.password
+                                                        )
+                                                    }
+                                                />
+                                                <FormFeedback>
+                                                    {errors.password}
+                                                </FormFeedback>
+                                            </FormGroup>
+                                            <FormGroup row>
+                                                <Label for='password2'>
+                                                    Confirm Password{required}
+                                                </Label>
+                                                <Input
+                                                    className='form-control-escrus'
+                                                    type='password'
+                                                    name='password2'
+                                                    id='password2'
+                                                    value={this.state.password2}
+                                                    onChange={this.onChange}
+                                                    invalid={
+                                                        !isEmpty(
+                                                            errors.password2
+                                                        )
+                                                    }
+                                                />
+                                                <FormFeedback>
+                                                    {errors.password2}
+                                                </FormFeedback>
+                                            </FormGroup>
+                                            <FormGroup row>
+                                                <Label for='role'>
+                                                    Professional role{required}
+                                                </Label>
+                                                <select
+                                                    name='role'
+                                                    className={classnames(
+                                                        'custom-select custom-select-md form-control-escrus',
+                                                        {
+                                                            'is-invalid':
+                                                                errors.role
+                                                        }
+                                                    )}
+                                                    onChange={this.onChange}
+                                                    value={this.state.role}
+                                                >
+                                                    <option value=''>
+                                                        Select your role ...
+                                                    </option>
+                                                    <option value='buyer'>
+                                                        Professional Buyer
+                                                    </option>
+                                                    <option value='supplier'>
+                                                        Supplier
+                                                    </option>
+                                                </select>
+                                                {errors.role && (
+                                                    <FormFeedback>
+                                                        {errors.role}
+                                                    </FormFeedback>
+                                                )}
+                                            </FormGroup>
+                                            <div>{content}</div>
+                                            <FormGroup row>
+                                                <div class='form-check'>
+                                                    <input
+                                                        type='checkbox'
+                                                        class='form-check-input'
+                                                        id='agreed'
+                                                        name='agreed'
+                                                        defaultchecked={
+                                                            this.state.agreed
+                                                        }
+                                                        onChange={this.onCheck}
+                                                    />
+                                                    <label
+                                                        className='form-check-label'
+                                                        htmlFor='agreed'
+                                                    >
+                                                        I agree to Terms &
+                                                        Conditions.
+                                                    </label>
+                                                </div>
+                                            </FormGroup>
 
-                                <FormGroup row>
-                                    <Button
-                                        className='btn-escrus block'
-                                        disabled={!this.state.agreed}
-                                    >
-                                        SIGN UP
-                                    </Button>
-                                </FormGroup>
-                                <FormGroup row>
-                                    <Button
-                                        className='btn-escrus-inv block'
-                                        onClick={this.onCancelClick}
-                                    >
-                                        Cancel
-                                    </Button>
-                                </FormGroup>
-                            </Form>
-                        </CardBody>
-                    </Card>
+                                            <FormGroup row>
+                                                <Button
+                                                    className='btn-escrus block'
+                                                    disabled={
+                                                        !this.state.agreed
+                                                    }
+                                                >
+                                                    SIGN UP
+                                                </Button>
+                                            </FormGroup>
+                                            <FormGroup row>
+                                                <Button
+                                                    className='btn-escrus-inv block'
+                                                    onClick={this.onCancelClick}
+                                                >
+                                                    Cancel
+                                                </Button>
+                                            </FormGroup>
+                                        </Form>
+                                    </CardBody>
+                                </Card>
+                            </Col>
+                            <Col md={2} />
+                        </Row>
+                    </div>
                 </ReactCSSTransitionGroup>
             </Fragment>
         );

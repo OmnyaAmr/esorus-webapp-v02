@@ -22,7 +22,7 @@ class Buyers extends Component {
                     transitionEnter={false}
                     transitionLeave={false}
                 >
-                    <div>
+                    <div className='app-main-enhanced'>
                         <h2>
                             FF&E Personal Assistant for intrior designers and{' '}
                             <br />

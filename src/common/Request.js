@@ -72,7 +72,7 @@ class Request extends Component {
                     transitionEnter={false}
                     transitionLeave={false}
                 >
-                    <div>
+                    <div className='app-main-enhanced'>
                         <Card className='container'>
                             <CardBody>
                                 <CardTitle className='text-center'>

@@ -10,20 +10,7 @@ import {
     STUDENT_PREV,
     USER_PREV
 } from '../../actions/types';
-import {
-    AdminNav,
-    ComponentsNav,
-    FormsNav,
-    WidgetsNav,
-    ChartsNav,
-    AuthNav,
-    StudentNav,
-    ModeratorNav,
-    UserNav,
-    ConfirmNav,
-    AboutUs,
-    CompleteNav
-} from './NavItems';
+import { AuthNav, UserNav, AboutUs } from './NavItems';
 
 class Nav extends Component {
     state = {};
@@ -195,16 +182,3 @@ export default connect(
     mapStateToProps,
     {}
 )(withRouter(Nav));
-
-// switch (prev) {
-//     case '':
-//         return ();
-//     case 'admin':
-//         return ();
-//     case 'moderator':
-//         return ();
-//     case 'student':
-//         return ();
-//     case 'user':
-//         return ();
-// }

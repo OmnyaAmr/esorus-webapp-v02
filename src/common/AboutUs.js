@@ -1,23 +1,17 @@
 import React, { Fragment, Component } from 'react';
 import { connect } from 'react-redux';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
-import PerfectScrollbar from 'react-perfect-scrollbar';
 import { Row, Col, Container, Card } from 'reactstrap';
 import AnimatedNumber from 'react-animated-number';
-import Sidebar from '../../Layout/AppSidebar';
 
-class Home extends Component {
+class AboutUs extends Component {
     constructor() {
         super();
         this.state = {
-            email: '',
             count: false,
             value: 0
         };
-        this.onClick = this.onClick.bind(this);
-        this.onChange = this.onChange.bind(this);
     }
-
     componentDidMount() {
         document.addEventListener('scroll', this.trackScrolling);
     }
@@ -37,22 +31,7 @@ class Home extends Component {
 
     formatValue = value => value.toFixed(2);
 
-    onClick(e) {
-        e.preventDefault();
-        let { email } = this.state;
-        this.props.history.push({
-            pathname: '/dashboard/signup',
-            state: { email: email }
-        });
-    }
-
-    onChange(e) {
-        this.setState({ [e.target.name]: e.target.value });
-    }
-
     render() {
-        let { enableHomeBackground, homeBackground } = this.props;
-
         return (
             <Fragment>
                 <ReactCSSTransitionGroup
@@ -63,49 +42,6 @@ class Home extends Component {
                     transitionEnter={false}
                     transitionLeave={false}
                 />
-                <div>
-                    <PerfectScrollbar>
-                        <div
-                            className='home-background'
-                            style={{
-                                backgroundImage: enableHomeBackground
-                                    ? 'url(' + homeBackground + ')'
-                                    : null,
-                                height: '700px'
-                            }}
-                        >
-                            <Row className='slogan-position ml-4'>
-                                <Col>
-                                    <h1 className='slogan-text'>Interior</h1>
-                                    <h1 className='slogan-text'>Sourcing</h1>
-                                    <h1 className='slogan-text'>Made Easy</h1>
-                                    <div className='d-flex justify-content-center mt-4'>
-                                        <input
-                                            className='form-control-escrus form-control-lg-escrus ml-1'
-                                            onChange={this.onChange}
-                                            value={this.state.email}
-                                            name='email'
-                                        />
-                                        <input
-                                            type='button'
-                                            className='btn-escrus ml-1'
-                                            value='Join Now'
-                                            onClick={this.onClick}
-                                        />
-                                    </div>
-                                </Col>
-                            </Row>
-                        </div>
-                    </PerfectScrollbar>
-                </div>
-                <div className='mt-5 ml-5'>
-                    <h1 className='slogan2-text ml-4'>
-                        We are <strong>reinventing</strong>
-                    </h1>
-                    <h1 className='slogan2-text ml-4'>
-                        the interior sourcing process!
-                    </h1>
-                </div>
                 <div className='review-background-escrus' id='about'>
                     <div className='handsome-background-escrus ' id='parallex'>
                         <div className='align-self-center pt-lg-5'>
@@ -292,6 +228,6 @@ const mapStateToProps = state => ({
     homeBackground: state.ThemeOptions.homeBackground
 });
 
-export default connect(mapStateToProps)(Home);
+export default connect(mapStateToProps)(AboutUs);
 
 // We are reinventing the interior sourcing process!

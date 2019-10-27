@@ -15,7 +15,7 @@ import {
 } from 'reactstrap';
 import { Link, withRouter } from 'react-router-dom';
 import isEmpty from '../validation/is-empty';
-
+import logo from '../assets/utils/images/logo.png';
 import { connect } from 'react-redux';
 import { loginUser } from '../actions/authActions';
 import Spinner from './Spinner';
@@ -106,98 +106,108 @@ class Login extends React.Component {
                     transitionEnter={false}
                     transitionLeave={false}
                 >
-                    <Row>
-                        <Col md={2}></Col>
-                        <Col md={8}>
-                            <Card className='container'>
-                                <CardBody>
-                                    <CardTitle className='text-center'>
-                                        esorus
-                                    </CardTitle>
-                                    <Form
-                                        onSubmit={this.onSubmit}
-                                        className='form-esorus m-auto'
-                                    >
-                                        <Row>
-                                            <Col md={12}>
-                                                <FormGroup>
-                                                    <Label for='exampleEmail11'>
-                                                        Email{required}
-                                                    </Label>
-                                                    <Input
-                                                        className='form-control-escrus'
-                                                        type='text'
-                                                        name='email'
-                                                        id='exampleEmail11'
-                                                        value={this.state.email}
-                                                        onChange={this.onChange}
-                                                        invalid={
-                                                            !isEmpty(
-                                                                errors.email
-                                                            )
+                    <div className='app-main-enhanced'>
+                        <Row>
+                            <Col md={2}></Col>
+                            <Col md={8}>
+                                <Card className='container'>
+                                    <CardBody>
+                                        <CardTitle className='text-center'>
+                                            <img
+                                                src={logo}
+                                                width='200'
+                                                height='40'
+                                            />
+                                        </CardTitle>
+                                        <Form
+                                            onSubmit={this.onSubmit}
+                                            className='form-esorus m-auto'
+                                        >
+                                            <Row>
+                                                <Col>
+                                                    <FormGroup>
+                                                        <Label for='exampleEmail11'>
+                                                            Email{required}
+                                                        </Label>
+                                                        <Input
+                                                            className='form-control-escrus'
+                                                            type='text'
+                                                            name='email'
+                                                            id='exampleEmail11'
+                                                            value={
+                                                                this.state.email
+                                                            }
+                                                            onChange={
+                                                                this.onChange
+                                                            }
+                                                            invalid={
+                                                                !isEmpty(
+                                                                    errors.email
+                                                                )
+                                                            }
+                                                        />
+                                                        <FormFeedback tooltip>
+                                                            {errors.email}
+                                                        </FormFeedback>
+                                                    </FormGroup>
+                                                </Col>
+                                            </Row>
+                                            <Row>
+                                                <Col>
+                                                    <FormGroup>
+                                                        <Label for='examplePassword11'>
+                                                            Password{required}
+                                                        </Label>
+                                                        <Input
+                                                            className='form-control-escrus'
+                                                            type='password'
+                                                            name='password'
+                                                            id='examplePassword11'
+                                                            value={
+                                                                this.state
+                                                                    .password
+                                                            }
+                                                            onChange={
+                                                                this.onChange
+                                                            }
+                                                            invalid={
+                                                                !isEmpty(
+                                                                    errors.password
+                                                                )
+                                                            }
+                                                        />
+                                                        <FormFeedback tooltip>
+                                                            {errors.password}
+                                                        </FormFeedback>
+                                                    </FormGroup>
+                                                </Col>
+                                            </Row>
+                                            <Row>
+                                                <Col>
+                                                    <Button className='btn-escrus block'>
+                                                        LOG IN
+                                                    </Button>
+                                                </Col>
+                                            </Row>
+                                            <Row>
+                                                <Col>
+                                                    <Button
+                                                        className='btn-escrus-inv block mt-3'
+                                                        onClick={
+                                                            this.onSignupClick
                                                         }
-                                                    />
-                                                    <FormFeedback tooltip>
-                                                        {errors.email}
-                                                    </FormFeedback>
-                                                </FormGroup>
-                                            </Col>
-                                        </Row>
-                                        <Row>
-                                            <Col md={12}>
-                                                <FormGroup>
-                                                    <Label for='examplePassword11'>
-                                                        Password{required}
-                                                    </Label>
-                                                    <Input
-                                                        className='form-control-escrus'
-                                                        type='password'
-                                                        name='password'
-                                                        id='examplePassword11'
-                                                        value={
-                                                            this.state.password
-                                                        }
-                                                        onChange={this.onChange}
-                                                        invalid={
-                                                            !isEmpty(
-                                                                errors.password
-                                                            )
-                                                        }
-                                                    />
-                                                    <FormFeedback tooltip>
-                                                        {errors.password}
-                                                    </FormFeedback>
-                                                </FormGroup>
-                                            </Col>
-                                        </Row>
-                                        <FormGroup row>
-                                            <Col>
-                                                <Button className='btn-escrus block'>
-                                                    LOG IN
-                                                </Button>
-                                            </Col>
-                                        </FormGroup>
-                                        {/* <div className='d-flex justify-content-center'>
-                                            <Link to='/forget'>
-                                                forget password ?
-                                            </Link>
-                                        </div> */}
-                                        <FormGroup row>
-                                            <Col>
-                                                <Button
-                                                    className='btn-escrus-inv block'
-                                                    onClick={this.onSignupClick}
-                                                >
-                                                    SIGN UP
-                                                </Button>
-                                            </Col>
-                                        </FormGroup>
-                                    </Form>
-                                </CardBody>
-                            </Card>
-                        </Col>
-                        <Col md={2}></Col>
-                    </Row>
+                                                    >
+                                                        SIGN UP
+                                                    </Button>
+                                                </Col>
+                                            </Row>
+                                        </Form>
+                                    </CardBody>
+                                </Card>
+                            </Col>
+                            <Col md={2}></Col>
+                        </Row>
+                    </div>
                 </ReactCSSTransitionGroup>
             </Fragment>
         );
