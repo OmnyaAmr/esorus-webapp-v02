@@ -174,25 +174,33 @@ class UserBox extends React.Component {
                                         className='btn custom-signin-btn mt-2 ml-4'
                                         to='/dashboard/buyers'
                                     >
-                                        Professional Buyers
+                                        <button className="btn-navBar">
+                                            Interior designers
+                                        </button>
+
                                     </Link>
                                     <Link
                                         className='btn custom-signin-btn mt-2 ml-4 mr-4'
                                         to='/dashboard/suppliers'
                                     >
-                                        Suppliers
+                                        <button className="btn-navBar">
+                                            Suppliers
+                                        </button>
                                     </Link>
-                                    <img
-                                        src={unknownUser}
-                                        width='25'
-                                        height='25'
-                                        className='mb-2'
-                                    />
+
                                     <Link
                                         className='btn ml-1 custom-signin-btn mt-2'
                                         to='/dashboard/login'
                                     >
-                                        Sign In
+                                        <button className="btn-navBar">
+                                            <img
+                                                src={unknownUser}
+                                                width='25'
+                                                height='25'
+                                                className='mb-2'
+                                            />
+                                            Sign In
+                                        </button>
                                     </Link>
                                 </div>
                             </div>

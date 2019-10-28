@@ -76,9 +76,10 @@ class Home extends Component {
                         >
                             <Row className='slogan-position ml-4'>
                                 <Col>
-                                    <h1 className='slogan-text'>Interior</h1>
-                                    <h1 className='slogan-text'>Sourcing</h1>
-                                    <h1 className='slogan-text'>Made Easy</h1>
+                                    <h2 className='slogan-text'>
+                                        Interior Sourcing
+                                    </h2>
+                                    <h2 className='slogan-text'>Made Easy</h2>
                                     <div className='d-flex justify-content-center mt-4'>
                                         <input
                                             className='form-control-escrus form-control-lg-escrus ml-1'
@@ -239,13 +240,12 @@ class Home extends Component {
                                 <Col md={12}>
                                     <div className='item'>
                                         <div className='testimony-wrap p-4 pb-5 text-center'>
-                                            <div className='user-img mb-5'>
-                                                <span className='quote d-flex align-items-center justify-content-center'>
-                                                    <i className='icon-quote-left'></i>
-                                                </span>
-                                            </div>
+                                            <img
+                                                className='user-img mb-5'
+                                                src={require('../../assets/utils/images/person_1.jpeg')}
+                                            ></img>
                                             <div className='text'>
-                                                <p className='mb-5 review-text'>
+                                                <p className='mb-5'>
                                                     We have been working with
                                                     ESORUS for a few months now
                                                     and growing from strength to
