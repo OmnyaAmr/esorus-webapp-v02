@@ -382,7 +382,7 @@ class Request extends Component {
                                     </FormGroup>
                                     <FormGroup row>
                                         <Button
-                                            className='btn-escrus block'
+                                            className='btn-escrus full-width block'
                                             onClick={this.onSubmit}
                                         >
                                             SUBMIT REQUEST{' '}
@@ -390,7 +390,7 @@ class Request extends Component {
                                     </FormGroup>
                                     <FormGroup row>
                                         <Button
-                                            className='btn-escrus-inv block'
+                                            className='btn-escrus-inv full-width block'
                                             onClick={this.onClick}
                                         >
                                             Cancel{' '}

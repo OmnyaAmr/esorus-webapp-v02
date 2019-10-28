@@ -36,7 +36,7 @@ class Buyers extends Component {
                         <input
                             type='button'
                             className='btn-escrus mt-2'
-                            value='Join Now'
+                            value='Source Now'
                             onClick={this.onClick}
                         />
                         <Row className='pt-4 pb-5'>

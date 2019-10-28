@@ -156,7 +156,7 @@ class Login extends React.Component {
                                             </Row>
                                             <Row>
                                                 <Col>
-                                                    <Button className='btn-escrus block'>
+                                                    <Button className='btn-escrus block full-width'>
                                                         LOG IN
                                                     </Button>
                                                 </Col>
@@ -164,7 +164,7 @@ class Login extends React.Component {
                                             <Row>
                                                 <Col>
                                                     <Button
-                                                        className='btn-escrus-inv block mt-3'
+                                                        className='btn-escrus-inv block full-width mt-3'
                                                         onClick={
                                                             this.onSignupClick
                                                         }
