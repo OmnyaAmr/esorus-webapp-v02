@@ -8145,11 +8145,11 @@ button,
     box-shadow: 7px 0 60px rgba(0, 0, 0, 0.05); }
 
 .app-sidebar__heading {
-  text-transform: uppercase;
   font-size: 0.8rem;
   margin: 0.75rem 0;
+  left:1.0rem;
   font-weight: bold;
-  color: #033C73;
+  color: black;
   white-space: nowrap;
   position: relative; }
 
@@ -12406,7 +12406,7 @@ body {
 
 .slogan-position{
   position: absolute;
-  top:20%;
+  top:28%;
   left: 4%;
 }
 
@@ -12422,19 +12422,25 @@ body {
   font-weight: 800;
   font-family: 'Poppins-Bold', sans-serif;
   color: #ecc503;
+  font-size: 55px;
 }
 
 .slogan3-text{
-  font-weight: 400;
   font-family: 'Poppins-Bold', sans-serif;
-  color: #fff;
   line-height: 1.1;
   font-size: 20px;
   margin-top: 20px;
   margin-left: 5px;
   margin-right: 5px;
+  font-weight: 100;
+  font-size: 40px;
+  color: #fff;
+  display: block; 
 }
-
+.text-center.slogan4-text{
+font-weight: 500;
+font-family: 'Poppins', sans-serif;
+}
 
 .center-height{
   position: absolute;
@@ -12449,6 +12455,7 @@ body {
 .btn-escrus-inv{
   display: inline-block;
   font-weight: 500;
+  width:100%;
   font-size: 1.2rem;
   border-radius: 0rem;
   font-family: 'Poppins-Bold', sans-serif;
@@ -12463,13 +12470,23 @@ body {
   background: rgb(255, 255, 255);
   border-color: #ecc503; }
 
+  .btn-escrus.full-width{
+    width: 100%;
+    font-weight: 400;
+}  
+.btn-escrus-inv.full-width{
+  width: 100%;
+  font-weight: 400;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.0rem;
+}  
 .btn-escrus {
   border: 0;
   background: #ecc503;
   box-shadow: none;
   border-radius: 0px;
-  height: 45px;
-  width: 90px;
+  height: 48px;
+  width: 94px ; 
   font-family: 'Poppins', sans-serif;
   font-weight: 600; }
   .btn-escrus:hover {
@@ -12539,7 +12556,7 @@ body {
               width:100%;
               }
               .review-background-escrus {
-                background-color: #ecc503;
+                background-color: #ffd000;
                 background-size: cover;
                 background-attachment: fixed;
                 height: 150%;
@@ -12607,6 +12624,9 @@ body {
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   border-radius: 50%;
+}
+.testimony-section{
+  background-color: #ecc503;
 }
 .testimony-wrap .user-img .quote i {
   color: #ecc503;
@@ -12775,7 +12795,7 @@ body {
 }
 
 .bm-morph-shape {
-  fill: #373a47;
+  fill: #a0a0a0;
 }
 
 .bm-item-list {

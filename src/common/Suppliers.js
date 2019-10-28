@@ -51,6 +51,7 @@ class Suppliers extends Component {
                                         className='form-control-escrus form-control-lg-escrus'
                                         onChange={this.onChange}
                                         value={this.state.email}
+                                        placeholder="Enter your Email here"
                                         name='email'
                                     />
                                     <input

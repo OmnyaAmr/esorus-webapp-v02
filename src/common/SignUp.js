@@ -160,7 +160,7 @@ class SignUp extends React.Component {
                             <Col>
                                 <Card className='container'>
                                     <CardBody>
-                                        <CardTitle className='text-center'>
+                                        <CardTitle className='text-center slogan4-text'>
                                             Sign up to esorus: become a
                                             community member
                                         </CardTitle>
@@ -250,7 +250,7 @@ class SignUp extends React.Component {
                                             </FormGroup>
                                             <FormGroup row>
                                                 <Label for='role'>
-                                                    Professional role{required}
+                                                    Professional Role{required}
                                                 </Label>
                                                 <select
                                                     name='role'
@@ -284,7 +284,7 @@ class SignUp extends React.Component {
 
                                             <FormGroup row>
                                                 <Button
-                                                    className='btn-escrus block'
+                                                    className='btn-escrus block full-width'
                                                     disabled={
                                                         !this.state.agreed
                                                     }
@@ -294,7 +294,7 @@ class SignUp extends React.Component {
                                             </FormGroup>
                                             <FormGroup row>
                                                 <Button
-                                                    className='btn-escrus-inv block'
+                                                    className='btn-escrus-inv block full-width'
                                                     onClick={this.onCancelClick}
                                                 >
                                                     Cancel

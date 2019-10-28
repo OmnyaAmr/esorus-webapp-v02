@@ -85,6 +85,7 @@ class Home extends Component {
                                             className='form-control-escrus form-control-lg-escrus ml-1'
                                             onChange={this.onChange}
                                             value={this.state.email}
+                                            placeholder="Enter your Email here"
                                             name='email'
                                         />
                                         <input
@@ -100,14 +101,14 @@ class Home extends Component {
                     </PerfectScrollbar>
                 </div>
                 <div className='mt-5 ml-5'>
-                    <h1 className='slogan2-text ml-4'>
+                    <h1 className='slogan2-text ml-5'>
                         We are <strong>reinventing</strong>
                     </h1>
-                    <h1 className='slogan2-text ml-4'>
+                    <h1 className='slogan2-text ml-5'>
                         the interior sourcing process!
                     </h1>
                 </div>
-                <div className='review-background-escrus' id='about'>
+                <div className='review-background-escrus'  id='about'>
                     <div className='handsome-background-escrus ' id='parallex'>
                         <div className='align-self-center pt-lg-5'>
                             {this.state.count && (
@@ -122,9 +123,9 @@ class Home extends Component {
                                                 value={1000}
                                                 style={{
                                                     transition: '0.8s ease-out',
-                                                    fontSize: 55,
+                                                    fontSize: '35px',
                                                     color: 'white',
-                                                    fontWeight: '500',
+                                                    fontWeight: '100',
                                                     transitionProperty:
                                                         'background-color, color, opacity'
                                                 }}
@@ -148,9 +149,9 @@ class Home extends Component {
                                                 value={35}
                                                 style={{
                                                     transition: '0.8s ease-out',
-                                                    fontSize: 55,
+                                                    fontSize: '35px',
                                                     color: 'white',
-                                                    fontWeight: '500',
+                                                    fontWeight: '100',
                                                     transitionProperty:
                                                         'background-color, color, opacity'
                                                 }}
@@ -174,9 +175,9 @@ class Home extends Component {
                                                 value={10}
                                                 style={{
                                                     transition: '0.8s ease-out',
-                                                    fontSize: 55,
+                                                    fontSize: '35px',
                                                     color: 'white',
-                                                    fontWeight: '500',
+                                                    fontWeight: '100',
                                                     transitionProperty:
                                                         'background-color, color, opacity'
                                                 }}
@@ -200,9 +201,9 @@ class Home extends Component {
                                                 value={55}
                                                 style={{
                                                     transition: '0.8s ease-out',
-                                                    fontSize: 55,
+                                                    fontSize: '35px',
                                                     color: 'white',
-                                                    fontWeight: '500',
+                                                    fontWeight: '100',
                                                     transitionProperty:
                                                         'background-color, color, opacity'
                                                 }}
@@ -227,7 +228,7 @@ class Home extends Component {
                         </div>
                     </div>
 
-                    <Container>
+                    <Container >
                         <Row className='pt-lg-4'>
                             <Col className='text-center' md={12}>
                                 <h2 className='mb-4 heading-text'>
@@ -235,10 +236,10 @@ class Home extends Component {
                                 </h2>
                             </Col>
                         </Row>
-                        <div className='mb-lg-5 pb-lg-5'>
+                        <div className='mb-lg-5 pb-lg-5' >
                             <Row>
                                 <Col md={12}>
-                                    <div className='item'>
+                                    <div className='item' >
                                         <div className='testimony-wrap p-4 pb-5 text-center'>
                                             <img
                                                 className='user-img mb-5'

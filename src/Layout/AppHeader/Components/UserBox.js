@@ -175,7 +175,7 @@ class UserBox extends React.Component {
                                         to='/dashboard/buyers'
                                     >
                                         <button className="btn-navBar">
-                                            Interior designers
+                                        Professional Buyers
                                         </button>
 
                                     </Link>
