@@ -17,6 +17,9 @@ import {
     FormFeedback,
     Form
 } from 'reactstrap';
+import { connect } from 'react-redux';
+import { requestForm } from '../actions/requestActions';
+import Spinner from './Spinner';
 
 class Request extends Component {
     constructor() {
@@ -26,8 +29,8 @@ class Request extends Component {
             role: '',
             projectType: '',
             projectPhase: '',
-            lookingFor: '',
-            fileLink: '',
+            typeOfWorkNeeded: '',
+            uploadedBOQ: '',
             details: '',
             boq: '',
             deliveryDate: '',
@@ -41,11 +44,17 @@ class Request extends Component {
         this.onSubmit = this.onSubmit.bind(this);
         this.onCheck = this.onCheck.bind(this);
     }
+    componentWillReceiveProps(nextProps) {
+        if (nextProps.errors) {
+            this.setState({ errors: nextProps.errors });
+        }
+    }
     onCheck(e) {
         this.setState({ [e.target.name]: e.target.value });
     }
     onFileUpload(meta) {
         console.log('PARENT: ', meta);
+        this.setState({ file: meta });
     }
     onChange(e) {
         this.setState({ [e.target.name]: e.target.value });
@@ -53,16 +62,20 @@ class Request extends Component {
     onSubmit(e) {
         e.preventDefault();
         let request = this.state;
-        console.log('REq: ', request);
+        this.props.requestForm(request);
     }
     onClick(e) {
         e.preventDefault();
+        this.state = {};
         this.props.history.push('/dashboard/home');
     }
     handleUpload() {
         console.log('HANDLE UPLOAD');
     }
     render() {
+        //HANDLE loading
+        let { loading } = this.props.loading;
+        if (loading) return <Spinner />;
         //HANDLE errors
         let { errors } = this.state;
         let required = <small className='required'>*</small>;
@@ -127,10 +140,10 @@ class Request extends Component {
                                             <option value='consultant'>
                                                 Consultant
                                             </option>
-                                            <option value='project owner'>
+                                            <option value='owner'>
                                                 Project owner
                                             </option>
-                                            <option value='freelance interior designer/architect'>
+                                            <option value='designer_architect'>
                                                 Freelancer intrior
                                                 designer/Architect
                                             </option>
@@ -164,26 +177,26 @@ class Request extends Component {
                                             <option value='residential'>
                                                 Residential
                                             </option>
-                                            <option value='restaurant/cafe'>
+                                            <option value='restaurant'>
                                                 Restaurant/Cafe
                                             </option>
-                                            <option value='retial shop'>
-                                                Retial shop/
+                                            <option value='retail_shop'>
+                                                Retial shop
                                             </option>
                                             <option value='hotel'>Hotel</option>
-                                            <option value='office'>
+                                            <option value='office_space'>
                                                 Office space
                                             </option>
-                                            <option value='spa/beauty salon'>
+                                            <option value='beauty_salon'>
                                                 Spa/Beauty salon
                                             </option>
-                                            <option value='hospital/clinic'>
+                                            <option value='hospital'>
                                                 Hospital/Clinic
                                             </option>
-                                            <option value='school/nursery/education center'>
+                                            <option value='education_center'>
                                                 School/Nursery/Education center
                                             </option>
-                                            <option value='sport/gym/fitness center'>
+                                            <option value='sport'>
                                                 Sport/Gym/Fitness center
                                             </option>
                                             <option value='landscape'>
@@ -216,16 +229,16 @@ class Request extends Component {
                                             <option value=''>
                                                 Select your project phase ...
                                             </option>
-                                            <option value='still looking for inspiration'>
+                                            <option value='inspiration'>
                                                 Still looking for inspirations
                                             </option>
-                                            <option value='design phase'>
+                                            <option value='design_phase'>
                                                 Design phase
                                             </option>
-                                            <option value='technical phase'>
+                                            <option value='technical_phase'>
                                                 Technical phase
                                             </option>
-                                            <option value='budget estimation'>
+                                            <option value='budget_estimation'>
                                                 budget estimation
                                             </option>
                                             <option value='execution'>
@@ -239,21 +252,21 @@ class Request extends Component {
                                         )}
                                     </FormGroup>
                                     <FormGroup row>
-                                        <Label for='lookingFor'>
+                                        <Label for='typeOfWorkNeeded'>
                                             what are you looking for ?{required}
                                         </Label>
                                         <select
-                                            id='lookingFor'
-                                            name='lookingFor'
+                                            id='typeOfWorkNeeded'
+                                            name='typeOfWorkNeeded'
                                             className={classnames(
                                                 'custom-select custom-select-md form-control-escrus',
                                                 {
                                                     'is-invalid':
-                                                        errors.lookingFor
+                                                        errors.typeOfWorkNeeded
                                                 }
                                             )}
                                             onChange={this.onChange}
-                                            value={this.state.lookingFor}
+                                            value={this.state.typeOfWorkNeeded}
                                         >
                                             <option value=''>
                                                 Select what you need ...
@@ -271,9 +284,9 @@ class Request extends Component {
                                                 Fabrics
                                             </option>
                                         </select>
-                                        {errors.lookingFor && (
+                                        {errors.typeOfWorkNeeded && (
                                             <FormFeedback>
-                                                {errors.lookingFor}
+                                                {errors.typeOfWorkNeeded}
                                             </FormFeedback>
                                         )}
                                     </FormGroup>
@@ -301,43 +314,71 @@ class Request extends Component {
                                         />
                                     </FormGroup>
                                     <FormGroup row>
-                                        <Label className='block'>
-                                            Do you have a BoQ?{required}
-                                        </Label>
-                                        <div className='form-check block'>
-                                            <input
-                                                type='radio'
-                                                className='form-check-input'
-                                                id='boq'
-                                                name='boq'
-                                                value='yes'
-                                                onChange={this.onCheck}
-                                            />
-                                            <Label>Yes</Label>
+                                        <div
+                                            className={classnames(
+                                                'block border',
+                                                {
+                                                    'is-invalid': isEmpty(
+                                                        errors.boq
+                                                    )
+                                                }
+                                            )}
+                                        >
+                                            <Label className='block'>
+                                                Do you have a BoQ?{required}
+                                            </Label>
+                                            <div className='form-check block'>
+                                                <input
+                                                    type='radio'
+                                                    className='form-check-input'
+                                                    id='boq'
+                                                    name='boq'
+                                                    value='yes'
+                                                    onChange={this.onCheck}
+                                                />
+                                                <Label>Yes</Label>
+                                            </div>
+                                            <div className='form-check block'>
+                                                <input
+                                                    type='radio'
+                                                    className='form-check-input'
+                                                    id='boq'
+                                                    name='boq'
+                                                    value='no'
+                                                    onChange={this.onCheck}
+                                                />
+                                                <Label>No</Label>
+                                            </div>
                                         </div>
-                                        <div className='form-check block'>
-                                            <input
-                                                type='radio'
-                                                className='form-check-input'
-                                                id='boq'
-                                                name='boq'
-                                                value='no'
-                                                onChange={this.onCheck}
-                                            />
-                                            <Label>No</Label>
-                                        </div>
+                                        {errors.boq && (
+                                            <FormFeedback>
+                                                {errors.boq}
+                                            </FormFeedback>
+                                        )}
                                     </FormGroup>
 
                                     <FormGroup row>
-                                        <Label>Date</Label>
+                                        <Label>Date{required}</Label>
                                         <Input
                                             type='date'
-                                            className='form-control-escrus'
+                                            className={classnames(
+                                                'form-control-escrus',
+                                                {
+                                                    'is-invalid': !isEmpty(
+                                                        errors.deliveryDate
+                                                    )
+                                                }
+                                            )}
                                             name='deliveryDate'
                                             id='deliveryDate'
                                             value={this.state.deliveryDate}
                                             onChange={this.onChange}
                                         />
+                                        {errors.deliveryDate && (
+                                            <FormFeedback>
+                                                {errors.deliveryDate}
+                                            </FormFeedback>
+                                        )}
                                     </FormGroup>
                                     <FormGroup row>
                                         <Button
@@ -364,5 +405,11 @@ class Request extends Component {
         );
     }
 }
-
-export default Request;
+const mapStateToProps = state => ({
+    loading: state.loading,
+    errors: state.errors
+});
+export default connect(
+    mapStateToProps,
+    { requestForm }
+)(Request);

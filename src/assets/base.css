@@ -12185,14 +12185,14 @@ body {
     .app-header .app-header__content {
       visibility: hidden;
       opacity: 0;
-      box-shadow: 0 0.46875rem 2.1875rem rgba(0, 0, 0, 0.5), 0 0.9375rem 1.40625rem rgba(0, 0, 0, 0.5), 0 0.25rem 0.53125rem rgba(0, 0, 0, 0.5), 0 0.125rem 0.1875rem rgba(0, 0, 0, 0.5);
+      box-shadow: 0 0.25rem 0.53125rem rgba(0, 0, 0, 0.5), 0 0.125rem 0.1875rem rgba(0, 0, 0, 0.5);
       position: absolute;
-      left: 5%;
-      width: 90%;
+      left: 1;
+      width: 95%;
       top: 0;
       transition: all .2s;
       background-color: rgba(255, 255, 255, 0.1);
-      border-radius: 50px;
+      border-radius: 0px;
       padding: 0 10px;
       overflow: hidden; }
       .app-header .app-header__content .header-btn-lg {
@@ -12205,6 +12205,7 @@ body {
       .app-header .app-header__content .app-header-left .nav {
         display: none; }
       .app-header .app-header__content.header-mobile-open {
+        margin-left: 4% !important;
         visibility: visible;
         opacity: 1;
         background-color: rgba(255, 255, 255, 0.1);
@@ -12548,7 +12549,6 @@ body {
                 }
 
   .left-side {
-    margin-top: 60px;
     height: 100%;
     width: 4%;
     background-color: #ecc503;
@@ -12558,7 +12558,7 @@ body {
 }
 
 .fix-shadow{
-  box-shadow: 0 0.46875rem 0.6875rem rgba(0, 0, 0, 0.5), 0 0.05375rem 0.90625rem rgba(77, 77, 77, 0.5), 0 0.25rem 0.53125rem rgba(94, 94, 94, 0.5), 0 0.125rem 0.1875rem rgba(51, 51, 50, 0.5)
+  box-shadow: 0 0.125rem 0.1875rem rgba(51, 51, 50, 0.5)
 }
 
 .custom-signin-btn {
@@ -12761,16 +12761,15 @@ body {
 }
 
 .bm-burger-button {
-  position: fixed;
-  width: 36px;
-  height: 90%;
-  left: 10px;
-  top: 36px;
+  position: absolute;
+  top: 40%;
+  height: 36px;
+  align-self: center;
 }
 
 .bm-menu {
   background: #ecc503;
-  padding: 2.7em 1.5em 0;
+  padding: 2.7em 0.9em 0;
   font-size: 1.15em;
 }
 
@@ -12813,4 +12812,10 @@ body {
   background-color: transparent;
   color: #ecc503;
 
+}
+
+.header-position{
+  margin-left: 4% !important;
+  margin-right: 1px !important;
+  width: 88% !important;
 }

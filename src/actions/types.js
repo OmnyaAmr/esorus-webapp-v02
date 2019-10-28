@@ -18,3 +18,8 @@ export const USER_PREV = 'user_prev';
 export const DROP_PREV = 'drop_prev';
 export const COMPLETION_REQUIRED = 'COMPLETION REQUIRED';
 export const CONFIRMATION_REQUIRED = 'CONFIRMATION_REQUIRED';
+
+//ROLES
+
+export const ROLE_PROFESSIONAL_BUYER = 'ROLE_PROFESSIONAL_BUYER';
+export const ROLE_SUPPLIER = 'ROLE_SUPPLIER';

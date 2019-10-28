@@ -20,15 +20,6 @@ import { connect } from 'react-redux';
 import { loginUser } from '../actions/authActions';
 import Spinner from './Spinner';
 
-import {
-    CONFIRMATION_REQUIRED,
-    COMPLETION_REQUIRED,
-    ADMIN_PREV,
-    USER_PREV,
-    MOD_PREV,
-    STUDENT_PREV
-} from '../actions/types';
-
 class Login extends React.Component {
     constructor() {
         super();
@@ -40,39 +31,20 @@ class Login extends React.Component {
         this.onSubmit = this.onSubmit.bind(this);
         this.onChange = this.onChange.bind(this);
         this.onSignupClick = this.onSignupClick.bind(this);
-        this.onForgetPasswordClick = this.onForgetPasswordClick.bind(this);
     }
     componentWillMount() {
         if (this.props.auth.isAuthenticated) {
-            let { prev } = this.props;
-            if (prev === ADMIN_PREV || prev === MOD_PREV) {
-                this.props.history.push('/dashboard/attendance');
-            } else if (prev === COMPLETION_REQUIRED) {
-                this.props.history.push('/dashboard/completesignup');
-            } else if (prev === CONFIRMATION_REQUIRED) {
-                this.props.history.push('/dashboard/confirm');
-            } else if (prev === USER_PREV) {
-                this.props.history.push('/dashboard/application');
-            } else if (prev === STUDENT_PREV) {
-                this.props.history.push('/dashboard/application');
-            } else {
-                this.props.history.push('/dashboard/aboutus');
-            }
+            this.props.history.push('/dashboard/home');
         }
     }
     onSignupClick(e) {
         e.preventDefault();
         this.props.history.push('/dashboard/signup');
     }
-    onForgetPasswordClick(e) {
-        e.preventDefault();
-        console.log('forget password');
-    }
 
     componentWillReceiveProps(nextProps) {
-        if (nextProps.prev) {
-            let { prev } = nextProps;
-            //HANDLE NAVIGATION PREV
+        if (nextProps.errors) {
+            this.setState({ errors: nextProps.errors });
         }
     }
 
@@ -146,7 +118,7 @@ class Login extends React.Component {
                                                                 )
                                                             }
                                                         />
-                                                        <FormFeedback tooltip>
+                                                        <FormFeedback>
                                                             {errors.email}
                                                         </FormFeedback>
                                                     </FormGroup>
@@ -176,7 +148,7 @@ class Login extends React.Component {
                                                                 )
                                                             }
                                                         />
-                                                        <FormFeedback tooltip>
+                                                        <FormFeedback>
                                                             {errors.password}
                                                         </FormFeedback>
                                                     </FormGroup>

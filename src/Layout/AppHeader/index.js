@@ -32,9 +32,13 @@ class Header extends React.Component {
                     transitionLeave={false}
                 >
                     <div
-                        className={cx('app-header__content', 'fix-shadow', {
-                            'header-mobile-open': enableMobileMenuSmall
-                        })}
+                        className={cx(
+                            'app-header__content header-position',
+                            'fix-shadow',
+                            {
+                                'header-mobile-open': enableMobileMenuSmall
+                            }
+                        )}
                     >
                         <div className='app-header-left'>
                             <Link to='/dashboard/home'>

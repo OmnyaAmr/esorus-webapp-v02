@@ -12,6 +12,7 @@ import Suppliers from '../Suppliers';
 import Buyers from '../Buyers';
 import Request from '../Request';
 import AboutUs from '../AboutUs';
+import Activition from '../Activition';
 //params ALL THE APP ROUTES WILL BE HERE
 
 // Layout
@@ -23,7 +24,7 @@ import Footer from '../Footer';
 const Dashboards = ({ match }) => (
     <Fragment>
         <AppHeader />
-        <div className='left-side' onClick={() => console.log('Div Clicked')}>
+        <div className='left-side'>
             <Sidebar />
         </div>
         <Route path={`${match.url}/home`} component={Home} />
@@ -33,7 +34,8 @@ const Dashboards = ({ match }) => (
         <Route path={`${match.url}/buyers`} component={Buyers} />
         <Route path={`${match.url}/request`} component={Request} />
         <Route path={`${match.url}/about`} component={AboutUs} />
-        <Footer />
+        <Route path={`${match.url}/activition`} component={Activition} />
+        {/* <Footer /> */}
     </Fragment>
 );
 

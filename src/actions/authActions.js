@@ -15,21 +15,48 @@ import setAuthToken from '../utils/setAuthToken';
 import jwt_decode from 'jwt-decode';
 import { setLoading, setLoaded } from './loadActions';
 
+//HANDLE validations
+import validateSignupInput from '../validation/SigupValidation';
+import validateLoginInput from '../validation/LoginValidation';
+
 export const SignUpUser = (userData, history) => dispatch => {
-    //LOADING
+    dispatch({ type: FLUSH_ERRORS });
+    let {
+        companyName,
+        companyDesc,
+        url,
+        name,
+        email,
+        role,
+        password,
+        password2
+    } = userData;
+
+    let newUser = {};
+    newUser.authorities = [];
+
+    let company = {};
+    company.name = companyName;
+    company.description = companyDesc;
+    company.url = url;
+
+    newUser.name = name;
+    newUser.email = email;
+    newUser.authorities.push(role);
+    newUser.company = company;
+    newUser.password = password;
+    newUser.password2 = password2;
+
+    let { isValid, errors } = validateSignupInput(newUser);
+
+    if (!isValid) {
+        dispatch({ type: GET_ERRORS, payload: errors });
+        return;
+    }
+
     dispatch(setLoading());
-    let formdata = new FormData();
-
-    formdata.append('image', userData.image);
-    formdata.set('name', userData.name);
-    formdata.set('email', userData.email);
-    formdata.set('password', userData.password);
-    formdata.set('password2', userData.password2);
-    formdata.set('gender', userData.gender);
-    formdata.set('username', userData.username);
-
     axios
-        .post('/api/user/signup', formdata)
+        .post('/api/register', userData)
         .then(res => {
             if (res) {
                 history.push('/dashboard/login');
@@ -49,6 +76,13 @@ export const SignUpUser = (userData, history) => dispatch => {
 };
 
 export const loginUser = userData => dispatch => {
+    dispatch({ type: FLUSH_ERRORS });
+    let { isValid, errors } = validateLoginInput(userData);
+
+    if (!isValid) {
+        dispatch({ type: GET_ERRORS, payload: errors });
+        return;
+    }
     dispatch(setLoading());
     axios
         .post('/api/user/login', userData)

@@ -18,6 +18,7 @@ import classnames from 'classnames';
 import Spinner from './Spinner';
 import { connect } from 'react-redux';
 import { SignUpUser } from '../actions/authActions';
+import { ROLE_PROFESSIONAL_BUYER, ROLE_SUPPLIER } from '../actions/types';
 
 class SignUp extends React.Component {
     constructor() {
@@ -28,7 +29,6 @@ class SignUp extends React.Component {
             password2: '',
             name: '',
             role: '',
-            agreed: false,
             errors: {},
             companyName: '',
             companyDesc: '',
@@ -54,7 +54,7 @@ class SignUp extends React.Component {
     onSubmit(e) {
         e.preventDefault();
         let newUser = this.state;
-        //this.props.SignUpUser(newUser, this.props.history);
+        this.props.SignUpUser(newUser, this.props.history);
     }
     componentWillMount() {
         if (this.props.location.state) {
@@ -68,7 +68,6 @@ class SignUp extends React.Component {
         }
     }
     render() {
-        console.log(this.state.agreed);
         //HANDLE loading
         let { loading } = this.props.loading;
         if (loading) return <Spinner />;
@@ -80,7 +79,7 @@ class SignUp extends React.Component {
 
         let required = <small className='required'>*</small>;
 
-        if (role === 'buyer') {
+        if (role === ROLE_PROFESSIONAL_BUYER) {
             content = (
                 <FormGroup row>
                     <Label for='name'>Company Name {required}</Label>
@@ -96,7 +95,7 @@ class SignUp extends React.Component {
                     <FormFeedback>{errors.companyName}</FormFeedback>
                 </FormGroup>
             );
-        } else if (role === 'supplier') {
+        } else if (role === ROLE_SUPPLIER) {
             content = (
                 <div>
                     <FormGroup row>
@@ -169,7 +168,7 @@ class SignUp extends React.Component {
                                             className='form-esorus m-auto'
                                         >
                                             <FormGroup row>
-                                                <Label for='name'>
+                                                <Label for='firstName'>
                                                     Name{required}
                                                 </Label>
                                                 <Input
@@ -267,10 +266,10 @@ class SignUp extends React.Component {
                                                     <option value=''>
                                                         Select your role ...
                                                     </option>
-                                                    <option value='buyer'>
+                                                    <option value='ROLE_PROFESSIONAL_BUYER'>
                                                         Professional Buyer
                                                     </option>
-                                                    <option value='supplier'>
+                                                    <option value='ROLE_SUPPLIER'>
                                                         Supplier
                                                     </option>
                                                 </select>
@@ -283,12 +282,7 @@ class SignUp extends React.Component {
                                             <div>{content}</div>
 
                                             <FormGroup row>
-                                                <Button
-                                                    className='btn-escrus block'
-                                                    disabled={
-                                                        !this.state.agreed
-                                                    }
-                                                >
+                                                <Button className='btn-escrus block'>
                                                     SIGN UP
                                                 </Button>
                                             </FormGroup>

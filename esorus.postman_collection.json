@@ -1,0 +1,181 @@
+{
+	"info": {
+		"_postman_id": "647543c6-d788-42bd-9c0d-f5323c16354a",
+		"name": "esorus",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/api/register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"authorities\": [\r\n    \"ROLE_PROFESSIONAL_BUYER\"\r\n  ],\r\n  \"email\": \"hesham.osman28@yahoo.com\",\r\n  \"firstName\": \"hesham\",\r\n  \"password\": \"123456\",\r\n  \"company\":{\"name\":\"mycom\"}\r\n}"
+				},
+				"url": {
+					"raw": "https://floating-sands-43700.herokuapp.com/api/register",
+					"protocol": "https",
+					"host": [
+						"floating-sands-43700",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/activate?key=yjdmaMekIHib5Kf5RCE7",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/activate?key=XESCF6NRLU333y4NJpJA",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"activate"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "XESCF6NRLU333y4NJpJA"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/authenticate",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"hesham.osman28@yahoo.com\",\r\n  \"password\": \"123456\",\r\n  \"rememberMe\": true,\r\n  \"username\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/authenticate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"authenticate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/upload-files",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJoZXNoYW0ub3NtYW4yOCIsImF1dGgiOiJST0xFX1BST0ZFU1NJT05BTF9CVVlFUixST0xFX1VTRVIiLCJlbWFpbCI6Imhlc2hhbS5vc21hbjI4QHlhaG9vLmNvbSIsImxhbmciOiJlbiIsImFjdGl2ZSI6dHJ1ZSwiZXhwIjoxNTc0ODE1NzYyfQ.ssWA0NVp6pjFdUP5hMkqmKCycPlhxiM-Nayk6vfZpiL0XZJZKLnWQhkbZp1ZvB-Yr55SAknlnH-6su-g2Cq7yw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/hesham/Downloads/69026736_1880434252060299_4879877133737918464_n.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/upload-files",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"upload-files"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/request-for-supplier",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJoZXNoYW0ub3NtYW4yOCIsImF1dGgiOiJST0xFX1BST0ZFU1NJT05BTF9CVVlFUixST0xFX1VTRVIiLCJlbWFpbCI6Imhlc2hhbS5vc21hbjI4QHlhaG9vLmNvbSIsImxhbmciOiJlbiIsImFjdGl2ZSI6dHJ1ZSwiZXhwIjoxNTc0ODE1NzYyfQ.ssWA0NVp6pjFdUP5hMkqmKCycPlhxiM-Nayk6vfZpiL0XZJZKLnWQhkbZp1ZvB-Yr55SAknlnH-6su-g2Cq7yw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"uploadedPic\": \"1572223807666\",\n\t\"typeOfWorkNeeded\": \"finishing\",\n\t\"projectType\": \"residential\",\n\t\"projectPhase\": \"inspiration\",\n\t\"deliveryDate\": \"2020-10-01\",\n\t\"detailes\": \"dddddddddddddd\",\n\t\"quantity\": \"2\",\n\t\"boq\": false,\n\t\"phoneNumber\": \"123\"\n\t\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/request-for-supplier",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"request-for-supplier"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

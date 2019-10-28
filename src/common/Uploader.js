@@ -9,10 +9,10 @@ class Uploader extends Component {
     // API Request
     getUploadParams = ({ meta }) => {
         console.log('Child: ', meta);
-        return { url: 'API LINK' };
+        return { url: '/api/upload-files' };
     };
 
-    // called every time a file's `status` changes
+    // called every time a file's status changes
     handleChangeStatus = ({ meta, file }, status) => {
         console.log('uploader props', this.props);
         this.props.onUpload(meta);
