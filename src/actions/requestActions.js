@@ -13,5 +13,14 @@ export const requestForm = reqData => dispatch => {
         return;
     }
 
-    //TODO generate axios request here
+    dispatch(setLoading());
+    axios
+        .post('/api/request-for-supplier')
+        .then(res => {
+            dispatch(setLoaded());
+        })
+        .catch(err => {
+            dispatch({ type: GET_ERRORS, payload: err.response.data });
+            dispatch(setLoaded());
+        });
 };

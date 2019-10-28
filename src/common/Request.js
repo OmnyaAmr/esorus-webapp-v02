@@ -314,41 +314,30 @@ class Request extends Component {
                                         />
                                     </FormGroup>
                                     <FormGroup row>
-                                        <div
-                                            className={classnames(
-                                                'block border',
-                                                {
-                                                    'is-invalid': isEmpty(
-                                                        errors.boq
-                                                    )
-                                                }
-                                            )}
-                                        >
-                                            <Label className='block'>
-                                                Do you have a BoQ?{required}
-                                            </Label>
-                                            <div className='form-check block'>
-                                                <input
-                                                    type='radio'
-                                                    className='form-check-input'
-                                                    id='boq'
-                                                    name='boq'
-                                                    value='yes'
-                                                    onChange={this.onCheck}
-                                                />
-                                                <Label>Yes</Label>
-                                            </div>
-                                            <div className='form-check block'>
-                                                <input
-                                                    type='radio'
-                                                    className='form-check-input'
-                                                    id='boq'
-                                                    name='boq'
-                                                    value='no'
-                                                    onChange={this.onCheck}
-                                                />
-                                                <Label>No</Label>
-                                            </div>
+                                        <Label className='block'>
+                                            Do you have a BoQ?{required}
+                                        </Label>
+                                        <div className='form-check block'>
+                                            <input
+                                                type='radio'
+                                                className='form-check-input'
+                                                id='boq'
+                                                name='boq'
+                                                value='yes'
+                                                onChange={this.onCheck}
+                                            />
+                                            <Label>Yes</Label>
+                                        </div>
+                                        <div className='form-check block'>
+                                            <input
+                                                type='radio'
+                                                className='form-check-input'
+                                                id='boq'
+                                                name='boq'
+                                                value='no'
+                                                onChange={this.onCheck}
+                                            />
+                                            <Label>No</Label>
                                         </div>
                                         {errors.boq && (
                                             <FormFeedback>
