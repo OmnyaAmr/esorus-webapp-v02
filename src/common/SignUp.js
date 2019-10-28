@@ -281,27 +281,6 @@ class SignUp extends React.Component {
                                                 )}
                                             </FormGroup>
                                             <div>{content}</div>
-                                            <FormGroup row>
-                                                <div class='form-check'>
-                                                    <input
-                                                        type='checkbox'
-                                                        class='form-check-input'
-                                                        id='agreed'
-                                                        name='agreed'
-                                                        defaultchecked={
-                                                            this.state.agreed
-                                                        }
-                                                        onChange={this.onCheck}
-                                                    />
-                                                    <label
-                                                        className='form-check-label'
-                                                        htmlFor='agreed'
-                                                    >
-                                                        I agree to Terms &
-                                                        Conditions.
-                                                    </label>
-                                                </div>
-                                            </FormGroup>
 
                                             <FormGroup row>
                                                 <Button

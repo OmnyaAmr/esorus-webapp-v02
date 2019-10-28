@@ -29,7 +29,7 @@ class Request extends Component {
             lookingFor: '',
             fileLink: '',
             details: '',
-            BoQ: '',
+            boq: '',
             deliveryDate: '',
             errors: {},
             file: ''
@@ -39,6 +39,10 @@ class Request extends Component {
         this.handleUpload = this.handleUpload.bind(this);
         this.onFileUpload = this.onFileUpload.bind(this);
         this.onSubmit = this.onSubmit.bind(this);
+        this.onCheck = this.onCheck.bind(this);
+    }
+    onCheck(e) {
+        this.setState({ [e.target.name]: e.target.value });
     }
     onFileUpload(meta) {
         console.log('PARENT: ', meta);
@@ -297,9 +301,31 @@ class Request extends Component {
                                         />
                                     </FormGroup>
                                     <FormGroup row>
-                                        <Label>
+                                        <Label className='block'>
                                             Do you have a BoQ?{required}
                                         </Label>
+                                        <div className='form-check block'>
+                                            <input
+                                                type='radio'
+                                                className='form-check-input'
+                                                id='boq'
+                                                name='boq'
+                                                value='yes'
+                                                onChange={this.onCheck}
+                                            />
+                                            <Label>Yes</Label>
+                                        </div>
+                                        <div className='form-check block'>
+                                            <input
+                                                type='radio'
+                                                className='form-check-input'
+                                                id='boq'
+                                                name='boq'
+                                                value='no'
+                                                onChange={this.onCheck}
+                                            />
+                                            <Label>No</Label>
+                                        </div>
                                     </FormGroup>
 
                                     <FormGroup row>
@@ -310,6 +336,7 @@ class Request extends Component {
                                             name='deliveryDate'
                                             id='deliveryDate'
                                             value={this.state.deliveryDate}
+                                            onChange={this.onChange}
                                         />
                                     </FormGroup>
                                     <FormGroup row>
