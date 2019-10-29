@@ -3,7 +3,8 @@ import isEmpty from './is-empty';
 
 const validateReqeustInput = data => {
     let errors = {};
-
+    data.name = !isEmpty(data.name) ? data.name : '';
+    data.quantity = !isEmpty(data.quantity) ? data.quantity : '';
     data.email = !isEmpty(data.email) ? data.email : '';
     data.role = !isEmpty(data.role) ? data.role : '';
     data.projectType = !isEmpty(data.projectType) ? data.projectType : '';
@@ -13,7 +14,9 @@ const validateReqeustInput = data => {
     data.typeOfWorkNeeded = !isEmpty(data.typeOfWorkNeeded)
         ? data.typeOfWorkNeeded
         : '';
-
+    if (Validator.isEmpty(data.name)) {
+        errors.name = 'Name is required';
+    }
     if (Validator.isEmpty(data.email)) {
         errors.email = 'Email required';
     }
@@ -44,6 +47,13 @@ const validateReqeustInput = data => {
     if (Validator.isEmpty(data.boq)) {
         errors.boq = 'BoQ is required';
     }
+
+    if (data.boq === 'false') {
+        if (Validator.isEmpty(data.quantity)) {
+            errors.quantity = 'Quantity is required';
+        }
+    }
+
     return {
         errors,
         isValid: isEmpty(errors)
