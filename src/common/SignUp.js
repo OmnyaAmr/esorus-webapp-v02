@@ -282,7 +282,7 @@ class SignUp extends React.Component {
 
                                             <FormGroup row>
                                                 <Button className='btn-escrus log-in block'>
-                                                    SIGN UP
+                                                    Sign up
                                                 </Button>
                                             </FormGroup>
                                             <FormGroup row>

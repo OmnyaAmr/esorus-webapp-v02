@@ -153,7 +153,7 @@ class Login extends React.Component {
                                             <Row>
                                                 <Col>
                                                     <Button className='btn-escrus block log-in'>
-                                                        LOG IN
+                                                        Log in
                                                     </Button>
                                                 </Col>
                                             </Row>
@@ -165,7 +165,7 @@ class Login extends React.Component {
                                                             this.onSignupClick
                                                         }
                                                     >
-                                                        SIGN UP
+                                                        Sign up
                                                     </Button>
                                                 </Col>
                                             </Row>
