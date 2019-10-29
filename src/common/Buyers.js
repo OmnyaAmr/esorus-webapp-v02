@@ -40,16 +40,16 @@ class Buyers extends Component {
                                 height: '700px'
                             }}
                         >
-                            <Row className='slogan-position ml-4'>
+                            <Row className='slogan-buyer-position ml-4'>
                                 <Col>                            <h2 className="slogan-text">
-                                    FF&E Personal Assistant for Intrior Designers and{' '}
+                                    FF&E Personal Assistant for Interior Designers and{' '}
                                     <br />
                                     Professional Buyers{' '}
                                 </h2>
-                                    <p className='supplier-text'>
-                                        single place to find furniture materials,
+                                    <p className='supplier-text3'>
+                                        A single place to find furniture materials,
                             <br /> get qoutes and purchase from over a 1000{' '}
-                                        <br /> different qualified suppliers{' '}
+                                        <br /> different qualified suppliers.{' '}
                                     </p>
                                 </Col>
 
@@ -62,7 +62,7 @@ class Buyers extends Component {
                             <Col>
                                 <div className="heading-section mb-5 pt-5 pl-md-5">
                                     <div className="pr-md-5 mr-md-5 text-md-left">
-                                        <h2 className="mb-4">How it Works</h2>
+                                        <h2 style={{ color: "black" }} className="mb-4">How it Works</h2>
                                     </div>
                                 </div>
                                 <div className="pr-md-3 pr-lg-5 pl-md-5 mr-md-5 mb-5">
@@ -106,7 +106,7 @@ class Buyers extends Component {
                         </Row>
 
                         <Row>
-                            <Col style={{left:"50px"}}>
+                            <Col style={{ left: "50px" }}>
                                 <p>
                                     We’re just a click away, send us
                                     your request and our FF&E Team
@@ -116,12 +116,13 @@ class Buyers extends Component {
                                     type='button'
                                     className='btn-escrus mt-2'
                                     value='Source Now'
+                                  
                                     onClick={this.onClick}
                                 />
                             </Col>
                         </Row>
                         <Row className='pt-4 pb-5'>
-                            <Col className='supplier-text'>
+                            <Col>
                                 <div className='d-flex justify-content-center mt-4'>
                                     <img
                                         className="ml-1"
@@ -132,11 +133,21 @@ class Buyers extends Component {
                                     />
                                 </div>
                                 <div className='d-flex justify-content-center mt-4'>
-                                    <p className="ml-1">Smart Sourcing</p>
+                                    <p className="ml-1 supplier-text">Smart Sourcing</p>
+                                </div>
+                                <div className='d-flex justify-content-center mt-4'>
+                                    <p className="ml-1 supplier-text2">
+                                        All you need for your
+                                        project
+                                    </p>
+                                </div>
+                                <div className='d-flex justify-content-center mt-4'>
+                                    <p className="text-center ml-1 supplier-text2">is just a
+                                        click away.</p>
                                 </div>
 
                             </Col>
-                            <Col className='supplier-text'>
+                            <Col>
                                 <div className='d-flex justify-content-center mt-4'>
                                     <img
                                         className="ml-1"
@@ -147,10 +158,21 @@ class Buyers extends Component {
                                     />
                                 </div>
                                 <div className='d-flex justify-content-center mt-4'>
-                                    <p className="ml-1">Recommendations</p>
+                                    <p className="ml-1 supplier-text">Recommendations</p>
                                 </div>
+                                <div className='d-flex justify-content-center mt-4'>
+                                    <p className="ml-1 supplier-text2">
+                                        Recommendation for effective materials
+                                    </p>
+                                </div>
+                                <div className='d-flex justify-content-center mt-4'>
+                                    <p className="text-center ml-1 supplier-text2">
+                                        from a wide range of suppliers suppliers
+                                        </p>
+                                </div>
+
                             </Col>
-                            <Col className='supplier-text'>
+                            <Col >
 
                                 <div className='d-flex justify-content-center mt-4'>
                                     <img
@@ -162,11 +184,22 @@ class Buyers extends Component {
                                     />
                                 </div>
                                 <div className='d-flex justify-content-center mt-4'>
-                                    <p className="ml-1">Follow-up</p>
+                                    <p className="ml-1 supplier-text">Follow-up</p>
+                                </div>
+                                <div className='d-flex justify-content-center mt-4'>
+                                    <p className="ml-1  text-center supplier-text2">
+                                        Dedicated support and follow-up ensuring you receive your
+                                         materials within the agreed time frame with the
+                                    </p>
+                                </div>
+                                <div className='d-flex justify-content-center mt-4'>
+                                    <p className="text-center ml-1 supplier-text2">
+                                        supplier.
+                                        </p>
                                 </div>
 
                             </Col>
-                            <Col className='supplier-text'>
+                            <Col >
                                 <div className='d-flex justify-content-center mt-4'>
                                     <img
                                         className="ml-1"
@@ -177,7 +210,13 @@ class Buyers extends Component {
                                     />
                                 </div>
                                 <div className='d-flex justify-content-center mt-4'>
-                                    <p className="ml-1">Best Pricing</p>
+                                    <p className="ml-1 supplier-text">Best Pricing</p>
+                                </div>
+                                <div className='d-flex justify-content-center mt-4'>
+                                    <p className="ml-1  text-center supplier-text2">
+                                    We make sure you get the best possible price 
+                                    in the market, with upto 45% additional discount.
+                                    </p>
                                 </div>
                             </Col>
                         </Row>

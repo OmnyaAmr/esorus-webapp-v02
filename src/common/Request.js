@@ -92,7 +92,7 @@ class Request extends Component {
                     <div className='app-main-enhanced'>
                         <Card className='container'>
                             <CardBody>
-                                <CardTitle className='text-center'>
+                                <CardTitle className='text-center slogan4-text'>
                                     Request Form
                                 </CardTitle>
                                 <Form
@@ -371,15 +371,15 @@ class Request extends Component {
                                     </FormGroup>
                                     <FormGroup row>
                                         <Button
-                                            className='btn-escrus full-width block'
+                                            className='btn-escrus log-in block'
                                             onClick={this.onSubmit}
                                         >
-                                            SUBMIT REQUEST{' '}
+                                            Submit Request{' '}
                                         </Button>
                                     </FormGroup>
                                     <FormGroup row>
                                         <Button
-                                            className='btn-escrus-inv full-width block'
+                                            className='btn-escrus-inv log-in block'
                                             onClick={this.onClick}
                                         >
                                             Cancel{' '}
