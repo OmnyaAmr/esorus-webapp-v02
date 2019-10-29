@@ -19,7 +19,7 @@ import Activition from '../Activition';
 
 import AppHeader from '../../Layout/AppHeader/';
 import Sidebar from '../Sidebar';
-import Footer from '../Footer';
+import AppFooter from '../../Layout/AppFooter/';
 
 const Dashboards = ({ match }) => (
     <Fragment>
@@ -35,7 +35,7 @@ const Dashboards = ({ match }) => (
         <Route path={`${match.url}/request`} component={Request} />
         <Route path={`${match.url}/about`} component={AboutUs} />
         <Route path={`${match.url}/activition`} component={Activition} />
-        {/* <Footer /> */}
+        <AppFooter />
     </Fragment>
 );
 

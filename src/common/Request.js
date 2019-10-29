@@ -52,7 +52,10 @@ class Request extends Component {
     }
     componentDidMount() {
         let { user, isAuthenticated } = this.props.auth;
-        console.log('here:> ', user, isAuthenticated);
+        if (isAuthenticated) {
+            this.setState({ email: user.email });
+            this.setState({ name: user.name });
+        }
     }
     onCheck(e) {
         this.setState({ [e.target.name]: e.target.value });
@@ -78,8 +81,6 @@ class Request extends Component {
         console.log('HANDLE UPLOAD');
     }
     render() {
-        let { user, isAuthenticated } = this.props.auth;
-
         //HANDLE loading
         let { loading } = this.props.loading;
         if (loading) return <Spinner />;

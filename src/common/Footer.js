@@ -42,7 +42,7 @@ const Footer = () => {
                         <div className='block-23 mb-3'>
                             <ul>
                                 <li>
-                                    <div className='widget-description text-white'>
+                                    <div className='text-white'>
                                         <FontAwesomeIcon icon={faMobileAlt} />
                                         <span className='pl-1'>
                                             +201025035347
@@ -50,7 +50,7 @@ const Footer = () => {
                                     </div>
                                 </li>
                                 <li>
-                                    <div className='widget-description text-white'>
+                                    <div className='text-white'>
                                         <FontAwesomeIcon icon={faPenAlt} />
                                         <span className='pl-1'>
                                             admin@esorus.com
