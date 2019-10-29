@@ -35,7 +35,8 @@ class Request extends Component {
             boq: '',
             deliveryDate: '',
             errors: {},
-            file: ''
+            file: '',
+            name: ''
         };
         this.onClick = this.onClick.bind(this);
         this.onChange = this.onChange.bind(this);
@@ -48,6 +49,10 @@ class Request extends Component {
         if (nextProps.errors) {
             this.setState({ errors: nextProps.errors });
         }
+    }
+    componentDidMount() {
+        let { user, isAuthenticated } = this.props.auth;
+        console.log('here:> ', user, isAuthenticated);
     }
     onCheck(e) {
         this.setState({ [e.target.name]: e.target.value });
@@ -73,12 +78,36 @@ class Request extends Component {
         console.log('HANDLE UPLOAD');
     }
     render() {
+        let { user, isAuthenticated } = this.props.auth;
+
         //HANDLE loading
         let { loading } = this.props.loading;
         if (loading) return <Spinner />;
         //HANDLE errors
         let { errors } = this.state;
         let required = <small className='required'>*</small>;
+
+        let quantity;
+
+        if (this.state.boq === 'false') {
+            quantity = (
+                <FormGroup row>
+                    <Label for='quantity'>
+                        No problem, just write down the quantity {required}
+                    </Label>
+                    <Input
+                        className='form-control-escrus'
+                        type='quantity'
+                        name='quantity'
+                        id='quantity'
+                        value={this.state.quantity}
+                        onChange={this.onChange}
+                        invalid={!isEmpty(errors.quantity)}
+                    />
+                    <FormFeedback>{errors.quantity}</FormFeedback>
+                </FormGroup>
+            );
+        }
         return (
             <Fragment>
                 <ReactCSSTransitionGroup
@@ -99,6 +128,21 @@ class Request extends Component {
                                     className='form-esorus m-auto'
                                     onSubmit={this.onSubmit}
                                 >
+                                    <FormGroup row>
+                                        <Label for='name'>Name{required}</Label>
+                                        <Input
+                                            className='form-control-escrus'
+                                            type='name'
+                                            name='name'
+                                            id='name'
+                                            value={this.state.name}
+                                            onChange={this.onChange}
+                                            invalid={!isEmpty(errors.name)}
+                                        />
+                                        <FormFeedback>
+                                            {errors.name}
+                                        </FormFeedback>
+                                    </FormGroup>
                                     <FormGroup row>
                                         <Label for='email'>
                                             Email{required}
@@ -323,7 +367,7 @@ class Request extends Component {
                                                 className='form-check-input'
                                                 id='boq'
                                                 name='boq'
-                                                value='yes'
+                                                value={true}
                                                 onChange={this.onCheck}
                                             />
                                             <Label>Yes</Label>
@@ -334,7 +378,7 @@ class Request extends Component {
                                                 className='form-check-input'
                                                 id='boq'
                                                 name='boq'
-                                                value='no'
+                                                value={false}
                                                 onChange={this.onCheck}
                                             />
                                             <Label>No</Label>
@@ -345,6 +389,8 @@ class Request extends Component {
                                             </FormFeedback>
                                         )}
                                     </FormGroup>
+
+                                    {quantity}
 
                                     <FormGroup row>
                                         <Label>Date{required}</Label>
@@ -395,6 +441,7 @@ class Request extends Component {
     }
 }
 const mapStateToProps = state => ({
+    auth: state.auth,
     loading: state.loading,
     errors: state.errors
 });

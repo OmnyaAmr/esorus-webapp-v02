@@ -155,7 +155,6 @@ class SignUp extends React.Component {
                 >
                     <div className='app-main-enhanced'>
                         <Row>
-                            <Col md={2} />
                             <Col>
                                 <Card className='container'>
                                     <CardBody>
@@ -282,7 +281,7 @@ class SignUp extends React.Component {
                                             <div>{content}</div>
 
                                             <FormGroup row>
-                                                <Button className='btn-escrus block'>
+                                                <Button className='btn-escrus block full-width'>
                                                     SIGN UP
                                                 </Button>
                                             </FormGroup>
@@ -298,7 +297,6 @@ class SignUp extends React.Component {
                                     </CardBody>
                                 </Card>
                             </Col>
-                            <Col md={2} />
                         </Row>
                     </div>
                 </ReactCSSTransitionGroup>

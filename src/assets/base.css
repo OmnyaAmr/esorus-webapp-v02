@@ -12568,6 +12568,7 @@ font-family: 'Poppins', sans-serif;
   .left-side {
     height: 100%;
     width: 4%;
+    padding-top: 60px;
     background-color: #ecc503;
     min-width: 45px;
     position: fixed;
@@ -12837,5 +12838,4 @@ font-family: 'Poppins', sans-serif;
 .header-position{
   margin-left: 4% !important;
   margin-right: 1px !important;
-  width: 88% !important;
 }
