@@ -2,6 +2,8 @@ import React, { Component, Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import { Row, Col } from 'reactstrap';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+import { connect } from 'react-redux';
+import PerfectScrollbar from 'react-perfect-scrollbar';
 
 class Suppliers extends Component {
     constructor() {
@@ -26,6 +28,7 @@ class Suppliers extends Component {
     }
 
     render() {
+        let { enableHomeBackground, suppliersBackground } = this.props;
         return (
             <Fragment>
                 <ReactCSSTransitionGroup
@@ -36,37 +39,50 @@ class Suppliers extends Component {
                     transitionEnter={false}
                     transitionLeave={false}
                 >
-                    <div className='app-main-enhanced'>
-                        <h2>esorus for suppliers and manufacturers</h2>
-                        <p className='supplier-text'>
-                            We take your brand around the <br /> World and
-                            expose you to a wide <br />
-                            network of professional buyers.
-                        </p>
-                        <Row className='mb-4'>
-                            <Col>
-                                {' '}
-                                <div className='d-flex justify-content-center mt-4'>
-                                    <input
-                                        className='form-control-escrus form-control-lg-escrus'
-                                        onChange={this.onChange}
-                                        value={this.state.email}
-                                        placeholder="Enter your Email here"
-                                        name='email'
-                                    />
-                                    <input
-                                        type='button'
-                                        className='btn-escrus ml-1'
-                                        value='Join Now'
-                                        onClick={this.onClick}
-                                    />
-                                </div>
-                            </Col>
-                            <Col />
-                        </Row>
+                    <PerfectScrollbar>
 
-                        <Row className='supplier-text pb-lg-5'>
-                            <Col className='' lg={6}>
+                        <div className='app-main-enhanced test'
+                            style={{
+                                backgroundImage: enableHomeBackground
+                                    ? 'url(' + suppliersBackground + ')'
+                                    : null,
+                                height: '650px',
+                                top: "28%"
+
+                            }}>
+                            <h2 className="slogan-text">esorus for Suppliers and Manufacturers</h2>
+                            <p className='supplier-text'>
+                                We take your brand around the <br /> World and
+                            expose you to a wide <br />
+                                network of professional buyers.
+                        </p>
+                            <Row className='mb-4'>
+                                <Col>
+                                    {' '}
+                                    <div className='d-flex justify-content-center mt-4'>
+                                        <input
+                                            className='form-control-escrus form-control-lg-escrus'
+                                            onChange={this.onChange}
+                                            value={this.state.email}
+                                            placeholder="Enter your Email here"
+                                            style={{ fontSize: "15px" }}
+                                            name='email'
+                                        />
+                                        <input
+                                            type='button'
+                                            className='btn-escrus ml-1'
+                                            value='Join Now'
+                                            onClick={this.onClick}
+                                        />
+                                    </div>
+                                </Col>
+                                <Col />
+                            </Row>
+                        </div>
+                    </PerfectScrollbar>
+                    <div className="app-main-enhanced">
+                        <Row className='supplier-text buttom-text pb-lg-5'>
+                            <Col lg={6}>
                                 <p>
                                     Gain access to our <br /> worldwide network{' '}
                                     <br />
@@ -89,4 +105,9 @@ class Suppliers extends Component {
         );
     }
 }
-export default Suppliers;
+const mapStateToProps = state => ({
+    enableHomeBackground: state.ThemeOptions.enableHomeBackground,
+    suppliersBackground: state.ThemeOptions.suppliersBackground
+});
+
+export default connect(mapStateToProps)(Suppliers);

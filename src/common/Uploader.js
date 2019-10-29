@@ -29,7 +29,6 @@ class Uploader extends Component {
                 getUploadParams={this.getUploadParams}
                 onChangeStatus={this.handleChangeStatus}
                 onSubmit={this.handleSubmit}
-                inputContent='Choose a file or drag here'
                 accept='image/*,pdf'
             />
         );

@@ -87,12 +87,14 @@ class Home extends Component {
                                             value={this.state.email}
                                             placeholder="Enter your Email here"
                                             name='email'
+                                            style={{fontSize:"15px"}}
                                         />
                                         <input
                                             type='button'
                                             className='btn-escrus ml-1'
                                             value='Join Now'
                                             onClick={this.onClick}
+                                           
                                         />
                                     </div>
                                 </Col>

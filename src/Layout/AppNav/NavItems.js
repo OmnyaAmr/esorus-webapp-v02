@@ -5,7 +5,7 @@ let aboutUs = {
 };
 
 let account = {
-    icon: 'pe-7s-id',
+    icon: 'pe-7s-user',
     label: 'Account',
     content: [
         {
