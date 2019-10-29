@@ -20,7 +20,7 @@ class AppFooter extends React.Component {
                                     >
                                         <FontAwesomeIcon
                                             icon={faFacebook}
-                                            size='4x'
+                                            size='3x'
                                         />
                                     </a>
                                 </li>
@@ -32,7 +32,7 @@ class AppFooter extends React.Component {
                                     >
                                         <FontAwesomeIcon
                                             icon={faInstagram}
-                                            size='4x'
+                                            size='3x'
                                         />
                                     </a>
                                 </li>

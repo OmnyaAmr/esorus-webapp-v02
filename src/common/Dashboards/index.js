@@ -27,14 +27,18 @@ const Dashboards = ({ match }) => (
         <div className='left-side'>
             <Sidebar />
         </div>
+
         <Route path={`${match.url}/home`} component={Home} />
-        <Route path={`${match.url}/login`} component={Login} />
-        <Route path={`${match.url}/signup`} component={SignUp} />
-        <Route path={`${match.url}/suppliers`} component={Suppliers} />
-        <Route path={`${match.url}/buyers`} component={Buyers} />
-        <Route path={`${match.url}/request`} component={Request} />
+        <div className='container'>
+            <Route path={`${match.url}/login`} component={Login} />
+            <Route path={`${match.url}/signup`} component={SignUp} />
+            <Route path={`${match.url}/suppliers`} component={Suppliers} />
+            <Route path={`${match.url}/buyers`} component={Buyers} />
+            <Route path={`${match.url}/request`} component={Request} />
+        </div>
         <Route path={`${match.url}/about`} component={AboutUs} />
         <Route path={`${match.url}/activition`} component={Activition} />
+
         <AppFooter />
     </Fragment>
 );
