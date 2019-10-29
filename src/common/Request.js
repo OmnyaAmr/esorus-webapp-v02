@@ -35,8 +35,7 @@ class Request extends Component {
             boq: '',
             deliveryDate: '',
             errors: {},
-            file: '',
-            name: ''
+            file: ''
         };
         this.onClick = this.onClick.bind(this);
         this.onChange = this.onChange.bind(this);
@@ -87,28 +86,6 @@ class Request extends Component {
         //HANDLE errors
         let { errors } = this.state;
         let required = <small className='required'>*</small>;
-
-        let quantity;
-
-        if (this.state.boq === 'false') {
-            quantity = (
-                <FormGroup row>
-                    <Label for='quantity'>
-                        No problem, just write down the quantity {required}
-                    </Label>
-                    <Input
-                        className='form-control-escrus'
-                        type='quantity'
-                        name='quantity'
-                        id='quantity'
-                        value={this.state.quantity}
-                        onChange={this.onChange}
-                        invalid={!isEmpty(errors.quantity)}
-                    />
-                    <FormFeedback>{errors.quantity}</FormFeedback>
-                </FormGroup>
-            );
-        }
         return (
             <Fragment>
                 <ReactCSSTransitionGroup
@@ -122,28 +99,13 @@ class Request extends Component {
                     <div className='app-main-enhanced'>
                         <Card className='container'>
                             <CardBody>
-                                <CardTitle className='text-center'>
+                                <CardTitle className='text-center slogan4-text'>
                                     Request Form
                                 </CardTitle>
                                 <Form
                                     className='form-esorus m-auto'
                                     onSubmit={this.onSubmit}
                                 >
-                                    <FormGroup row>
-                                        <Label for='name'>Name{required}</Label>
-                                        <Input
-                                            className='form-control-escrus'
-                                            type='name'
-                                            name='name'
-                                            id='name'
-                                            value={this.state.name}
-                                            onChange={this.onChange}
-                                            invalid={!isEmpty(errors.name)}
-                                        />
-                                        <FormFeedback>
-                                            {errors.name}
-                                        </FormFeedback>
-                                    </FormGroup>
                                     <FormGroup row>
                                         <Label for='email'>
                                             Email{required}
@@ -298,7 +260,7 @@ class Request extends Component {
                                     </FormGroup>
                                     <FormGroup row>
                                         <Label for='typeOfWorkNeeded'>
-                                            what are you looking for ?{required}
+                                            What are you looking for ?{required}
                                         </Label>
                                         <select
                                             id='typeOfWorkNeeded'
@@ -368,7 +330,7 @@ class Request extends Component {
                                                 className='form-check-input'
                                                 id='boq'
                                                 name='boq'
-                                                value={true}
+                                                value='yes'
                                                 onChange={this.onCheck}
                                             />
                                             <Label>Yes</Label>
@@ -379,7 +341,7 @@ class Request extends Component {
                                                 className='form-check-input'
                                                 id='boq'
                                                 name='boq'
-                                                value={false}
+                                                value='no'
                                                 onChange={this.onCheck}
                                             />
                                             <Label>No</Label>
@@ -390,8 +352,6 @@ class Request extends Component {
                                             </FormFeedback>
                                         )}
                                     </FormGroup>
-
-                                    {quantity}
 
                                     <FormGroup row>
                                         <Label>Date{required}</Label>
@@ -418,15 +378,15 @@ class Request extends Component {
                                     </FormGroup>
                                     <FormGroup row>
                                         <Button
-                                            className='btn-escrus full-width block'
+                                            className='btn-escrus log-in block'
                                             onClick={this.onSubmit}
                                         >
-                                            SUBMIT REQUEST{' '}
+                                            Submit Request{' '}
                                         </Button>
                                     </FormGroup>
                                     <FormGroup row>
                                         <Button
-                                            className='btn-escrus-inv full-width block'
+                                            className='btn-escrus-inv log-in block'
                                             onClick={this.onClick}
                                         >
                                             Cancel{' '}
@@ -442,7 +402,6 @@ class Request extends Component {
     }
 }
 const mapStateToProps = state => ({
-    auth: state.auth,
     loading: state.loading,
     errors: state.errors
 });

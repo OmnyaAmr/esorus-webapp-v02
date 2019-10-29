@@ -195,8 +195,8 @@ class UserBox extends React.Component {
                                         <button className="btn-navBar">
                                             <img
                                                 src={unknownUser}
-                                                width='25'
-                                                height='25'
+                                                width='20'
+                                                height='20'
                                                 className='mb-2'
                                             />
                                             Sign In

@@ -1657,7 +1657,7 @@ pre {
   background-color: #212529;
   border-color: #32383e; }
 .table .thead-light th {
-  color: #868e96;
+  color: #a0a0a0;
   background-color: #f8f9fa;
   border-color: #e9ecef; }
 
@@ -7944,7 +7944,7 @@ button,
   align-items: center;
   align-content: center;
   position: relative;
-  z-index: 10;
+  z-index:1;
   transition: all .2s; }
   .app-header.header-shadow {
     box-shadow: 0 0.46875rem 2.1875rem rgba(0, 0, 0, 0.03), 0 0.9375rem 1.40625rem rgba(0, 0, 0, 0.03), 0 0.25rem 0.53125rem rgba(0, 0, 0, 0.05), 0 0.125rem 0.1875rem rgba(0, 0, 0, 0.03); }
@@ -8005,7 +8005,7 @@ button,
   .header-btn-lg .hamburger-inner,
   .header-btn-lg .hamburger-inner::before,
   .header-btn-lg .hamburger-inner::after {
-    background: #868e96; }
+    background: #a0a0a0; }
 
 .app-header.header-text-light .app-header__logo {
   background: rgba(255, 255, 255, 0.1); }
@@ -8193,18 +8193,17 @@ button,
       padding: 0 1.5rem 0 45px;
       position: relative;
       border-radius: 0.25rem;
-      color: #343a40;
+      color: black;
       white-space: nowrap; }
       .vertical-nav-menu .metismenu-container .metismenu-link:hover {
-        background: #d1f3ff;
+        background: #a0a0a0;
         text-decoration: none; }
         .vertical-nav-menu .metismenu-container .metismenu-link:hover i.metismenu-icon {
           opacity: .6; }
         .vertical-nav-menu .metismenu-container .metismenu-link:hover i.metismenu-state-icon {
           opacity: 1; }
       .vertical-nav-menu .metismenu-container .metismenu-link.active {
-        color: #033C73;
-        background: #d1f3ff; }
+        background: #a0a0a0; }
       .vertical-nav-menu .metismenu-container .metismenu-link.has-active-child, .vertical-nav-menu .metismenu-container .metismenu-link.active {
         font-weight: bold; }
     .vertical-nav-menu .metismenu-container i.metismenu-state-icon,
@@ -8235,7 +8234,7 @@ button,
           height: 100%;
           opacity: 1;
           width: 3px;
-          background: #d1f3ff;
+          background: #a0a0a0;
           position: absolute;
           left: 20px;
           top: 0;
@@ -8243,14 +8242,14 @@ button,
         .vertical-nav-menu .metismenu-container .metismenu-container.visible > .metismenu-item > .metismenu-link {
           height: 2.3em;
           line-height: 2.3em;
-          color: #868e96; }
+          color: #a0a0a0; }
           .vertical-nav-menu .metismenu-container .metismenu-container.visible > .metismenu-item > .metismenu-link:hover {
-            color: #033C73; }
+            color: black; }
           .vertical-nav-menu .metismenu-container .metismenu-container.visible > .metismenu-item > .metismenu-link .metismenu-icon {
             display: none; }
           .vertical-nav-menu .metismenu-container .metismenu-container.visible > .metismenu-item > .metismenu-link.active {
-            color: #033C73;
-            background: #d1f3ff; }
+            color: black;
+            background: #a0a0a0; }
       .vertical-nav-menu .metismenu-container .metismenu-container .metismenu-item > .metismenu-link {
         height: 0;
         overflow: hidden; }
@@ -8923,7 +8922,7 @@ button,
   .loader-container small {
     margin: 10px 0 0;
     display: block;
-    color: #868e96;
+    color: #a0a0a0;
     font-weight: normal; }
   .loader-container h3 {
     text-align: center;
@@ -9022,7 +9021,7 @@ Copyright (c) 2015 Daniel Eden
 
 body {
   -webkit-backface-visibility: hidden; }
-  /*##################### CUSTOM ANIMATION #########################*/
+  /*########### CUSTOM ANIMATION #############*/
   
   .animated, .TableAnimation-appear {
     -webkit-animation-duration: calc( 1s );
@@ -9041,7 +9040,7 @@ body {
       -webkit-animation-duration: calc( 1s * 0.75 );
       animation-duration: calc( 1s * 0.75 ); }
   
-  /*########################################################*/
+  /*############################*/
 
 .animated, .TabsAnimation-appear {
   -webkit-animation-duration: calc( 1s );
@@ -9500,7 +9499,7 @@ body {
 .nav-item.nav-item-header {
   text-transform: uppercase;
   font-size: 0.7333333333rem;
-  color: #868e96;
+  color: #a0a0a0;
   font-weight: bold;
   padding: 0.5rem 1rem; }
 .nav-item.nav-item-btn {
@@ -12085,7 +12084,7 @@ body {
     background: #f8f9fa;
     color: #033C73; }
     .font-icon-wrapper:hover p {
-      color: #868e96; }
+      color: #a0a0a0; }
   .font-icon-wrapper i {
     font-size: 1.782rem; }
   .font-icon-wrapper p {
@@ -12414,6 +12413,11 @@ body {
   top:28%;
   left: 4%;
 }
+.slogan-buyer-position{
+  position: absolute;
+  top:20%;
+  left: 4%;
+}
 
 .slogan-text{
   font-weight: 800;
@@ -12431,17 +12435,39 @@ body {
 }
 
 .slogan3-text{
-  font-family: 'Poppins-Bold', sans-serif;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  line-height: 1.1;
+  margin-top: 20px;
+  margin-left: 5px;
+  margin-right: 5px;
+  font-size: 40px;
+  color: #fff;
+  display: block; 
+}
+.slogan5-text{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  line-height: 0;
+  font-size: 20px;
+  margin-top: 20px;
+  margin-left: 5px;
+  margin-right: 5px;
+  color: #fff;
+  display: block; 
+}
+.slogan6-text{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 200;
   line-height: 1.1;
   font-size: 20px;
   margin-top: 20px;
   margin-left: 5px;
   margin-right: 5px;
-  font-weight: 100;
-  font-size: 40px;
   color: #fff;
   display: block; 
 }
+
 .text-center.slogan4-text{
 font-weight: 500;
 font-family: 'Poppins', sans-serif;
@@ -12458,6 +12484,7 @@ font-family: 'Poppins', sans-serif;
 }
 
 .btn-escrus-inv{
+  text-align: center;
   display: inline-block;
   font-weight: 500;
   width:100%;
@@ -12473,25 +12500,28 @@ font-family: 'Poppins', sans-serif;
   color: #ecc503;
   border-radius: 0rem;
   background: rgb(255, 255, 255);
-  border-color: #ecc503; }
+  border-color:rgb(153, 133, 0); }
 
-  .btn-escrus.full-width{
+  .btn-escrus.log-in{
+    font-size: 1.0rem;
     width: 100%;
-    font-weight: 400;
+    font-weight: 500;
+    color:white;
 }  
-.btn-escrus-inv.full-width{
+.btn-escrus-inv.log-in{
   width: 100%;
-  font-weight: 400;
+  font-weight: 500;
   font-family: 'Poppins', sans-serif;
   font-size: 1.0rem;
 }  
 .btn-escrus {
+  text-align: center;
   border: 0;
   background: #ecc503;
   box-shadow: none;
   border-radius: 0px;
   height: 48px;
-  width: 94px ; 
+  width: 98px ; 
   font-family: 'Poppins', sans-serif;
   font-weight: 600; }
   .btn-escrus:hover {
@@ -12561,7 +12591,7 @@ font-family: 'Poppins', sans-serif;
               width:100%;
               }
               .review-background-escrus {
-                background-color: #ffd000;
+                background-color:#ecc503;
                 background-size: cover;
                 background-attachment: fixed;
                 height: 150%;
@@ -12572,7 +12602,6 @@ font-family: 'Poppins', sans-serif;
   .left-side {
     height: 100%;
     width: 4%;
-    padding-top: 60px;
     background-color: #ecc503;
     min-width: 45px;
     position: fixed;
@@ -12765,8 +12794,23 @@ font-family: 'Poppins', sans-serif;
 
 .supplier-text {
     font-size: 20px;
-    font-weight:200;
+    font-weight:400;
     color: #000;
+}
+.supplier-text3 {
+  font-size: 20px;
+  font-weight:100;
+  color: #000;
+}
+.supplier-text2 {
+  font-size: 10;
+  font-weight:100;
+  color: #000;
+  margin-top: -35px;
+}
+.supplier-text.buttom-text {
+  margin-top: -130px;
+
 }
 
 .supplier-heading {
@@ -12812,7 +12856,11 @@ font-family: 'Poppins', sans-serif;
 }
 
 .app-main-enhanced{
-  padding-top:90px;
+    background-size: cover;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-top:15%;
   padding-bottom: 40px;
   padding-left:90px;
 }
@@ -12848,3 +12896,15 @@ font-family: 'Poppins', sans-serif;
   color: #ecc503 ;
 }
 
+.test{
+  top:30%
+}
+
+.heading-section .subheading {
+  font-weight: 600;
+  font-size: 20;
+  display: block;
+  margin-bottom: 0;
+  text-transform: uppercase;
+  
+  color: #fcd307; }

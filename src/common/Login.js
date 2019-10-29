@@ -84,12 +84,8 @@ class Login extends React.Component {
                             <Col md={8}>
                                 <Card className='container'>
                                     <CardBody>
-                                        <CardTitle className='text-center'>
-                                            <img
-                                                src={logo}
-                                                width='200'
-                                                height='40'
-                                            />
+                                        <CardTitle className='text-center slogan4-text'>
+                                            Log in to esorus
                                         </CardTitle>
                                         <Form
                                             onSubmit={this.onSubmit}
@@ -156,20 +152,20 @@ class Login extends React.Component {
                                             </Row>
                                             <Row>
                                                 <Col>
-                                                    <Button className='btn-escrus block full-width'>
-                                                        LOG IN
+                                                    <Button className='btn-escrus block log-in'>
+                                                        Log in
                                                     </Button>
                                                 </Col>
                                             </Row>
                                             <Row>
                                                 <Col>
                                                     <Button
-                                                        className='btn-escrus-inv block full-width mt-3'
+                                                        className='btn-escrus-inv block log-in mt-3'
                                                         onClick={
                                                             this.onSignupClick
                                                         }
                                                     >
-                                                        SIGN UP
+                                                        Sign up
                                                     </Button>
                                                 </Col>
                                             </Row>

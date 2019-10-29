@@ -56,7 +56,7 @@ export const SignUpUser = (userData, history) => dispatch => {
 
     dispatch(setLoading());
     axios
-        .post('/api/register', userData)
+        .post('/api/register', newUser)
         .then(res => {
             if (res) {
                 history.push('/dashboard/login');
@@ -85,18 +85,18 @@ export const loginUser = userData => dispatch => {
     }
     dispatch(setLoading());
     axios
-        .post('/api/user/login', userData)
+        .post('/api/authenticate', userData)
         .then(res => {
             dispatch({ type: FLUSH_ERRORS });
             //* Take the token and store it in Local Storage
-            const { token } = res.data;
-            localStorage.setItem('jwtToken', token);
+            const { id_token } = res.data;
+            localStorage.setItem('jwtToken', id_token);
 
             //* Set Authorization Headers to every Requiest
-            setAuthToken(token);
+            setAuthToken(id_token);
 
             //Decode the token
-            const decoded = jwt_decode(token);
+            const decoded = jwt_decode(id_token);
 
             //Set Current User
             dispatch(setCurrentUser(decoded));

@@ -1,8 +1,12 @@
 import sideBar6 from '../assets/utils/images/sidebar/interior1.jpg';
 import background from '../assets/utils/images/originals/background.png';
+import buyersBackground from '../assets/utils/images/originals/buyersBackground.jpg';
+import suppliersBackground from '../assets/utils/images/originals/suppliersBackground2.jpg';
 
 export const SET_ENABLE_BACKGROUND_IMAGE =
     'THEME_OPTIONS/SET_ENABLE_BACKGROUND_IMAGE';
+
+    
 
 export const SET_ENABLE_MOBILE_MENU = 'THEME_OPTIONS/SET_ENABLE_MOBILE_MENU';
 export const SET_ENABLE_MOBILE_MENU_SMALL =
@@ -157,6 +161,8 @@ export default function reducer(
         enablePageTitleSubheading: true,
         enablePageTabsAlt: false,
         homeBackground: background,
+        buyersBackground:buyersBackground,
+        suppliersBackground:suppliersBackground,
         enableHomeBackground: true
     },
     action

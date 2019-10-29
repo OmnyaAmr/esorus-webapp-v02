@@ -281,13 +281,13 @@ class SignUp extends React.Component {
                                             <div>{content}</div>
 
                                             <FormGroup row>
-                                                <Button className='btn-escrus block full-width'>
-                                                    SIGN UP
+                                                <Button className='btn-escrus log-in block'>
+                                                    Sign up
                                                 </Button>
                                             </FormGroup>
                                             <FormGroup row>
                                                 <Button
-                                                    className='btn-escrus-inv block full-width'
+                                                    className='btn-escrus-inv block log-in'
                                                     onClick={this.onCancelClick}
                                                 >
                                                     Cancel
