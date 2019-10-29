@@ -85,7 +85,7 @@ class Home extends Component {
                                             className='form-control-escrus form-control-lg-escrus ml-1'
                                             onChange={this.onChange}
                                             value={this.state.email}
-                                            placeholder="Enter your Email here"
+                                            placeholder="Enter your email here"
                                             name='email'
                                             style={{fontSize:"15px"}}
                                         />

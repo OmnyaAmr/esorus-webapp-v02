@@ -50,7 +50,7 @@ class Suppliers extends Component {
                                 top: "28%"
 
                             }}>
-                            <h2 className="slogan-text">esorus for Suppliers and Manufacturers</h2>
+                            <h2 className="slogan-text">For Suppliers and Manufacturers</h2>
                             <p className='supplier-text'>
                                 We take your brand around the <br /> World and
                             expose you to a wide <br />
@@ -64,7 +64,7 @@ class Suppliers extends Component {
                                             className='form-control-escrus form-control-lg-escrus'
                                             onChange={this.onChange}
                                             value={this.state.email}
-                                            placeholder="Enter your Email here"
+                                            placeholder="Enter your email here"
                                             style={{ fontSize: "15px" }}
                                             name='email'
                                         />
