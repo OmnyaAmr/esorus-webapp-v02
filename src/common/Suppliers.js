@@ -51,22 +51,22 @@ class Suppliers extends Component {
 
                             }}>
                             <h2 className="slogan-text">For Suppliers and Manufacturers</h2>
-                            <p className='supplier-text'>
-                                We take your brand around the <br /> World and
-                            expose you to a wide <br />
-                                network of professional buyers.
+                            <p className='supplier-text3'>
+                                We take your brand around the World and
+                            expose<br />you to a wide
+                                    network of professional buyers.
                         </p>
                             <Row className='mb-4'>
-                                <Col>
+                                <Col style={{marginRight:"310px"}}>
                                     {' '}
                                     <div className='d-flex justify-content-center mt-4'>
                                         <input
-                                            className='form-control-escrus form-control-lg-escrus'
+                                            className='form-control-escrus form-control-lg-escrus ml-1'
                                             onChange={this.onChange}
                                             value={this.state.email}
                                             placeholder="Enter your email here"
-                                            style={{ fontSize: "15px" }}
                                             name='email'
+                                            style={{ fontSize: "15px",width:"350px"}}
                                         />
                                         <input
                                             type='button'
@@ -81,22 +81,22 @@ class Suppliers extends Component {
                         </div>
                     </PerfectScrollbar>
                     <div className="app-main-enhanced">
-                        <Row className='supplier-text buttom-text pb-lg-5'>
+                        <Row className='supplier-text3 buttom-text pb-lg-5'>
                             <Col lg={6}>
                                 <p>
                                     Gain access to our <br /> worldwide network{' '}
                                     <br />
-                                    of professional buyers
+                                    of professional buyers.
                                 </p>
                             </Col>
                             <Col className='' lg={6}>
-                                You deciede <br /> who buyes your <br /> product
+                                You deciede <br /> who buyes your <br /> product.
                             </Col>
                             <Col className='' lg={6}>
-                                manage your brand <br /> and product easily
+                                Manage your brand <br /> and product easily.
                             </Col>
                             <Col className='' lg={6}>
-                                You can manage <br /> your orders
+                                You can manage <br /> your orders.
                             </Col>
                         </Row>
                     </div>

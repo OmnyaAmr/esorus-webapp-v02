@@ -87,7 +87,7 @@ class Home extends Component {
                                             value={this.state.email}
                                             placeholder="Enter your email here"
                                             name='email'
-                                            style={{fontSize:"15px"}}
+                                            style={{fontSize:"15px",width:"350px"}}
                                         />
                                         <input
                                             type='button'
@@ -116,9 +116,9 @@ class Home extends Component {
                             {this.state.count && (
                                 <Container>
                                     <Row>
-                                        <Col className='slogan3-text'>
-                                            <h1>Some</h1>
-                                            <h1>Interesting Facts</h1>
+                                        <Col >
+                                            <h1 className='slogan5-text'>Some</h1>
+                                            <h1 className='slogan3-text'>Interesting Facts</h1>
                                         </Col>
                                         <Col className='slogan3-text'>
                                             <AnimatedNumber
@@ -144,7 +144,7 @@ class Home extends Component {
                                                     Number(value).toFixed(0)
                                                 }
                                             />
-                                            <h4>Suppliers</h4>
+                                            <h4 className='slogan6-text'>Suppliers</h4>
                                         </Col>
                                         <Col className='slogan3-text'>
                                             <AnimatedNumber
@@ -170,7 +170,7 @@ class Home extends Component {
                                                     Number(value).toFixed(0)
                                                 }
                                             />
-                                            <h4>Our Projects</h4>
+                                            <h4 className='slogan6-text'>Our Projects</h4>
                                         </Col>
                                         <Col className='slogan3-text'>
                                             <AnimatedNumber
@@ -196,7 +196,7 @@ class Home extends Component {
                                                     Number(value).toFixed(0)
                                                 }
                                             />
-                                            <h4>Years Experience</h4>
+                                            <h4 className='slogan6-text'>Years Experience</h4>
                                         </Col>
                                         <Col className='slogan3-text'>
                                             <AnimatedNumber
@@ -222,7 +222,7 @@ class Home extends Component {
                                                     Number(value).toFixed(0)
                                                 }
                                             />
-                                            <h4>Successful Matchmaking</h4>
+                                            <h4 className='slogan6-text'>Successful Matchmaking</h4>
                                         </Col>
                                     </Row>
                                 </Container>
@@ -233,7 +233,7 @@ class Home extends Component {
                     <Container >
                         <Row className='pt-lg-4'>
                             <Col className='text-center' md={12}>
-                                <h2 className='mb-4 heading-text'>
+                                <h2 className='mb-4 slogan-text'>
                                     Our satisfied client says
                                 </h2>
                             </Col>
@@ -270,7 +270,7 @@ class Home extends Component {
                                                     working with them on many
                                                     more projects in the future.
                                                 </p>
-                                                <p className='name'>
+                                                <p className='name slogan-text' >
                                                     NORA EL FAKHARANY
                                                 </p>
                                                 <span className='position'>

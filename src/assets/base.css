@@ -12409,6 +12409,11 @@ body {
   top:28%;
   left: 4%;
 }
+.slogan-buyer-position{
+  position: absolute;
+  top:20%;
+  left: 4%;
+}
 
 .slogan-text{
   font-weight: 800;
@@ -12426,17 +12431,39 @@ body {
 }
 
 .slogan3-text{
-  font-family: 'Poppins-Bold', sans-serif;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  line-height: 1.1;
+  margin-top: 20px;
+  margin-left: 5px;
+  margin-right: 5px;
+  font-size: 40px;
+  color: #fff;
+  display: block; 
+}
+.slogan5-text{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  line-height: 0;
+  font-size: 20px;
+  margin-top: 20px;
+  margin-left: 5px;
+  margin-right: 5px;
+  color: #fff;
+  display: block; 
+}
+.slogan6-text{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 200;
   line-height: 1.1;
   font-size: 20px;
   margin-top: 20px;
   margin-left: 5px;
   margin-right: 5px;
-  font-weight: 100;
-  font-size: 40px;
   color: #fff;
   display: block; 
 }
+
 .text-center.slogan4-text{
 font-weight: 500;
 font-family: 'Poppins', sans-serif;
@@ -12453,6 +12480,7 @@ font-family: 'Poppins', sans-serif;
 }
 
 .btn-escrus-inv{
+  text-align: center;
   display: inline-block;
   font-weight: 500;
   width:100%;
@@ -12483,12 +12511,13 @@ font-family: 'Poppins', sans-serif;
   font-size: 1.0rem;
 }  
 .btn-escrus {
+  text-align: center;
   border: 0;
   background: #ecc503;
   box-shadow: none;
   border-radius: 0px;
   height: 48px;
-  width: 94px ; 
+  width: 98px ; 
   font-family: 'Poppins', sans-serif;
   font-weight: 600; }
   .btn-escrus:hover {
@@ -12558,7 +12587,7 @@ font-family: 'Poppins', sans-serif;
               width:100%;
               }
               .review-background-escrus {
-                background-color: #ffd000;
+                background-color:#ecc503;
                 background-size: cover;
                 background-attachment: fixed;
                 height: 150%;
@@ -12761,8 +12790,19 @@ font-family: 'Poppins', sans-serif;
 
 .supplier-text {
     font-size: 20px;
-    font-weight:500;
+    font-weight:400;
     color: #000;
+}
+.supplier-text3 {
+  font-size: 20px;
+  font-weight:100;
+  color: #000;
+}
+.supplier-text2 {
+  font-size: 10;
+  font-weight:100;
+  color: #000;
+  margin-top: -35px;
 }
 .supplier-text.buttom-text {
   margin-top: -130px;
