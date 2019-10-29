@@ -56,7 +56,7 @@ export const SignUpUser = (userData, history) => dispatch => {
 
     dispatch(setLoading());
     axios
-        .post('/api/register', userData)
+        .post('/api/register', newUser)
         .then(res => {
             if (res) {
                 history.push('/dashboard/login');
