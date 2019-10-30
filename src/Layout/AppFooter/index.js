@@ -7,7 +7,7 @@ import location from '../../assets/components/icons/location.svg';
 import phone from '../../assets/components/icons/phone.svg';
 import envelope from '../../assets/components/icons/envelope.svg';
 import facebook from '../../assets/components/icons/facebook.svg';
-
+import instagram from '../../assets/components/icons/instagram.svg';
 class AppFooter extends React.Component {
     render() {
         return (
@@ -31,12 +31,11 @@ class AppFooter extends React.Component {
                                                 href='https://www.facebook.com/Esorus'
                                                 target='_blank'
                                             >
-                                        <img
-                                            src={facebook}
-                                            width='25'
-                                            height='25'
-                                            className='mb-2'
-                                        />
+                                                <img
+                                                    src={facebook}
+                                                    width='25'
+                                                    height='25'
+                                                />
                                             </a>
                                         </li>
                                         <li>
@@ -45,9 +44,12 @@ class AppFooter extends React.Component {
                                                 href='https://www.instagram.com/_esorus'
                                                 target='_blank'
                                             >
-                                                <FontAwesomeIcon
-                                                    icon={faInstagram}
-                                                    size='3x'
+                                                <img
+                                                    src={instagram}
+                                                    width='25'
+                                                    height='25'
+                                                    style={{marginLeft:"-35px"}}
+                                                   
                                                 />
                                             </a>
                                         </li>
@@ -58,11 +60,10 @@ class AppFooter extends React.Component {
                         <div className='app-footer-middle'>
                             <ul class="list-unstyled">
                                 <li><h2 >Quick links</h2></li>
-                                <li><a className='pl-1 ' href="#/dashboard/buyers">Professional Buyers</a></li>
+                                <li><a className='pl-1' href="#/dashboard/buyers">Professional Buyers</a></li>
                                 <li><a className='pl-1' href="#/dashboard/suppliers">Suppliers</a></li>
                                 <li><a className='pl-1' href="#/dashboard/about">About Esorus</a></li>
                             </ul>
-                            <p className="copy-rights-text">All rights reserved. esorus © 2019</p>
                         </div>
                         <div className='app-footer-right'>
                             <h2 style={{ marginLeft: "35px", marginTop: "30px" }}>Curious and intrigued? Let's Talk!</h2>
@@ -109,9 +110,10 @@ class AppFooter extends React.Component {
 
                             </ul>
                         </div>
-                       
+                        <p className="copy-rights-text">All rights reserved. esorus © 2019</p>
+
                     </div>
-                    
+
                 </div>
             </Fragment>
         );

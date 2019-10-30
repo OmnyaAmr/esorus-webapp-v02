@@ -167,7 +167,7 @@ class Buyers extends Component {
                                 </div>
                                 <div className='d-flex justify-content-center mt-4'>
                                     <p className="text-center ml-1 supplier-text2">
-                                        suppliers
+                                        suppliers.
                                     </p>
                                 </div>
 

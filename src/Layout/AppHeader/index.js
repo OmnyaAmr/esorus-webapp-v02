@@ -18,7 +18,7 @@ class Header extends React.Component {
                 this.document.getElementById("header").style.backgroundColor = "transparent";
             }
             else {
-                this.document.getElementById("header").style.backgroundColor = "#a0a0a0";
+                this.document.getElementById("header").style.backgroundColor = "#bfbfbf";
             }
         };
     }

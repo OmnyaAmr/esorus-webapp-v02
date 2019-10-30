@@ -3,6 +3,10 @@ import { Row, Col } from 'reactstrap';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import { connect } from 'react-redux';
 import PerfectScrollbar from 'react-perfect-scrollbar';
+import world from '../assets/components/icons/world.svg'
+import buyer from '../assets/components/icons/buyer.svg'
+import project from '../assets/components/icons/project.svg'
+import order from '../assets/components/icons/order.svg'
 
 class Suppliers extends Component {
     constructor() {
@@ -47,8 +51,7 @@ class Suppliers extends Component {
                                     : null,
                                 height: '650px',
                                 top: '28%',
-                                boxShadow:'inset 0 0 0 2000px rgba(0,0,0,0.3)'
-                            
+
                             }}
                         >
                             <h2 className='slogan-text'>
@@ -111,20 +114,41 @@ class Suppliers extends Component {
                         </Row>*/}
                         <Row className='pt-4 pb-5'>
                             <Col>
+                                <div className='d-flex justify-content-center mt-4'>
+                                    <img
+                                        className="ml-1"
+                                        src={world}
+                                        width='50'
+                                        height='50'
+                                        className='mb-1'
+                                        style={{ marginRight: "50px" }}
+                                    />
+                                </div>
 
 
-                                <div className='supplier-text3 buttom-text pb-lg-5'>
-                                    <p >
-                                        Gain access to our worldwide network of professional buyers.
+                                <div className='d-flex justify-content-center mt-4'>
+                                    <p className=" supplier-text3 buttom-text" text-center >
+                                        Gain access to our worldwide network
+                                        of professional buyers.
                                     </p>
                                 </div>
+
 
                             </Col>
                             <Col>
 
-
-                                <div className='supplier-text3 buttom-text pb-lg-5'>
-                                    <p>
+                                <div className='d-flex justify-content-center mt-4'>
+                                    <img
+                                        className="ml-1"
+                                        src={buyer}
+                                        width='50'
+                                        height='50'
+                                        className='mb-1'
+                                        style={{ marginRight: "50px" }}
+                                    />
+                                </div>
+                                <div className="d-flex justify-content-center mt-4">
+                                    <p className=" supplier-text3 buttom-text text-center ">
                                         You deciede  who buyes your
                                         product.
                                     </p>
@@ -133,10 +157,19 @@ class Suppliers extends Component {
 
                             </Col>
                             <Col >
+                                <div className='d-flex justify-content-center mt-4'>
+                                    <img
+                                        className="ml-1"
+                                        src={project}
+                                        width='50'
+                                        height='50'
+                                        className='mb-2'
+                                        style={{ marginRight: "50px" }}
+                                    />
+                                </div>
 
-
-                                <div className='supplier-text3 buttom-text pb-lg-5'>
-                                    <p >
+                                <div className="d-flex justify-content-center mt-4">
+                                    <p  className=" supplier-text3 buttom-text text-center ">
                                         Manage your brand and product easily.
                                     </p>
                                 </div>
@@ -144,9 +177,18 @@ class Suppliers extends Component {
 
                             </Col>
                             <Col >
-
-                                <div className='supplier-text3 buttom-text pb-lg-5'>
-                                    <p>
+                                <div className='d-flex justify-content-center mt-4'>
+                                    <img
+                                        className="ml-1"
+                                        src={order}
+                                        width='50'
+                                        height='50'
+                                        className='mb-2'
+                                        style={{ marginRight: "50px" }}
+                                    />
+                                </div>
+                                <div className="d-flex justify-content-center mt-4">
+                                    <p className=" supplier-text3 buttom-text text-center ">
                                         You can manage <br /> your orders.
                                     </p>
                                 </div>
