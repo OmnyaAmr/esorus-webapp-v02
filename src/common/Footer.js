@@ -25,7 +25,7 @@ const Footer = () => {
                         <ul className='ftco-footer-social list-unstyled float-md-left float-lft mt-3'>
                             <li className='ftco-animate'>
                                 <a href='https://www.facebook.com/Esorus'>
-                                    <span className='fa fa-facebook'></span>
+                                    <span style={{color:'white'}} className='fa fa-facebook'></span>
                                 </a>
                             </li>
                             <li className='ftco-animate'>

@@ -46,14 +46,16 @@ class Suppliers extends Component {
                                     ? 'url(' + suppliersBackground + ')'
                                     : null,
                                 height: '650px',
-                                top: '28%'
+                                top: '28%',
+                                boxShadow:'inset 0 0 0 2000px rgba(0,0,0,0.3)'
+                            
                             }}
                         >
                             <h2 className='slogan-text'>
                                 For Suppliers and Manufacturers
                             </h2>
                             <p className='supplier-text3'>
-                                We take your brand around the World and expose
+                                We take your brand around the world and expose
                                 <br />
                                 you to a wide network of professional buyers.
                             </p>
@@ -69,7 +71,7 @@ class Suppliers extends Component {
                                             name='email'
                                             style={{
                                                 fontSize: '15px',
-                                                width: '350px'
+                                                width: '280px'
                                             }}
                                         />
                                         <input
@@ -85,7 +87,10 @@ class Suppliers extends Component {
                         </div>
                     </PerfectScrollbar>
                     <div className='app-main-enhanced'>
-                        <Row className='supplier-text3 buttom-text pb-lg-5'>
+                        <div className="pr-md-5 mr-md-5 text-md-left">
+                            <h2 style={{ color: "black" }} className="mb-4">How can esorus help your brand?</h2>
+                        </div>
+                        {/*<Row className='supplier-text3 buttom-text pb-lg-5'>
                             <Col lg={6}>
                                 <p>
                                     Gain access to our <br /> worldwide network{' '}
@@ -102,6 +107,49 @@ class Suppliers extends Component {
                             </Col>
                             <Col className='' lg={6}>
                                 You can manage <br /> your orders.
+                            </Col>
+                        </Row>*/}
+                        <Row className='pt-4 pb-5'>
+                            <Col>
+
+
+                                <div className='supplier-text3 buttom-text pb-lg-5'>
+                                    <p >
+                                        Gain access to our worldwide network of professional buyers.
+                                    </p>
+                                </div>
+
+                            </Col>
+                            <Col>
+
+
+                                <div className='supplier-text3 buttom-text pb-lg-5'>
+                                    <p>
+                                        You deciede  who buyes your
+                                        product.
+                                    </p>
+                                </div>
+
+
+                            </Col>
+                            <Col >
+
+
+                                <div className='supplier-text3 buttom-text pb-lg-5'>
+                                    <p >
+                                        Manage your brand and product easily.
+                                    </p>
+                                </div>
+
+
+                            </Col>
+                            <Col >
+
+                                <div className='supplier-text3 buttom-text pb-lg-5'>
+                                    <p>
+                                        You can manage <br /> your orders.
+                                    </p>
+                                </div>
                             </Col>
                         </Row>
                     </div>

@@ -92,7 +92,7 @@ class Login extends React.Component {
                                 <Card className='container'>
                                     <CardBody>
                                         <CardTitle className='text-center slogan4-text'>
-                                            Log in to esorus
+                                            Welcome back to esorus
                                         </CardTitle>
                                         <Form
                                             onSubmit={this.onSubmit}

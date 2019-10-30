@@ -32,7 +32,7 @@ class Buyers extends Component {
                     transitionLeave={false}
                 >
                     <PerfectScrollbar>
-                        <div className='app-main-enhanced'
+                        <div className='app-main-enhanced' 
                             style={{
                                 backgroundImage: enableHomeBackground
                                     ? 'url(' + buyersBackground + ')'
@@ -116,7 +116,7 @@ class Buyers extends Component {
                                     type='button'
                                     className='btn-escrus mt-2'
                                     value='Source Now'
-                                  
+
                                     onClick={this.onClick}
                                 />
                             </Col>
@@ -162,13 +162,13 @@ class Buyers extends Component {
                                 </div>
                                 <div className='d-flex justify-content-center mt-4'>
                                     <p className="ml-1 supplier-text2">
-                                        Recommendation for effective materials
+                                        Recommendation for effective materials from a  wide range of
                                     </p>
                                 </div>
                                 <div className='d-flex justify-content-center mt-4'>
                                     <p className="text-center ml-1 supplier-text2">
-                                        from a wide range of suppliers suppliers
-                                        </p>
+                                        suppliers
+                                    </p>
                                 </div>
 
                             </Col>
@@ -189,14 +189,10 @@ class Buyers extends Component {
                                 <div className='d-flex justify-content-center mt-4'>
                                     <p className="ml-1  text-center supplier-text2">
                                         Dedicated support and follow-up ensuring you receive your
-                                         materials within the agreed time frame with the
+                                         materials within the agreed time frame with the  supplier.
                                     </p>
                                 </div>
-                                <div className='d-flex justify-content-center mt-4'>
-                                    <p className="text-center ml-1 supplier-text2">
-                                        supplier.
-                                        </p>
-                                </div>
+
 
                             </Col>
                             <Col >
@@ -214,8 +210,8 @@ class Buyers extends Component {
                                 </div>
                                 <div className='d-flex justify-content-center mt-4'>
                                     <p className="ml-1  text-center supplier-text2">
-                                    We make sure you get the best possible price 
-                                    in the market, with upto 45% additional discount.
+                                        We make sure you get the best possible price
+                                        in the market, with up to 45% additional discount.
                                     </p>
                                 </div>
                             </Col>

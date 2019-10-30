@@ -87,7 +87,7 @@ class Home extends Component {
                                             value={this.state.email}
                                             placeholder="Enter your email here"
                                             name='email'
-                                            style={{fontSize:"15px",width:"350px"}}
+                                            style={{fontSize:"15px",width:"280px"}}
                                         />
                                         <input
                                             type='button'
@@ -117,7 +117,7 @@ class Home extends Component {
                                 <Container>
                                     <Row>
                                         <Col >
-                                            <h1 className='slogan5-text'>Some</h1>
+                                            <h1 className='slogan5-text'>SOME</h1>
                                             <h1 className='slogan3-text'>Interesting Facts</h1>
                                         </Col>
                                         <Col className='slogan3-text'>
@@ -127,7 +127,7 @@ class Home extends Component {
                                                     transition: '0.8s ease-out',
                                                     fontSize: '35px',
                                                     color: 'white',
-                                                    fontWeight: '100',
+                                                    fontWeight: '400',
                                                     transitionProperty:
                                                         'background-color, color, opacity'
                                                 }}
@@ -153,7 +153,7 @@ class Home extends Component {
                                                     transition: '0.8s ease-out',
                                                     fontSize: '35px',
                                                     color: 'white',
-                                                    fontWeight: '100',
+                                                    fontWeight: '400',
                                                     transitionProperty:
                                                         'background-color, color, opacity'
                                                 }}
@@ -179,7 +179,7 @@ class Home extends Component {
                                                     transition: '0.8s ease-out',
                                                     fontSize: '35px',
                                                     color: 'white',
-                                                    fontWeight: '100',
+                                                    fontWeight: '400',
                                                     transitionProperty:
                                                         'background-color, color, opacity'
                                                 }}
@@ -205,7 +205,7 @@ class Home extends Component {
                                                     transition: '0.8s ease-out',
                                                     fontSize: '35px',
                                                     color: 'white',
-                                                    fontWeight: '100',
+                                                    fontWeight: '400',
                                                     transitionProperty:
                                                         'background-color, color, opacity'
                                                 }}
@@ -270,7 +270,7 @@ class Home extends Component {
                                                     working with them on many
                                                     more projects in the future.
                                                 </p>
-                                                <p className='name slogan-text' >
+                                                <p className='name' >
                                                     NORA EL FAKHARANY
                                                 </p>
                                                 <span className='position'>
