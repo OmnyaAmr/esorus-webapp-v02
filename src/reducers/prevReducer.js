@@ -1,28 +1,19 @@
 import {
-    ADMIN_PREV,
-    MOD_PREV,
-    STUDENT_PREV,
-    USER_PREV,
-    DROP_PREV,
+    ROLE_PROFESSIONAL_BUYER,
+    ROLE_SUPPLIER,
     CONFIRMATION_REQUIRED,
-    COMPLETION_REQUIRED
+    DROP_PREV
 } from '../actions/types';
 let initial_state = '';
 
 export default function(state = initial_state, action) {
     switch (action.type) {
-        case COMPLETION_REQUIRED:
-            return COMPLETION_REQUIRED;
+        case ROLE_PROFESSIONAL_BUYER:
+            return ROLE_PROFESSIONAL_BUYER;
         case CONFIRMATION_REQUIRED:
             return CONFIRMATION_REQUIRED;
-        case ADMIN_PREV:
-            return ADMIN_PREV;
-        case MOD_PREV:
-            return MOD_PREV;
-        case STUDENT_PREV:
-            return STUDENT_PREV;
-        case USER_PREV:
-            return USER_PREV;
+        case ROLE_SUPPLIER:
+            return ROLE_SUPPLIER;
         case DROP_PREV:
             return '';
         default:

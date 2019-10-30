@@ -44,7 +44,7 @@ class AboutUs extends Component {
                 />
                 <div className='review-background-escrus' id='about'>
                     <div className='handsome-background-escrus ' id='parallex'>
-                        <div className='align-self-center pt-lg-5'>
+                        <div className='align-self-center pt-1'>
                             {this.state.count && (
                                 <Container>
                                     <Row>
@@ -228,5 +228,3 @@ const mapStateToProps = state => ({
 });
 
 export default connect(mapStateToProps)(AboutUs);
-
-// We are reinventing the interior sourcing process!

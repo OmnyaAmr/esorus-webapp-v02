@@ -20,6 +20,7 @@ let account = {
 };
 
 export const AboutUs = [aboutUs];
+
 export const AuthNav = [
     {
         icon: 'pe-7s-home',
@@ -56,3 +57,35 @@ export const UserNav = [
     },
     aboutUs
 ];
+
+let confirm = {
+    icon: 'pe-7s-user',
+    label: 'Confirmation Required',
+    content: [
+        {
+            label: 'Confirmation Required',
+            to: '#/dashboard/confirm'
+        }
+    ]
+};
+
+let InitialNavs = {
+    icon: 'pe-7s-home',
+    label: 'Home',
+    content: [
+        {
+            label: 'Professional Buyers',
+            to: '#/dashboard/buyers'
+        },
+        {
+            label: 'Suppliers',
+            to: '#/dashboard/suppliers'
+        }
+    ]
+};
+
+export const ConfirmNav = [InitialNavs, confirm, aboutUs];
+
+export const Supplier = [InitialNavs, aboutUs];
+
+export const Buyer = [InitialNavs, aboutUs];

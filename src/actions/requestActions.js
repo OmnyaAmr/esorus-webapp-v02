@@ -15,11 +15,12 @@ export const requestForm = reqData => dispatch => {
 
     dispatch(setLoading());
     axios
-        .post('/api/request-for-supplier')
+        .post('/api/request-for-supplier', reqData)
         .then(res => {
             dispatch(setLoaded());
         })
         .catch(err => {
+            console.log('Request Error: ', err.response.data);
             dispatch({ type: GET_ERRORS, payload: err.response.data });
             dispatch(setLoaded());
         });

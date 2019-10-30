@@ -46,6 +46,13 @@ class Login extends React.Component {
         if (nextProps.errors) {
             this.setState({ errors: nextProps.errors });
         }
+        if (nextProps.auth.isAuthenticated) {
+            this.props.history.push('/dashboard/home');
+        }
+        let { errors } = this.state;
+        if (errors.title && errors.title === 'Unauthorized') {
+            this.props.history.push('/dashboard/confirm');
+        }
     }
 
     onSubmit(e) {
@@ -56,6 +63,7 @@ class Login extends React.Component {
         user.password = password;
         this.props.loginUser(user);
     }
+
     onChange(e) {
         this.setState({ [e.target.name]: e.target.value });
     }

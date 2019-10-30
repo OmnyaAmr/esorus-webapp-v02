@@ -25,6 +25,7 @@ class Request extends Component {
     constructor() {
         super();
         this.state = {
+            name: '',
             email: '',
             role: '',
             projectType: '',
@@ -35,7 +36,8 @@ class Request extends Component {
             boq: '',
             deliveryDate: '',
             errors: {},
-            file: ''
+            file: '',
+            quantity: ''
         };
         this.onClick = this.onClick.bind(this);
         this.onChange = this.onChange.bind(this);
@@ -60,7 +62,6 @@ class Request extends Component {
         this.setState({ [e.target.name]: e.target.value });
     }
     onFileUpload(meta) {
-        console.log('PARENT: ', meta);
         this.setState({ file: meta });
     }
     onChange(e) {
@@ -86,6 +87,25 @@ class Request extends Component {
         //HANDLE errors
         let { errors } = this.state;
         let required = <small className='required'>*</small>;
+        let boqContent;
+        if (this.state.boq === 'false') {
+            boqContent = (
+                <FormGroup row>
+                    <Label for='quantity'>Quantity{required}</Label>
+                    <Input
+                        className='form-control-escrus'
+                        type='quantity'
+                        name='quantity'
+                        id='quantity'
+                        value={this.state.quantity}
+                        onChange={this.onChange}
+                        invalid={!isEmpty(errors.quantity)}
+                    />
+                    <FormFeedback>{errors.quantity}</FormFeedback>
+                </FormGroup>
+            );
+        }
+
         return (
             <Fragment>
                 <ReactCSSTransitionGroup
@@ -106,6 +126,22 @@ class Request extends Component {
                                     className='form-esorus m-auto'
                                     onSubmit={this.onSubmit}
                                 >
+                                    <FormGroup row>
+                                        <Label for='name'>Name{required}</Label>
+                                        <Input
+                                            className='form-control-escrus'
+                                            type='name'
+                                            name='name'
+                                            id='name'
+                                            value={this.state.name}
+                                            onChange={this.onChange}
+                                            invalid={!isEmpty(errors.name)}
+                                        />
+                                        <FormFeedback>
+                                            {errors.email}
+                                        </FormFeedback>
+                                    </FormGroup>
+
                                     <FormGroup row>
                                         <Label for='email'>
                                             Email{required}
@@ -330,7 +366,7 @@ class Request extends Component {
                                                 className='form-check-input'
                                                 id='boq'
                                                 name='boq'
-                                                value='yes'
+                                                value={true}
                                                 onChange={this.onCheck}
                                             />
                                             <Label>Yes</Label>
@@ -341,7 +377,7 @@ class Request extends Component {
                                                 className='form-check-input'
                                                 id='boq'
                                                 name='boq'
-                                                value='no'
+                                                value={false}
                                                 onChange={this.onCheck}
                                             />
                                             <Label>No</Label>
@@ -352,7 +388,7 @@ class Request extends Component {
                                             </FormFeedback>
                                         )}
                                     </FormGroup>
-
+                                    {boqContent}
                                     <FormGroup row>
                                         <Label>Date{required}</Label>
                                         <Input
@@ -403,7 +439,8 @@ class Request extends Component {
 }
 const mapStateToProps = state => ({
     loading: state.loading,
-    errors: state.errors
+    errors: state.errors,
+    auth: state.auth
 });
 export default connect(
     mapStateToProps,

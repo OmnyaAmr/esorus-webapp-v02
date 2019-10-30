@@ -2,13 +2,10 @@ import {
     GET_ERRORS,
     SET_CURRENT_USER,
     FLUSH_ERRORS,
-    ADMIN_PREV,
-    STUDENT_PREV,
-    USER_PREV,
-    MOD_PREV,
     DROP_PREV,
     CONFIRMATION_REQUIRED,
-    COMPLETION_REQUIRED
+    ROLE_PROFESSIONAL_BUYER,
+    ROLE_SUPPLIER
 } from './types';
 import axios from 'axios';
 import setAuthToken from '../utils/setAuthToken';
@@ -118,23 +115,16 @@ export const setCurrentUserPrev = decoded => {
             type: DROP_PREV
         };
     }
-    if (decoded.confirm) {
-        let { TYPE } = decoded;
-        if (TYPE === 'admin') {
+    if (decoded.active) {
+        let { auth } = decoded;
+
+        if (auth === 'ROLE_PROFESSIONAL_BUYER,ROLE_USER') {
             return {
-                type: ADMIN_PREV
+                type: ROLE_PROFESSIONAL_BUYER
             };
-        } else if (TYPE === 'student') {
+        } else if (auth === 'ROLE_SUPPLIER,ROLE_USER') {
             return {
-                type: STUDENT_PREV
-            };
-        } else if (TYPE === 'regular') {
-            return {
-                type: USER_PREV
-            };
-        } else if (TYPE === 'moderator') {
-            return {
-                type: MOD_PREV
+                type: ROLE_SUPPLIER
             };
         } else {
             return {
@@ -142,15 +132,9 @@ export const setCurrentUserPrev = decoded => {
             };
         }
     } else {
-        if (decoded.incomplete) {
-            return {
-                type: COMPLETION_REQUIRED
-            };
-        } else {
-            return {
-                type: CONFIRMATION_REQUIRED
-            };
-        }
+        return {
+            type: CONFIRMATION_REQUIRED
+        };
     }
 };
 
@@ -221,13 +205,11 @@ export const resetPassword = (resetSpecs, SRC) => dispatch => {
 export const confirmEmail = SRC => dispatch => {
     dispatch(setLoading());
     axios
-        .post('/api/user/signup/confirm')
+        .post('/api/user/signup/confirm') //To specify send confirmation email again
         .then(res => {
             SRC.showToast(
                 'success',
-                `your confiramtion mail sent successfully to ${
-                    res.data.accepted[0]
-                }`
+                `your confiramtion mail sent successfully to your email`
             );
             dispatch(logoutUser());
         })

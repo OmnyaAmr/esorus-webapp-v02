@@ -49,10 +49,7 @@ class UserBox extends React.Component {
         let { isAuthenticated, user } = this.props.auth;
         let avatar;
 
-        avatar =
-            isAuthenticated && user.image
-                ? 'http://localhost:5000/' + user.image
-                : unknownUser;
+        avatar = unknownUser;
 
         let navbarMenu;
 
@@ -62,95 +59,41 @@ class UserBox extends React.Component {
                     <div className='widget-content p-0'>
                         <div className='widget-content-wrapper'>
                             <div className='widget-content-left'>
-                                <UncontrolledButtonDropdown>
-                                    <DropdownToggle
-                                        color='link'
-                                        className='p-0'
+                                <div className='d-flex justify-content-center align-items-center mt-2'>
+                                    <Link
+                                        className='btn custom-signin-btn mt-2 ml-4'
+                                        to='/dashboard/buyers'
                                     >
-                                        <img
-                                            width={50}
-                                            height={50}
-                                            className='rounded-circle'
-                                            src={avatar}
-                                            alt=''
-                                        />
-                                        <FontAwesomeIcon
-                                            className='ml-2 opacity-8'
-                                            icon={faAngleDown}
-                                        />
-                                    </DropdownToggle>
-                                    <DropdownMenu
-                                        right
-                                        className='rm-pointers dropdown-menu-lg'
+                                        <button className='btn-navBar'>
+                                            Professional Buyers
+                                        </button>
+                                    </Link>
+                                    <Link
+                                        className='btn custom-signin-btn mt-2 ml-4 mr-4'
+                                        to='/dashboard/suppliers'
                                     >
-                                        <Nav vertical>
-                                            <NavItem className='nav-item-header'>
-                                                Admin Panal
-                                            </NavItem>
-                                            <NavItem>
-                                                <NavLink>
-                                                    Posts
-                                                    <div className='ml-auto badge badge-pill badge-info'>
-                                                        888
-                                                    </div>
-                                                </NavLink>
-                                            </NavItem>
-                                            <NavItem>
-                                                <NavLink>
-                                                    Change Password
-                                                </NavLink>
-                                            </NavItem>
-                                            <NavItem className='nav-item-header'>
-                                                My Account
-                                            </NavItem>
-                                            <NavItem>
-                                                <NavLink href='#/dashboard/settings'>
-                                                    Settings
-                                                    <div className='ml-auto badge badge-success'>
-                                                        New
-                                                    </div>
-                                                </NavLink>
-                                            </NavItem>
-                                            <NavItem>
-                                                <NavLink
-                                                    onClick={this.onLogoutClick}
-                                                >
-                                                    Logout
-                                                </NavLink>
-                                            </NavItem>
+                                        <button className='btn-navBar'>
+                                            Suppliers
+                                        </button>
+                                    </Link>
 
-                                            <NavItem>
-                                                <NavLink>
-                                                    About Us
-                                                    <FontAwesomeIcon
-                                                        className='ml-auto opacity-8'
-                                                        icon={faInfo}
-                                                    />
-                                                </NavLink>
-                                            </NavItem>
-                                        </Nav>
-                                    </DropdownMenu>
-                                </UncontrolledButtonDropdown>
-                            </div>
-
-                            <div className='widget-content-left  ml-3 header-user-info'>
-                                <div className='widget-heading'>
-                                    {user ? user.name : ''}
+                                    <div className='widget-content-left header-user-info'>
+                                        <div className='widget-heading'>
+                                            {user ? user.name : ''}
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
 
                             <div className='widget-content-right header-user-info ml-3'>
                                 <Button
-                                    className='btn-shadow p-1'
+                                    className='btn-escrus p-1'
                                     size='sm'
                                     onClick={this.onLogoutClick}
                                     color='info'
                                     id='Tooltip-1'
                                 >
-                                    <FontAwesomeIcon
-                                        className='mr-2 ml-2'
-                                        icon={faSignOutAlt}
-                                    />
+                                    LOG OUT
                                 </Button>
                                 <UncontrolledTooltip
                                     placement='bottom'
@@ -174,16 +117,15 @@ class UserBox extends React.Component {
                                         className='btn custom-signin-btn mt-2 ml-4'
                                         to='/dashboard/buyers'
                                     >
-                                        <button className="btn-navBar">
-                                        Professional Buyers
+                                        <button className='btn-navBar'>
+                                            Professional Buyers
                                         </button>
-
                                     </Link>
                                     <Link
                                         className='btn custom-signin-btn mt-2 ml-4 mr-4'
                                         to='/dashboard/suppliers'
                                     >
-                                        <button className="btn-navBar">
+                                        <button className='btn-navBar'>
                                             Suppliers
                                         </button>
                                     </Link>
@@ -192,7 +134,7 @@ class UserBox extends React.Component {
                                         className='btn ml-1 custom-signin-btn mt-2'
                                         to='/dashboard/login'
                                     >
-                                        <button className="btn-navBar">
+                                        <button className='btn-navBar'>
                                             <img
                                                 src={unknownUser}
                                                 width='20'

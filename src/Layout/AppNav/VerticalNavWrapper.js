@@ -4,13 +4,10 @@ import { connect } from 'react-redux';
 import MetisMenu from 'react-metismenu';
 import {
     CONFIRMATION_REQUIRED,
-    COMPLETION_REQUIRED,
-    ADMIN_PREV,
-    MOD_PREV,
-    STUDENT_PREV,
-    USER_PREV
+    ROLE_PROFESSIONAL_BUYER,
+    ROLE_SUPPLIER
 } from '../../actions/types';
-import { AuthNav, UserNav, AboutUs } from './NavItems';
+import { AuthNav, Supplier, AboutUs, ConfirmNav, Buyer } from './NavItems';
 
 class Nav extends Component {
     state = {};
@@ -18,7 +15,9 @@ class Nav extends Component {
     render() {
         let navContent;
         let { isAuthenticated, user } = this.props.auth;
+
         let { prev } = this.props;
+
         if (!isAuthenticated) {
             return (navContent = (
                 <Fragment>
@@ -33,117 +32,40 @@ class Nav extends Component {
                 </Fragment>
             ));
         } else {
-            if (prev === ADMIN_PREV) {
-                navContent = (
-                    <Fragment>
-                        <h5 className='app-sidebar__heading'>Dashboard</h5>
-                        <MetisMenu
-                            content={AdminNav}
-                            activeLinkFromLocation
-                            className='vertical-nav-menu'
-                            iconNamePrefix=''
-                            classNameStateIcon='pe-7s-angle-down'
-                        />
-                        <h5 className='app-sidebar__heading'>Moderator</h5>
-                        <MetisMenu
-                            content={ModeratorNav}
-                            activeLinkFromLocation
-                            className='vertical-nav-menu'
-                            iconNamePrefix=''
-                            classNameStateIcon='pe-7s-angle-down'
-                        />
-                        <h5 className='app-sidebar__heading'>UI Component</h5>
-                        <MetisMenu
-                            content={ComponentsNav}
-                            activeLinkFromLocation
-                            className='vertical-nav-menu'
-                            iconNamePrefix=''
-                            classNameStateIcon='pe-7s-angle-down'
-                        />
-                        <h5 className='app-sidebar__heading'>Forms</h5>
-                        <MetisMenu
-                            content={FormsNav}
-                            activeLinkFromLocation
-                            className='vertical-nav-menu'
-                            iconNamePrefix=''
-                            classNameStateIcon='pe-7s-angle-down'
-                        />
-                        <h5 className='app-sidebar__heading'>Widgets</h5>
-                        <MetisMenu
-                            content={WidgetsNav}
-                            activeLinkFromLocation
-                            className='vertical-nav-menu'
-                            iconNamePrefix=''
-                            classNameStateIcon='pe-7s-angle-down'
-                        />
-                        <h5 className='app-sidebar__heading'>Charts</h5>
-                        <MetisMenu
-                            content={ChartsNav}
-                            activeLinkFromLocation
-                            className='vertical-nav-menu'
-                            iconNamePrefix=''
-                            classNameStateIcon='pe-7s-angle-down'
-                        />
-                    </Fragment>
-                );
-            } else if (prev === MOD_PREV) {
-                navContent = (
-                    <Fragment>
-                        <h5 className='app-sidebar__heading'>Dashboard</h5>
-                        <MetisMenu
-                            content={ModeratorNav}
-                            activeLinkFromLocation
-                            className='vertical-nav-menu'
-                            iconNamePrefix=''
-                            classNameStateIcon='pe-7s-angle-down'
-                        />
-                    </Fragment>
-                );
-            } else if (prev === STUDENT_PREV) {
-                navContent = (
-                    <Fragment>
-                        <h5 className='app-sidebar__heading'>Register</h5>
-                        <MetisMenu
-                            content={StudentNav}
-                            activeLinkFromLocation
-                            className='vertical-nav-menu'
-                            iconNamePrefix=''
-                            classNameStateIcon='pe-7s-angle-down'
-                        />
-                    </Fragment>
-                );
-            } else if (prev === USER_PREV) {
-                navContent = (
-                    <Fragment>
-                        <h5 className='app-sidebar__heading'>Register</h5>
-                        <MetisMenu
-                            content={UserNav}
-                            activeLinkFromLocation
-                            className='vertical-nav-menu'
-                            iconNamePrefix=''
-                            classNameStateIcon='pe-7s-angle-down'
-                        />
-                    </Fragment>
-                );
-            } else if (prev == COMPLETION_REQUIRED) {
-                navContent = (
-                    <Fragment>
-                        <h5 className='app-sidebar__heading'>Complete</h5>
-                        <MetisMenu
-                            content={CompleteNav}
-                            activeLinkFromLocation
-                            className='vertical-nav-menu'
-                            iconNamePrefix=''
-                            classNameStateIcon='pe-7s-angle-down'
-                        />
-                    </Fragment>
-                );
-            } else if (prev == CONFIRMATION_REQUIRED) {
+            if (prev === CONFIRMATION_REQUIRED) {
                 navContent = (
                     <Fragment>
                         <h5 className='app-sidebar__heading'>Confirm</h5>
                         <MetisMenu
                             content={ConfirmNav}
+                            activeLinkFromLocation
+                            className='vertical-nav-menu'
+                            iconNamePrefix=''
+                            classNameStateIcon='pe-7s-angle-down'
+                        />
+                    </Fragment>
+                );
+            } else if (prev === ROLE_PROFESSIONAL_BUYER) {
+                navContent = (
+                    <Fragment>
+                        <h5 className='app-sidebar__heading'>
+                            Professional Buyer
+                        </h5>
+                        <MetisMenu
+                            content={Buyer}
+                            activeLinkFromLocation
+                            className='vertical-nav-menu'
+                            iconNamePrefix=''
+                            classNameStateIcon='pe-7s-angle-down'
+                        />
+                    </Fragment>
+                );
+            } else if (prev === ROLE_SUPPLIER) {
+                navContent = (
+                    <Fragment>
+                        <h5 className='app-sidebar__heading'>Supplier</h5>
+                        <MetisMenu
+                            content={Supplier}
                             activeLinkFromLocation
                             className='vertical-nav-menu'
                             iconNamePrefix=''

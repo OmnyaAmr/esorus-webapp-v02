@@ -13,6 +13,8 @@ import Buyers from '../Buyers';
 import Request from '../Request';
 import AboutUs from '../AboutUs';
 import Activition from '../Activition';
+import Confirmation from '../Confirmation';
+
 //params ALL THE APP ROUTES WILL BE HERE
 
 // Layout
@@ -34,7 +36,8 @@ const Dashboards = ({ match }) => (
             <Route path={`${match.url}/signup`} component={SignUp} />
             <Route path={`${match.url}/suppliers`} component={Suppliers} />
             <Route path={`${match.url}/buyers`} component={Buyers} />
-            <Route path={`${match.url}/request`} component={Request} />
+            <Route path={`${match.url}/confirm`} component={Confirmation} />
+            <PrivateRoute path={`${match.url}/request`} component={Request} />
         </div>
         <Route path={`${match.url}/about`} component={AboutUs} />
         <Route path={`${match.url}/activition`} component={Activition} />
@@ -44,9 +47,3 @@ const Dashboards = ({ match }) => (
 );
 
 export default Dashboards;
-
-// <div className='app-main'>
-//     <div className='app-main__outer'>
-//         <div className='app-main__inner'></div>
-//     </div>
-// </div>
