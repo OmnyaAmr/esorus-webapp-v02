@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import isEmpty from '../validation/is-empty';
-import Uploader from './Uploader';
+import axios from 'axios';
 import classnames from 'classnames';
 import {
     Card,
@@ -34,15 +34,16 @@ class Request extends Component {
             boq: '',
             deliveryDate: '',
             errors: {},
-            file: '',
-            quantity: ''
+            file: null,
+            quantity: '',
+            token: '',
+            uploadedPic: ''
         };
         this.onClick = this.onClick.bind(this);
         this.onChange = this.onChange.bind(this);
-        this.handleUpload = this.handleUpload.bind(this);
-        this.onFileUpload = this.onFileUpload.bind(this);
         this.onSubmit = this.onSubmit.bind(this);
         this.onCheck = this.onCheck.bind(this);
+        this.onUpload = this.onUpload.bind(this);
     }
     componentWillReceiveProps(nextProps) {
         if (nextProps.errors) {
@@ -50,18 +51,29 @@ class Request extends Component {
         }
     }
     showToast = (type, msg) => toast[type](msg);
-    componentDidMount() {
+    componentWillMount() {
         let { user, isAuthenticated } = this.props.auth;
         if (isAuthenticated) {
             this.setState({ email: user.email });
             this.setState({ name: user.name });
+            this.setState({ token: user.token });
         }
     }
     onCheck(e) {
         this.setState({ [e.target.name]: e.target.value });
     }
-    onFileUpload(meta) {
-        this.setState({ file: meta });
+    onUpload(e) {
+        this.setState({ [e.target.name]: e.target.files[0] });
+        let formdata = new FormData();
+        formdata.append('file', this.state.file);
+        axios
+            .post('/api/upload-files', formdata)
+            .then(res => {
+                console.log(res);
+            })
+            .catch(err => {
+                console.log(err);
+            });
     }
     onChange(e) {
         this.setState({ [e.target.name]: e.target.value });
@@ -76,16 +88,13 @@ class Request extends Component {
         this.state = {};
         this.props.history.push('/dashboard/home');
     }
-    handleUpload() {
-        console.log('HANDLE UPLOAD');
-    }
+
     render() {
         //HANDLE loading
         let { loading } = this.props.loading;
         if (loading) return <Spinner />;
         //HANDLE errors
         let { errors } = this.state;
-        console.log('from component errors: ', errors);
         let required = <small className='required'>*</small>;
         let boqContent;
         if (this.state.boq === 'false') {
@@ -180,13 +189,13 @@ class Request extends Component {
                                             <option value='contractor'>
                                                 Contractor
                                             </option>
-                                            <option value='consultant'>
+                                            <option value='conslutant'>
                                                 Consultant
                                             </option>
-                                            <option value='owner'>
+                                            <option value='project_owner'>
                                                 Project owner
                                             </option>
-                                            <option value='designer_architect'>
+                                            <option value='freelancer'>
                                                 Freelancer intrior
                                                 designer/Architect
                                             </option>
@@ -334,16 +343,20 @@ class Request extends Component {
                                         )}
                                     </FormGroup>
                                     <FormGroup row>
-                                        <Label for='uploader'>
-                                            Attach an image to what you're
-                                            looking for
-                                            <br />
-                                            in any of the following formats .jpg
-                                            / .png / .pdf:{required}
+                                        <Label for='exampleFile'>
+                                            Attach an image similar to what
+                                            you're looking for in any of the
+                                            following formats: jpg, png, pdf{' '}
+                                            {required}
                                         </Label>
-                                        <Uploader
-                                            id='uploader'
-                                            onUpload={this.onFileUpload}
+                                        <Input
+                                            type='file'
+                                            name='file'
+                                            id='exampleFile'
+                                            accept='image/*, pdf'
+                                            onChange={event => {
+                                                this.onUpload(event);
+                                            }}
                                         />
                                     </FormGroup>
                                     <FormGroup row>

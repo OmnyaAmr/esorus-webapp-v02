@@ -5,18 +5,31 @@ class Uploader extends Component {
     constructor() {
         super();
         this.handleChangeStatus = this.handleChangeStatus.bind(this);
+        this.state = {
+            token: ''
+        };
+    }
+    componentWillMount() {
+        let { token } = this.props;
+        this.setState({ token });
     }
     // API Request
-    getUploadParams = ({ meta }) => {
-        console.log('Child: ', meta);
-        return { url: '/api/upload-files' };
+    getUploadParams = ({ file, meta }) => {
+        let { token } = this.state;
+        const body = new FormData();
+        body.append('file', file);
+        return {
+            url: '/api/upload-files',
+            body,
+            headers: { Authorization: `Bearer ${token}` }
+        };
     };
 
     // called every time a file's status changes
     handleChangeStatus = ({ meta, file }, status) => {
         console.log('uploader props', this.props);
         this.props.onUpload(meta);
-        console.log('Status: ', status, 'Meta:Child: ', meta, 'File: ', file);
+        console.log('Status: ', status, 'Meta: ', meta, 'File: ', file);
     };
 
     // receives array of files that are done uploading when submit button is clicked
@@ -24,6 +37,7 @@ class Uploader extends Component {
         console.log(files.map(f => f.meta));
     };
     render() {
+        console.log('state: ', this.state);
         return (
             <Dropzone
                 getUploadParams={this.getUploadParams}
@@ -34,4 +48,5 @@ class Uploader extends Component {
         );
     }
 }
+
 export default Uploader;
