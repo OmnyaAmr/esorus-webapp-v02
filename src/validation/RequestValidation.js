@@ -6,7 +6,9 @@ const validateReqeustInput = data => {
     data.name = !isEmpty(data.name) ? data.name : '';
     data.quantity = !isEmpty(data.quantity) ? data.quantity : '';
     data.email = !isEmpty(data.email) ? data.email : '';
-    data.role = !isEmpty(data.role) ? data.role : '';
+    data.professionalRole = !isEmpty(data.professionalRole)
+        ? data.professionalRole
+        : '';
     data.projectType = !isEmpty(data.projectType) ? data.projectType : '';
     data.projectPhase = !isEmpty(data.projectPhase) ? data.projectPhase : '';
     data.deliveryDate = !isEmpty(data.deliveryDate) ? data.deliveryDate : '';
@@ -25,8 +27,8 @@ const validateReqeustInput = data => {
         errors.email = 'Please check your email format';
     }
 
-    if (Validator.isEmpty(data.role)) {
-        errors.role = 'Role is required';
+    if (Validator.isEmpty(data.professionalRole)) {
+        errors.professionalRole = 'Role is required';
     }
     if (Validator.isEmpty(data.projectType)) {
         errors.projectType = 'Project type is required';

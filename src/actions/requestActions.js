@@ -14,18 +14,32 @@ export const requestForm = (reqData, SRC) => dispatch => {
     }
 
     dispatch(setLoading());
+
+    let formdata = new FormData();
+    formdata.append('file', reqData.file);
     axios
-        .post('/api/request-for-supplier', reqData)
+        .post('/api/upload-files', formdata)
         .then(res => {
-            SRC.showToast(
-                'success',
-                'Congratulations .. Your request has been successfully registered !'
-            );
-            SRC.props.history.push('/dashboard/home');
-            dispatch(setLoaded());
+            let uploadedPic = res.data.fileSystemName;
+            console.log('HERE: ', uploadedPic);
+            reqData.uploadedPic = uploadedPic;
+            axios
+                .post('/api/request-for-supplier', reqData)
+                .then(res => {
+                    SRC.showToast(
+                        'success',
+                        'Congratulations .. Your request has been successfully registered !'
+                    );
+                    SRC.props.history.push('/dashboard/home');
+                    dispatch(setLoaded());
+                })
+                .catch(err => {
+                    console.log('Request Error: ', err.response.data);
+                    dispatch({ type: GET_ERRORS, payload: err.response.data });
+                    dispatch(setLoaded());
+                });
         })
         .catch(err => {
-            console.log('Request Error: ', err.response.data);
             dispatch({ type: GET_ERRORS, payload: err.response.data });
             dispatch(setLoaded());
         });

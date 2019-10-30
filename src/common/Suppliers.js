@@ -3,10 +3,10 @@ import { Row, Col } from 'reactstrap';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import { connect } from 'react-redux';
 import PerfectScrollbar from 'react-perfect-scrollbar';
-import world from '../assets/components/icons/world.svg'
-import buyer from '../assets/components/icons/buyer.svg'
-import project from '../assets/components/icons/project.svg'
-import order from '../assets/components/icons/order.svg'
+import world from '../assets/components/icons/world.svg';
+import buyer from '../assets/components/icons/buyer.svg';
+import project from '../assets/components/icons/project.svg';
+import order from '../assets/components/icons/order.svg';
 
 class Suppliers extends Component {
     constructor() {
@@ -32,6 +32,31 @@ class Suppliers extends Component {
 
     render() {
         let { enableHomeBackground, suppliersBackground } = this.props;
+        let { isAuthenticated } = this.props.auth;
+        let content;
+        if (!isAuthenticated) {
+            content = (
+                <div className='d-flex justify-content-center mt-4'>
+                    <input
+                        className='form-control-escrus form-control-lg-escrus ml-1'
+                        onChange={this.onChange}
+                        value={this.state.email}
+                        placeholder='Enter your email here'
+                        name='email'
+                        style={{
+                            fontSize: '15px',
+                            width: '280px'
+                        }}
+                    />
+                    <input
+                        type='button'
+                        className='btn-escrus ml-1'
+                        value='Join Now'
+                        onClick={this.onClick}
+                    />
+                </div>
+            );
+        }
         return (
             <Fragment>
                 <ReactCSSTransitionGroup
@@ -50,8 +75,7 @@ class Suppliers extends Component {
                                     ? 'url(' + suppliersBackground + ')'
                                     : null,
                                 height: '650px',
-                                top: '28%',
-
+                                top: '28%'
                             }}
                         >
                             <h2 className='slogan-text'>
@@ -65,33 +89,17 @@ class Suppliers extends Component {
                             <Row className='mb-4'>
                                 <Col style={{ marginRight: '310px' }}>
                                     {' '}
-                                    <div className='d-flex justify-content-center mt-4'>
-                                        <input
-                                            className='form-control-escrus form-control-lg-escrus ml-1'
-                                            onChange={this.onChange}
-                                            value={this.state.email}
-                                            placeholder='Enter your email here'
-                                            name='email'
-                                            style={{
-                                                fontSize: '15px',
-                                                width: '280px'
-                                            }}
-                                        />
-                                        <input
-                                            type='button'
-                                            className='btn-escrus ml-1'
-                                            value='Join Now'
-                                            onClick={this.onClick}
-                                        />
-                                    </div>
+                                    {content}
                                 </Col>
                                 <Col />
                             </Row>
                         </div>
                     </PerfectScrollbar>
                     <div className='app-main-enhanced'>
-                        <div className="pr-md-5 mr-md-5 text-md-left">
-                            <h2 style={{ color: "black" }} className="mb-4">How can esorus help your brand?</h2>
+                        <div className='pr-md-5 mr-md-5 text-md-left'>
+                            <h2 style={{ color: 'black' }} className='mb-4'>
+                                How can esorus help your brand?
+                            </h2>
                         </div>
                         {/*<Row className='supplier-text3 buttom-text pb-lg-5'>
                             <Col lg={6}>
@@ -116,79 +124,73 @@ class Suppliers extends Component {
                             <Col>
                                 <div className='d-flex justify-content-center mt-4'>
                                     <img
-                                        className="ml-1"
+                                        className='ml-1'
                                         src={world}
                                         width='50'
                                         height='50'
                                         className='mb-1'
-                                        style={{ marginRight: "50px" }}
+                                        style={{ marginRight: '50px' }}
                                     />
                                 </div>
 
-
                                 <div className='d-flex justify-content-center mt-4'>
-                                    <p className=" supplier-text3 buttom-text" text-center >
-                                        Gain access to our worldwide network
-                                        of professional buyers.
+                                    <p
+                                        className=' supplier-text3 buttom-text'
+                                        text-center
+                                    >
+                                        Gain access to our worldwide network of
+                                        professional buyers.
                                     </p>
                                 </div>
-
-
                             </Col>
                             <Col>
-
                                 <div className='d-flex justify-content-center mt-4'>
                                     <img
-                                        className="ml-1"
+                                        className='ml-1'
                                         src={buyer}
                                         width='50'
                                         height='50'
                                         className='mb-1'
-                                        style={{ marginRight: "50px" }}
+                                        style={{ marginRight: '50px' }}
                                     />
                                 </div>
-                                <div className="d-flex justify-content-center mt-4">
-                                    <p className=" supplier-text3 buttom-text text-center ">
-                                        You deciede  who buyes your
-                                        product.
+                                <div className='d-flex justify-content-center mt-4'>
+                                    <p className=' supplier-text3 buttom-text text-center '>
+                                        You deciede who buyes your product.
                                     </p>
                                 </div>
-
-
                             </Col>
-                            <Col >
+                            <Col>
                                 <div className='d-flex justify-content-center mt-4'>
                                     <img
-                                        className="ml-1"
+                                        className='ml-1'
                                         src={project}
                                         width='50'
                                         height='50'
                                         className='mb-2'
-                                        style={{ marginRight: "50px" }}
+                                        style={{ marginRight: '50px' }}
                                     />
                                 </div>
 
-                                <div className="d-flex justify-content-center mt-4">
-                                    <p  className=" supplier-text3 buttom-text text-center ">
+                                <div className='d-flex justify-content-center mt-4'>
+                                    <p className=' supplier-text3 buttom-text text-center '>
                                         Manage your brand and product easily.
                                     </p>
                                 </div>
-
-
                             </Col>
-                            <Col >
+                            <Col>
                                 <div className='d-flex justify-content-center mt-4'>
                                     <img
-                                        className="ml-1"
+                                        className='ml-1'
                                         src={order}
                                         width='50'
                                         height='50'
                                         className='mb-2'
-                                        style={{ marginRight: "50px" }}
+                                        style={{ marginRight: '50px' }}
                                     />
                                 </div>
-                                <div className="d-flex justify-content-center mt-4">
-                                    <p className=" supplier-text3 buttom-text text-center ">
+                                <div className='d-flex justify-content-center mt-4'>
+                                    <p className=' supplier-text3 buttom-text text-center '>
                                         You can manage <br /> your orders.
                                     </p>
                                 </div>
@@ -202,7 +204,8 @@ class Suppliers extends Component {
 }
 const mapStateToProps = state => ({
     enableHomeBackground: state.ThemeOptions.enableHomeBackground,
-    suppliersBackground: state.ThemeOptions.suppliersBackground
+    suppliersBackground: state.ThemeOptions.suppliersBackground,
+    auth: state.auth
 });
 
 export default connect(mapStateToProps)(Suppliers);

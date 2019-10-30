@@ -25,11 +25,10 @@ class Request extends Component {
         this.state = {
             name: '',
             email: '',
-            role: '',
+            professionalRole: '',
             projectType: '',
             projectPhase: '',
             typeOfWorkNeeded: '',
-            uploadedBOQ: '',
             details: '',
             boq: '',
             deliveryDate: '',
@@ -56,24 +55,14 @@ class Request extends Component {
         if (isAuthenticated) {
             this.setState({ email: user.email });
             this.setState({ name: user.name });
-            this.setState({ token: user.token });
         }
     }
+
     onCheck(e) {
         this.setState({ [e.target.name]: e.target.value });
     }
     onUpload(e) {
         this.setState({ [e.target.name]: e.target.files[0] });
-        let formdata = new FormData();
-        formdata.append('file', this.state.file);
-        axios
-            .post('/api/upload-files', formdata)
-            .then(res => {
-                console.log(res);
-            })
-            .catch(err => {
-                console.log(err);
-            });
     }
     onChange(e) {
         this.setState({ [e.target.name]: e.target.value });
@@ -93,6 +82,7 @@ class Request extends Component {
         //HANDLE loading
         let { loading } = this.props.loading;
         if (loading) return <Spinner />;
+
         //HANDLE errors
         let { errors } = this.state;
         let required = <small className='required'>*</small>;
@@ -169,19 +159,20 @@ class Request extends Component {
                                         </FormFeedback>
                                     </FormGroup>
                                     <FormGroup row>
-                                        <Label for='role'>
+                                        <Label for='professionalRole'>
                                             Professional role{required}
                                         </Label>
                                         <select
-                                            name='role'
+                                            name='professionalRole'
                                             className={classnames(
                                                 'custom-select custom-select-md form-control-escrus',
                                                 {
-                                                    'is-invalid': errors.role
+                                                    'is-invalid':
+                                                        errors.professionalRole
                                                 }
                                             )}
                                             onChange={this.onChange}
-                                            value={this.state.role}
+                                            value={this.state.professionalRole}
                                         >
                                             <option value=''>
                                                 Select your role ...
@@ -202,7 +193,7 @@ class Request extends Component {
                                         </select>
                                         {errors.role && (
                                             <FormFeedback>
-                                                {errors.role}
+                                                {errors.professionalRole}
                                             </FormFeedback>
                                         )}
                                     </FormGroup>
@@ -358,6 +349,11 @@ class Request extends Component {
                                                 this.onUpload(event);
                                             }}
                                         />
+                                        {errors.file && (
+                                            <FormFeedback>
+                                                {errors.file}
+                                            </FormFeedback>
+                                        )}
                                     </FormGroup>
                                     <FormGroup row>
                                         <Label>Additional Details</Label>

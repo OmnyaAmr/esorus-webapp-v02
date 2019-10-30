@@ -4,7 +4,6 @@ import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import PerfectScrollbar from 'react-perfect-scrollbar';
 import { Row, Col, Container, Card } from 'reactstrap';
 import AnimatedNumber from 'react-animated-number';
-import Sidebar from '../../Layout/AppSidebar';
 
 class Home extends Component {
     constructor() {
@@ -52,6 +51,30 @@ class Home extends Component {
 
     render() {
         let { enableHomeBackground, homeBackground } = this.props;
+        let { isAuthenticated } = this.props.auth;
+
+        let content;
+
+        if (!isAuthenticated) {
+            content = (
+                <div className='d-flex justify-content-center mt-4'>
+                    <input
+                        className='form-control-escrus form-control-lg-escrus ml-1'
+                        onChange={this.onChange}
+                        value={this.state.email}
+                        placeholder='Enter your email here'
+                        name='email'
+                        style={{ fontSize: '15px', width: '280px' }}
+                    />
+                    <input
+                        type='button'
+                        className='btn-escrus ml-1'
+                        value='Join Now'
+                        onClick={this.onClick}
+                    />
+                </div>
+            );
+        }
 
         return (
             <Fragment>
@@ -80,23 +103,7 @@ class Home extends Component {
                                         Interior Sourcing
                                     </h2>
                                     <h2 className='slogan-text'>Made Easy</h2>
-                                    <div className='d-flex justify-content-center mt-4'>
-                                        <input
-                                            className='form-control-escrus form-control-lg-escrus ml-1'
-                                            onChange={this.onChange}
-                                            value={this.state.email}
-                                            placeholder="Enter your email here"
-                                            name='email'
-                                            style={{fontSize:"15px",width:"280px"}}
-                                        />
-                                        <input
-                                            type='button'
-                                            className='btn-escrus ml-1'
-                                            value='Join Now'
-                                            onClick={this.onClick}
-                                           
-                                        />
-                                    </div>
+                                    {content}
                                 </Col>
                             </Row>
                         </div>
@@ -110,15 +117,19 @@ class Home extends Component {
                         the interior sourcing process!
                     </h1>
                 </div>
-                <div className='review-background-escrus'  id='about'>
+                <div className='review-background-escrus' id='about'>
                     <div className='handsome-background-escrus ' id='parallex'>
                         <div className='align-self-center pt-lg-5'>
                             {this.state.count && (
                                 <Container>
                                     <Row>
-                                        <Col >
-                                            <h1 className='slogan5-text'>SOME</h1>
-                                            <h1 className='slogan3-text'>Interesting Facts</h1>
+                                        <Col>
+                                            <h1 className='slogan5-text'>
+                                                SOME
+                                            </h1>
+                                            <h1 className='slogan3-text'>
+                                                Interesting Facts
+                                            </h1>
                                         </Col>
                                         <Col className='slogan3-text'>
                                             <AnimatedNumber
@@ -144,7 +155,9 @@ class Home extends Component {
                                                     Number(value).toFixed(0)
                                                 }
                                             />
-                                            <h4 className='slogan6-text'>Suppliers</h4>
+                                            <h4 className='slogan6-text'>
+                                                Suppliers
+                                            </h4>
                                         </Col>
                                         <Col className='slogan3-text'>
                                             <AnimatedNumber
@@ -170,7 +183,9 @@ class Home extends Component {
                                                     Number(value).toFixed(0)
                                                 }
                                             />
-                                            <h4 className='slogan6-text'>Our Projects</h4>
+                                            <h4 className='slogan6-text'>
+                                                Our Projects
+                                            </h4>
                                         </Col>
                                         <Col className='slogan3-text'>
                                             <AnimatedNumber
@@ -196,7 +211,9 @@ class Home extends Component {
                                                     Number(value).toFixed(0)
                                                 }
                                             />
-                                            <h4 className='slogan6-text'>Years Experience</h4>
+                                            <h4 className='slogan6-text'>
+                                                Years Experience
+                                            </h4>
                                         </Col>
                                         <Col className='slogan3-text'>
                                             <AnimatedNumber
@@ -222,7 +239,9 @@ class Home extends Component {
                                                     Number(value).toFixed(0)
                                                 }
                                             />
-                                            <h4 className='slogan6-text'>Successful Matchmaking</h4>
+                                            <h4 className='slogan6-text'>
+                                                Successful Matchmaking
+                                            </h4>
                                         </Col>
                                     </Row>
                                 </Container>
@@ -230,7 +249,7 @@ class Home extends Component {
                         </div>
                     </div>
 
-                    <Container >
+                    <Container>
                         <Row className='pt-lg-4'>
                             <Col className='text-center' md={12}>
                                 <h2 className='mb-4 slogan-text'>
@@ -238,10 +257,10 @@ class Home extends Component {
                                 </h2>
                             </Col>
                         </Row>
-                        <div className='mb-lg-5 pb-lg-5' >
+                        <div className='mb-lg-5 pb-lg-5'>
                             <Row>
                                 <Col md={12}>
-                                    <div className='item' >
+                                    <div className='item'>
                                         <div className='testimony-wrap p-4 pb-5 text-center'>
                                             <img
                                                 className='user-img mb-5'
@@ -270,7 +289,7 @@ class Home extends Component {
                                                     working with them on many
                                                     more projects in the future.
                                                 </p>
-                                                <p className='name' >
+                                                <p className='name'>
                                                     NORA EL FAKHARANY
                                                 </p>
                                                 <span className='position'>
@@ -292,7 +311,8 @@ class Home extends Component {
 
 const mapStateToProps = state => ({
     enableHomeBackground: state.ThemeOptions.enableHomeBackground,
-    homeBackground: state.ThemeOptions.homeBackground
+    homeBackground: state.ThemeOptions.homeBackground,
+    auth: state.auth
 });
 
 export default connect(mapStateToProps)(Home);
