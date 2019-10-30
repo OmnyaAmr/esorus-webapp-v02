@@ -17,9 +17,10 @@ class AppFooter extends React.Component {
                         <div className='app-footer-left ml-5'>
                             <Row>
                                 <Col>
-                                    <h2 style={{ marginTop: "30px" }}>e s o r u s</h2>
+                                    <h2 style={{ marginTop: '30px' }}>
+                                        e s o r u s
+                                    </h2>
                                 </Col>
-
                             </Row>
                             <Row>
                                 <Col>
@@ -31,12 +32,12 @@ class AppFooter extends React.Component {
                                                 href='https://www.facebook.com/Esorus'
                                                 target='_blank'
                                             >
-                                        <img
-                                            src={facebook}
-                                            width='25'
-                                            height='25'
-                                            className='mb-2'
-                                        />
+                                                <img
+                                                    src={facebook}
+                                                    width='25'
+                                                    height='25'
+                                                    className='mb-2'
+                                                />
                                             </a>
                                         </li>
                                         <li>
@@ -56,16 +57,49 @@ class AppFooter extends React.Component {
                             </Row>
                         </div>
                         <div className='app-footer-middle'>
-                            <ul class="list-unstyled">
-                                <li><h2 >Quick links</h2></li>
-                                <li><a className='pl-1 ' href="#/dashboard/buyers">Professional Buyers</a></li>
-                                <li><a className='pl-1' href="#/dashboard/suppliers">Suppliers</a></li>
-                                <li><a className='pl-1' href="#/dashboard/about">About Esorus</a></li>
+                            <ul class='list-unstyled'>
+                                <li>
+                                    <h2>Quick links</h2>
+                                </li>
+                                <li>
+                                    <a
+                                        className='pl-1 '
+                                        href='#/dashboard/buyers'
+                                    >
+                                        Professional Buyers
+                                    </a>
+                                </li>
+                                <li>
+                                    <a
+                                        className='pl-1'
+                                        href='#/dashboard/suppliers'
+                                    >
+                                        Suppliers
+                                    </a>
+                                </li>
+                                <li>
+                                    <a
+                                        className='pl-1'
+                                        href='#/dashboard/about'
+                                    >
+                                        About Esorus
+                                    </a>
+                                </li>
                             </ul>
-                            <p className="copy-rights-text">All rights reserved. esorus © 2019</p>
+                            <p className='copy-rights-text'>
+                                All rights reserved. esorus &copy;{' '}
+                                {new Date().getFullYear()}
+                            </p>
                         </div>
                         <div className='app-footer-right'>
-                            <h2 style={{ marginLeft: "35px", marginTop: "30px" }}>Curious and intrigued? Let's Talk!</h2>
+                            <h2
+                                style={{
+                                    marginLeft: '35px',
+                                    marginTop: '30px'
+                                }}
+                            >
+                                Curious and intrigued? Let's Talk!
+                            </h2>
                             <ul>
                                 <li>
                                     <div className='text-white'>
@@ -106,12 +140,9 @@ class AppFooter extends React.Component {
                                         </span>
                                     </div>
                                 </li>
-
                             </ul>
                         </div>
-                       
                     </div>
-                    
                 </div>
             </Fragment>
         );

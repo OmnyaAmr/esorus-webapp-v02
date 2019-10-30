@@ -17,6 +17,7 @@ import {
 import { connect } from 'react-redux';
 import { requestForm } from '../actions/requestActions';
 import Spinner from './Spinner';
+import { toast } from 'react-toastify';
 
 class Request extends Component {
     constructor() {
@@ -48,6 +49,7 @@ class Request extends Component {
             this.setState({ errors: nextProps.errors });
         }
     }
+    showToast = (type, msg) => toast[type](msg);
     componentDidMount() {
         let { user, isAuthenticated } = this.props.auth;
         if (isAuthenticated) {
@@ -67,7 +69,7 @@ class Request extends Component {
     onSubmit(e) {
         e.preventDefault();
         let request = this.state;
-        this.props.requestForm(request);
+        this.props.requestForm(request, this);
     }
     onClick(e) {
         e.preventDefault();
@@ -83,6 +85,7 @@ class Request extends Component {
         if (loading) return <Spinner />;
         //HANDLE errors
         let { errors } = this.state;
+        console.log('from component errors: ', errors);
         let required = <small className='required'>*</small>;
         let boqContent;
         if (this.state.boq === 'false') {

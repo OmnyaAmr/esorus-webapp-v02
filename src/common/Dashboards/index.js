@@ -31,7 +31,7 @@ const Dashboards = ({ match }) => (
         </div>
 
         <Route path={`${match.url}/home`} component={Home} />
-        <div className='container'>
+        <div>
             <Route path={`${match.url}/login`} component={Login} />
             <Route path={`${match.url}/signup`} component={SignUp} />
             <Route path={`${match.url}/suppliers`} component={Suppliers} />
