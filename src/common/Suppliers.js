@@ -1,5 +1,4 @@
 import React, { Component, Fragment } from 'react';
-import { Link } from 'react-router-dom';
 import { Row, Col } from 'reactstrap';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import { connect } from 'react-redux';
@@ -40,33 +39,38 @@ class Suppliers extends Component {
                     transitionLeave={false}
                 >
                     <PerfectScrollbar>
-
-                        <div className='app-main-enhanced test'
+                        <div
+                            className='app-main-enhanced test'
                             style={{
                                 backgroundImage: enableHomeBackground
                                     ? 'url(' + suppliersBackground + ')'
                                     : null,
                                 height: '650px',
-                                top: "28%"
-
-                            }}>
-                            <h2 className="slogan-text">For Suppliers and Manufacturers</h2>
+                                top: '28%'
+                            }}
+                        >
+                            <h2 className='slogan-text'>
+                                For Suppliers and Manufacturers
+                            </h2>
                             <p className='supplier-text3'>
-                                We take your brand around the World and
-                            expose<br />you to a wide
-                                    network of professional buyers.
-                        </p>
+                                We take your brand around the World and expose
+                                <br />
+                                you to a wide network of professional buyers.
+                            </p>
                             <Row className='mb-4'>
-                                <Col style={{marginRight:"310px"}}>
+                                <Col style={{ marginRight: '310px' }}>
                                     {' '}
                                     <div className='d-flex justify-content-center mt-4'>
                                         <input
                                             className='form-control-escrus form-control-lg-escrus ml-1'
                                             onChange={this.onChange}
                                             value={this.state.email}
-                                            placeholder="Enter your email here"
+                                            placeholder='Enter your email here'
                                             name='email'
-                                            style={{ fontSize: "15px",width:"350px"}}
+                                            style={{
+                                                fontSize: '15px',
+                                                width: '350px'
+                                            }}
                                         />
                                         <input
                                             type='button'
@@ -80,7 +84,7 @@ class Suppliers extends Component {
                             </Row>
                         </div>
                     </PerfectScrollbar>
-                    <div className="app-main-enhanced">
+                    <div className='app-main-enhanced'>
                         <Row className='supplier-text3 buttom-text pb-lg-5'>
                             <Col lg={6}>
                                 <p>
@@ -90,7 +94,8 @@ class Suppliers extends Component {
                                 </p>
                             </Col>
                             <Col className='' lg={6}>
-                                You deciede <br /> who buyes your <br /> product.
+                                You deciede <br /> who buyes your <br />{' '}
+                                product.
                             </Col>
                             <Col className='' lg={6}>
                                 Manage your brand <br /> and product easily.

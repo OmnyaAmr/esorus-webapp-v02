@@ -13,9 +13,8 @@ import {
     Input,
     FormFeedback
 } from 'reactstrap';
-import { Link, withRouter } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 import isEmpty from '../validation/is-empty';
-import logo from '../assets/utils/images/logo.png';
 import { connect } from 'react-redux';
 import { loginUser } from '../actions/authActions';
 import Spinner from './Spinner';

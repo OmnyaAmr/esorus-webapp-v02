@@ -21,10 +21,6 @@ componentDidMount() {
     document.addEventListener('scroll', this.trackScrolling);
 }
 
-componentWillUnmount() {
-   // document.removeEventListener('scroll', this.trackScrolling);
-}
-
 trackScrolling = () => {
     const wrappedElement = document.getElementsByClassName('parallax');
     if (this.isTop(wrappedElement[0])) {
@@ -33,10 +29,6 @@ trackScrolling = () => {
     }
 }
 render(){
-    // var width = window.innerWidth;
-    // var height=window.screen.height;
-    // console.log(width+" "+height);
-    // console.log(window.innerWidth);
 
     return(
     <div >
