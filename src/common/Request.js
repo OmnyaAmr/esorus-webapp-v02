@@ -5,14 +5,11 @@ import Uploader from './Uploader';
 import classnames from 'classnames';
 import {
     Card,
-    CardHeader,
     CardBody,
     CardTitle,
     Button,
     Input,
     FormGroup,
-    Row,
-    Col,
     Label,
     FormFeedback,
     Form

@@ -12395,10 +12395,16 @@ body {
     height: auto;
   }
 
+  .spinner-holder{
+    margin-top: 60px;
+    min-height: 500px;
+  }
+
   .custom-spinner{
-    position:absolute;
-    top:50%;
-    left:50%;
+    position: relative;
+    vertical-align: middle;
+    text-align: center;
+    margin: auto;
     }
 /***************** MY CUSTOM STYLES ****************/
 .home-background{
