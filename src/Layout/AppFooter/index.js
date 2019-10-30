@@ -17,9 +17,10 @@ class AppFooter extends React.Component {
                         <div className='app-footer-left ml-5'>
                             <Row>
                                 <Col>
-                                    <h2 style={{ marginTop: "30px" }}>e s o r u s</h2>
+                                    <h2 style={{ marginTop: '30px' }}>
+                                        e s o r u s
+                                    </h2>
                                 </Col>
-
                             </Row>
                             <Row>
                                 <Col>
@@ -66,7 +67,14 @@ class AppFooter extends React.Component {
                             </ul>
                         </div>
                         <div className='app-footer-right'>
-                            <h2 style={{ marginLeft: "35px", marginTop: "30px" }}>Curious and intrigued? Let's Talk!</h2>
+                            <h2
+                                style={{
+                                    marginLeft: '35px',
+                                    marginTop: '30px'
+                                }}
+                            >
+                                Curious and intrigued? Let's Talk!
+                            </h2>
                             <ul>
                                 <li>
                                     <div className='text-white'>
@@ -107,7 +115,6 @@ class AppFooter extends React.Component {
                                         </span>
                                     </div>
                                 </li>
-
                             </ul>
                         </div>
                         <p className="copy-rights-text">All rights reserved. esorus © 2019</p>
