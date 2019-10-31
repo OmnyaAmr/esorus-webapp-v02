@@ -4,6 +4,7 @@ import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import PerfectScrollbar from 'react-perfect-scrollbar';
 import { Row, Col, Container, Card } from 'reactstrap';
 import AnimatedNumber from 'react-animated-number';
+import { browserHistory } from 'react-router';
 
 class Home extends Component {
     constructor() {
@@ -18,7 +19,23 @@ class Home extends Component {
     }
 
     componentDidMount() {
+        this.urlListener();
+
+
+
+
         document.addEventListener('scroll', this.trackScrolling);
+    }
+    urlListener() {
+        this.unlisten = this.props.history.listen((location) => {
+            const myId = window.location.hash, url = myId.split("#");
+            const section = document.getElementById(url[2])
+            if (section) {
+                section.scrollIntoView()
+                this.props.history.push('#/dashboard/home');
+            }
+            
+        })
     }
 
     trackScrolling = () => {
@@ -117,7 +134,7 @@ class Home extends Component {
                         the interior sourcing process!
                     </h1>
                 </div>
-                <div className='review-background-escrus' id='about'>
+                <div className='review-background-escrus' id='aboutUs'>
                     <div className='handsome-background-escrus ' id='parallex'>
                         <div className='align-self-center pt-lg-5'>
                             {this.state.count && (
@@ -146,9 +163,9 @@ class Home extends Component {
                                                     perc === 100
                                                         ? {}
                                                         : {
-                                                              backgroundColor:
-                                                                  'transparent'
-                                                          }
+                                                            backgroundColor:
+                                                                'transparent'
+                                                        }
                                                 }
                                                 duration={5000}
                                                 formatValue={value =>
@@ -174,9 +191,9 @@ class Home extends Component {
                                                     perc === 100
                                                         ? {}
                                                         : {
-                                                              backgroundColor:
-                                                                  'transparent'
-                                                          }
+                                                            backgroundColor:
+                                                                'transparent'
+                                                        }
                                                 }
                                                 duration={5000}
                                                 formatValue={value =>
@@ -202,9 +219,9 @@ class Home extends Component {
                                                     perc === 100
                                                         ? {}
                                                         : {
-                                                              backgroundColor:
-                                                                  'transparent'
-                                                          }
+                                                            backgroundColor:
+                                                                'transparent'
+                                                        }
                                                 }
                                                 duration={5000}
                                                 formatValue={value =>
@@ -230,9 +247,9 @@ class Home extends Component {
                                                     perc === 100
                                                         ? {}
                                                         : {
-                                                              backgroundColor:
-                                                                  'transparent'
-                                                          }
+                                                            backgroundColor:
+                                                                'transparent'
+                                                        }
                                                 }
                                                 duration={5000}
                                                 formatValue={value =>

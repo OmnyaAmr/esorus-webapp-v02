@@ -1,7 +1,7 @@
 let aboutUs = {
     icon: 'pe-7s-info',
     label: 'About Us',
-    to: '#/dashboard/about'
+    to: '#/dashboard/home#aboutUs'
 };
 
 let account = {

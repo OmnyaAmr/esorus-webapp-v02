@@ -83,7 +83,7 @@ class AppFooter extends React.Component {
                                 <li>
                                     <a
                                         className='pl-1'
-                                        href='#/dashboard/about'
+                                        href='#/dashboard/home#aboutUs'
                                     >
                                         About Esorus
                                     </a>
