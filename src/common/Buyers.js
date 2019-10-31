@@ -50,7 +50,7 @@ class Buyers extends Component {
                                 </h2>
                                 <p className='buyer-text3'>
                                     A single place to find furniture materials,
-                                    <br /> get qoutes and purchase from over a
+                                    get qoutes and purchase from over a
                                     1000 <br /> different qualified suppliers.{' '}
                                 </p>
                             </Col>
