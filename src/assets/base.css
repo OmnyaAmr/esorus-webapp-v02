@@ -12981,3 +12981,7 @@ font-family: 'Poppins', sans-serif;
   text-transform: uppercase;
   
   color: #fcd307; }
+
+  .copyright-container{
+    background: #1a1600;
+  }

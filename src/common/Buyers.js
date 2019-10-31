@@ -2,13 +2,12 @@ import React, { Component, Fragment } from 'react';
 import { Row, Col } from 'reactstrap';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import { connect } from 'react-redux';
-import PerfectScrollbar from 'react-perfect-scrollbar';
 import idea from '../assets/components/icons/idea.svg';
 import analysis from '../assets/components/icons/analysis.svg';
 import data from '../assets/components/icons/data.svg';
 import startUp from '../assets/components/icons/startup.svg';
 import buyersPic from '../assets/utils/images/originals/buyersPic.jpg';
-
+import { ROLE_SUPPLIER } from '../actions/types';
 class Buyers extends Component {
     constructor() {
         super();
@@ -21,6 +20,25 @@ class Buyers extends Component {
     }
     render() {
         let { enableHomeBackground, buyersBackground } = this.props;
+        let content;
+        let { prev } = this.props;
+        if (prev !== ROLE_SUPPLIER) {
+            content = (
+                <div>
+                    {' '}
+                    <p>
+                        We’re just a click away, send us your request and our
+                        FF&E Team will assist you.
+                    </p>
+                    <input
+                        type='button'
+                        className='btn-escrus mt-2'
+                        value='Source Now'
+                        onClick={this.onClick}
+                    />
+                </div>
+            );
+        }
         return (
             <Fragment>
                 <ReactCSSTransitionGroup
@@ -50,8 +68,8 @@ class Buyers extends Component {
                                 </h2>
                                 <p className='buyer-text3'>
                                     A single place to find furniture materials,
-                                    get qoutes and purchase from over a
-                                    1000 <br /> different qualified suppliers.{' '}
+                                    get qoutes and purchase from over a 1000{' '}
+                                    <br /> different qualified suppliers.{' '}
                                 </p>
                             </Col>
                         </Row>
@@ -118,18 +136,7 @@ class Buyers extends Component {
                         </Row>
 
                         <Row>
-                            <Col style={{ left: '50px' }}>
-                                <p>
-                                    We’re just a click away, send us your
-                                    request and our FF&E Team will assist you.
-                                </p>
-                                <input
-                                    type='button'
-                                    className='btn-escrus mt-2'
-                                    value='Source Now'
-                                    onClick={this.onClick}
-                                />
-                            </Col>
+                            <Col style={{ left: '50px' }}>{content}</Col>
                         </Row>
                         <Row className='pt-4 pb-5 '>
                             <Col>
@@ -230,7 +237,9 @@ class Buyers extends Component {
 }
 const mapStateToProps = state => ({
     enableHomeBackground: state.ThemeOptions.enableHomeBackground,
-    buyersBackground: state.ThemeOptions.buyersBackground
+    buyersBackground: state.ThemeOptions.buyersBackground,
+    auth: state.auth,
+    prev: state.prev
 });
 
 export default connect(mapStateToProps)(Buyers);
