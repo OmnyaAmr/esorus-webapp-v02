@@ -92,8 +92,9 @@ class UserBox extends React.Component {
                                     onClick={this.onLogoutClick}
                                     color='info'
                                     id='Tooltip-1'
+                                    style={{width:"90px",height:"40px"}}
                                 >
-                                    LOG OUT
+                                    Log out
                                 </Button>
                                 <UncontrolledTooltip
                                     placement='bottom'

@@ -97,7 +97,7 @@ class Confirmation extends Component {
                             <Col lg='6'>
                                 <Card className='main-card mb-3'>
                                     <CardBody>
-                                        <CardTitle>Announcement</CardTitle>
+                                        <CardTitle>Alert</CardTitle>
                                         <div className='bg-warning text-white text-center'>
                                             <FormText
                                                 color='white'
@@ -112,10 +112,7 @@ class Confirmation extends Component {
                                         <div className='divider' />
 
                                         <p>
-                                            For security reasons it's required
-                                            to confirm your email to have{' '}
-                                            <strong>full control</strong> on
-                                            your account
+                                        Message: For security reasons, please check your email to activate your account.
                                         </p>
                                         <p>Hope to enjoy your being</p>
                                         <Modal
@@ -124,11 +121,9 @@ class Confirmation extends Component {
                                             toggle={this.toggle}
                                             centered
                                         >
-                                            <ModalHeader toggle={this.toggle}>
-                                                Note
-                                            </ModalHeader>
+
                                             <ModalBody>
-                                                <Alert color='focus'>
+                                                <Alert color='focus' style={{color:"#ecc503"}}>
                                                     <h4 className='alert-heading'>
                                                         <strong className='text-uppercase'>
                                                             be careful
@@ -199,14 +194,14 @@ class Confirmation extends Component {
                                             type='button'
                                             name='change'
                                             className='btn-escrus-inv block log-in mb-3'
-                                            value='change email'
+                                            value='Change email'
                                             onClick={this.onClick}
                                         />
                                         <input
                                             type='button'
                                             name='confirm'
                                             className='btn-escrus block log-in'
-                                            value='send again'
+                                            value='Send again'
                                             onClick={this.onConfirm}
                                         />
                                     </CardBody>
