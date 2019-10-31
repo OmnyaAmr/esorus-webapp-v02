@@ -122,7 +122,7 @@ class Home extends Component {
                         <div className='align-self-center pt-lg-5'>
                             {this.state.count && (
                                 <Container>
-                                    <Row>
+                                    <Row id='about'>
                                         <Col>
                                             <h1 className='slogan5-text'>
                                                 SOME

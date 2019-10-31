@@ -32,26 +32,7 @@ class Main extends React.Component {
                 handleWidth
                 render={({ width }) => (
                     <Fragment>
-                        <div
-                            className={cx(
-                                'app-container app-theme-' + colorScheme,
-                                { 'fixed-header': enableFixedHeader },
-                                {
-                                    'fixed-sidebar':
-                                        enableFixedSidebar || width < 1250
-                                },
-                                { 'fixed-footer': enableFixedFooter },
-                                {
-                                    'closed-sidebar':
-                                        enableClosedSidebar || width < 1250
-                                },
-                                {
-                                    'closed-sidebar-mobile':
-                                        closedSmallerSidebar || width < 1250
-                                },
-                                { 'sidebar-mobile-open': enableMobileMenu }
-                            )}
-                        >
+                        <div className='app-container fixed-header'>
                             <AppMain />
                         </div>
                     </Fragment>

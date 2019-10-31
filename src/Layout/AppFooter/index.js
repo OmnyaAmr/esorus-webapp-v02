@@ -14,7 +14,7 @@ class AppFooter extends React.Component {
             <Fragment>
                 <div className='app-footer'>
                     <div className='app-footer__inner'>
-                        <div className='app-footer-left ml-5'>
+                        <div className='app-footer-left'>
                             <Row>
                                 <Col>
                                     <h2 style={{ marginTop: '30px' }}>
@@ -89,6 +89,10 @@ class AppFooter extends React.Component {
                                     </a>
                                 </li>
                             </ul>
+                            <p className='copy-rights-text '>
+                                All rights reserved. esorus &copy;{' '}
+                                {new Date().getFullYear()}
+                            </p>
                         </div>
                         <div className='app-footer-right'>
                             <h2
@@ -141,9 +145,6 @@ class AppFooter extends React.Component {
                                 </li>
                             </ul>
                         </div>
-                        <p className='copy-rights-text'>
-                            All rights reserved. esorus © 2019
-                        </p>
                     </div>
                 </div>
             </Fragment>

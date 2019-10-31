@@ -36,7 +36,7 @@ class Suppliers extends Component {
         let content;
         if (!isAuthenticated) {
             content = (
-                <div className='d-flex justify-content-center mt-4'>
+                <div className='d-flex justify-content-left mt-4'>
                     <input
                         className='form-control-escrus form-control-lg-escrus ml-1'
                         onChange={this.onChange}
@@ -86,13 +86,7 @@ class Suppliers extends Component {
                                 <br />
                                 you to a wide network of professional buyers.
                             </p>
-                            <Row className='mb-4'>
-                                <Col style={{ marginRight: '310px' }}>
-                                    {' '}
-                                    {content}
-                                </Col>
-                                <Col />
-                            </Row>
+                            {content}
                         </div>
                     </PerfectScrollbar>
                     <div className='app-main-enhanced'>

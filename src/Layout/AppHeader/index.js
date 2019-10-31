@@ -13,12 +13,13 @@ import { Link } from 'react-router-dom';
 
 class Header extends React.Component {
     componentDidMount() {
-        window.onscroll = function () {
+        window.onscroll = function() {
             if (window.pageYOffset === 0) {
-                this.document.getElementById("header").style.backgroundColor = "transparent";
-            }
-            else {
-                this.document.getElementById("header").style.backgroundColor = "#bfbfbf";
+                this.document.getElementById('header').style.backgroundColor =
+                    'transparent';
+            } else {
+                this.document.getElementById('header').style.backgroundColor =
+                    '#bfbfbf';
             }
         };
     }
@@ -42,7 +43,7 @@ class Header extends React.Component {
                     transitionLeave={false}
                 >
                     <div
-                        id="header"
+                        id='header'
                         className={cx(
                             'app-header__content header-position',
                             'fix-shadow',
