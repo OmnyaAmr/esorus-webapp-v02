@@ -89,10 +89,10 @@ class AppFooter extends React.Component {
                                     </a>
                                 </li>
                             </ul>
-                            <p className='copy-rights-text '>
+                          {/*  <p className='copy-rights-text '>
                                 All rights reserved. esorus &copy;{' '}
                                 {new Date().getFullYear()}
-                            </p>
+                                                </p>*/}
                         </div>
                         <div className='app-footer-right'>
                             <h2

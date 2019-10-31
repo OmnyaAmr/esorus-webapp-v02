@@ -1,7 +1,7 @@
 import sideBar6 from '../assets/utils/images/sidebar/interior1.jpg';
 import background from '../assets/utils/images/originals/background.png';
-import buyersBackground from '../assets/utils/images/originals/buyersBackground.jpg';
-import suppliersBackground from '../assets/utils/images/originals/suppliersBackground6.jpg';
+import buyersBackground from '../assets/utils/images/originals/buyersBackground2.png';
+import suppliersBackground from '../assets/utils/images/originals/suppliersBackground9.jpg';
 
 export const SET_ENABLE_BACKGROUND_IMAGE =
     'THEME_OPTIONS/SET_ENABLE_BACKGROUND_IMAGE';

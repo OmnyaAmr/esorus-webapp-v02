@@ -36,7 +36,7 @@ class Suppliers extends Component {
         let content;
         if (!isAuthenticated) {
             content = (
-                <div className='d-flex justify-content-left mt-4'>
+                <div className='d-flex justify-content-left mt-4' >
                     <input
                         className='form-control-escrus form-control-lg-escrus ml-1'
                         onChange={this.onChange}
@@ -75,13 +75,13 @@ class Suppliers extends Component {
                                     ? 'url(' + suppliersBackground + ')'
                                     : null,
                                 height: '650px',
-                                top: '28%'
+                                paddingTop:"23%"
                             }}
                         >
-                            <h2 className='slogan-text'>
+                            <h2 className='slogan-text' style={{color:"white"}}>
                                 For Suppliers and Manufacturers
                             </h2>
-                            <p className='supplier-text3'>
+                            <p className='supplier-text3' style={{color:"white"}}>
                                 We take your brand around the world and expose
                                 <br />
                                 you to a wide network of professional buyers.
@@ -123,14 +123,14 @@ class Suppliers extends Component {
                                         width='50'
                                         height='50'
                                         className='mb-1'
-                                        style={{ marginRight: '50px' }}
+                                        
                                     />
                                 </div>
 
                                 <div className='d-flex justify-content-center mt-4'>
                                     <p
-                                        className=' supplier-text3 buttom-text'
-                                        text-center
+                                        className=' supplier-text3 buttom-text text-center'
+                                        
                                     >
                                         Gain access to our worldwide network of
                                         professional buyers.
@@ -145,7 +145,7 @@ class Suppliers extends Component {
                                         width='50'
                                         height='50'
                                         className='mb-1'
-                                        style={{ marginRight: '50px' }}
+                                       
                                     />
                                 </div>
                                 <div className='d-flex justify-content-center mt-4'>
@@ -162,7 +162,7 @@ class Suppliers extends Component {
                                         width='50'
                                         height='50'
                                         className='mb-2'
-                                        style={{ marginRight: '50px' }}
+                                        
                                     />
                                 </div>
 
@@ -180,7 +180,7 @@ class Suppliers extends Component {
                                         width='50'
                                         height='50'
                                         className='mb-2'
-                                        style={{ marginRight: '50px' }}
+                                        
                                     />
                                 </div>
                                 <div className='d-flex justify-content-center mt-4'>

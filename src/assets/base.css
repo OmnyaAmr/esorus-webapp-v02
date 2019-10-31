@@ -8514,7 +8514,9 @@ button,
       color: #a0a0a0;
 
     }
-    
+    .app-footer-right li{
+      margin-bottom: 9px;
+    }
     .app-footer .app-footer__inner .app-footer-left {
       align-items: center; }
     .app-footer .app-footer__inner .app-footer-right {
@@ -12861,7 +12863,12 @@ font-family: 'Poppins', sans-serif;
     color: #000;
 }
 .supplier-text3 {
-  font-size: 20px;
+  font-size: 10;
+  font-weight:100;
+  color: #000;
+}
+.buyer-text3 {
+  font-size: 25px;
   font-weight:100;
   color: #000;
 }

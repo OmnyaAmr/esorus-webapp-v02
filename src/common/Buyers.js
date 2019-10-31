@@ -48,7 +48,7 @@ class Buyers extends Component {
                                     Designers and <br />
                                     Professional Buyers{' '}
                                 </h2>
-                                <p className='supplier-text3'>
+                                <p className='buyer-text3'>
                                     A single place to find furniture materials,
                                     <br /> get qoutes and purchase from over a
                                     1000 <br /> different qualified suppliers.{' '}
