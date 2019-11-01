@@ -210,11 +210,12 @@ export const confirmEmail = (activitionKey, history) => dispatch => {
     axios
         .get('/api/activate?key=' + activitionKey)
         .then(res => {
-            dispatch(setloaded());
+            dispatch(setLoaded());
             history.push('/dashboard/login');
         })
         .catch(err => {
-            dispatch(setloaded());
-            history.push('/dashboard/login');
+            dispatch({ type: GET_ERRORS, payload: err.response.data });
+            dispatch(setLoaded());
+            history.push('/dashboard/home');
         });
 };
