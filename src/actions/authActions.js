@@ -209,7 +209,7 @@ export const confirmEmail = (activitionKey, history) => dispatch => {
     body.key = activitionKey;
     dispatch(setLoading());
     axios
-        .get('/api/activate?' + activitionKey, body)
+        .get('/api/activate?key=' + activitionKey, body)
         .then(res => {
             dispatch(setloaded());
             history.push('/dashboard/login');
