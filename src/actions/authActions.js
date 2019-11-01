@@ -205,11 +205,10 @@ export const resetPassword = (resetSpecs, SRC) => dispatch => {
 // confirm
 
 export const confirmEmail = (activitionKey, history) => dispatch => {
-    let body = {};
-    body.key = activitionKey;
+   
     dispatch(setLoading());
     axios
-        .get('/api/activate?key=' + activitionKey, body)
+        .get('/api/activate?key=' + activitionKey)
         .then(res => {
             dispatch(setloaded());
             history.push('/dashboard/login');
