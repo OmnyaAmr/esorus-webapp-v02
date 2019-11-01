@@ -214,8 +214,7 @@ export const confirmEmail = (activitionKey, history) => dispatch => {
             history.push('/dashboard/login');
         })
         .catch(err => {
-            dispatch({ type: GET_ERRORS, payload: err.response.data });
-            dispatch(setLoaded());
-            history.push('/dashboard/home');
+            dispatch(setloaded());
+            history.push('/dashboard/login');
         });
 };
