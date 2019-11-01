@@ -8442,7 +8442,9 @@ button,
 .closed-sidebar.closed-sidebar-mobile .app-header {
   margin-left: 0 !important; }
 .closed-sidebar.fixed-footer .app-footer__inner {
-  margin-left: 0 !important; }
+  margin-left: 0 !important;
+  
+}
 
 .app-main {
   flex: 1;
@@ -8479,10 +8481,12 @@ button,
   height: 20em; }
   .app-footer .app-footer__inner {
     background-color: #1a1600 !important;
+    margin-left: 150px !important;
+    margin-right: 150px !important;
     padding: 0 1rem 0 0.5rem;
     height: 35em;
     display: flex;
-    align-content: center;
+    align-content: top;
     align-items: center;
     justify-content: space-between;
   }

@@ -18,9 +18,7 @@ class AppFooter extends React.Component {
                             <div className='app-footer-left'>
                                 <Row>
                                     <Col>
-                                        <h2 style={{ marginTop: '30px' }}>
-                                            e s o r u s
-                                        </h2>
+                                        <h2>e s o r u s</h2>
                                     </Col>
                                 </Row>
                                 <Row>
@@ -61,11 +59,11 @@ class AppFooter extends React.Component {
                                 </Row>
                             </div>
                             <div className='app-footer-middle'>
-                                <ul class='list-unstyled'>
-                                    <li>
+                                <ul className='list-unstyled'>
+                                    <li className='mb-3'>
                                         <h2>Quick Links</h2>
                                     </li>
-                                    <li>
+                                    <li className='mb-3'>
                                         <a
                                             className='pl-1'
                                             href='#/dashboard/buyers'
@@ -73,7 +71,7 @@ class AppFooter extends React.Component {
                                             Professional Buyers
                                         </a>
                                     </li>
-                                    <li>
+                                    <li className='mb-3'>
                                         <a
                                             className='pl-1'
                                             href='#/dashboard/suppliers'
@@ -101,7 +99,7 @@ class AppFooter extends React.Component {
                                     Curious and intrigued? Let's Talk!
                                 </h2>
                                 <ul>
-                                    <li>
+                                    <li className='mb-3'>
                                         <div className='text-white'>
                                             <img
                                                 src={location}
@@ -114,7 +112,7 @@ class AppFooter extends React.Component {
                                             </span>
                                         </div>
                                     </li>
-                                    <li>
+                                    <li className='mb-3'>
                                         <div className='text-white'>
                                             <img
                                                 src={phone}
@@ -143,7 +141,7 @@ class AppFooter extends React.Component {
                                 </ul>
                             </div>
                         </div>
-                        <div className='text-center'>
+                        <div className='text-center pb-2'>
                             <p className='copy-rights-text'>
                                 All rights reserved. esorus &copy;{' '}
                                 {new Date().getFullYear()}

@@ -38,9 +38,12 @@ const Dashboards = ({ match }) => (
             <Route path={`${match.url}/buyers`} component={Buyers} />
             <Route path={`${match.url}/confirm`} component={Confirmation} />
             <PrivateRoute path={`${match.url}/request`} component={Request} />
+            <Route
+                path={`${match.url}/activated/:key`}
+                component={Activition}
+            />
         </div>
         <Route path={`${match.url}/about`} component={AboutUs} />
-        <Route path={`${match.url}/activition`} component={Activition} />
 
         <AppFooter />
     </Fragment>

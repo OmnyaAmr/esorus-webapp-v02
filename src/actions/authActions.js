@@ -204,52 +204,19 @@ export const resetPassword = (resetSpecs, SRC) => dispatch => {
 
 // confirm
 
-export const confirmEmail = SRC => dispatch => {
+export const confirmEmail = (activitionKey, history) => dispatch => {
+    let body = {};
+    body.key = activitionKey;
     dispatch(setLoading());
     axios
-        .post('/api/user/signup/confirm') //To specify send confirmation email again
+        .post('/api/activate?' + activitionKey, body)
         .then(res => {
-            SRC.showToast(
-                'success',
-                `your confiramtion mail sent successfully to your email`
-            );
-            dispatch(logoutUser());
+            dispatch(setloaded());
+            history.push('/dashboard/login');
         })
         .catch(err => {
             dispatch({ type: GET_ERRORS, payload: err.response.data });
             dispatch(setLoaded());
-        });
-};
-
-export const completeSignup = (userSpecs, SRC) => dispatch => {
-    dispatch(setLoading());
-    axios
-        .post('/api/user/signup/complete', userSpecs)
-        .then(res => {
-            SRC.showToast(
-                'success',
-                `Confirmation mail sent successfuly to ${res.data.accepted[0]}`
-            );
-            dispatch(logoutUser());
-        })
-        .catch(err => {
-            dispatch({ type: GET_ERRORS, payload: err.response.data });
-            dispatch(setLoaded());
-        });
-};
-
-export const confirmPassword = (passwordSpecs, SRC) => dispatch => {
-    dispatch(setLoading());
-    axios
-        .post('/api/user/forgot/reset', passwordSpecs)
-        .then(res => {
-            SRC.showToast('success', 'Password Changed Successfuly !');
-            SRC.props.history.push('/dashboard/login');
-            dispatch(setLoaded());
-        })
-        .catch(err => {
-            console.log(err);
-            dispatch({ type: GET_ERRORS, payload: err.response.data });
-            dispatch(setLoaded());
+            history.push('/dashboard/home');
         });
 };
