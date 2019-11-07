@@ -1694,6 +1694,9 @@ pre {
     .table-responsive-md > .table-bordered {
       border: 0; } }
 @media (max-width: 991.98px) {
+  .logo-src{
+    visibility: visible;
+  }
   .table-responsive-lg {
     display: block;
     width: 100%;
@@ -2645,6 +2648,9 @@ input[type="button"].btn-block {
     right: 0;
     left: auto; } }
 @media (min-width: 1200px) {
+  .logo-src{
+    visibility: hidden;
+  }
   .dropdown-menu-xl-right {
     right: 0;
     left: auto; } }
@@ -5222,6 +5228,9 @@ button.bg-alternate:focus {
   .d-md-inline-flex {
     display: inline-flex !important; } }
 @media (min-width: 992px) {
+  .logo-src{
+    visibility: hidden;
+  }
   .d-lg-none {
     display: none !important; }
 
@@ -8006,8 +8015,6 @@ button,
   .header-btn-lg .hamburger-inner::after {
     background: #a0a0a0; }
 
-.app-header.header-text-light .app-header__logo {
-  background: rgba(255, 255, 255, 0.1); }
 .app-header.header-text-light .app-header-left > .nav > li > .nav-link {
   color: rgba(255, 255, 255, 0.7); }
   .app-header.header-text-light .app-header-left > .nav > li > .nav-link .nav-link-icon {
