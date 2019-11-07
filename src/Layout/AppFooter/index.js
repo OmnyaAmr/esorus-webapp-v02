@@ -1,8 +1,5 @@
 import React, { Fragment } from 'react';
 import { Row, Col } from 'reactstrap';
-import { faMobileAlt, faAddressCard } from '@fortawesome/free-solid-svg-icons';
-import { faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import location from '../../assets/components/icons/location.svg';
 import phone from '../../assets/components/icons/phone.svg';
 import envelope from '../../assets/components/icons/envelope.svg';

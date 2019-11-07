@@ -20,22 +20,18 @@ class Home extends Component {
 
     componentDidMount() {
         this.urlListener();
-
-
-
-
         document.addEventListener('scroll', this.trackScrolling);
     }
     urlListener() {
-        this.unlisten = this.props.history.listen((location) => {
-            const myId = window.location.hash, url = myId.split("#");
-            const section = document.getElementById(url[2])
+        this.unlisten = this.props.history.listen(location => {
+            const myId = window.location.hash,
+                url = myId.split('#');
+            const section = document.getElementById(url[2]);
             if (section) {
-                section.scrollIntoView()
+                section.scrollIntoView();
                 this.props.history.push('#/dashboard/home');
             }
-            
-        })
+        });
     }
 
     trackScrolling = () => {
@@ -163,9 +159,9 @@ class Home extends Component {
                                                     perc === 100
                                                         ? {}
                                                         : {
-                                                            backgroundColor:
-                                                                'transparent'
-                                                        }
+                                                              backgroundColor:
+                                                                  'transparent'
+                                                          }
                                                 }
                                                 duration={5000}
                                                 formatValue={value =>
@@ -191,9 +187,9 @@ class Home extends Component {
                                                     perc === 100
                                                         ? {}
                                                         : {
-                                                            backgroundColor:
-                                                                'transparent'
-                                                        }
+                                                              backgroundColor:
+                                                                  'transparent'
+                                                          }
                                                 }
                                                 duration={5000}
                                                 formatValue={value =>
@@ -219,9 +215,9 @@ class Home extends Component {
                                                     perc === 100
                                                         ? {}
                                                         : {
-                                                            backgroundColor:
-                                                                'transparent'
-                                                        }
+                                                              backgroundColor:
+                                                                  'transparent'
+                                                          }
                                                 }
                                                 duration={5000}
                                                 formatValue={value =>
@@ -247,9 +243,9 @@ class Home extends Component {
                                                     perc === 100
                                                         ? {}
                                                         : {
-                                                            backgroundColor:
-                                                                'transparent'
-                                                        }
+                                                              backgroundColor:
+                                                                  'transparent'
+                                                          }
                                                 }
                                                 duration={5000}
                                                 formatValue={value =>

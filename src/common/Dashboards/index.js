@@ -26,23 +26,19 @@ import AppFooter from '../../Layout/AppFooter/';
 const Dashboards = ({ match }) => (
     <Fragment>
         <AppHeader />
-        <div className='left-side'>
-            <Sidebar />
-        </div>
+
+        <Sidebar />
 
         <Route path={`${match.url}/home`} component={Home} />
-        <div>
-            <Route path={`${match.url}/login`} component={Login} />
-            <Route path={`${match.url}/signup`} component={SignUp} />
-            <Route path={`${match.url}/suppliers`} component={Suppliers} />
-            <Route path={`${match.url}/buyers`} component={Buyers} />
-            <Route path={`${match.url}/confirm`} component={Confirmation} />
-            <PrivateRoute path={`${match.url}/request`} component={Request} />
-            <Route
-                path={`${match.url}/activated/:key`}
-                component={Activition}
-            />
-        </div>
+
+        <Route path={`${match.url}/login`} component={Login} />
+        <Route path={`${match.url}/signup`} component={SignUp} />
+        <Route path={`${match.url}/suppliers`} component={Suppliers} />
+        <Route path={`${match.url}/buyers`} component={Buyers} />
+        <Route path={`${match.url}/confirm`} component={Confirmation} />
+        <PrivateRoute path={`${match.url}/request`} component={Request} />
+        <Route path={`${match.url}/activated/:key`} component={Activition} />
+
         <Route path={`${match.url}/about`} component={AboutUs} />
 
         <AppFooter />

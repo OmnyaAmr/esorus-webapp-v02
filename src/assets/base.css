@@ -8112,14 +8112,13 @@ button,
   background: url("~/utils/images/logo-inverse.png"); }
 
 .app-sidebar {
-  width: 280px;
+  width: 4% ;
   display: flex;
   z-index: 11;
   overflow: hidden;
   min-width: 280px;
-  position: relative;
+  position: fixed;
   flex: 0 0 280px;
-  margin-top: -60px;
   padding-top: 60px;
   transition: all .2s; }
   .app-sidebar .app-sidebar__inner {
@@ -8345,12 +8344,10 @@ button,
   .fixed-sidebar.closed-sidebar:not(.fixed-header) .app-sidebar .app-header__logo .logo-src {
     display: none; }
   .fixed-sidebar.closed-sidebar:not(.fixed-header) .app-sidebar .app-header__logo .header__pane {
-    margin-right: auto; }
+    visibility: hidden; }
 
 .closed-sidebar .app-sidebar {
   transition: all .3s ease;
-  width: 80px;
-  min-width: 80px;
   flex: 0 0 80px;
   z-index: 13; }
   .closed-sidebar .app-sidebar .app-sidebar__inner .app-sidebar__heading {
@@ -8379,7 +8376,7 @@ button,
       height: 0; }
   .closed-sidebar .app-sidebar:hover {
     flex: 0 0 280px !important;
-    width: 280px !important; }
+    width: 5% !important; }
     .closed-sidebar .app-sidebar:hover .app-sidebar__inner .app-sidebar__heading {
       text-indent: initial; }
       .closed-sidebar .app-sidebar:hover .app-sidebar__inner .app-sidebar__heading::before {
