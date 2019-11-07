@@ -20,14 +20,14 @@ import Confirmation from '../Confirmation';
 // Layout
 
 import AppHeader from '../../Layout/AppHeader/';
-import Sidebar from '../Sidebar';
 import AppFooter from '../../Layout/AppFooter/';
+import AppSidebar from '../../Layout/AppSidebar';
 
 const Dashboards = ({ match }) => (
     <Fragment>
         <AppHeader />
 
-        <Sidebar />
+        <AppSidebar />
 
         <Route path={`${match.url}/home`} component={Home} />
 

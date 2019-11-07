@@ -12,7 +12,6 @@ class Sidebar extends Component {
     }
 
     render() {
-        let { enableMobileMenu } = this.props;
         return (
             <div className='left-side app-sidebar'>
                 <Menu

@@ -1,7 +1,8 @@
 import React, { Fragment } from 'react';
 import { connect } from 'react-redux';
-
+import logo from '../../assets/utils/images/logo-inverse2.png';
 import Hamburger from 'react-hamburgers';
+import { Link } from 'react-router-dom';
 
 import AppMobileMenu from '../AppMobileMenu';
 
@@ -43,11 +44,16 @@ class HeaderLogo extends React.Component {
         return (
             <Fragment>
                 <div className='app-header__logo'>
+                    <div className='logo-src'>
+                        <Link to='/dashboard/home'>
+                            <img src={logo} width='97' heigth='23' />
+                        </Link>
+                    </div>
                     <div className='header__pane ml-auto'>
                         <div onClick={this.toggleEnableClosedSidebar}>
                             <Hamburger
                                 active={enableClosedSidebar}
-                                type='slider'
+                                type='elastic'
                                 onClick={() =>
                                     this.setState({
                                         active: !this.state.active
