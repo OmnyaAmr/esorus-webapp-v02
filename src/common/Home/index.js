@@ -122,7 +122,7 @@ class Home extends Component {
                         </div>
                     </PerfectScrollbar>
                 </div>
-                <div className='mt-5 ml-5'>
+                <div className='slogan2-position'>
                     <h1 className='slogan2-text ml-5'>
                         We are <strong>reinventing</strong>
                     </h1>
@@ -144,118 +144,124 @@ class Home extends Component {
                                                 Interesting Facts
                                             </h1>
                                         </Col>
-                                        <Col className='slogan3-text'>
-                                            <AnimatedNumber
-                                                value={1000}
-                                                style={{
-                                                    transition: '0.8s ease-out',
-                                                    fontSize: '35px',
-                                                    color: 'white',
-                                                    fontWeight: '400',
-                                                    transitionProperty:
-                                                        'background-color, color, opacity'
-                                                }}
-                                                frameStyle={perc =>
-                                                    perc === 100
-                                                        ? {}
-                                                        : {
-                                                              backgroundColor:
-                                                                  'transparent'
-                                                          }
-                                                }
-                                                duration={5000}
-                                                formatValue={value =>
-                                                    Number(value).toFixed(0)
-                                                }
-                                            />
-                                            <h4 className='slogan6-text'>
-                                                Suppliers
-                                            </h4>
-                                        </Col>
-                                        <Col className='slogan3-text'>
-                                            <AnimatedNumber
-                                                value={35}
-                                                style={{
-                                                    transition: '0.8s ease-out',
-                                                    fontSize: '35px',
-                                                    color: 'white',
-                                                    fontWeight: '400',
-                                                    transitionProperty:
-                                                        'background-color, color, opacity'
-                                                }}
-                                                frameStyle={perc =>
-                                                    perc === 100
-                                                        ? {}
-                                                        : {
-                                                              backgroundColor:
-                                                                  'transparent'
-                                                          }
-                                                }
-                                                duration={5000}
-                                                formatValue={value =>
-                                                    Number(value).toFixed(0)
-                                                }
-                                            />
-                                            <h4 className='slogan6-text'>
-                                                Our Projects
-                                            </h4>
-                                        </Col>
-                                        <Col className='slogan3-text'>
-                                            <AnimatedNumber
-                                                value={10}
-                                                style={{
-                                                    transition: '0.8s ease-out',
-                                                    fontSize: '35px',
-                                                    color: 'white',
-                                                    fontWeight: '400',
-                                                    transitionProperty:
-                                                        'background-color, color, opacity'
-                                                }}
-                                                frameStyle={perc =>
-                                                    perc === 100
-                                                        ? {}
-                                                        : {
-                                                              backgroundColor:
-                                                                  'transparent'
-                                                          }
-                                                }
-                                                duration={5000}
-                                                formatValue={value =>
-                                                    Number(value).toFixed(0)
-                                                }
-                                            />
-                                            <h4 className='slogan6-text'>
-                                                Years Experience
-                                            </h4>
-                                        </Col>
-                                        <Col className='slogan3-text'>
-                                            <AnimatedNumber
-                                                value={55}
-                                                style={{
-                                                    transition: '0.8s ease-out',
-                                                    fontSize: '35px',
-                                                    color: 'white',
-                                                    fontWeight: '400',
-                                                    transitionProperty:
-                                                        'background-color, color, opacity'
-                                                }}
-                                                frameStyle={perc =>
-                                                    perc === 100
-                                                        ? {}
-                                                        : {
-                                                              backgroundColor:
-                                                                  'transparent'
-                                                          }
-                                                }
-                                                duration={5000}
-                                                formatValue={value =>
-                                                    Number(value).toFixed(0)
-                                                }
-                                            />
-                                            <h4 className='slogan6-text'>
-                                                Successful Matchmaking
-                                            </h4>
-                                        </Col>
+                                        <Row>
+                                            <Col className='slogan3-text'>
+                                                <AnimatedNumber
+                                                    value={1000}
+                                                    style={{
+                                                        transition:
+                                                            '0.8s ease-out',
+                                                        fontSize: '35px',
+                                                        color: 'white',
+                                                        fontWeight: '400',
+                                                        transitionProperty:
+                                                            'background-color, color, opacity'
+                                                    }}
+                                                    frameStyle={perc =>
+                                                        perc === 100
+                                                            ? {}
+                                                            : {
+                                                                  backgroundColor:
+                                                                      'transparent'
+                                                              }
+                                                    }
+                                                    duration={5000}
+                                                    formatValue={value =>
+                                                        Number(value).toFixed(0)
+                                                    }
+                                                />
+                                                <h4 className='slogan6-text'>
+                                                    Suppliers
+                                                </h4>
+                                            </Col>
+                                            <Col className='slogan3-text col-auto'>
+                                                <AnimatedNumber
+                                                    value={35}
+                                                    style={{
+                                                        transition:
+                                                            '0.8s ease-out',
+                                                        fontSize: '35px',
+                                                        color: 'white',
+                                                        fontWeight: '400',
+                                                        transitionProperty:
+                                                            'background-color, color, opacity'
+                                                    }}
+                                                    frameStyle={perc =>
+                                                        perc === 100
+                                                            ? {}
+                                                            : {
+                                                                  backgroundColor:
+                                                                      'transparent'
+                                                              }
+                                                    }
+                                                    duration={5000}
+                                                    formatValue={value =>
+                                                        Number(value).toFixed(0)
+                                                    }
+                                                />
+                                                <h4 className='slogan6-text'>
+                                                    Our Projects
+                                                </h4>
+                                            </Col>
+                                            <Col className='slogan3-text'>
+                                                <AnimatedNumber
+                                                    value={10}
+                                                    style={{
+                                                        transition:
+                                                            '0.8s ease-out',
+                                                        fontSize: '35px',
+                                                        color: 'white',
+                                                        fontWeight: '400',
+                                                        transitionProperty:
+                                                            'background-color, color, opacity'
+                                                    }}
+                                                    frameStyle={perc =>
+                                                        perc === 100
+                                                            ? {}
+                                                            : {
+                                                                  backgroundColor:
+                                                                      'transparent'
+                                                              }
+                                                    }
+                                                    duration={5000}
+                                                    formatValue={value =>
+                                                        Number(value).toFixed(0)
+                                                    }
+                                                />
+                                                <h4 className='slogan6-text'>
+                                                    Years Experience
+                                                </h4>
+                                            </Col>
+                                            <Col className='slogan3-text'>
+                                                <AnimatedNumber
+                                                    value={55}
+                                                    style={{
+                                                        transition:
+                                                            '0.8s ease-out',
+                                                        fontSize: '35px',
+                                                        color: 'white',
+                                                        fontWeight: '400',
+                                                        transitionProperty:
+                                                            'background-color, color, opacity'
+                                                    }}
+                                                    frameStyle={perc =>
+                                                        perc === 100
+                                                            ? {}
+                                                            : {
+                                                                  backgroundColor:
+                                                                      'transparent'
+                                                              }
+                                                    }
+                                                    duration={5000}
+                                                    formatValue={value =>
+                                                        Number(value).toFixed(0)
+                                                    }
+                                                />
+                                                <h4 className='slogan6-text'>
+                                                    Successful Matchmaking
+                                                </h4>
+                                            </Col>
+                                        </Row>
                                     </Row>
                                 </Container>
                             )}

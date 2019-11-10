@@ -1,5 +1,5 @@
 import sideBar6 from '../assets/utils/images/sidebar/interior1.jpg';
-import background from '../assets/utils/images/originals/background.png';
+import homeBackground from '../assets/utils/images/originals/background.png';
 import buyersBackground from '../assets/utils/images/originals/buyersBackground2.png';
 import suppliersBackground from '../assets/utils/images/originals/suppliersBackground9.jpg';
 
@@ -31,9 +31,17 @@ export const SET_ENABLE_PAGE_TABS_ALT =
 // NEW
 export const SET_ENABLE_HOME_BACKGROUND =
     'THEME_OPTIONS/SET_ENABLE_HOME_BACKGROUND';
+export const SET_ENABLE_BUYER_BACKGROUND =
+    'THEME_OPTIONS/SET_ENABLE_BUYER_BACKGROUND';
+export const SET_ENABLE_SUPPLIER_BACKGROUND =
+    'THEME_OPTIONS/SET_ENABLE_SUPPLIER_BACKGROUND';
+
 export const SET_HOME_BACKGROUND = 'THEME_OPTION/SET_HOME_BACKGROUND';
+export const SET_BUYER_BACKGROUND = 'THEME_OPTION/SET_BUYER_BACKGROUND';
+export const SET_SUPPLIER_BACKGROUND = 'THEME_OPTION/SET_SUPPLIER_BACKGROUND';
 
 // END NEW
+
 export const SET_BACKGROUND_IMAGE = 'THEME_OPTIONS/SET_BACKGROUND_IMAGE';
 export const SET_BACKGROUND_COLOR = 'THEME_OPTIONS/SET_BACKGROUND_COLOR';
 export const SET_COLOR_SCHEME = 'THEME_OPTIONS/SET_COLOR_SCHEME';
@@ -56,6 +64,25 @@ export const setEnableHomeBackground = enableHomeBackground => ({
 export const setHomeBackground = homeBackground => ({
     type: SET_HOME_BACKGROUND,
     homeBackground
+});
+
+export const setEnableBuyerBackground = enableBuyerBackground => ({
+    type: SET_ENABLE_BUYER_BACKGROUND,
+    enableBuyerBackground
+});
+export const setBuyerBackground = buyerBackground => ({
+    type: SET_BUYER_BACKGROUND,
+    buyerBackground
+});
+
+export const setEnableSupplierBackground = enableSupplierBackground => ({
+    type: SET_ENABLE_SUPPLIER_BACKGROUND,
+    enableSupplierBackground
+});
+
+export const setsupplierBackground = supplierBackground => ({
+    type: SET_SUPPLIER_BACKGROUND,
+    supplierBackground
 });
 
 //NEW
@@ -158,14 +185,40 @@ export default function reducer(
         enablePageTitleIcon: true,
         enablePageTitleSubheading: true,
         enablePageTabsAlt: false,
-        homeBackground: background,
+        homeBackground: homeBackground,
         buyersBackground: buyersBackground,
         suppliersBackground: suppliersBackground,
-        enableHomeBackground: true
+        enableHomeBackground: true,
+        enableSupplierBackground: true,
+        enableBuyerBackground: true
     },
     action
 ) {
     switch (action.type) {
+        case SET_ENABLE_SUPPLIER_BACKGROUND:
+            return {
+                ...state,
+                enableSupplierBackground: action.enableSupplierBackground
+            };
+
+        case SET_SUPPLIER_BACKGROUND:
+            return {
+                ...state,
+                supplierBackground: action.supplierBackground
+            };
+
+        case SET_ENABLE_BUYER_BACKGROUND:
+            return {
+                ...state,
+                enableBuyerBackground: action.enableBuyerBackground
+            };
+
+        case SET_BUYER_BACKGROUND:
+            return {
+                ...state,
+                buyerBackground: action.buyerBackground
+            };
+
         case SET_ENABLE_HOME_BACKGROUND:
             return {
                 ...state,

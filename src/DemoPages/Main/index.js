@@ -7,12 +7,31 @@ import ResizeDetector from 'react-resize-detector';
 
 import AppMain from '../../Layout/AppMain';
 
+import {
+    setEnableHomeBackground,
+    setEnableBuyerBackground,
+    setEnableSupplierBackground
+} from '../../reducers/ThemeOptions';
+
 class Main extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             closedSmallerSidebar: false
         };
+        this.onResize = this.onResize.bind(this);
+    }
+
+    onResize(width) {
+        if (width < 992) {
+            this.props.setEnableHomeBackground(false);
+            this.props.setEnableSupplierBackground(false);
+            this.props.setEnableBuyerBackground(false);
+        } else {
+            this.props.setEnableHomeBackground(true);
+            this.props.setEnableSupplierBackground(true);
+            this.props.setEnableBuyerBackground(true);
+        }
     }
 
     render() {
@@ -30,6 +49,7 @@ class Main extends React.Component {
         return (
             <ResizeDetector
                 handleWidth
+                onResize={this.onResize}
                 render={({ width }) => (
                     <Fragment>
                         <div
@@ -71,4 +91,13 @@ const mapStateToProp = state => ({
     enablePageTabsAlt: state.ThemeOptions.enablePageTabsAlt
 });
 
-export default withRouter(connect(mapStateToProp)(Main));
+export default withRouter(
+    connect(
+        mapStateToProp,
+        {
+            setEnableHomeBackground,
+            setEnableBuyerBackground,
+            setEnableSupplierBackground
+        }
+    )(Main)
+);

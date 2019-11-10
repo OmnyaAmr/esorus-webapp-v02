@@ -5227,9 +5227,12 @@ button.bg-alternate:focus {
 
   .d-md-inline-flex {
     display: inline-flex !important; } }
-@media (min-width: 992px) {
+@media (min-width: 992px) { /*MOBILE VIEW*/
   .logo-src{
     visibility: hidden;
+  }
+  .app-footer{
+    margin-left: 0% !important;
   }
   .d-lg-none {
     display: none !important; }
@@ -12182,11 +12185,18 @@ body {
 @media only screen and (max-width: 1320px) {
   .header-user-info {
     display: block; } }
-    /*STAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAART*/
+    /*STAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA MOBILE VIEW  AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAART*/
 @media (max-width: 991.98px) {
   .app-main {
     display: block; }
 
+    .app-footer{
+      margin-left: 0% !important;
+    }
+    .slogan2-position{
+      margin-top:0rem !important;
+      margin-left: 0rem !important;
+    }
   .dropdown-menu::before, .dropdown-menu::after {
     display: none; }
 
@@ -12678,7 +12688,7 @@ font-family: 'Poppins', sans-serif;
               background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url(./utils/images/originals/background2.jpg) no-repeat center ;
               background-size: cover;
               background-attachment: fixed;
-              height: 350px;
+              height: 380px;
               width:100%;
               }
               .review-background-escrus {
@@ -13012,4 +13022,13 @@ font-family: 'Poppins', sans-serif;
 
   .copyright-container{
     background: #1a1600;
+  }
+
+  .mobile-view{
+    background-image: none !important;
+  }
+
+  .slogan2-position{
+    margin-top: 3rem;
+    margin-left: 3rem;
   }
