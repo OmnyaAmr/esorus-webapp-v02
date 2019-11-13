@@ -12189,7 +12189,8 @@ body {
     /*STAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA MOBILE VIEW  AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAART*/
 @media (max-width: 991.98px) {
   #left-counters-mobile{
-   margin-left: -2rem;
+   margin-left: -1rem;
+   
   }
   .counters-mobile{
     margin-left: 0.25rem;
@@ -12207,8 +12208,11 @@ body {
   .buyers-mobile{
     flex-basis: 100%;
   }
-  .slogan2-text{
-    font-size: 40px !important;
+  .slogan-buyer-position{
+    top:30% !important;
+  }
+  .buyers3-mobile{
+    height: 600px !important;
   }
   .slogan3-text{
     font-size: 35px !important;
@@ -12216,6 +12220,15 @@ body {
   .slogan7-text{
     margin-right: -5px !important;
     font-size: 30px !important;
+  }
+  .supplier-text5{
+    color:black !important;
+    font-size:1.5rem !important;
+    margin-top: 50%;
+
+  }
+  .supplier-text4{
+    color:black !important;
   }
   .home-background{
     height: 500px !important;
@@ -12966,10 +12979,16 @@ font-family: 'Poppins', sans-serif;
   font-weight:100;
   color: #000;
 }
-.buyer-text3 {
-  font-size: 15px;
+.supplier-text4 {
+  font-size: 10;
   font-weight:100;
   color: #000;
+  color: white;
+}
+.supplier-text5 {
+  font-weight: 800;
+  font-family: 'Poppins-Bold', sans-serif;
+  color: white;
 }
 .supplier-text2 {
   font-size: 10;

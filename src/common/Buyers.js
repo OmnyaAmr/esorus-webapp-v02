@@ -50,7 +50,7 @@ class Buyers extends Component {
                     transitionLeave={false}
                 >
                     <div
-                        className='app-main-enhanced'
+                        className='app-main-enhanced buyers3-mobile'
                         style={{
                             backgroundImage: enableHomeBackground
                                 ? 'url(' + buyersBackground + ')'
@@ -84,7 +84,11 @@ class Buyers extends Component {
                             />}
 
                     </Row>
+
                     <div className='app-main-enhanced'>
+                        <Row>
+                            <Col className='buyers2-mobile' style={{ left: '50px' }}>{content}</Col>
+                        </Row>
                         <Row>
                             <Col>
                                 <div className='heading-section mb-5 pt-5 pl-md-5'>

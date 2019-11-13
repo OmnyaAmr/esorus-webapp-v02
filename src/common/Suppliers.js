@@ -35,27 +35,49 @@ class Suppliers extends Component {
         let { isAuthenticated } = this.props.auth;
         let content;
         if (!isAuthenticated) {
-            content = (
-                <div className='d-flex justify-content-left mt-4'>
-                    <input
-                        className='form-control-escrus form-control-lg-escrus ml-1'
-                        onChange={this.onChange}
-                        value={this.state.email}
-                        placeholder='Enter your email here'
-                        name='email'
-                        style={{
-                            fontSize: '15px',
-                            width: '280px'
-                        }}
-                    />
-                    <input
-                        type='button'
-                        className='btn-escrus ml-1'
-                        value='Join Now'
-                        onClick={this.onClick}
-                    />
-                </div>
-            );
+            if (enableHomeBackground) {
+                content = (
+
+                    <div className='d-flex justify-content-left mt-4'>
+                        <input
+                            className='form-control-escrus form-control-lg-escrus ml-1'
+                            onChange={this.onChange}
+                            value={this.state.email}
+                            placeholder='Enter your email here'
+                            name='email'
+                        />
+                        <input
+                            type='button'
+                            className='btn-escrus ml-1'
+                            value='Join Now'
+                            onClick={this.onClick}
+                        />
+                    </div>
+                );
+            }
+            else {
+                content = (
+                    <div>
+                        <div className='d-flex justify-content-center mt-4'>
+                            <input
+                                className='form-control-escrus form-control-lg-escrus ml-1'
+                                onChange={this.onChange}
+                                value={this.state.email}
+                                placeholder='Enter your email here'
+                                name='email'
+                            />
+                        </div>
+                        <div className='d-flex justify-content-center mt-4'>
+                            <input
+                                type='button'
+                                className='btn-escrus ml-1'
+                                value='Join Now'
+                                onClick={this.onClick}
+                            />
+                        </div>
+                    </div>
+                );
+            }
         }
         return (
             <Fragment>
@@ -68,7 +90,7 @@ class Suppliers extends Component {
                     transitionLeave={false}
                 >
                     <div
-                        className='app-main-enhanced test'
+                        className='app-main-enhanced buyers3-mobile'
                         style={{
                             backgroundImage: enableHomeBackground
                                 ? 'url(' + suppliersBackground + ')'
@@ -77,15 +99,15 @@ class Suppliers extends Component {
                             paddingTop: '23%'
                         }}
                     >
-                        <h2 className='slogan-text' style={{ color: 'white' }}>
+                        <h2 className='supplier-text5'>
                             For Suppliers and Manufacturers
                         </h2>
                         <p
-                            className='supplier-text3'
-                            style={{ color: 'white' }}
+                            className='supplier-text4 '
+                            
                         >
                             We take your brand around the world and expose
-                            <br />
+                            {enableHomeBackground &&<br />}
                             you to a wide network of professional buyers.
                         </p>
                         {content}
@@ -97,27 +119,8 @@ class Suppliers extends Component {
                                 How can esorus help your brand?
                             </h2>
                         </div>
-                        {/*<Row className='supplier-text3 buttom-text pb-lg-5'>
-                            <Col lg={6}>
-                                <p>
-                                    Gain access to our <br /> worldwide network{' '}
-                                    <br />
-                                    of professional buyers.
-                                </p>
-                            </Col>
-                            <Col className='' lg={6}>
-                                You deciede <br /> who buyes your <br />{' '}
-                                product.
-                            </Col>
-                            <Col className='' lg={6}>
-                                Manage your brand <br /> and product easily.
-                            </Col>
-                            <Col className='' lg={6}>
-                                You can manage <br /> your orders.
-                            </Col>
-                        </Row>*/}
                         <Row className='pt-4 pb-5'>
-                            <Col>
+                            <Col className='buyers-mobile'>
                                 <div className='d-flex justify-content-center mt-4'>
                                     <img
                                         className='ml-1'
@@ -135,7 +138,7 @@ class Suppliers extends Component {
                                     </p>
                                 </div>
                             </Col>
-                            <Col>
+                            <Col className='buyers-mobile'>
                                 <div className='d-flex justify-content-center mt-4'>
                                     <img
                                         className='ml-1'
@@ -151,7 +154,7 @@ class Suppliers extends Component {
                                     </p>
                                 </div>
                             </Col>
-                            <Col>
+                            <Col className='buyers-mobile'>
                                 <div className='d-flex justify-content-center mt-4'>
                                     <img
                                         className='ml-1'
@@ -168,7 +171,7 @@ class Suppliers extends Component {
                                     </p>
                                 </div>
                             </Col>
-                            <Col>
+                            <Col className='buyers-mobile'>
                                 <div className='d-flex justify-content-center mt-4'>
                                     <img
                                         className='ml-1'
