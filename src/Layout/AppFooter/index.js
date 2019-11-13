@@ -21,8 +21,8 @@ class AppFooter extends React.Component {
                                 <Row>
                                     <Col>
                                         <p>Your FF&E Personal Assistant</p>
-                                        <ul className='nav'>
-                                            <li className='nav-item mr-5'>
+                                        <div className='d-flex justify-content-around'>
+                                            <div>
                                                 <a
                                                     className='a-esorus'
                                                     href='https://www.facebook.com/Esorus'
@@ -34,8 +34,8 @@ class AppFooter extends React.Component {
                                                         height='25'
                                                     />
                                                 </a>
-                                            </li>
-                                            <li>
+                                            </div>
+                                            <div>
                                                 <a
                                                     className='a-esorus'
                                                     href='https://www.instagram.com/_esorus'
@@ -45,13 +45,10 @@ class AppFooter extends React.Component {
                                                         src={instagram}
                                                         width='25'
                                                         height='25'
-                                                        style={{
-                                                            marginLeft: '-35px'
-                                                        }}
                                                     />
                                                 </a>
-                                            </li>
-                                        </ul>
+                                            </div>
+                                        </div>
                                     </Col>
                                 </Row>
                             </div>
@@ -87,14 +84,7 @@ class AppFooter extends React.Component {
                                 </ul>
                             </div>
                             <div className='app-footer-right'>
-                                <h2
-                                    style={{
-                                        marginLeft: '35px',
-                                        marginTop: '30px'
-                                    }}
-                                >
-                                    Curious and intrigued? Let's Talk!
-                                </h2>
+                                <h2>Curious and intrigued? Let's Talk!</h2>
                                 <ul>
                                     <li className='mb-3'>
                                         <div className='text-white'>

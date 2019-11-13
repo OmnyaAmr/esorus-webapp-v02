@@ -17,8 +17,12 @@ class Header extends React.Component {
             if (window.pageYOffset === 0) {
                 this.document.getElementById('header').style.backgroundColor =
                     'transparent';
+                this.document.getElementById('logo').style.backgroundColor =
+                    'transparent';
             } else {
                 this.document.getElementById('header').style.backgroundColor =
+                    '#bfbfbf';
+                this.document.getElementById('logo').style.backgroundColor =
                     '#bfbfbf';
             }
         };
@@ -41,7 +45,6 @@ class Header extends React.Component {
                     transitionAppearTimeout={1500}
                     transitionEnter={false}
                     transitionLeave={false}
-                   
                 >
                     <HeaderLogo />
                     <div
@@ -49,7 +52,6 @@ class Header extends React.Component {
                             'header-mobile-open': enableMobileMenuSmall
                         })}
                         id='header'
-
                     >
                         <div className='app-header-left'>
                             <Link to='/dashboard/home'>

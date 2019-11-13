@@ -43,7 +43,7 @@ class HeaderLogo extends React.Component {
 
         return (
             <Fragment>
-                <div className='app-header__logo'>
+                <div id='logo' className='app-header__logo'>
                     <div className='logo-src'>
                         <Link to='/dashboard/home'>
                             <img src={logo} width='97' heigth='23' />
@@ -52,13 +52,13 @@ class HeaderLogo extends React.Component {
                     <div className='header__pane ml-auto'>
                         <div onClick={this.toggleEnableClosedSidebar}>
                             <Hamburger
-                                active={enableClosedSidebar}
+                                active={!enableClosedSidebar}
                                 type='elastic'
-                                onClick={() =>
+                                onClick={() => {
                                     this.setState({
                                         active: !this.state.active
-                                    })
-                                }
+                                    });
+                                }}
                             />
                         </div>
                     </div>

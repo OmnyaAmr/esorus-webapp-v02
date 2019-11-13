@@ -8463,7 +8463,7 @@ button,
 
 .app-main {
   flex: 1;
-  display: flex;
+  display: block;
   z-index: 8;
   position: relative; }
   .app-main .app-main__outer {
@@ -8492,22 +8492,18 @@ button,
   background: rgba(250, 251, 252, 0.1); }
 
 .app-footer {
-  margin-left: 4% !important;
   height: 20em; }
   .app-footer .app-footer__inner {
     background-color: #1a1600 !important;
-    margin-left: 150px !important;
-    margin-right: 150px !important;
-    padding: 0 1rem 0 0.5rem;
     height: 35em;
     display: flex;
     align-content: top;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
+    text-align: center;
   }
     .app-footer .app-footer__inner h2{
       line-height: 1.5;
-      margin-bottom: 30px;
       font-size: 18px;
       font-weight: 400;
       color: white;
@@ -12188,6 +12184,10 @@ body {
     display: block; } }
     /*STAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA MOBILE VIEW  AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAART*/
 @media (max-width: 991.98px) {
+  .app-main-enhanced{
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+  }
   #left-counters-mobile{
    margin-left: -1rem;
    
@@ -12301,6 +12301,7 @@ body {
     padding-left: 0 !important; }
 
   .app-header {
+    position: relative !important;
     background-color: rgba(0, 0, 0, 1) !important;
     display: flex;
     justify-content: space-between; }
@@ -12384,6 +12385,7 @@ body {
   .app-footer .app-footer__inner .app-footer-right {
     display: block; }
   .app-footer .app-footer__inner {
+    flex-direction: column;
     width: 100%; }
     .app-footer .app-footer__inner .app-footer-left .footer-dots {
       display: block; }
@@ -13008,10 +13010,6 @@ font-family: 'Poppins', sans-serif;
   font-size: 40px;
   font-weight: 500;
   color: #000;
-}
-
-.form-esorus{
-  width: 400px;
 }
 
 .required{

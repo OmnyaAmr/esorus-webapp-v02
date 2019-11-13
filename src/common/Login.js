@@ -96,7 +96,7 @@ class Login extends React.Component {
                                         </CardTitle>
                                         <Form
                                             onSubmit={this.onSubmit}
-                                            className='form-esorus m-auto'
+                                            className='m-auto'
                                         >
                                             <Row>
                                                 <Col>

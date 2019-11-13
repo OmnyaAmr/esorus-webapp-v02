@@ -71,7 +71,6 @@ class Home extends Component {
         if (!isAuthenticated) {
             if (enableHomeBackground) {
                 content = (
-
                     <div className='d-flex justify-content-center mt-4'>
                         <input
                             className='form-control-escrus form-control-lg-escrus ml-1'
@@ -88,8 +87,7 @@ class Home extends Component {
                         />
                     </div>
                 );
-            }
-            else {
+            } else {
                 content = (
                     <div>
                         <div className='d-flex justify-content-center mt-4'>
@@ -169,7 +167,7 @@ class Home extends Component {
                                                 Interesting Facts
                                             </h1>
                                         </Col>
-                                        <Row className="counters-mobile">
+                                        <Row className='counters-mobile'>
                                             <Col className='slogan7-text'>
                                                 <AnimatedNumber
                                                     value={1000}
@@ -183,9 +181,9 @@ class Home extends Component {
                                                         perc === 100
                                                             ? {}
                                                             : {
-                                                                backgroundColor:
-                                                                    'transparent'
-                                                            }
+                                                                  backgroundColor:
+                                                                      'transparent'
+                                                              }
                                                     }
                                                     duration={5000}
                                                     formatValue={value =>
@@ -196,7 +194,10 @@ class Home extends Component {
                                                     Suppliers
                                                 </h4>
                                             </Col>
-                                            <Col className='slogan7-text'  id="left-counters-mobile">
+                                            <Col
+                                                className='slogan7-text'
+                                                id='left-counters-mobile'
+                                            >
                                                 <AnimatedNumber
                                                     value={35}
                                                     style={{
@@ -210,9 +211,9 @@ class Home extends Component {
                                                         perc === 100
                                                             ? {}
                                                             : {
-                                                                backgroundColor:
-                                                                    'transparent'
-                                                            }
+                                                                  backgroundColor:
+                                                                      'transparent'
+                                                              }
                                                     }
                                                     duration={5000}
                                                     formatValue={value =>
@@ -229,7 +230,7 @@ class Home extends Component {
                                                     style={{
                                                         transition:
                                                             '0.8s ease-out',
- 
+
                                                         transitionProperty:
                                                             'background-color, color, opacity'
                                                     }}
@@ -237,9 +238,9 @@ class Home extends Component {
                                                         perc === 100
                                                             ? {}
                                                             : {
-                                                                backgroundColor:
-                                                                    'transparent'
-                                                            }
+                                                                  backgroundColor:
+                                                                      'transparent'
+                                                              }
                                                     }
                                                     duration={5000}
                                                     formatValue={value =>
@@ -250,7 +251,10 @@ class Home extends Component {
                                                     Years Experience
                                                 </h4>
                                             </Col>
-                                            <Col className='slogan7-text' id="left-counters-mobile">
+                                            <Col
+                                                className='slogan7-text'
+                                                id='left-counters-mobile'
+                                            >
                                                 <AnimatedNumber
                                                     value={55}
                                                     style={{
@@ -264,9 +268,9 @@ class Home extends Component {
                                                         perc === 100
                                                             ? {}
                                                             : {
-                                                                backgroundColor:
-                                                                    'transparent'
-                                                            }
+                                                                  backgroundColor:
+                                                                      'transparent'
+                                                              }
                                                     }
                                                     duration={5000}
                                                     formatValue={value =>

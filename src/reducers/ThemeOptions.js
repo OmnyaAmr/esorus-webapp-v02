@@ -173,7 +173,7 @@ export default function reducer(
         headerBackgroundColor: 'bg-strong-bliss header-text-light',
         enableMobileMenuSmall: 'app-header',
         enableBackgroundImage: true,
-        enableClosedSidebar: false,
+        enableClosedSidebar: true,
         enableFixedHeader: true,
         enableHeaderShadow: true,
         enableSidebarShadow: true,
