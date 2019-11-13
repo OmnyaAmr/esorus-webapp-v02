@@ -41,13 +41,15 @@ class Header extends React.Component {
                     transitionAppearTimeout={1500}
                     transitionEnter={false}
                     transitionLeave={false}
-                    id='header'
+                   
                 >
                     <HeaderLogo />
                     <div
                         className={cx('app-header__content', {
                             'header-mobile-open': enableMobileMenuSmall
                         })}
+                        id='header'
+
                     >
                         <div className='app-header-left'>
                             <Link to='/dashboard/home'>

@@ -61,7 +61,7 @@ class Buyers extends Component {
                         <Row className='slogan-buyer-position ml-4'>
                             <Col>
                                 {' '}
-                                <h2 className='slogan-text'>
+                                <h2 className='slogan8-text'>
                                     FF&E Personal Assistant for Interior
                                     Designers and <br />
                                     Professional Buyers{' '}
@@ -74,7 +74,16 @@ class Buyers extends Component {
                             </Col>
                         </Row>
                     </div>
+                    <Row>
+                        {!enableHomeBackground &&
+                            <img
+                                src={buyersPic}
+                                width='100%'
+                                height='500'
+                                className='mb-2'
+                            />}
 
+                    </Row>
                     <div className='app-main-enhanced'>
                         <Row>
                             <Col>
@@ -125,24 +134,25 @@ class Buyers extends Component {
                                     </div>
                                 </div>
                             </Col>
-                            <Col>
-                                <img
-                                    src={buyersPic}
-                                    width='500'
-                                    height='500'
-                                    className='mb-2'
-                                />
-                            </Col>
+                            {enableHomeBackground &&
+                                <Col>
+                                    <img
+                                        src={buyersPic}
+                                        width='500'
+                                        height='500'
+                                        className='mb-2'
+                                    />
+                                </Col>
+                            }
                         </Row>
 
                         <Row>
-                            <Col style={{ left: '50px' }}>{content}</Col>
+                            <Col className='buyers2-mobile' style={{ left: '50px' }}>{content}</Col>
                         </Row>
-                        <Row className='pt-4 pb-5 '>
-                            <Col>
+                        <Row >
+                            <Col className='buyers-mobile'>
                                 <div className='d-flex justify-content-center mt-4'>
                                     <img
-                                        className='ml-1'
                                         src={idea}
                                         width='50'
                                         height='50'
@@ -154,14 +164,14 @@ class Buyers extends Component {
                                         Smart Sourcing
                                     </p>
                                 </div>
-                                <div className='text-center mt-4'>
-                                    <p className=' supplier-text2'>
+                                <div className='d-flex justify-content-center mt-4'>
+                                    <p className='text-center supplier-text2'>
                                         All you need for your project is just a
                                         click away.
                                     </p>
                                 </div>
                             </Col>
-                            <Col>
+                            <Col className='buyers-mobile'>
                                 <div className='d-flex justify-content-center mt-4'>
                                     <img
                                         src={analysis}
@@ -171,21 +181,20 @@ class Buyers extends Component {
                                     />
                                 </div>
                                 <div className='d-flex justify-content-center mt-4'>
-                                    <p className='supplier-text'>
+                                    <p className='ml-1 supplier-text'>
                                         Recommendations
                                     </p>
                                 </div>
                                 <div className='d-flex justify-content-center mt-4'>
-                                    <p className='supplier-text2 text-center'>
+                                    <p className='text-center supplier-text2'>
                                         Recommendation for effective <br />{' '}
                                         materials from a wide range of suppliers
                                     </p>
                                 </div>
                             </Col>
-                            <Col>
+                            <Col className='buyers-mobile'>
                                 <div className='d-flex justify-content-center mt-4'>
                                     <img
-                                        className='ml-1'
                                         src={data}
                                         width='50'
                                         height='50'
@@ -193,7 +202,7 @@ class Buyers extends Component {
                                     />
                                 </div>
                                 <div className='d-flex justify-content-center mt-4'>
-                                    <p className='ml-1 supplier-text'>
+                                    <p className='supplier-text'>
                                         Follow-up
                                     </p>
                                 </div>
@@ -205,10 +214,9 @@ class Buyers extends Component {
                                     </p>
                                 </div>
                             </Col>
-                            <Col>
+                            <Col className='buyers-mobile'>
                                 <div className='d-flex justify-content-center mt-4'>
                                     <img
-                                        className='ml-1'
                                         src={startUp}
                                         width='50'
                                         height='50'
@@ -221,7 +229,7 @@ class Buyers extends Component {
                                     </p>
                                 </div>
                                 <div className='d-flex justify-content-center mt-4'>
-                                    <p className='ml-1  text-center supplier-text2'>
+                                    <p className='text-center supplier-text2'>
                                         We make sure you get the best possible
                                         price in the market, with up to 45%
                                         additional discount.

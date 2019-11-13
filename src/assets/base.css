@@ -1697,6 +1697,7 @@ pre {
   .logo-src{
     visibility: visible;
   }
+
   .table-responsive-lg {
     display: block;
     width: 100%;
@@ -12187,6 +12188,45 @@ body {
     display: block; } }
     /*STAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA MOBILE VIEW  AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAART*/
 @media (max-width: 991.98px) {
+  #left-counters-mobile{
+   margin-left: -2rem;
+  }
+  .counters-mobile{
+    margin-left: 0.25rem;
+  }
+  .slogan2-text{
+    font-size: 40px !important;
+  }
+  .buyers2-mobile{
+    left: 0 !important;
+  }
+  .slogan8-text{
+    font-size:1.5rem;
+    margin-top:1rem;
+  }
+  .buyers-mobile{
+    flex-basis: 100%;
+  }
+  .slogan2-text{
+    font-size: 40px !important;
+  }
+  .slogan3-text{
+    font-size: 35px !important;
+  }
+  .slogan7-text{
+    margin-right: -5px !important;
+    font-size: 30px !important;
+  }
+  .home-background{
+    height: 500px !important;
+  }
+  .form-control-lg-escrus{
+    width:100% !important;
+  }
+  .btn-escrus{
+    margin-top: -10px !important;
+    width: 100% !important;
+  }
   .app-main {
     display: block; }
 
@@ -12194,8 +12234,11 @@ body {
       margin-left: 0% !important;
     }
     .slogan2-position{
-      margin-top:0rem !important;
-      margin-left: 0rem !important;
+      margin-top:1rem !important;
+      margin-left: 0.5rem !important;
+    }
+    .slogan-position{
+      margin-top:1rem !important;
     }
   .dropdown-menu::before, .dropdown-menu::after {
     display: none; }
@@ -12505,8 +12548,6 @@ body {
   font-weight: 800;
   font-family: 'Poppins-Bold', sans-serif;
   color: black;
-  
-  
 }
 
 .slogan2-text{
@@ -12527,6 +12568,7 @@ body {
   color: #fff;
   display: block; 
 }
+
 .slogan5-text{
   font-family: 'Poppins', sans-serif;
   font-weight: 500;
@@ -12549,7 +12591,22 @@ body {
   color: #fff;
   display: block; 
 }
-
+.slogan7-text{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  line-height: 1.1;
+  margin-top: 20px;
+  margin-left: 5px;
+  margin-right: 5px;
+  font-size: 35px;
+  color: #fff;
+  display: block; 
+}
+.slogan8-text{
+  font-weight: 800;
+  font-family: 'Poppins-Bold', sans-serif;
+  color: black;
+}
 .text-center.slogan4-text{
 font-weight: 500;
 text-transform: capitalize;
@@ -12621,7 +12678,7 @@ font-family: 'Poppins', sans-serif;
   box-shadow: none;
   border-radius: 0px;
   height: 48px;
-  width: 98px ; 
+  width: 98px; 
   font-family: 'Poppins', sans-serif;
   font-weight: 600; }
   .btn-escrus:hover {
@@ -12681,7 +12738,10 @@ font-family: 'Poppins', sans-serif;
             padding: 0.5rem 1rem;
             font-size: 1.25rem;
             line-height: 1.5;
-            border-radius: 0rem; }
+            border-radius: 0rem;
+            width: 280px;
+            font-size: 15px;
+          }
 
             .handsome-background-escrus {
               background-color: #ecc503;
@@ -12690,6 +12750,7 @@ font-family: 'Poppins', sans-serif;
               background-attachment: fixed;
               height: 380px;
               width:100%;
+              padding-left: 1rem;
               }
               .review-background-escrus {
                 background-color:#ecc503;
@@ -12967,7 +13028,7 @@ font-family: 'Poppins', sans-serif;
 }
 
 .app-main-enhanced{
-    background-size: cover;
+  background-size: cover;
   width: 100%;
   background-repeat: no-repeat;
   background-position: center;

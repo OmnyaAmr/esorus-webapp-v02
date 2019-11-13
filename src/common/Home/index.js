@@ -69,24 +69,49 @@ class Home extends Component {
         let content;
 
         if (!isAuthenticated) {
-            content = (
-                <div className='d-flex justify-content-center mt-4'>
-                    <input
-                        className='form-control-escrus form-control-lg-escrus ml-1'
-                        onChange={this.onChange}
-                        value={this.state.email}
-                        placeholder='Enter your email here'
-                        name='email'
-                        style={{ fontSize: '15px', width: '280px' }}
-                    />
-                    <input
-                        type='button'
-                        className='btn-escrus ml-1'
-                        value='Join Now'
-                        onClick={this.onClick}
-                    />
-                </div>
-            );
+            if (enableHomeBackground) {
+                content = (
+
+                    <div className='d-flex justify-content-center mt-4'>
+                        <input
+                            className='form-control-escrus form-control-lg-escrus ml-1'
+                            onChange={this.onChange}
+                            value={this.state.email}
+                            placeholder='Enter your email here'
+                            name='email'
+                        />
+                        <input
+                            type='button'
+                            className='btn-escrus ml-1'
+                            value='Join Now'
+                            onClick={this.onClick}
+                        />
+                    </div>
+                );
+            }
+            else {
+                content = (
+                    <div>
+                        <div className='d-flex justify-content-center mt-4'>
+                            <input
+                                className='form-control-escrus form-control-lg-escrus ml-1'
+                                onChange={this.onChange}
+                                value={this.state.email}
+                                placeholder='Enter your email here'
+                                name='email'
+                            />
+                        </div>
+                        <div className='d-flex justify-content-center mt-4'>
+                            <input
+                                type='button'
+                                className='btn-escrus ml-1'
+                                value='Join Now'
+                                onClick={this.onClick}
+                            />
+                        </div>
+                    </div>
+                );
+            }
         }
 
         return (
@@ -144,16 +169,13 @@ class Home extends Component {
                                                 Interesting Facts
                                             </h1>
                                         </Col>
-                                        <Row>
-                                            <Col className='slogan3-text'>
+                                        <Row className="counters-mobile">
+                                            <Col className='slogan7-text'>
                                                 <AnimatedNumber
                                                     value={1000}
                                                     style={{
                                                         transition:
                                                             '0.8s ease-out',
-                                                        fontSize: '35px',
-                                                        color: 'white',
-                                                        fontWeight: '400',
                                                         transitionProperty:
                                                             'background-color, color, opacity'
                                                     }}
@@ -161,9 +183,9 @@ class Home extends Component {
                                                         perc === 100
                                                             ? {}
                                                             : {
-                                                                  backgroundColor:
-                                                                      'transparent'
-                                                              }
+                                                                backgroundColor:
+                                                                    'transparent'
+                                                            }
                                                     }
                                                     duration={5000}
                                                     formatValue={value =>
@@ -174,15 +196,13 @@ class Home extends Component {
                                                     Suppliers
                                                 </h4>
                                             </Col>
-                                            <Col className='slogan3-text col-auto'>
+                                            <Col className='slogan7-text'  id="left-counters-mobile">
                                                 <AnimatedNumber
                                                     value={35}
                                                     style={{
                                                         transition:
                                                             '0.8s ease-out',
-                                                        fontSize: '35px',
-                                                        color: 'white',
-                                                        fontWeight: '400',
+
                                                         transitionProperty:
                                                             'background-color, color, opacity'
                                                     }}
@@ -190,9 +210,9 @@ class Home extends Component {
                                                         perc === 100
                                                             ? {}
                                                             : {
-                                                                  backgroundColor:
-                                                                      'transparent'
-                                                              }
+                                                                backgroundColor:
+                                                                    'transparent'
+                                                            }
                                                     }
                                                     duration={5000}
                                                     formatValue={value =>
@@ -203,15 +223,13 @@ class Home extends Component {
                                                     Our Projects
                                                 </h4>
                                             </Col>
-                                            <Col className='slogan3-text'>
+                                            <Col className='slogan7-text'>
                                                 <AnimatedNumber
                                                     value={10}
                                                     style={{
                                                         transition:
                                                             '0.8s ease-out',
-                                                        fontSize: '35px',
-                                                        color: 'white',
-                                                        fontWeight: '400',
+ 
                                                         transitionProperty:
                                                             'background-color, color, opacity'
                                                     }}
@@ -219,9 +237,9 @@ class Home extends Component {
                                                         perc === 100
                                                             ? {}
                                                             : {
-                                                                  backgroundColor:
-                                                                      'transparent'
-                                                              }
+                                                                backgroundColor:
+                                                                    'transparent'
+                                                            }
                                                     }
                                                     duration={5000}
                                                     formatValue={value =>
@@ -232,15 +250,13 @@ class Home extends Component {
                                                     Years Experience
                                                 </h4>
                                             </Col>
-                                            <Col className='slogan3-text'>
+                                            <Col className='slogan7-text' id="left-counters-mobile">
                                                 <AnimatedNumber
                                                     value={55}
                                                     style={{
                                                         transition:
                                                             '0.8s ease-out',
-                                                        fontSize: '35px',
-                                                        color: 'white',
-                                                        fontWeight: '400',
+
                                                         transitionProperty:
                                                             'background-color, color, opacity'
                                                     }}
@@ -248,9 +264,9 @@ class Home extends Component {
                                                         perc === 100
                                                             ? {}
                                                             : {
-                                                                  backgroundColor:
-                                                                      'transparent'
-                                                              }
+                                                                backgroundColor:
+                                                                    'transparent'
+                                                            }
                                                     }
                                                     duration={5000}
                                                     formatValue={value =>
@@ -271,7 +287,7 @@ class Home extends Component {
                     <Container>
                         <Row className='pt-lg-4'>
                             <Col className='text-center' md={12}>
-                                <h2 className='mb-4 slogan-text'>
+                                <h2 className='mb-4 slogan8-text'>
                                     Our satisfied client says
                                 </h2>
                             </Col>
