@@ -8157,7 +8157,7 @@ button,
     box-shadow: 7px 0 60px rgba(0, 0, 0, 0.05); }
 
 .app-sidebar__heading {
-  text-transform: uppercase;
+  text-transform: capitalize;
   font-size: 0.8rem;
   margin: 0.75rem 0;
   font-weight: bold;
