@@ -67,7 +67,7 @@ class Home extends Component {
         let { isAuthenticated } = this.props.auth;
 
         let content;
-
+        
         if (!isAuthenticated) {
             if (enableHomeBackground) {
                 content = (

@@ -12183,13 +12183,13 @@ body {
   .header-user-info {
     display: block; } }
     /*STAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA MOBILE VIEW  AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAART*/
-@media (max-width: 991.98px) {
+
+    @media (max-width: 991.98px) {
   .app-main-enhanced{
-    padding-left: 5px !important;
-    padding-right: 5px !important;
+
   }
   #left-counters-mobile{
-   margin-left: -1rem;
+   margin-left: -10%;
    
   }
   .counters-mobile{
@@ -12207,6 +12207,8 @@ body {
   }
   .buyers-mobile{
     flex-basis: 100%;
+    margin-left: -10 !important;
+    left:0 !important;
   }
   .slogan-buyer-position{
     top:30% !important;
@@ -12218,17 +12220,21 @@ body {
     font-size: 35px !important;
   }
   .slogan7-text{
-    margin-right: -5px !important;
+    margin-right: 5% !important;
     font-size: 30px !important;
   }
   .supplier-text5{
     color:black !important;
     font-size:1.5rem !important;
-    margin-top: 50%;
+    margin-top: 20%;
 
   }
   .supplier-text4{
     color:black !important;
+
+  }
+  .supplier-slogan-position{
+    margin-left:-25%!important ;
   }
   .home-background{
     height: 500px !important;
@@ -12637,7 +12643,9 @@ font-family: 'Poppins', sans-serif;
   position: absolute;
   left: 50%;
 }
-
+  .supplier-slogan-position{
+    margin-top: 8%;
+  }
 .btn-escrus-inv{
   text-align: center;
   display: inline-block;
