@@ -12184,6 +12184,7 @@ body {
     display: block; } }
     /*STAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA MOBILE VIEW  AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAART*/
 
+
     @media (max-width: 991.98px) {
   .app-main-enhanced{
 
@@ -12559,6 +12560,14 @@ body {
   top:28%;
   left: 4%;
 }
+
+
+.slogan-auth-position{
+  position: absolute;
+  top:30%;
+  left: 4%;
+}
+
 .slogan-buyer-position{
   position: absolute;
   top:20%;
@@ -12978,7 +12987,11 @@ font-family: 'Poppins', sans-serif;
   color: #ecc503;
 }
 
-
+.slogan-auth-position{
+  position: absolute;
+  top:35%;
+  left: 4%;
+}
 .supplier-text {
     font-size: 20px;
     font-weight:400;

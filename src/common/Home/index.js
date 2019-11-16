@@ -67,7 +67,7 @@ class Home extends Component {
         let { isAuthenticated } = this.props.auth;
 
         let content;
-        
+
         if (!isAuthenticated) {
             if (enableHomeBackground) {
                 content = (
@@ -133,15 +133,27 @@ class Home extends Component {
                                 height: '700px'
                             }}
                         >
-                            <Row className='slogan-position ml-4'>
-                                <Col>
-                                    <h2 className='slogan-text'>
-                                        Interior Sourcing
+                            {!isAuthenticated ?
+                                <Row className='slogan-position ml-4'>
+                                    <Col>
+                                        <h2 className='slogan-text'>
+                                            Interior Sourcing
                                     </h2>
-                                    <h2 className='slogan-text'>Made Easy</h2>
-                                    {content}
-                                </Col>
-                            </Row>
+                                        <h2 className='slogan-text'>Made Easy</h2>
+                                        {content}
+                                    </Col>
+                                </Row>
+                                :
+                                <Row className='slogan-auth-position ml-4'>
+                                    <Col>
+                                        <h2 className='slogan-text'>
+                                            Interior Sourcing
+                                         </h2>
+                                        <h2 className='slogan-text'>Made Easy</h2>
+                                    </Col>
+                                </Row>
+
+                            }
                         </div>
                     </PerfectScrollbar>
                 </div>
@@ -181,9 +193,9 @@ class Home extends Component {
                                                         perc === 100
                                                             ? {}
                                                             : {
-                                                                  backgroundColor:
-                                                                      'transparent'
-                                                              }
+                                                                backgroundColor:
+                                                                    'transparent'
+                                                            }
                                                     }
                                                     duration={5000}
                                                     formatValue={value =>
@@ -211,9 +223,9 @@ class Home extends Component {
                                                         perc === 100
                                                             ? {}
                                                             : {
-                                                                  backgroundColor:
-                                                                      'transparent'
-                                                              }
+                                                                backgroundColor:
+                                                                    'transparent'
+                                                            }
                                                     }
                                                     duration={5000}
                                                     formatValue={value =>
@@ -238,9 +250,9 @@ class Home extends Component {
                                                         perc === 100
                                                             ? {}
                                                             : {
-                                                                  backgroundColor:
-                                                                      'transparent'
-                                                              }
+                                                                backgroundColor:
+                                                                    'transparent'
+                                                            }
                                                     }
                                                     duration={5000}
                                                     formatValue={value =>
@@ -268,9 +280,9 @@ class Home extends Component {
                                                         perc === 100
                                                             ? {}
                                                             : {
-                                                                  backgroundColor:
-                                                                      'transparent'
-                                                              }
+                                                                backgroundColor:
+                                                                    'transparent'
+                                                            }
                                                     }
                                                     duration={5000}
                                                     formatValue={value =>
