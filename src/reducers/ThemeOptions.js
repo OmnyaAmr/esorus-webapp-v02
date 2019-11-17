@@ -80,7 +80,7 @@ export const setEnableSupplierBackground = enableSupplierBackground => ({
     enableSupplierBackground
 });
 
-export const setsupplierBackground = supplierBackground => ({
+export const setSupplierBackground = supplierBackground => ({
     type: SET_SUPPLIER_BACKGROUND,
     supplierBackground
 });
@@ -189,7 +189,7 @@ export default function reducer(
         buyersBackground: buyersBackground,
         suppliersBackground: suppliersBackground,
         enableHomeBackground: true,
-        enableSupplierBackground: true,
+        enableSupplierBackground: false,
         enableBuyerBackground: true
     },
     action

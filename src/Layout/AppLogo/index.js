@@ -46,7 +46,7 @@ class HeaderLogo extends React.Component {
                 <div id='logo' className='app-header__logo'>
                     <div className='logo-src'>
                         <Link to='/dashboard/home'>
-                            <img src={logo} width='97' heigth='23' />
+                            <img src={logo} width='153' height='23' />
                         </Link>
                     </div>
                     <div className='header__pane ml-auto'>
@@ -54,7 +54,6 @@ class HeaderLogo extends React.Component {
                             <Hamburger
                                 active={!enableClosedSidebar}
                                 type='elastic'
-                                color='#fff'
                                 onClick={() => {
                                     this.setState({
                                         active: !this.state.active
