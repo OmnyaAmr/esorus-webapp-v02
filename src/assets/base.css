@@ -12261,6 +12261,30 @@ body {
     .slogan-position{
       margin-top:1rem !important;
     }
+    .dez-logo{
+      margin-left: -5%;
+    }
+    .alfa-logo{
+      margin-left:-2%!important ;
+      margin-top: 2%!important;
+    }
+    .lumi-logo{
+      margin-left: -8% !important;
+    }
+    .mizaj-logo{
+      margin-top: 8% !important;
+    }
+    .tag-logo{
+      margin-left: -15%;
+    }
+    .jass-logo{
+      margin-top: 8%;
+      margin-left: -8%!important;
+    }
+    .atlas-logo{
+      margin-left: -8%;
+      margin-top: 10%;
+    }
   .dropdown-menu::before, .dropdown-menu::after {
     display: none; }
 
@@ -13142,6 +13166,35 @@ font-family: 'Poppins', sans-serif;
   .meet-our-text2{
     color: #343845;
     font-family: 'Poppins', sans-serif;
+  }
+  .meet-our-text3{
+    color: #343845;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 0.5%;
+  }
+  .meet-out-col{
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    
 
-
+  }
+  .alfa-logo{
+    margin-top: -14%;
+    margin-left: 9%;
+  }
+  .tag-logo{
+    margin-top: -10%;
+  }
+  .lumi-logo{
+    margin-left: 3%;
+    margin-top: -2%;
+  }
+  .mizaj-logo{
+    margin-top: -9%;
+  }
+  .jass-logo{
+    margin-left: 5%;
+  }
+  .meet-out-row{
+    margin-left: -2.6%;
   }

@@ -8,7 +8,13 @@ import data from '../assets/components/icons/data.svg';
 import startUp from '../assets/components/icons/startup.svg';
 import buyersPic from '../assets/utils/images/originals/buyersPic.jpg';
 import { ROLE_SUPPLIER } from '../actions/types';
-import encoreLogo from '../assets/utils/images/encore_logo.png';
+import deizgLogo from '../assets/utils/images/Dezignablez_logo.png';
+import alfaLogo from '../assets/utils/images/Alfa_Furniture_Logo.png';
+import lumiLogo from '../assets/utils/images/lumi_logo.png';
+import mizajLogo from '../assets/utils/images/Mizaj_Logo.png';
+import tagoLogo from '../assets/utils/images/tago-logo.png';
+import jassLogo from '../assets/utils/images/Jass.jpg';
+import atlasLogo from '../assets/utils/images/Atlas_Concorde.png';
 
 class Buyers extends Component {
     constructor() {
@@ -24,6 +30,31 @@ class Buyers extends Component {
         let { enableHomeBackground, buyersBackground } = this.props;
         let content;
         let { prev } = this.props;
+        let dezWidth;let dezHeight;
+        let alfaWidth;let alfaHeight;
+        let lumiWidth; let lumiHeight;
+        let mazajWidth; let mazajHeight;
+        let tagWidth; let tagHeight;
+        let jassWidth; let jassHeight;
+        let atlasWidth;let atlasHeight;
+        
+        if(enableHomeBackground){
+            dezWidth= '360'; dezHeight= '110';
+            lumiWidth= '330';lumiHeight= '120';
+            tagWidth= '400'; tagHeight='200';
+            jassWidth= '350'; jassHeight= '100';
+            atlasWidth='370'; atlasHeight='120'
+        }
+        else{
+            dezWidth= '290'; dezHeight= '80';
+            lumiWidth= '280';lumiHeight= '90';
+            tagWidth= '330'; tagHeight='150';
+            jassWidth= '290'; jassHeight= '80';
+            atlasWidth='280'; atlasHeight='90'
+
+
+        }
+
         if (prev !== ROLE_SUPPLIER) {
             content = (
                 <div>
@@ -259,25 +290,102 @@ class Buyers extends Component {
                         </Row>
                         <Row>
                             <Col>
-                                <h5 className="meet-our-text2 text-center">
-                                    We work with renowned Proffesional
-                                    Buyers, below is of our trusted Buyers
+                                <h5 className="meet-our-text3 text-center">
+                                    We have a wide range of Suppliers both local
+                                    and international, below are some of our
+                                    featured Suppliers
                                 </h5>
                             </Col>
                         </Row>
                         <Row>
-                            <Col>
-                                <a href='http://www.encore-cf.com/'>
-                                    <div className='d-flex justify-content-center mt-4'>
-                                        <img
-                                            className='ml-1'
-                                            src={encoreLogo}
-                                            width='40%'
-                                            height='120'
-                                            className='mb-2'
-                                        />
-                                    </div>
+                            <Col className='meet-out-col'>
+                                <a href='https://www.facebook.com/DezignablezArt/'>
 
+                                    <img
+                                        className='ml-1'
+                                        src={deizgLogo}
+                                        width={dezWidth}
+                                        height={dezHeight}
+                                        className='dez-logo'
+                                    />
+
+
+                                </a>
+                            </Col>
+                            <Col className='meet-out-col'>
+                                <a href=' http://www.alfa.furniture/'>
+
+                                    <img
+                                        className='ml-1'
+                                        src={alfaLogo}
+                                        width='280'
+                                        height='220'
+                                        className='alfa-logo'
+                                    />
+
+
+                                </a>
+                            </Col>
+                            <Col className='meet-out-col'>
+                                <a href='https://www.facebook.com/LumiereEgypt/'>
+
+                                    <img
+                                        className='ml-1'
+                                        src={lumiLogo}
+                                        width={lumiWidth}
+                                        height={lumiHeight}
+                                        className='lumi-logo'
+                                    />
+                                </a>
+                            </Col>
+                            <Col className='meet-out-col'>
+                                <a href='https://www.facebook.com/Mizajtileseg/'>
+
+                                    <img
+                                        className='ml-1'
+                                        src={mizajLogo}
+                                        width='270'
+                                        height='170'
+                                        className='mizaj-logo'
+                                    />
+                                </a>
+                            </Col>
+                        </Row>
+                        <Row className='meet-out-row'>
+                            <Col className='meet-out-col'>
+                                <a href='http://tagouryshouse.com/'>
+
+                                    <img
+                                        className='ml-1'
+                                        src={tagoLogo}
+                                        width={tagWidth}
+                                        height={tagHeight}
+                                        className='tag-logo'
+                                    />
+                                </a>
+                            </Col>
+                            <Col className='meet-out-col'>
+                                <a href='https://www.facebook.com/JWardaniDesign/'>
+
+                                    <img
+                                        className='ml-1'
+                                        src={jassLogo}
+                                        width={jassWidth}
+                                        height={jassHeight}
+                                        className='jass-logo'
+                                    />
+                                </a>
+                            </Col>
+                            <Col className='meet-out-col'>
+                                <a href='https://www.atlasconcorde.com/en/'>
+
+                                    <img
+                                        className='ml-1'
+                                        src={atlasLogo}
+                                        width={atlasWidth}
+                                        height={atlasHeight}
+                                        className='atlas-logo'
+                                    />
                                 </a>
                             </Col>
                         </Row>

@@ -54,6 +54,16 @@ class Suppliers extends Component {
         let { enableHomeBackground, suppliersBackground } = this.props;
         let { isAuthenticated } = this.props.auth;
         let content;
+        let encoreWidth;
+        let encoreHeight;
+        if(enableHomeBackground){
+             encoreWidth='450';
+             encoreHeight='150';
+        }
+        else{
+            encoreWidth='250';
+            encoreHeight='90';
+        }
         if (!isAuthenticated) {
             if (enableHomeBackground) {
                 content = (
@@ -231,8 +241,8 @@ class Suppliers extends Component {
                                         <img
                                             className='ml-1'
                                             src={encoreLogo}
-                                            width='450'
-                                            height='120'
+                                            width={encoreWidth}
+                                            height={encoreHeight}
                                             className='mb-2'
                                         />
                                     </div>
