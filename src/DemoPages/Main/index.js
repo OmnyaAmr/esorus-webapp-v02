@@ -24,7 +24,7 @@ class Main extends React.Component {
 
     onResize(width) {
         if (width < 992) {
-            this.props.setEnableHomeBackground(false);
+            this.props.setEnableHomeBackground(true);
             this.props.setEnableSupplierBackground(false);
             this.props.setEnableBuyerBackground(false);
         } else {

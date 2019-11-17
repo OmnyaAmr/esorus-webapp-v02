@@ -189,12 +189,11 @@ export default function reducer(
         buyersBackground: buyersBackground,
         suppliersBackground: suppliersBackground,
         enableHomeBackground: true,
-        enableSupplierBackground: false,
+        enableSupplierBackground: true,
         enableBuyerBackground: true
     },
     action
 ) {
-    console.log(state.inSuppliersPage);
     switch (action.type) {
         case SET_ENABLE_SUPPLIER_BACKGROUND:
             return {

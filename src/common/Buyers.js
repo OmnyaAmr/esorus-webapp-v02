@@ -21,7 +21,7 @@ class Buyers extends Component {
         this.props.history.push('/dashboard/request');
     }
     render() {
-        let { enableHomeBackground, buyersBackground } = this.props;
+        let { enableBuyerBackground, buyersBackground } = this.props;
         let content;
         let { prev } = this.props;
         if (prev !== ROLE_SUPPLIER) {
@@ -54,7 +54,7 @@ class Buyers extends Component {
                     <div
                         className='app-main-enhanced buyers3-mobile'
                         style={{
-                            backgroundImage: enableHomeBackground
+                            backgroundImage: enableBuyerBackground
                                 ? 'url(' + buyersBackground + ')'
                                 : null,
                             height: '700px'
@@ -68,36 +68,45 @@ class Buyers extends Component {
                                     Designers and <br />
                                     Professional Buyers{' '}
                                 </h2>
-                                {enableHomeBackground ?
+                                {enableBuyerBackground ? (
                                     <p className='buyer-text3'>
-                                        A single place to find furniture materials,
-                                    get qoutes and purchase from over a 1000{' '}
-                                        <br /> different qualified suppliers.{' '}
+                                        A single place to find furniture
+                                        materials, get qoutes and purchase from
+                                        over a 1000 <br /> different qualified
+                                        suppliers.{' '}
                                     </p>
-                                    :
-                                    <p className='buyer-text3' style={{ fontSize: '12px' }}>
-                                        A single place to find furniture materials,
-                                         get qoutes and purchase from over a 1000
-                                         different qualified suppliers.
+                                ) : (
+                                    <p
+                                        className='buyer-text3'
+                                        style={{ fontSize: '12px' }}
+                                    >
+                                        A single place to find furniture
+                                        materials, get qoutes and purchase from
+                                        over a 1000 different qualified
+                                        suppliers.
                                     </p>
-                                }
+                                )}
                             </Col>
-                            <Col className='buyers2-mobile' style={{ flexBasis: '100%' }}>{content}</Col>
+                            <Col
+                                className='buyers2-mobile'
+                                style={{ flexBasis: '100%' }}
+                            >
+                                {content}
+                            </Col>
                         </Row>
                     </div>
                     <Row>
-                        {!enableHomeBackground &&
+                        {!enableBuyerBackground && (
                             <img
                                 src={buyersPic}
                                 width='100%'
                                 height='500'
                                 className='mb-2'
-                            />}
-
+                            />
+                        )}
                     </Row>
 
                     <div className='app-main-enhanced'>
-
                         <Row>
                             <Col>
                                 <div className='heading-section mb-5 pt-5 pl-md-5'>
@@ -147,7 +156,7 @@ class Buyers extends Component {
                                     </div>
                                 </div>
                             </Col>
-                            {enableHomeBackground &&
+                            {enableBuyerBackground && (
                                 <Col>
                                     <img
                                         src={buyersPic}
@@ -156,13 +165,18 @@ class Buyers extends Component {
                                         className='mb-2'
                                     />
                                 </Col>
-                            }
+                            )}
                         </Row>
 
                         <Row>
-                            <Col className='buyers2-mobile' style={{ left: '50px' }}>{content}</Col>
+                            <Col
+                                className='buyers2-mobile'
+                                style={{ left: '50px' }}
+                            >
+                                {content}
+                            </Col>
                         </Row>
-                        <Row >
+                        <Row>
                             <Col className='buyers-mobile'>
                                 <div className='d-flex justify-content-center mt-4'>
                                     <img
@@ -215,9 +229,7 @@ class Buyers extends Component {
                                     />
                                 </div>
                                 <div className='d-flex justify-content-center mt-4'>
-                                    <p className='supplier-text'>
-                                        Follow-up
-                                    </p>
+                                    <p className='supplier-text'>Follow-up</p>
                                 </div>
                                 <div className='d-flex justify-content-center mt-4'>
                                     <p className='ml-1  text-center supplier-text2'>
@@ -252,16 +264,16 @@ class Buyers extends Component {
                         </Row>
                         <Row>
                             <Col>
-                                <h2 className="meet-our-text text-center">
+                                <h2 className='meet-our-text text-center'>
                                     Meet our network of Suppliers
                                 </h2>
                             </Col>
                         </Row>
                         <Row>
                             <Col>
-                                <h5 className="meet-our-text2 text-center">
-                                    We work with renowned Proffesional
-                                    Buyers, below is of our trusted Buyers
+                                <h5 className='meet-our-text2 text-center'>
+                                    We work with renowned Proffesional Buyers,
+                                    below is of our trusted Buyers
                                 </h5>
                             </Col>
                         </Row>
@@ -277,7 +289,6 @@ class Buyers extends Component {
                                             className='mb-2'
                                         />
                                     </div>
-
                                 </a>
                             </Col>
                         </Row>
@@ -288,7 +299,7 @@ class Buyers extends Component {
     }
 }
 const mapStateToProps = state => ({
-    enableHomeBackground: state.ThemeOptions.enableHomeBackground,
+    enableBuyerBackground: state.ThemeOptions.enableBuyerBackground,
     buyersBackground: state.ThemeOptions.buyersBackground,
     auth: state.auth,
     prev: state.prev

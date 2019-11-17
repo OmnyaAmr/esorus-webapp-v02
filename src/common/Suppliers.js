@@ -31,33 +31,31 @@ class Suppliers extends Component {
     }
 
     onChange(e) {
-
         this.setState({ [e.target.name]: e.target.value });
     }
     componentDidMount() {
-        window.document.getElementById('professional-buyers').style.color = 'white';
+        window.document.getElementById('professional-buyers').style.color =
+            'white';
         window.document.getElementById('suppliers').style.color = 'white';
         window.document.getElementById('sign-in').style.color = 'white';
         window.document.getElementById('header-logo').src = whiteLogo;
         window.document.getElementById('user-icon').src = whiteUser;
-
     }
     componentWillUnmount() {
-        window.document.getElementById('professional-buyers').style.color = 'black';
+        window.document.getElementById('professional-buyers').style.color =
+            'black';
         window.document.getElementById('suppliers').style.color = 'black';
         window.document.getElementById('sign-in').style.color = 'black';
         window.document.getElementById('header-logo').src = blackLogo;
         window.document.getElementById('user-icon').src = blackUser;
-
     }
     render() {
-        let { enableHomeBackground, suppliersBackground } = this.props;
+        let { enableSupplierBackground, suppliersBackground } = this.props;
         let { isAuthenticated } = this.props.auth;
         let content;
         if (!isAuthenticated) {
-            if (enableHomeBackground) {
+            if (enableSupplierBackground) {
                 content = (
-
                     <div className='d-flex justify-content-left mt-4'>
                         <input
                             className='form-control-escrus form-control-lg-escrus ml-1'
@@ -74,8 +72,7 @@ class Suppliers extends Component {
                         />
                     </div>
                 );
-            }
-            else {
+            } else {
                 content = (
                     <div>
                         <div className='d-flex justify-content-center mt-4'>
@@ -112,25 +109,24 @@ class Suppliers extends Component {
                     <div
                         className='app-main-enhanced buyers3-mobile'
                         style={{
-                            backgroundImage: enableHomeBackground
+                            backgroundImage: enableSupplierBackground
                                 ? 'url(' + suppliersBackground + ')'
                                 : null,
-                            height: '650px',
+                            height: '650px'
                         }}
                     >
                         <Row className='supplier-slogan-position '>
                             <Col>
                                 <h2 className='supplier-text5'>
                                     For Suppliers and Manufacturers
-                        </h2>
-                                <p
-                                    className='supplier-text4 '
-
-                                >
-                                    We take your brand around the world and expose
-                            {enableHomeBackground && <br />}
-                                    you to a wide network of professional buyers.
-                        </p>
+                                </h2>
+                                <p className='supplier-text4 '>
+                                    We take your brand around the world and
+                                    expose
+                                    {enableSupplierBackground && <br />}
+                                    you to a wide network of professional
+                                    buyers.
+                                </p>
                                 {content}
                             </Col>
                         </Row>
@@ -213,14 +209,16 @@ class Suppliers extends Component {
                         </Row>
                         <Row>
                             <Col>
-                                <h2 className="meet-our-text text-center">Meet our network of Professional Buyers</h2>
+                                <h2 className='meet-our-text text-center'>
+                                    Meet our network of Professional Buyers
+                                </h2>
                             </Col>
                         </Row>
                         <Row>
                             <Col>
-                                <h5 className="meet-our-text2 text-center">
-                                    We work with renowned Proffesional
-                                    Buyers, below is of our trusted Buyers
+                                <h5 className='meet-our-text2 text-center'>
+                                    We work with renowned Proffesional Buyers,
+                                    below is of our trusted Buyers
                                 </h5>
                             </Col>
                         </Row>
@@ -236,7 +234,6 @@ class Suppliers extends Component {
                                             className='mb-2'
                                         />
                                     </div>
-
                                 </a>
                             </Col>
                         </Row>
@@ -247,7 +244,7 @@ class Suppliers extends Component {
     }
 }
 const mapStateToProps = state => ({
-    enableHomeBackground: state.ThemeOptions.enableHomeBackground,
+    enableSupplierBackground: state.ThemeOptions.enableSupplierBackground,
     suppliersBackground: state.ThemeOptions.suppliersBackground,
     auth: state.auth
 });
