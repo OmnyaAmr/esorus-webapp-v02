@@ -8,6 +8,8 @@ import data from '../assets/components/icons/data.svg';
 import startUp from '../assets/components/icons/startup.svg';
 import buyersPic from '../assets/utils/images/originals/buyersPic.jpg';
 import { ROLE_SUPPLIER } from '../actions/types';
+import encoreLogo from '../assets/utils/images/encore_logo.png';
+
 class Buyers extends Component {
     constructor() {
         super();
@@ -80,7 +82,7 @@ class Buyers extends Component {
                                     </p>
                                 }
                             </Col>
-                            <Col className='buyers2-mobile' style={{ flexBasis:'100%'}}>{content}</Col>
+                            <Col className='buyers2-mobile' style={{ flexBasis: '100%' }}>{content}</Col>
                         </Row>
                     </div>
                     <Row>
@@ -246,6 +248,37 @@ class Buyers extends Component {
                                         additional discount.
                                     </p>
                                 </div>
+                            </Col>
+                        </Row>
+                        <Row>
+                            <Col>
+                                <h2 className="meet-our-text text-center">
+                                    Meet our network of Suppliers
+                                </h2>
+                            </Col>
+                        </Row>
+                        <Row>
+                            <Col>
+                                <h5 className="meet-our-text2 text-center">
+                                    We work with renowned Proffesional
+                                    Buyers, below is of our trusted Buyers
+                                </h5>
+                            </Col>
+                        </Row>
+                        <Row>
+                            <Col>
+                                <a href='http://www.encore-cf.com/'>
+                                    <div className='d-flex justify-content-center mt-4'>
+                                        <img
+                                            className='ml-1'
+                                            src={encoreLogo}
+                                            width='40%'
+                                            height='120'
+                                            className='mb-2'
+                                        />
+                                    </div>
+
+                                </a>
                             </Col>
                         </Row>
                     </div>
