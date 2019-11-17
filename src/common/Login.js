@@ -159,7 +159,7 @@ class Login extends React.Component {
                                             </Row>
                                             <Row>
                                                 <Col>
-                                                    <Button className='btn-escrus block log-in'>
+                                                    <Button className='btn-escrus block log-in mt-4 mb-2'>
                                                         Log in
                                                     </Button>
                                                 </Col>
@@ -167,7 +167,7 @@ class Login extends React.Component {
                                             <Row>
                                                 <Col>
                                                     <Button
-                                                        className='btn-escrus-inv block log-in mt-3'
+                                                        className='btn-escrus-inv block log-in'
                                                         onClick={
                                                             this.onSignupClick
                                                         }
@@ -194,9 +194,4 @@ const mapStateToProps = state => ({
     errors: state.errors,
     loading: state.loading
 });
-export default withRouter(
-    connect(
-        mapStateToProps,
-        { loginUser }
-    )(Login)
-);
+export default withRouter(connect(mapStateToProps, { loginUser })(Login));

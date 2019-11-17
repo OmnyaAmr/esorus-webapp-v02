@@ -84,8 +84,14 @@ let InitialNavs = {
     ]
 };
 
+let logout = {
+    icon: 'pe-7s-left-arrow',
+    label: 'Log out',
+    to: '#/dashboard/logout'
+};
+
 export const ConfirmNav = [InitialNavs, confirm, aboutUs];
 
-export const Supplier = [InitialNavs, aboutUs];
+export const Supplier = [InitialNavs, aboutUs, logout];
 
-export const Buyer = [InitialNavs, aboutUs];
+export const Buyer = [InitialNavs, aboutUs, logout];

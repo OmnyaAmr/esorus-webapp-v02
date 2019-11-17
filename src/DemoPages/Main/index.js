@@ -92,12 +92,9 @@ const mapStateToProp = state => ({
 });
 
 export default withRouter(
-    connect(
-        mapStateToProp,
-        {
-            setEnableHomeBackground,
-            setEnableBuyerBackground,
-            setEnableSupplierBackground
-        }
-    )(Main)
+    connect(mapStateToProp, {
+        setEnableHomeBackground,
+        setEnableBuyerBackground,
+        setEnableSupplierBackground
+    })(Main)
 );

@@ -15,6 +15,7 @@ import AboutUs from '../AboutUs';
 import Activition from '../Activition';
 import Confirmation from '../Confirmation';
 
+import Logout from '../Logout';
 //params ALL THE APP ROUTES WILL BE HERE
 
 // Layout
@@ -36,6 +37,7 @@ const Dashboards = ({ match }) => (
         <Route path={`${match.url}/buyers`} component={Buyers} />
         <Route path={`${match.url}/confirm`} component={Confirmation} />
         <PrivateRoute path={`${match.url}/request`} component={Request} />
+        <PrivateRoute path={`${match.url}/logout`} component={Logout} />
         <Route path={`${match.url}/activated/:key`} component={Activition} />
 
         <Route path={`${match.url}/about`} component={AboutUs} />

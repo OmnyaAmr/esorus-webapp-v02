@@ -7986,11 +7986,7 @@ button,
   display: flex;
   align-items: center;
   transition: width .2s; }
-  .app-header__logo .logo-src {
-    height: 23px;
-    width: 97px;
-    /* background: url("./utils/images/logo-inverse2.png"); */
-  } 
+
 
     .app-header__menu,
     .app-header__mobile-menu {
@@ -8451,7 +8447,6 @@ button,
 .closed-sidebar.closed-sidebar-mobile .app-sidebar:hover .app-header__logo {
   width: 280px; }
   .closed-sidebar.closed-sidebar-mobile .app-sidebar:hover .app-header__logo .logo-src {
-    width: 97px;
     margin: 0; }
 .closed-sidebar.closed-sidebar-mobile .app-header {
   background: rgba(0,0,0,1);
@@ -12302,7 +12297,6 @@ body {
     
     }
       .sidebar-mobile-open .app-sidebar .app-header__logo .logo-src {
-        width: 97px !important;
         margin-left: auto;
         margin-right: 0; }
   .sidebar-mobile-open .fixed-sidebar .app-sidebar {
@@ -12358,8 +12352,8 @@ body {
       display: flex;
       order: 3; }
     .app-header.header-text-light .app-header__menu > span .btn, .app-header.header-text-light .app-header__menu > .btn {
-      background: rgba(255, 255, 255, 0.1);
-      border-color: rgba(255, 255, 255, 0.1); }
+      background: rgba(255, 255, 255, 0);
+      border-color: rgba(255, 255, 255, 0); }
     .app-header.header-text-light .header-mobile-open {
       background-color: rgb(0, 0, 0, 1); }
 

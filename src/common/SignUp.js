@@ -281,11 +281,9 @@ class SignUp extends React.Component {
                                             <div>{content}</div>
 
                                             <FormGroup row>
-                                                <Button className='btn-escrus log-in block'>
+                                                <Button className='btn-escrus log-in block mt-4 mb-2'>
                                                     Sign up
                                                 </Button>
-                                            </FormGroup>
-                                            <FormGroup row>
                                                 <Button
                                                     className='btn-escrus-inv block log-in'
                                                     onClick={this.onCancelClick}
@@ -310,7 +308,4 @@ const mapStateToProps = state => ({
     errors: state.errors
 });
 
-export default connect(
-    mapStateToProps,
-    { SignUpUser }
-)(SignUp);
+export default connect(mapStateToProps, { SignUpUser })(SignUp);

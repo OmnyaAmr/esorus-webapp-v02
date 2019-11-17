@@ -54,6 +54,7 @@ class HeaderLogo extends React.Component {
                             <Hamburger
                                 active={!enableClosedSidebar}
                                 type='elastic'
+                                color='#fff'
                                 onClick={() => {
                                     this.setState({
                                         active: !this.state.active
@@ -82,7 +83,4 @@ const mapDispatchToProps = dispatch => ({
         dispatch(setEnableMobileMenuSmall(enable))
 });
 
-export default connect(
-    mapStateToProps,
-    mapDispatchToProps
-)(HeaderLogo);
+export default connect(mapStateToProps, mapDispatchToProps)(HeaderLogo);

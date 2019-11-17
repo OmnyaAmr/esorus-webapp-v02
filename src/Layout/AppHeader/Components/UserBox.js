@@ -57,12 +57,6 @@ class UserBox extends React.Component {
                                             Suppliers
                                         </button>
                                     </Link>
-
-                                    <div className='widget-content-left header-user-info'>
-                                        <div className='widget-heading'>
-                                            {user ? user.name : ''}
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
 
