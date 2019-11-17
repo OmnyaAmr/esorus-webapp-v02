@@ -1,25 +1,6 @@
 import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
-import {
-    DropdownToggle,
-    DropdownMenu,
-    Nav,
-    Button,
-    NavItem,
-    NavLink,
-    UncontrolledTooltip,
-    UncontrolledButtonDropdown
-} from 'reactstrap';
-
-import {
-    faSignInAlt,
-    faAngleDown,
-    faSignOutAlt,
-    faUpload,
-    faInfo
-} from '@fortawesome/free-solid-svg-icons';
-
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Button, UncontrolledTooltip } from 'reactstrap';
 
 import unknownUser from '../../../assets/utils/images/avatars/user.svg';
 
@@ -92,7 +73,7 @@ class UserBox extends React.Component {
                                     onClick={this.onLogoutClick}
                                     color='info'
                                     id='Tooltip-1'
-                                    style={{width:"90px",height:"40px"}}
+                                    style={{ width: '90px', height: '40px' }}
                                 >
                                     Log out
                                 </Button>
@@ -161,7 +142,4 @@ const mapStateToProps = state => ({
     auth: state.auth
 });
 
-export default connect(
-    mapStateToProps,
-    { logoutUser }
-)(UserBox);
+export default connect(mapStateToProps, { logoutUser })(UserBox);

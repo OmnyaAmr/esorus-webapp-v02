@@ -8500,7 +8500,6 @@ button,
     align-content: top;
     align-items: center;
     justify-content: space-around;
-    text-align: center;
   }
     .app-footer .app-footer__inner h2{
       line-height: 1.5;
@@ -10337,7 +10336,7 @@ body {
   color: inherit;
   text-transform: none;
   background-color: transparent;
-  border: 0;
+  border: 5px;
   margin: 0;
   overflow: visible; }
   .hamburger:hover {
@@ -12187,6 +12186,13 @@ body {
   .app-main-enhanced{
     padding-left: 5px !important;
     padding-right: 5px !important;
+  }
+  .app-footer .app-footer__inner{
+    align-items: flex-start;
+    padding:10%;
+  }
+  .app-footer-left{
+    padding-bottom: 5%;
   }
   #left-counters-mobile{
    margin-left: -1rem;

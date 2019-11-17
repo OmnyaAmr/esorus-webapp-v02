@@ -21,10 +21,10 @@ class AppFooter extends React.Component {
                                 <Row>
                                     <Col>
                                         <p>Your FF&E Personal Assistant</p>
-                                        <div className='d-flex justify-content-around'>
+                                        <div className='d-flex flex-start'>
                                             <div>
                                                 <a
-                                                    className='a-esorus'
+                                                    className='a-esorus mr-3'
                                                     href='https://www.facebook.com/Esorus'
                                                     target='_blank'
                                                 >
@@ -84,8 +84,10 @@ class AppFooter extends React.Component {
                                 </ul>
                             </div>
                             <div className='app-footer-right'>
-                                <h2>Curious and intrigued? Let's Talk!</h2>
-                                <ul>
+                                <h2 className='mb-4'>
+                                    Curious and intrigued? Let's Talk!
+                                </h2>
+                                <ul className='p-0'>
                                     <li className='mb-3'>
                                         <div className='text-white'>
                                             <img
