@@ -60,7 +60,7 @@ class Suppliers extends Component {
                     <div>
                         <div className='d-flex justify-content-center mt-4'>
                             <input
-                                className='form-control-escrus form-control-lg-escrus ml-1'
+                                className='form-control-escrus form-control-lg-escrus '
                                 onChange={this.onChange}
                                 value={this.state.email}
                                 placeholder='Enter your email here'
@@ -70,7 +70,7 @@ class Suppliers extends Component {
                         <div className='d-flex justify-content-center mt-4'>
                             <input
                                 type='button'
-                                className='btn-escrus ml-1'
+                                className='btn-escrus '
                                 value='Join Now'
                                 onClick={this.onClick}
                             />
@@ -96,21 +96,24 @@ class Suppliers extends Component {
                                 ? 'url(' + suppliersBackground + ')'
                                 : null,
                             height: '650px',
-                            paddingTop: '23%'
                         }}
                     >
-                        <h2 className='supplier-text5'>
-                            For Suppliers and Manufacturers
+                        <Row className='supplier-slogan-position '>
+                            <Col>
+                                <h2 className='supplier-text5'>
+                                    For Suppliers and Manufacturers
                         </h2>
-                        <p
-                            className='supplier-text4 '
-                            
-                        >
-                            We take your brand around the world and expose
-                            {enableHomeBackground &&<br />}
-                            you to a wide network of professional buyers.
+                                <p
+                                    className='supplier-text4 '
+
+                                >
+                                    We take your brand around the world and expose
+                            {enableHomeBackground && <br />}
+                                    you to a wide network of professional buyers.
                         </p>
-                        {content}
+                                {content}
+                            </Col>
+                        </Row>
                     </div>
 
                     <div className='app-main-enhanced'>

@@ -66,12 +66,21 @@ class Buyers extends Component {
                                     Designers and <br />
                                     Professional Buyers{' '}
                                 </h2>
-                                <p className='buyer-text3'>
-                                    A single place to find furniture materials,
+                                {enableHomeBackground ?
+                                    <p className='buyer-text3'>
+                                        A single place to find furniture materials,
                                     get qoutes and purchase from over a 1000{' '}
-                                    <br /> different qualified suppliers.{' '}
-                                </p>
+                                        <br /> different qualified suppliers.{' '}
+                                    </p>
+                                    :
+                                    <p className='buyer-text3' style={{ fontSize: '12px' }}>
+                                        A single place to find furniture materials,
+                                         get qoutes and purchase from over a 1000
+                                         different qualified suppliers.
+                                    </p>
+                                }
                             </Col>
+                            <Col className='buyers2-mobile' style={{ flexBasis:'100%'}}>{content}</Col>
                         </Row>
                     </div>
                     <Row>
@@ -86,9 +95,7 @@ class Buyers extends Component {
                     </Row>
 
                     <div className='app-main-enhanced'>
-                        <Row>
-                            <Col className='buyers2-mobile' style={{ left: '50px' }}>{content}</Col>
-                        </Row>
+
                         <Row>
                             <Col>
                                 <div className='heading-section mb-5 pt-5 pl-md-5'>
