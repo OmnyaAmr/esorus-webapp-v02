@@ -14,12 +14,8 @@ class Nav extends Component {
     state = {};
     constructor() {
         super();
-        this.onClick = this.onClick.bind(this);
     }
-    onClick(e) {
-        e.preventDefault();
-        console.log('Here');
-    }
+
     render() {
         let navContent;
         let { isAuthenticated, user } = this.props.auth;

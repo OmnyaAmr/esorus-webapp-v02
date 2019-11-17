@@ -19,12 +19,8 @@ class Header extends React.Component {
             if (window.pageYOffset === 0) {
                 this.document.getElementById('header').style.backgroundColor =
                     'transparent';
-                this.document.getElementById('logo').style.backgroundColor =
-                    'transparent';
             } else {
                 this.document.getElementById('header').style.backgroundColor =
-                    '#bfbfbf';
-                this.document.getElementById('logo').style.backgroundColor =
                     '#bfbfbf';
             }
         };
@@ -81,7 +77,4 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({});
 
-export default connect(
-    mapStateToProps,
-    mapDispatchToProps
-)(Header);
+export default connect(mapStateToProps, mapDispatchToProps)(Header);

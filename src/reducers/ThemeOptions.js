@@ -45,10 +45,11 @@ export const SET_SUPPLIER_BACKGROUND = 'THEME_OPTION/SET_SUPPLIER_BACKGROUND';
 export const SET_BACKGROUND_IMAGE = 'THEME_OPTIONS/SET_BACKGROUND_IMAGE';
 export const SET_BACKGROUND_COLOR = 'THEME_OPTIONS/SET_BACKGROUND_COLOR';
 export const SET_COLOR_SCHEME = 'THEME_OPTIONS/SET_COLOR_SCHEME';
-export const SET_BACKGROUND_IMAGE_OPACITY ='THEME_OPTIONS/SET_BACKGROUND_IMAGE_OPACITY';
+export const SET_BACKGROUND_IMAGE_OPACITY =
+    'THEME_OPTIONS/SET_BACKGROUND_IMAGE_OPACITY';
 
-export const SET_HEADER_BACKGROUND_COLOR ='THEME_OPTIONS/SET_HEADER_BACKGROUND_COLOR';
-
+export const SET_HEADER_BACKGROUND_COLOR =
+    'THEME_OPTIONS/SET_HEADER_BACKGROUND_COLOR';
 
 export const setEnableBackgroundImage = enableBackgroundImage => ({
     type: SET_ENABLE_BACKGROUND_IMAGE,
@@ -79,7 +80,7 @@ export const setEnableSupplierBackground = enableSupplierBackground => ({
     enableSupplierBackground
 });
 
-export const setsupplierBackground = supplierBackground => ({
+export const setSupplierBackground = supplierBackground => ({
     type: SET_SUPPLIER_BACKGROUND,
     supplierBackground
 });
@@ -166,7 +167,6 @@ export const setBackgroundImage = backgroundImage => ({
     backgroundImage
 });
 
-
 export default function reducer(
     state = {
         backgroundColor: 'bg-royal sidebar-text-light',
@@ -190,11 +190,10 @@ export default function reducer(
         suppliersBackground: suppliersBackground,
         enableHomeBackground: true,
         enableSupplierBackground: true,
-        enableBuyerBackground: true,
+        enableBuyerBackground: true
     },
     action
 ) {
-    console.log(state.inSuppliersPage)
     switch (action.type) {
         case SET_ENABLE_SUPPLIER_BACKGROUND:
             return {
@@ -331,7 +330,6 @@ export default function reducer(
                 ...state,
                 backgroundImageOpacity: action.backgroundImageOpacity
             };
-
     }
     return state;
 }
