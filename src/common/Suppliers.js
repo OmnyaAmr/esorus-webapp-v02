@@ -7,7 +7,10 @@ import world from '../assets/components/icons/world.svg';
 import buyer from '../assets/components/icons/buyer.svg';
 import project from '../assets/components/icons/project.svg';
 import order from '../assets/components/icons/order.svg';
-
+import whiteLogo from '../assets/utils/images/white-logo.png';
+import blackLogo from '../assets/utils/images/logo.png';
+import whiteUser from '../assets/components/icons/white-user-icon.svg';
+import blackUser from '../assets/utils/images/avatars/user.svg';
 class Suppliers extends Component {
     constructor() {
         super();
@@ -27,9 +30,25 @@ class Suppliers extends Component {
     }
 
     onChange(e) {
+
         this.setState({ [e.target.name]: e.target.value });
     }
+    componentDidMount(){
+    window.document.getElementById('professional-buyers').style.color='white';
+    window.document.getElementById('suppliers').style.color='white';
+    window.document.getElementById('sign-in').style.color='white';
+    window.document.getElementById('header-logo').src=whiteLogo;
+    window.document.getElementById('user-icon').src=whiteUser;
 
+    }
+    componentWillUnmount(){
+        window.document.getElementById('professional-buyers').style.color='black';
+        window.document.getElementById('suppliers').style.color='black';
+        window.document.getElementById('sign-in').style.color='black';
+        window.document.getElementById('header-logo').src=blackLogo;
+        window.document.getElementById('user-icon').src=blackUser;
+
+    }
     render() {
         let { enableHomeBackground, suppliersBackground } = this.props;
         let { isAuthenticated } = this.props.auth;

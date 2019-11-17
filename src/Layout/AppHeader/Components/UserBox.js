@@ -93,7 +93,7 @@ class UserBox extends React.Component {
                                         className='btn custom-signin-btn mt-2 ml-4'
                                         to='/dashboard/buyers'
                                     >
-                                        <button className='btn-navBar'>
+                                        <button className='btn-navBar' id='professional-buyers'>
                                             Professional Buyers
                                         </button>
                                     </Link>
@@ -101,7 +101,7 @@ class UserBox extends React.Component {
                                         className='btn custom-signin-btn mt-2 ml-4 mr-4'
                                         to='/dashboard/suppliers'
                                     >
-                                        <button className='btn-navBar'>
+                                        <button className='btn-navBar' id='suppliers'>
                                             Suppliers
                                         </button>
                                     </Link>
@@ -110,12 +110,13 @@ class UserBox extends React.Component {
                                         className='btn ml-1 custom-signin-btn mt-2'
                                         to='/dashboard/login'
                                     >
-                                        <button className='btn-navBar'>
+                                        <button className='btn-navBar' id='sign-in'>
                                             <img
                                                 src={unknownUser}
                                                 width='20'
                                                 height='20'
                                                 className='mb-2'
+                                                id='user-icon'
                                             />
                                             Sign In
                                         </button>

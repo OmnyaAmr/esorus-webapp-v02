@@ -26,7 +26,7 @@ import AppSidebar from '../../Layout/AppSidebar';
 
 const Dashboards = ({ match }) => (
     <Fragment>
-        <AppHeader />
+        <AppHeader  />
         <AppSidebar />
 
         <Route path={`${match.url}/home`} component={Home} />
