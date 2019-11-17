@@ -194,6 +194,7 @@ export default function reducer(
     },
     action
 ) {
+    console.log(state.inSuppliersPage);
     switch (action.type) {
         case SET_ENABLE_SUPPLIER_BACKGROUND:
             return {

@@ -7,7 +7,11 @@ import world from '../assets/components/icons/world.svg';
 import buyer from '../assets/components/icons/buyer.svg';
 import project from '../assets/components/icons/project.svg';
 import order from '../assets/components/icons/order.svg';
-
+import whiteLogo from '../assets/utils/images/white-logo.png';
+import blackLogo from '../assets/utils/images/logo.png';
+import whiteUser from '../assets/components/icons/white-user-icon.svg';
+import blackUser from '../assets/utils/images/avatars/user.svg';
+import encoreLogo from '../assets/utils/images/encore_logo.png';
 class Suppliers extends Component {
     constructor() {
         super();
@@ -27,9 +31,25 @@ class Suppliers extends Component {
     }
 
     onChange(e) {
+
         this.setState({ [e.target.name]: e.target.value });
     }
+    componentDidMount() {
+        window.document.getElementById('professional-buyers').style.color = 'white';
+        window.document.getElementById('suppliers').style.color = 'white';
+        window.document.getElementById('sign-in').style.color = 'white';
+        window.document.getElementById('header-logo').src = whiteLogo;
+        window.document.getElementById('user-icon').src = whiteUser;
 
+    }
+    componentWillUnmount() {
+        window.document.getElementById('professional-buyers').style.color = 'black';
+        window.document.getElementById('suppliers').style.color = 'black';
+        window.document.getElementById('sign-in').style.color = 'black';
+        window.document.getElementById('header-logo').src = blackLogo;
+        window.document.getElementById('user-icon').src = blackUser;
+
+    }
     render() {
         let { enableHomeBackground, suppliersBackground } = this.props;
         let { isAuthenticated } = this.props.auth;
@@ -189,6 +209,35 @@ class Suppliers extends Component {
                                         You can manage <br /> your orders.
                                     </p>
                                 </div>
+                            </Col>
+                        </Row>
+                        <Row>
+                            <Col>
+                                <h2 className="meet-our-text text-center">Meet our network of Professional Buyers</h2>
+                            </Col>
+                        </Row>
+                        <Row>
+                            <Col>
+                                <h5 className="meet-our-text2 text-center">
+                                    We work with renowned Proffesional
+                                    Buyers, below is of our trusted Buyers
+                                </h5>
+                            </Col>
+                        </Row>
+                        <Row>
+                            <Col>
+                                <a href='http://www.encore-cf.com/'>
+                                    <div className='d-flex justify-content-center mt-4'>
+                                        <img
+                                            className='ml-1'
+                                            src={encoreLogo}
+                                            width='450'
+                                            height='120'
+                                            className='mb-2'
+                                        />
+                                    </div>
+
+                                </a>
                             </Col>
                         </Row>
                     </div>
