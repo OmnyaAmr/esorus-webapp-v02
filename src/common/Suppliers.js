@@ -30,7 +30,7 @@ class Suppliers extends Component {
         });
     }
     componentWillMount() {
-        let x = window.document.getElementById('professional-buyers');
+        let x = window.document.getElementById('header');
         console.log(x);
     }
     onChange(e) {
@@ -42,7 +42,10 @@ class Suppliers extends Component {
         window.document.getElementById('suppliers').style.color = 'white';
         window.document.getElementById('sign-in').style.color = 'white';
         window.document.getElementById('header-logo').src = whiteLogo;
-        window.document.getElementById('user-icon').src = whiteUser;
+        let { isAuthenticated } = this.props.auth;
+        if (!isAuthenticated) {
+            window.document.getElementById('user-icon').src = whiteUser;
+        }
     }
     componentWillUnmount() {
         window.document.getElementById('professional-buyers').style.color =
@@ -50,7 +53,10 @@ class Suppliers extends Component {
         window.document.getElementById('suppliers').style.color = 'black';
         window.document.getElementById('sign-in').style.color = 'black';
         window.document.getElementById('header-logo').src = blackLogo;
-        window.document.getElementById('user-icon').src = blackUser;
+        let { isAuthenticated } = this.props.auth;
+        if (!isAuthenticated) {
+            window.document.getElementById('user-icon').src = blackUser;
+        }
     }
     render() {
         let { enableSupplierBackground, suppliersBackground } = this.props;

@@ -45,7 +45,10 @@ class UserBox extends React.Component {
                                         className='btn custom-signin-btn mt-2 ml-4'
                                         to='/dashboard/buyers'
                                     >
-                                        <button className='btn-navBar'>
+                                        <button
+                                            className='btn-navBar'
+                                            id='professional-buyers'
+                                        >
                                             Professional Buyers
                                         </button>
                                     </Link>
@@ -53,7 +56,10 @@ class UserBox extends React.Component {
                                         className='btn custom-signin-btn mt-2 ml-4 mr-4'
                                         to='/dashboard/suppliers'
                                     >
-                                        <button className='btn-navBar'>
+                                        <button
+                                            className='btn-navBar'
+                                            id='suppliers'
+                                        >
                                             Suppliers
                                         </button>
                                     </Link>
@@ -66,14 +72,14 @@ class UserBox extends React.Component {
                                     size='sm'
                                     onClick={this.onLogoutClick}
                                     color='info'
-                                    id='Tooltip-1'
+                                    id='sign-in'
                                     style={{ width: '90px', height: '40px' }}
                                 >
                                     Log out
                                 </Button>
                                 <UncontrolledTooltip
                                     placement='bottom'
-                                    target={'Tooltip-1'}
+                                    target={'sign-in'}
                                 >
                                     Click Here To Logout
                                 </UncontrolledTooltip>
@@ -93,7 +99,10 @@ class UserBox extends React.Component {
                                         className='btn custom-signin-btn mt-2 ml-4'
                                         to='/dashboard/buyers'
                                     >
-                                        <button className='btn-navBar' id='professional-buyers'>
+                                        <button
+                                            className='btn-navBar'
+                                            id='professional-buyers'
+                                        >
                                             Professional Buyers
                                         </button>
                                     </Link>
@@ -101,7 +110,10 @@ class UserBox extends React.Component {
                                         className='btn custom-signin-btn mt-2 ml-4 mr-4'
                                         to='/dashboard/suppliers'
                                     >
-                                        <button className='btn-navBar' id='suppliers'>
+                                        <button
+                                            className='btn-navBar'
+                                            id='suppliers'
+                                        >
                                             Suppliers
                                         </button>
                                     </Link>
@@ -110,7 +122,10 @@ class UserBox extends React.Component {
                                         className='btn ml-1 custom-signin-btn mt-2'
                                         to='/dashboard/login'
                                     >
-                                        <button className='btn-navBar' id='sign-in'>
+                                        <button
+                                            className='btn-navBar'
+                                            id='sign-in'
+                                        >
                                             <img
                                                 src={unknownUser}
                                                 width='20'

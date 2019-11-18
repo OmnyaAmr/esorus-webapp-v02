@@ -1,13 +1,9 @@
 import React, { Fragment } from 'react';
 import cx from 'classnames';
 import logo from '../../assets/utils/images/logo.png';
-
 import { connect } from 'react-redux';
-
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
-
 import HeaderLogo from '../AppLogo';
-
 import UserBox from './Components/UserBox';
 import { Link } from 'react-router-dom';
 
