@@ -30,29 +30,43 @@ class Buyers extends Component {
         let { enableBuyerBackground, buyersBackground } = this.props;
         let content;
         let { prev } = this.props;
-        let dezWidth;let dezHeight;
-        let alfaWidth;let alfaHeight;
-        let lumiWidth; let lumiHeight;
-        let mazajWidth; let mazajHeight;
-        let tagWidth; let tagHeight;
-        let jassWidth; let jassHeight;
-        let atlasWidth;let atlasHeight;
-        
-        if(enableHomeBackground){
-            dezWidth= '360'; dezHeight= '110';
-            lumiWidth= '330';lumiHeight= '120';
-            tagWidth= '400'; tagHeight='200';
-            jassWidth= '350'; jassHeight= '100';
-            atlasWidth='370'; atlasHeight='120'
-        }
-        else{
-            dezWidth= '290'; dezHeight= '80';
-            lumiWidth= '280';lumiHeight= '90';
-            tagWidth= '330'; tagHeight='150';
-            jassWidth= '290'; jassHeight= '80';
-            atlasWidth='280'; atlasHeight='90'
+        let dezWidth;
+        let dezHeight;
+        let alfaWidth;
+        let alfaHeight;
+        let lumiWidth;
+        let lumiHeight;
+        let mazajWidth;
+        let mazajHeight;
+        let tagWidth;
+        let tagHeight;
+        let jassWidth;
+        let jassHeight;
+        let atlasWidth;
+        let atlasHeight;
 
-
+        if (enableBuyerBackground) {
+            dezWidth = '360';
+            dezHeight = '110';
+            lumiWidth = '330';
+            lumiHeight = '120';
+            tagWidth = '400';
+            tagHeight = '200';
+            jassWidth = '350';
+            jassHeight = '100';
+            atlasWidth = '370';
+            atlasHeight = '120';
+        } else {
+            dezWidth = '290';
+            dezHeight = '80';
+            lumiWidth = '280';
+            lumiHeight = '90';
+            tagWidth = '330';
+            tagHeight = '150';
+            jassWidth = '290';
+            jassHeight = '80';
+            atlasWidth = '280';
+            atlasHeight = '90';
         }
 
         if (prev !== ROLE_SUPPLIER) {
@@ -302,7 +316,7 @@ class Buyers extends Component {
                         </Row>
                         <Row>
                             <Col>
-                                <h5 className="meet-our-text3 text-center">
+                                <h5 className='meet-our-text3 text-center'>
                                     We have a wide range of Suppliers both local
                                     and international, below are some of our
                                     featured Suppliers
@@ -312,7 +326,6 @@ class Buyers extends Component {
                         <Row>
                             <Col className='meet-out-col'>
                                 <a href='https://www.facebook.com/DezignablezArt/'>
-
                                     <img
                                         className='ml-1'
                                         src={deizgLogo}
@@ -320,13 +333,10 @@ class Buyers extends Component {
                                         height={dezHeight}
                                         className='dez-logo'
                                     />
-
-
                                 </a>
                             </Col>
                             <Col className='meet-out-col'>
                                 <a href=' http://www.alfa.furniture/'>
-
                                     <img
                                         className='ml-1'
                                         src={alfaLogo}
@@ -334,13 +344,10 @@ class Buyers extends Component {
                                         height='220'
                                         className='alfa-logo'
                                     />
-
-
                                 </a>
                             </Col>
                             <Col className='meet-out-col'>
                                 <a href='https://www.facebook.com/LumiereEgypt/'>
-
                                     <img
                                         className='ml-1'
                                         src={lumiLogo}
@@ -352,7 +359,6 @@ class Buyers extends Component {
                             </Col>
                             <Col className='meet-out-col'>
                                 <a href='https://www.facebook.com/Mizajtileseg/'>
-
                                     <img
                                         className='ml-1'
                                         src={mizajLogo}
@@ -366,7 +372,6 @@ class Buyers extends Component {
                         <Row className='meet-out-row'>
                             <Col className='meet-out-col'>
                                 <a href='http://tagouryshouse.com/'>
-
                                     <img
                                         className='ml-1'
                                         src={tagoLogo}
@@ -378,7 +383,6 @@ class Buyers extends Component {
                             </Col>
                             <Col className='meet-out-col'>
                                 <a href='https://www.facebook.com/JWardaniDesign/'>
-
                                     <img
                                         className='ml-1'
                                         src={jassLogo}
@@ -390,7 +394,6 @@ class Buyers extends Component {
                             </Col>
                             <Col className='meet-out-col'>
                                 <a href='https://www.atlasconcorde.com/en/'>
-
                                     <img
                                         className='ml-1'
                                         src={atlasLogo}

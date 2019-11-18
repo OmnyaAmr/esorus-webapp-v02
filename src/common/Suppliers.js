@@ -29,7 +29,10 @@ class Suppliers extends Component {
             state: { email: email }
         });
     }
-
+    componentWillMount() {
+        let x = window.document.getElementById('professional-buyers');
+        console.log(x);
+    }
     onChange(e) {
         this.setState({ [e.target.name]: e.target.value });
     }
@@ -55,13 +58,12 @@ class Suppliers extends Component {
         let content;
         let encoreWidth;
         let encoreHeight;
-        if(enableHomeBackground){
-             encoreWidth='450';
-             encoreHeight='150';
-        }
-        else{
-            encoreWidth='250';
-            encoreHeight='90';
+        if (enableSupplierBackground) {
+            encoreWidth = '450';
+            encoreHeight = '150';
+        } else {
+            encoreWidth = '250';
+            encoreHeight = '90';
         }
         if (!isAuthenticated) {
             if (enableSupplierBackground) {

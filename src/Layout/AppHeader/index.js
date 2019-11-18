@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import cx from 'classnames';
-import logo from '../../assets/utils/images/logo.png'; //'assets/utils/images/logo.png'
+import logo from '../../assets/utils/images/logo.png';
 
 import { connect } from 'react-redux';
 
@@ -13,9 +13,7 @@ import { Link } from 'react-router-dom';
 
 class Header extends React.Component {
     componentDidMount() {
-
         window.onscroll = function() {
-
             if (window.pageYOffset === 0) {
                 this.document.getElementById('header').style.backgroundColor =
                     'transparent';
@@ -31,7 +29,6 @@ class Header extends React.Component {
             enableMobileMenuSmall,
             enableHeaderShadow
         } = this.props;
-
 
         return (
             <Fragment>
@@ -55,7 +52,12 @@ class Header extends React.Component {
                     >
                         <div className='app-header-left'>
                             <Link to='/dashboard/home'>
-                                <img src={logo} width='160' heigth='100' id='header-logo' />
+                                <img
+                                    src={logo}
+                                    width='160'
+                                    heigth='100'
+                                    id='header-logo'
+                                />
                             </Link>
                         </div>
                         <div className='app-header-right'>
@@ -72,7 +74,7 @@ const mapStateToProps = state => ({
     enableHeaderShadow: state.ThemeOptions.enableHeaderShadow,
     closedSmallerSidebar: state.ThemeOptions.closedSmallerSidebar,
     headerBackgroundColor: state.ThemeOptions.headerBackgroundColor,
-    enableMobileMenuSmall: state.ThemeOptions.enableMobileMenuSmall,
+    enableMobileMenuSmall: state.ThemeOptions.enableMobileMenuSmall
 });
 
 const mapDispatchToProps = dispatch => ({});
