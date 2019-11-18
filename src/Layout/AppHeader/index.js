@@ -1,13 +1,9 @@
 import React, { Fragment } from 'react';
 import cx from 'classnames';
-import logo from '../../assets/utils/images/logo.png'; //'assets/utils/images/logo.png'
-
+import logo from '../../assets/utils/images/logo.png';
 import { connect } from 'react-redux';
-
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
-
 import HeaderLogo from '../AppLogo';
-
 import UserBox from './Components/UserBox';
 import { Link } from 'react-router-dom';
 
@@ -29,6 +25,7 @@ class Header extends React.Component {
             enableMobileMenuSmall,
             enableHeaderShadow
         } = this.props;
+
         return (
             <Fragment>
                 <ReactCSSTransitionGroup
@@ -42,19 +39,21 @@ class Header extends React.Component {
                     transitionEnter={false}
                     transitionLeave={false}
                 >
+                    <HeaderLogo />
                     <div
+                        className={cx('app-header__content', {
+                            'header-mobile-open': enableMobileMenuSmall
+                        })}
                         id='header'
-                        className={cx(
-                            'app-header__content header-position',
-                            'fix-shadow',
-                            {
-                                'header-mobile-open': enableMobileMenuSmall
-                            }
-                        )}
                     >
                         <div className='app-header-left'>
                             <Link to='/dashboard/home'>
-                                <img src={logo} width='160' heigth='100' />
+                                <img
+                                    src={logo}
+                                    width='160'
+                                    heigth='100'
+                                    id='header-logo'
+                                />
                             </Link>
                         </div>
                         <div className='app-header-right'>
@@ -76,7 +75,4 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({});
 
-export default connect(
-    mapStateToProps,
-    mapDispatchToProps
-)(Header);
+export default connect(mapStateToProps, mapDispatchToProps)(Header);

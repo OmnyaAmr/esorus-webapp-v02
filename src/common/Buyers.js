@@ -8,6 +8,14 @@ import data from '../assets/components/icons/data.svg';
 import startUp from '../assets/components/icons/startup.svg';
 import buyersPic from '../assets/utils/images/originals/buyersPic.jpg';
 import { ROLE_SUPPLIER } from '../actions/types';
+import deizgLogo from '../assets/utils/images/Dezignablez_logo.png';
+import alfaLogo from '../assets/utils/images/Alfa_Furniture_Logo.png';
+import lumiLogo from '../assets/utils/images/lumi_logo.png';
+import mizajLogo from '../assets/utils/images/Mizaj_Logo.png';
+import tagoLogo from '../assets/utils/images/tago-logo.png';
+import jassLogo from '../assets/utils/images/Jass.jpg';
+import atlasLogo from '../assets/utils/images/Atlas_Concorde.png';
+
 class Buyers extends Component {
     constructor() {
         super();
@@ -19,9 +27,48 @@ class Buyers extends Component {
         this.props.history.push('/dashboard/request');
     }
     render() {
-        let { enableHomeBackground, buyersBackground } = this.props;
+        let { enableBuyerBackground, buyersBackground } = this.props;
         let content;
         let { prev } = this.props;
+        let dezWidth;
+        let dezHeight;
+        let alfaWidth;
+        let alfaHeight;
+        let lumiWidth;
+        let lumiHeight;
+        let mazajWidth;
+        let mazajHeight;
+        let tagWidth;
+        let tagHeight;
+        let jassWidth;
+        let jassHeight;
+        let atlasWidth;
+        let atlasHeight;
+
+        if (enableBuyerBackground) {
+            dezWidth = '360';
+            dezHeight = '110';
+            lumiWidth = '330';
+            lumiHeight = '120';
+            tagWidth = '400';
+            tagHeight = '200';
+            jassWidth = '350';
+            jassHeight = '100';
+            atlasWidth = '370';
+            atlasHeight = '120';
+        } else {
+            dezWidth = '290';
+            dezHeight = '80';
+            lumiWidth = '280';
+            lumiHeight = '90';
+            tagWidth = '330';
+            tagHeight = '150';
+            jassWidth = '290';
+            jassHeight = '80';
+            atlasWidth = '280';
+            atlasHeight = '90';
+        }
+
         if (prev !== ROLE_SUPPLIER) {
             content = (
                 <div>
@@ -50,9 +97,9 @@ class Buyers extends Component {
                     transitionLeave={false}
                 >
                     <div
-                        className='app-main-enhanced'
+                        className='app-main-enhanced buyers3-mobile'
                         style={{
-                            backgroundImage: enableHomeBackground
+                            backgroundImage: enableBuyerBackground
                                 ? 'url(' + buyersBackground + ')'
                                 : null,
                             height: '700px'
@@ -61,19 +108,48 @@ class Buyers extends Component {
                         <Row className='slogan-buyer-position ml-4'>
                             <Col>
                                 {' '}
-                                <h2 className='slogan-text'>
+                                <h2 className='slogan8-text'>
                                     FF&E Personal Assistant for Interior
                                     Designers and <br />
                                     Professional Buyers{' '}
                                 </h2>
-                                <p className='buyer-text3'>
-                                    A single place to find furniture materials,
-                                    get qoutes and purchase from over a 1000{' '}
-                                    <br /> different qualified suppliers.{' '}
-                                </p>
+                                {enableBuyerBackground ? (
+                                    <p className='buyer-text3'>
+                                        A single place to find furniture
+                                        materials, get qoutes and purchase from
+                                        over a 1000 <br /> different qualified
+                                        suppliers.{' '}
+                                    </p>
+                                ) : (
+                                    <p
+                                        className='buyer-text3'
+                                        style={{ fontSize: '12px' }}
+                                    >
+                                        A single place to find furniture
+                                        materials, get qoutes and purchase from
+                                        over a 1000 different qualified
+                                        suppliers.
+                                    </p>
+                                )}
+                            </Col>
+                            <Col
+                                className='buyers2-mobile'
+                                style={{ flexBasis: '100%' }}
+                            >
+                                {content}
                             </Col>
                         </Row>
                     </div>
+                    <Row>
+                        {!enableBuyerBackground && (
+                            <img
+                                src={buyersPic}
+                                width='100%'
+                                height='500'
+                                className='mb-2'
+                            />
+                        )}
+                    </Row>
 
                     <div className='app-main-enhanced'>
                         <Row>
@@ -125,24 +201,30 @@ class Buyers extends Component {
                                     </div>
                                 </div>
                             </Col>
-                            <Col>
-                                <img
-                                    src={buyersPic}
-                                    width='500'
-                                    height='500'
-                                    className='mb-2'
-                                />
-                            </Col>
+                            {enableBuyerBackground && (
+                                <Col>
+                                    <img
+                                        src={buyersPic}
+                                        width='500'
+                                        height='500'
+                                        className='mb-2'
+                                    />
+                                </Col>
+                            )}
                         </Row>
 
                         <Row>
-                            <Col style={{ left: '50px' }}>{content}</Col>
+                            <Col
+                                className='buyers2-mobile'
+                                style={{ left: '50px' }}
+                            >
+                                {content}
+                            </Col>
                         </Row>
-                        <Row className='pt-4 pb-5 '>
-                            <Col>
+                        <Row>
+                            <Col className='buyers-mobile'>
                                 <div className='d-flex justify-content-center mt-4'>
                                     <img
-                                        className='ml-1'
                                         src={idea}
                                         width='50'
                                         height='50'
@@ -154,14 +236,14 @@ class Buyers extends Component {
                                         Smart Sourcing
                                     </p>
                                 </div>
-                                <div className='text-center mt-4'>
-                                    <p className=' supplier-text2'>
+                                <div className='d-flex justify-content-center mt-4'>
+                                    <p className='text-center supplier-text2'>
                                         All you need for your project is just a
                                         click away.
                                     </p>
                                 </div>
                             </Col>
-                            <Col>
+                            <Col className='buyers-mobile'>
                                 <div className='d-flex justify-content-center mt-4'>
                                     <img
                                         src={analysis}
@@ -171,21 +253,20 @@ class Buyers extends Component {
                                     />
                                 </div>
                                 <div className='d-flex justify-content-center mt-4'>
-                                    <p className='supplier-text'>
+                                    <p className='ml-1 supplier-text'>
                                         Recommendations
                                     </p>
                                 </div>
                                 <div className='d-flex justify-content-center mt-4'>
-                                    <p className='supplier-text2 text-center'>
+                                    <p className='text-center supplier-text2'>
                                         Recommendation for effective <br />{' '}
                                         materials from a wide range of suppliers
                                     </p>
                                 </div>
                             </Col>
-                            <Col>
+                            <Col className='buyers-mobile'>
                                 <div className='d-flex justify-content-center mt-4'>
                                     <img
-                                        className='ml-1'
                                         src={data}
                                         width='50'
                                         height='50'
@@ -193,9 +274,7 @@ class Buyers extends Component {
                                     />
                                 </div>
                                 <div className='d-flex justify-content-center mt-4'>
-                                    <p className='ml-1 supplier-text'>
-                                        Follow-up
-                                    </p>
+                                    <p className='supplier-text'>Follow-up</p>
                                 </div>
                                 <div className='d-flex justify-content-center mt-4'>
                                     <p className='ml-1  text-center supplier-text2'>
@@ -205,10 +284,9 @@ class Buyers extends Component {
                                     </p>
                                 </div>
                             </Col>
-                            <Col>
+                            <Col className='buyers-mobile'>
                                 <div className='d-flex justify-content-center mt-4'>
                                     <img
-                                        className='ml-1'
                                         src={startUp}
                                         width='50'
                                         height='50'
@@ -221,12 +299,109 @@ class Buyers extends Component {
                                     </p>
                                 </div>
                                 <div className='d-flex justify-content-center mt-4'>
-                                    <p className='ml-1  text-center supplier-text2'>
+                                    <p className='text-center supplier-text2'>
                                         We make sure you get the best possible
                                         price in the market, with up to 45%
                                         additional discount.
                                     </p>
                                 </div>
+                            </Col>
+                        </Row>
+                        <Row>
+                            <Col>
+                                <h2 className='meet-our-text text-center'>
+                                    Meet our network of Suppliers
+                                </h2>
+                            </Col>
+                        </Row>
+                        <Row>
+                            <Col>
+                                <h5 className='meet-our-text3 text-center'>
+                                    We have a wide range of Suppliers both local
+                                    and international, below are some of our
+                                    featured Suppliers
+                                </h5>
+                            </Col>
+                        </Row>
+                        <Row>
+                            <Col className='meet-out-col'>
+                                <a href='https://www.facebook.com/DezignablezArt/'>
+                                    <img
+                                        className='ml-1'
+                                        src={deizgLogo}
+                                        width={dezWidth}
+                                        height={dezHeight}
+                                        className='dez-logo'
+                                    />
+                                </a>
+                            </Col>
+                            <Col className='meet-out-col'>
+                                <a href=' http://www.alfa.furniture/'>
+                                    <img
+                                        className='ml-1'
+                                        src={alfaLogo}
+                                        width='280'
+                                        height='220'
+                                        className='alfa-logo'
+                                    />
+                                </a>
+                            </Col>
+                            <Col className='meet-out-col'>
+                                <a href='https://www.facebook.com/LumiereEgypt/'>
+                                    <img
+                                        className='ml-1'
+                                        src={lumiLogo}
+                                        width={lumiWidth}
+                                        height={lumiHeight}
+                                        className='lumi-logo'
+                                    />
+                                </a>
+                            </Col>
+                            <Col className='meet-out-col'>
+                                <a href='https://www.facebook.com/Mizajtileseg/'>
+                                    <img
+                                        className='ml-1'
+                                        src={mizajLogo}
+                                        width='270'
+                                        height='170'
+                                        className='mizaj-logo'
+                                    />
+                                </a>
+                            </Col>
+                        </Row>
+                        <Row className='meet-out-row'>
+                            <Col className='meet-out-col'>
+                                <a href='http://tagouryshouse.com/'>
+                                    <img
+                                        className='ml-1'
+                                        src={tagoLogo}
+                                        width={tagWidth}
+                                        height={tagHeight}
+                                        className='tag-logo'
+                                    />
+                                </a>
+                            </Col>
+                            <Col className='meet-out-col'>
+                                <a href='https://www.facebook.com/JWardaniDesign/'>
+                                    <img
+                                        className='ml-1'
+                                        src={jassLogo}
+                                        width={jassWidth}
+                                        height={jassHeight}
+                                        className='jass-logo'
+                                    />
+                                </a>
+                            </Col>
+                            <Col className='meet-out-col'>
+                                <a href='https://www.atlasconcorde.com/en/'>
+                                    <img
+                                        className='ml-1'
+                                        src={atlasLogo}
+                                        width={atlasWidth}
+                                        height={atlasHeight}
+                                        className='atlas-logo'
+                                    />
+                                </a>
                             </Col>
                         </Row>
                     </div>
@@ -236,7 +411,7 @@ class Buyers extends Component {
     }
 }
 const mapStateToProps = state => ({
-    enableHomeBackground: state.ThemeOptions.enableHomeBackground,
+    enableBuyerBackground: state.ThemeOptions.enableBuyerBackground,
     buyersBackground: state.ThemeOptions.buyersBackground,
     auth: state.auth,
     prev: state.prev

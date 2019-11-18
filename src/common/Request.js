@@ -399,7 +399,7 @@ class Request extends Component {
                                     </FormGroup>
                                     {boqContent}
                                     <FormGroup row>
-                                        <Label>Date{required}</Label>
+                                        <Label>Delivery Date{required}</Label>
                                         <Input
                                             type='date'
                                             className={classnames(
@@ -421,15 +421,14 @@ class Request extends Component {
                                             </FormFeedback>
                                         )}
                                     </FormGroup>
+
                                     <FormGroup row>
                                         <Button
-                                            className='btn-escrus log-in block'
+                                            className='btn-escrus log-in block mt-4 mb-2'
                                             onClick={this.onSubmit}
                                         >
                                             Submit Request{' '}
                                         </Button>
-                                    </FormGroup>
-                                    <FormGroup row>
                                         <Button
                                             className='btn-escrus-inv log-in block'
                                             onClick={this.onClick}
@@ -451,7 +450,4 @@ const mapStateToProps = state => ({
     errors: state.errors,
     auth: state.auth
 });
-export default connect(
-    mapStateToProps,
-    { requestForm }
-)(Request);
+export default connect(mapStateToProps, { requestForm })(Request);

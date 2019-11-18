@@ -171,9 +171,7 @@ export const changeEmail = (emailSpecs, src) => dispatch => {
         .then(res => {
             src.showToast(
                 'success',
-                `Your confirmation email sent successfully to ${
-                    res.data.accepted[0]
-                }`
+                `Your confirmation email sent successfully to ${res.data.accepted[0]}`
             );
             dispatch(logoutUser());
         })
@@ -205,7 +203,6 @@ export const resetPassword = (resetSpecs, SRC) => dispatch => {
 // confirm
 
 export const confirmEmail = (activitionKey, history) => dispatch => {
-   
     dispatch(setLoading());
     axios
         .get('/api/activate?key=' + activitionKey)

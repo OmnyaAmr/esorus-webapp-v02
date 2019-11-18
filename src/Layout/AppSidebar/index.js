@@ -10,6 +10,8 @@ import PerfectScrollbar from 'react-perfect-scrollbar';
 
 import { setEnableMobileMenu } from '../../reducers/ThemeOptions';
 
+import AppLogo from '../AppLogo';
+
 class AppSidebar extends Component {
     state = {
         active: false
@@ -51,14 +53,6 @@ class AppSidebar extends Component {
                             <Nav />
                         </div>
                     </PerfectScrollbar>
-                    <div
-                        className={cx('app-sidebar-bg', backgroundImageOpacity)}
-                        style={{
-                            backgroundImage: enableBackgroundImage
-                                ? 'url(' + backgroundImage + ')'
-                                : null
-                        }}
-                    ></div>
                 </ReactCSSTransitionGroup>
             </Fragment>
         );
@@ -79,7 +73,4 @@ const mapDispatchToProps = dispatch => ({
     setEnableMobileMenu: enable => dispatch(setEnableMobileMenu(enable))
 });
 
-export default connect(
-    mapStateToProps,
-    mapDispatchToProps
-)(AppSidebar);
+export default connect(mapStateToProps, mapDispatchToProps)(AppSidebar);

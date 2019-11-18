@@ -7,7 +7,11 @@ import world from '../assets/components/icons/world.svg';
 import buyer from '../assets/components/icons/buyer.svg';
 import project from '../assets/components/icons/project.svg';
 import order from '../assets/components/icons/order.svg';
-
+import whiteLogo from '../assets/utils/images/white-logo.png';
+import blackLogo from '../assets/utils/images/logo.png';
+import whiteUser from '../assets/components/icons/white-user-icon.svg';
+import blackUser from '../assets/utils/images/avatars/user.svg';
+import encoreLogo from '../assets/utils/images/encore_logo.png';
 class Suppliers extends Component {
     constructor() {
         super();
@@ -25,37 +29,90 @@ class Suppliers extends Component {
             state: { email: email }
         });
     }
-
+    componentWillMount() {
+        let x = window.document.getElementById('header');
+        console.log(x);
+    }
     onChange(e) {
         this.setState({ [e.target.name]: e.target.value });
     }
-
+    componentDidMount() {
+        window.document.getElementById('professional-buyers').style.color =
+            'white';
+        window.document.getElementById('suppliers').style.color = 'white';
+        window.document.getElementById('sign-in').style.color = 'white';
+        window.document.getElementById('header-logo').src = whiteLogo;
+        let { isAuthenticated } = this.props.auth;
+        if (!isAuthenticated) {
+            window.document.getElementById('user-icon').src = whiteUser;
+        }
+    }
+    componentWillUnmount() {
+        window.document.getElementById('professional-buyers').style.color =
+            'black';
+        window.document.getElementById('suppliers').style.color = 'black';
+        window.document.getElementById('sign-in').style.color = 'black';
+        window.document.getElementById('header-logo').src = blackLogo;
+        let { isAuthenticated } = this.props.auth;
+        if (!isAuthenticated) {
+            window.document.getElementById('user-icon').src = blackUser;
+        }
+    }
     render() {
-        let { enableHomeBackground, suppliersBackground } = this.props;
+        let { enableSupplierBackground, suppliersBackground } = this.props;
         let { isAuthenticated } = this.props.auth;
         let content;
+        let encoreWidth;
+        let encoreHeight;
+        if (enableSupplierBackground) {
+            encoreWidth = '450';
+            encoreHeight = '150';
+        } else {
+            encoreWidth = '250';
+            encoreHeight = '90';
+        }
         if (!isAuthenticated) {
-            content = (
-                <div className='d-flex justify-content-left mt-4' >
-                    <input
-                        className='form-control-escrus form-control-lg-escrus ml-1'
-                        onChange={this.onChange}
-                        value={this.state.email}
-                        placeholder='Enter your email here'
-                        name='email'
-                        style={{
-                            fontSize: '15px',
-                            width: '280px'
-                        }}
-                    />
-                    <input
-                        type='button'
-                        className='btn-escrus ml-1'
-                        value='Join Now'
-                        onClick={this.onClick}
-                    />
-                </div>
-            );
+            if (enableSupplierBackground) {
+                content = (
+                    <div className='d-flex justify-content-left mt-4'>
+                        <input
+                            className='form-control-escrus form-control-lg-escrus ml-1'
+                            onChange={this.onChange}
+                            value={this.state.email}
+                            placeholder='Enter your email here'
+                            name='email'
+                        />
+                        <input
+                            type='button'
+                            className='btn-escrus ml-1'
+                            value='Join Now'
+                            onClick={this.onClick}
+                        />
+                    </div>
+                );
+            } else {
+                content = (
+                    <div>
+                        <div className='d-flex justify-content-center mt-4'>
+                            <input
+                                className='form-control-escrus form-control-lg-escrus '
+                                onChange={this.onChange}
+                                value={this.state.email}
+                                placeholder='Enter your email here'
+                                name='email'
+                            />
+                        </div>
+                        <div className='d-flex justify-content-center mt-4'>
+                            <input
+                                type='button'
+                                className='btn-escrus '
+                                value='Join Now'
+                                onClick={this.onClick}
+                            />
+                        </div>
+                    </div>
+                );
+            }
         }
         return (
             <Fragment>
@@ -67,55 +124,40 @@ class Suppliers extends Component {
                     transitionEnter={false}
                     transitionLeave={false}
                 >
-                    <PerfectScrollbar>
-                        <div
-                            className='app-main-enhanced test'
-                            style={{
-                                backgroundImage: enableHomeBackground
-                                    ? 'url(' + suppliersBackground + ')'
-                                    : null,
-                                height: '650px',
-                                paddingTop:"23%"
-                            }}
-                        >
-                            <h2 className='slogan-text' style={{color:"white"}}>
-                                For Suppliers and Manufacturers
-                            </h2>
-                            <p className='supplier-text3' style={{color:"white"}}>
-                                We take your brand around the world and expose
-                                <br />
-                                you to a wide network of professional buyers.
-                            </p>
-                            {content}
-                        </div>
-                    </PerfectScrollbar>
+                    <div
+                        className='app-main-enhanced buyers3-mobile'
+                        style={{
+                            backgroundImage: enableSupplierBackground
+                                ? 'url(' + suppliersBackground + ')'
+                                : null,
+                            height: '650px'
+                        }}
+                    >
+                        <Row className='supplier-slogan-position '>
+                            <Col>
+                                <h2 className='supplier-text5'>
+                                    For Suppliers and Manufacturers
+                                </h2>
+                                <p className='supplier-text4 '>
+                                    We take your brand around the world and
+                                    expose
+                                    {enableSupplierBackground && <br />}
+                                    you to a wide network of professional
+                                    buyers.
+                                </p>
+                                {content}
+                            </Col>
+                        </Row>
+                    </div>
+
                     <div className='app-main-enhanced'>
                         <div className='pr-md-5 mr-md-5 text-md-left'>
                             <h2 style={{ color: 'black' }} className='mb-4'>
                                 How can esorus help your brand?
                             </h2>
                         </div>
-                        {/*<Row className='supplier-text3 buttom-text pb-lg-5'>
-                            <Col lg={6}>
-                                <p>
-                                    Gain access to our <br /> worldwide network{' '}
-                                    <br />
-                                    of professional buyers.
-                                </p>
-                            </Col>
-                            <Col className='' lg={6}>
-                                You deciede <br /> who buyes your <br />{' '}
-                                product.
-                            </Col>
-                            <Col className='' lg={6}>
-                                Manage your brand <br /> and product easily.
-                            </Col>
-                            <Col className='' lg={6}>
-                                You can manage <br /> your orders.
-                            </Col>
-                        </Row>*/}
                         <Row className='pt-4 pb-5'>
-                            <Col>
+                            <Col className='buyers-mobile'>
                                 <div className='d-flex justify-content-center mt-4'>
                                     <img
                                         className='ml-1'
@@ -123,21 +165,17 @@ class Suppliers extends Component {
                                         width='50'
                                         height='50'
                                         className='mb-1'
-                                        
                                     />
                                 </div>
 
                                 <div className='d-flex justify-content-center mt-4'>
-                                    <p
-                                        className=' supplier-text3 buttom-text text-center'
-                                        
-                                    >
+                                    <p className=' supplier-text3 buttom-text text-center'>
                                         Gain access to our worldwide network of
                                         professional buyers.
                                     </p>
                                 </div>
                             </Col>
-                            <Col>
+                            <Col className='buyers-mobile'>
                                 <div className='d-flex justify-content-center mt-4'>
                                     <img
                                         className='ml-1'
@@ -145,7 +183,6 @@ class Suppliers extends Component {
                                         width='50'
                                         height='50'
                                         className='mb-1'
-                                       
                                     />
                                 </div>
                                 <div className='d-flex justify-content-center mt-4'>
@@ -154,7 +191,7 @@ class Suppliers extends Component {
                                     </p>
                                 </div>
                             </Col>
-                            <Col>
+                            <Col className='buyers-mobile'>
                                 <div className='d-flex justify-content-center mt-4'>
                                     <img
                                         className='ml-1'
@@ -162,7 +199,6 @@ class Suppliers extends Component {
                                         width='50'
                                         height='50'
                                         className='mb-2'
-                                        
                                     />
                                 </div>
 
@@ -172,7 +208,7 @@ class Suppliers extends Component {
                                     </p>
                                 </div>
                             </Col>
-                            <Col>
+                            <Col className='buyers-mobile'>
                                 <div className='d-flex justify-content-center mt-4'>
                                     <img
                                         className='ml-1'
@@ -180,7 +216,6 @@ class Suppliers extends Component {
                                         width='50'
                                         height='50'
                                         className='mb-2'
-                                        
                                     />
                                 </div>
                                 <div className='d-flex justify-content-center mt-4'>
@@ -190,6 +225,36 @@ class Suppliers extends Component {
                                 </div>
                             </Col>
                         </Row>
+                        <Row>
+                            <Col>
+                                <h2 className='meet-our-text text-center'>
+                                    Meet our network of Professional Buyers
+                                </h2>
+                            </Col>
+                        </Row>
+                        <Row>
+                            <Col>
+                                <h5 className='meet-our-text2 text-center'>
+                                    We work with renowned Proffesional Buyers,
+                                    below is of our trusted Buyers
+                                </h5>
+                            </Col>
+                        </Row>
+                        <Row>
+                            <Col>
+                                <a href='http://www.encore-cf.com/'>
+                                    <div className='d-flex justify-content-center mt-4'>
+                                        <img
+                                            className='ml-1'
+                                            src={encoreLogo}
+                                            width={encoreWidth}
+                                            height={encoreHeight}
+                                            className='mb-2'
+                                        />
+                                    </div>
+                                </a>
+                            </Col>
+                        </Row>
                     </div>
                 </ReactCSSTransitionGroup>
             </Fragment>
@@ -197,7 +262,7 @@ class Suppliers extends Component {
     }
 }
 const mapStateToProps = state => ({
-    enableHomeBackground: state.ThemeOptions.enableHomeBackground,
+    enableSupplierBackground: state.ThemeOptions.enableSupplierBackground,
     suppliersBackground: state.ThemeOptions.suppliersBackground,
     auth: state.auth
 });

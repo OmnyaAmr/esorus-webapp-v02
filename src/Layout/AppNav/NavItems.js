@@ -1,11 +1,9 @@
 let aboutUs = {
-    icon: 'pe-7s-info',
     label: 'About Us',
     to: '#/dashboard/home#aboutUs'
 };
 
 let account = {
-    icon: 'pe-7s-user',
     label: 'Account',
     content: [
         {
@@ -23,7 +21,6 @@ export const AboutUs = [aboutUs];
 
 export const AuthNav = [
     {
-        icon: 'pe-7s-home',
         label: 'Home',
         content: [
             {
@@ -42,7 +39,6 @@ export const AuthNav = [
 
 export const UserNav = [
     {
-        icon: 'pe-7s-home',
         label: 'esorus',
         content: [
             {
@@ -70,7 +66,6 @@ let confirm = {
 };
 
 let InitialNavs = {
-    icon: 'pe-7s-home',
     label: 'Home',
     content: [
         {
@@ -84,8 +79,13 @@ let InitialNavs = {
     ]
 };
 
+let logout = {
+    label: 'Log out',
+    to: '#/dashboard/logout'
+};
+
 export const ConfirmNav = [InitialNavs, confirm, aboutUs];
 
-export const Supplier = [InitialNavs, aboutUs];
+export const Supplier = [InitialNavs, aboutUs, logout];
 
-export const Buyer = [InitialNavs, aboutUs];
+export const Buyer = [InitialNavs, aboutUs, logout];

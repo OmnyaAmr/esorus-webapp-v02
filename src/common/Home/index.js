@@ -20,22 +20,18 @@ class Home extends Component {
 
     componentDidMount() {
         this.urlListener();
-
-
-
-
         document.addEventListener('scroll', this.trackScrolling);
     }
     urlListener() {
-        this.unlisten = this.props.history.listen((location) => {
-            const myId = window.location.hash, url = myId.split("#");
-            const section = document.getElementById(url[2])
+        this.unlisten = this.props.history.listen(location => {
+            const myId = window.location.hash,
+                url = myId.split('#');
+            const section = document.getElementById(url[2]);
             if (section) {
-                section.scrollIntoView()
+                section.scrollIntoView();
                 this.props.history.push('#/dashboard/home');
             }
-            
-        })
+        });
     }
 
     trackScrolling = () => {
@@ -73,24 +69,47 @@ class Home extends Component {
         let content;
 
         if (!isAuthenticated) {
-            content = (
-                <div className='d-flex justify-content-center mt-4'>
-                    <input
-                        className='form-control-escrus form-control-lg-escrus ml-1'
-                        onChange={this.onChange}
-                        value={this.state.email}
-                        placeholder='Enter your email here'
-                        name='email'
-                        style={{ fontSize: '15px', width: '280px' }}
-                    />
-                    <input
-                        type='button'
-                        className='btn-escrus ml-1'
-                        value='Join Now'
-                        onClick={this.onClick}
-                    />
-                </div>
-            );
+            if (enableHomeBackground) {
+                content = (
+                    <div className='d-flex justify-content-center mt-4'>
+                        <input
+                            className='form-control-escrus form-control-lg-escrus ml-1'
+                            onChange={this.onChange}
+                            value={this.state.email}
+                            placeholder='Enter your email here'
+                            name='email'
+                        />
+                        <input
+                            type='button'
+                            className='btn-escrus ml-1'
+                            value='Join Now'
+                            onClick={this.onClick}
+                        />
+                    </div>
+                );
+            } else {
+                content = (
+                    <div>
+                        <div className='d-flex justify-content-center mt-4'>
+                            <input
+                                className='form-control-escrus form-control-lg-escrus ml-1'
+                                onChange={this.onChange}
+                                value={this.state.email}
+                                placeholder='Enter your email here'
+                                name='email'
+                            />
+                        </div>
+                        <div className='d-flex justify-content-center mt-4'>
+                            <input
+                                type='button'
+                                className='btn-escrus ml-1'
+                                value='Join Now'
+                                onClick={this.onClick}
+                            />
+                        </div>
+                    </div>
+                );
+            }
         }
 
         return (
@@ -114,19 +133,31 @@ class Home extends Component {
                                 height: '700px'
                             }}
                         >
-                            <Row className='slogan-position ml-4'>
-                                <Col>
-                                    <h2 className='slogan-text'>
-                                        Interior Sourcing
+                            {!isAuthenticated ?
+                                <Row className='slogan-position ml-4'>
+                                    <Col>
+                                        <h2 className='slogan-text'>
+                                            Interior Sourcing
                                     </h2>
-                                    <h2 className='slogan-text'>Made Easy</h2>
-                                    {content}
-                                </Col>
-                            </Row>
+                                        <h2 className='slogan-text'>Made Easy</h2>
+                                        {content}
+                                    </Col>
+                                </Row>
+                                :
+                                <Row className='slogan-auth-position ml-4'>
+                                    <Col>
+                                        <h2 className='slogan-text'>
+                                            Interior Sourcing
+                                         </h2>
+                                        <h2 className='slogan-text'>Made Easy</h2>
+                                    </Col>
+                                </Row>
+
+                            }
                         </div>
                     </PerfectScrollbar>
                 </div>
-                <div className='mt-5 ml-5'>
+                <div className='slogan2-position'>
                     <h1 className='slogan2-text ml-5'>
                         We are <strong>reinventing</strong>
                     </h1>
@@ -148,118 +179,121 @@ class Home extends Component {
                                                 Interesting Facts
                                             </h1>
                                         </Col>
-                                        <Col className='slogan3-text'>
-                                            <AnimatedNumber
-                                                value={1000}
-                                                style={{
-                                                    transition: '0.8s ease-out',
-                                                    fontSize: '35px',
-                                                    color: 'white',
-                                                    fontWeight: '400',
-                                                    transitionProperty:
-                                                        'background-color, color, opacity'
-                                                }}
-                                                frameStyle={perc =>
-                                                    perc === 100
-                                                        ? {}
-                                                        : {
-                                                            backgroundColor:
-                                                                'transparent'
-                                                        }
-                                                }
-                                                duration={5000}
-                                                formatValue={value =>
-                                                    Number(value).toFixed(0)
-                                                }
-                                            />
-                                            <h4 className='slogan6-text'>
-                                                Suppliers
-                                            </h4>
-                                        </Col>
-                                        <Col className='slogan3-text'>
-                                            <AnimatedNumber
-                                                value={35}
-                                                style={{
-                                                    transition: '0.8s ease-out',
-                                                    fontSize: '35px',
-                                                    color: 'white',
-                                                    fontWeight: '400',
-                                                    transitionProperty:
-                                                        'background-color, color, opacity'
-                                                }}
-                                                frameStyle={perc =>
-                                                    perc === 100
-                                                        ? {}
-                                                        : {
-                                                            backgroundColor:
-                                                                'transparent'
-                                                        }
-                                                }
-                                                duration={5000}
-                                                formatValue={value =>
-                                                    Number(value).toFixed(0)
-                                                }
-                                            />
-                                            <h4 className='slogan6-text'>
-                                                Our Projects
-                                            </h4>
-                                        </Col>
-                                        <Col className='slogan3-text'>
-                                            <AnimatedNumber
-                                                value={10}
-                                                style={{
-                                                    transition: '0.8s ease-out',
-                                                    fontSize: '35px',
-                                                    color: 'white',
-                                                    fontWeight: '400',
-                                                    transitionProperty:
-                                                        'background-color, color, opacity'
-                                                }}
-                                                frameStyle={perc =>
-                                                    perc === 100
-                                                        ? {}
-                                                        : {
-                                                            backgroundColor:
-                                                                'transparent'
-                                                        }
-                                                }
-                                                duration={5000}
-                                                formatValue={value =>
-                                                    Number(value).toFixed(0)
-                                                }
-                                            />
-                                            <h4 className='slogan6-text'>
-                                                Years Experience
-                                            </h4>
-                                        </Col>
-                                        <Col className='slogan3-text'>
-                                            <AnimatedNumber
-                                                value={55}
-                                                style={{
-                                                    transition: '0.8s ease-out',
-                                                    fontSize: '35px',
-                                                    color: 'white',
-                                                    fontWeight: '400',
-                                                    transitionProperty:
-                                                        'background-color, color, opacity'
-                                                }}
-                                                frameStyle={perc =>
-                                                    perc === 100
-                                                        ? {}
-                                                        : {
-                                                            backgroundColor:
-                                                                'transparent'
-                                                        }
-                                                }
-                                                duration={5000}
-                                                formatValue={value =>
-                                                    Number(value).toFixed(0)
-                                                }
-                                            />
-                                            <h4 className='slogan6-text'>
-                                                Successful Matchmaking
-                                            </h4>
-                                        </Col>
+                                        <Row className='counters-mobile'>
+                                            <Col className='slogan7-text'>
+                                                <AnimatedNumber
+                                                    value={1000}
+                                                    style={{
+                                                        transition:
+                                                            '0.8s ease-out',
+                                                        transitionProperty:
+                                                            'background-color, color, opacity'
+                                                    }}
+                                                    frameStyle={perc =>
+                                                        perc === 100
+                                                            ? {}
+                                                            : {
+                                                                backgroundColor:
+                                                                    'transparent'
+                                                            }
+                                                    }
+                                                    duration={5000}
+                                                    formatValue={value =>
+                                                        Number(value).toFixed(0)
+                                                    }
+                                                />
+                                                <h4 className='slogan6-text'>
+                                                    Suppliers
+                                                </h4>
+                                            </Col>
+                                            <Col
+                                                className='slogan7-text'
+                                                id='left-counters-mobile'
+                                            >
+                                                <AnimatedNumber
+                                                    value={35}
+                                                    style={{
+                                                        transition:
+                                                            '0.8s ease-out',
+
+                                                        transitionProperty:
+                                                            'background-color, color, opacity'
+                                                    }}
+                                                    frameStyle={perc =>
+                                                        perc === 100
+                                                            ? {}
+                                                            : {
+                                                                backgroundColor:
+                                                                    'transparent'
+                                                            }
+                                                    }
+                                                    duration={5000}
+                                                    formatValue={value =>
+                                                        Number(value).toFixed(0)
+                                                    }
+                                                />
+                                                <h4 className='slogan6-text'>
+                                                    Our Projects
+                                                </h4>
+                                            </Col>
+                                            <Col className='slogan7-text'>
+                                                <AnimatedNumber
+                                                    value={10}
+                                                    style={{
+                                                        transition:
+                                                            '0.8s ease-out',
+
+                                                        transitionProperty:
+                                                            'background-color, color, opacity'
+                                                    }}
+                                                    frameStyle={perc =>
+                                                        perc === 100
+                                                            ? {}
+                                                            : {
+                                                                backgroundColor:
+                                                                    'transparent'
+                                                            }
+                                                    }
+                                                    duration={5000}
+                                                    formatValue={value =>
+                                                        Number(value).toFixed(0)
+                                                    }
+                                                />
+                                                <h4 className='slogan6-text'>
+                                                    Years Experience
+                                                </h4>
+                                            </Col>
+                                            <Col
+                                                className='slogan7-text'
+                                                id='left-counters-mobile'
+                                            >
+                                                <AnimatedNumber
+                                                    value={55}
+                                                    style={{
+                                                        transition:
+                                                            '0.8s ease-out',
+
+                                                        transitionProperty:
+                                                            'background-color, color, opacity'
+                                                    }}
+                                                    frameStyle={perc =>
+                                                        perc === 100
+                                                            ? {}
+                                                            : {
+                                                                backgroundColor:
+                                                                    'transparent'
+                                                            }
+                                                    }
+                                                    duration={5000}
+                                                    formatValue={value =>
+                                                        Number(value).toFixed(0)
+                                                    }
+                                                />
+                                                <h4 className='slogan6-text'>
+                                                    Successful Matchmaking
+                                                </h4>
+                                            </Col>
+                                        </Row>
                                     </Row>
                                 </Container>
                             )}
@@ -269,7 +303,7 @@ class Home extends Component {
                     <Container>
                         <Row className='pt-lg-4'>
                             <Col className='text-center' md={12}>
-                                <h2 className='mb-4 slogan-text'>
+                                <h2 className='mb-4 slogan8-text'>
                                     Our satisfied client says
                                 </h2>
                             </Col>

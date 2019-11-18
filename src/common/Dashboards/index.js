@@ -15,34 +15,31 @@ import AboutUs from '../AboutUs';
 import Activition from '../Activition';
 import Confirmation from '../Confirmation';
 
+import Logout from '../Logout';
 //params ALL THE APP ROUTES WILL BE HERE
 
 // Layout
 
 import AppHeader from '../../Layout/AppHeader/';
-import Sidebar from '../Sidebar';
 import AppFooter from '../../Layout/AppFooter/';
+import AppSidebar from '../../Layout/AppSidebar';
 
 const Dashboards = ({ match }) => (
     <Fragment>
-        <AppHeader />
-        <div className='left-side'>
-            <Sidebar />
-        </div>
+        <AppHeader  />
+        <AppSidebar />
 
         <Route path={`${match.url}/home`} component={Home} />
-        <div>
-            <Route path={`${match.url}/login`} component={Login} />
-            <Route path={`${match.url}/signup`} component={SignUp} />
-            <Route path={`${match.url}/suppliers`} component={Suppliers} />
-            <Route path={`${match.url}/buyers`} component={Buyers} />
-            <Route path={`${match.url}/confirm`} component={Confirmation} />
-            <PrivateRoute path={`${match.url}/request`} component={Request} />
-            <Route
-                path={`${match.url}/activated/:key`}
-                component={Activition}
-            />
-        </div>
+
+        <Route path={`${match.url}/login`} component={Login} />
+        <Route path={`${match.url}/signup`} component={SignUp} />
+        <Route path={`${match.url}/suppliers`} component={Suppliers} />
+        <Route path={`${match.url}/buyers`} component={Buyers} />
+        <Route path={`${match.url}/confirm`} component={Confirmation} />
+        <PrivateRoute path={`${match.url}/request`} component={Request} />
+        <PrivateRoute path={`${match.url}/logout`} component={Logout} />
+        <Route path={`${match.url}/activated/:key`} component={Activition} />
+
         <Route path={`${match.url}/about`} component={AboutUs} />
 
         <AppFooter />

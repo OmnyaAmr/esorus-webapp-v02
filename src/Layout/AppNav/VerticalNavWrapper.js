@@ -8,9 +8,13 @@ import {
     ROLE_SUPPLIER
 } from '../../actions/types';
 import { AuthNav, Supplier, AboutUs, ConfirmNav, Buyer } from './NavItems';
+import { Button } from 'reactstrap';
 
 class Nav extends Component {
     state = {};
+    constructor() {
+        super();
+    }
 
     render() {
         let navContent;
@@ -48,9 +52,12 @@ class Nav extends Component {
             } else if (prev === ROLE_PROFESSIONAL_BUYER) {
                 navContent = (
                     <Fragment>
-                        <h5 className='app-sidebar__heading'>
-                            Professional Buyer
-                        </h5>
+                        <div>
+                            <h5 className='app-sidebar__heading'>
+                                Professional Buyer
+                                {<h5>{user.name}</h5>}
+                            </h5>
+                        </div>
                         <MetisMenu
                             content={Buyer}
                             activeLinkFromLocation
@@ -63,7 +70,9 @@ class Nav extends Component {
             } else if (prev === ROLE_SUPPLIER) {
                 navContent = (
                     <Fragment>
-                        <h5 className='app-sidebar__heading'>Supplier</h5>
+                        <h5 className='app-sidebar__heading'>
+                            Supplier{<h5>{user.name}</h5>}
+                        </h5>
                         <MetisMenu
                             content={Supplier}
                             activeLinkFromLocation
@@ -100,7 +109,4 @@ const mapStateToProps = state => ({
     prev: state.prev
 });
 
-export default connect(
-    mapStateToProps,
-    {}
-)(withRouter(Nav));
+export default connect(mapStateToProps, {})(withRouter(Nav));
