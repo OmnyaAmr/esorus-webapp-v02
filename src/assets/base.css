@@ -12186,7 +12186,7 @@ body {
         padding: 10px;
       }
       .app-main-enhanced{
-        padding-left:0 !important;
+        padding: 10px !important;
       }
       .logo-src{
         visibility: visible !important;
@@ -12244,9 +12244,7 @@ body {
     color:black !important;
 
   }
-  .supplier-slogan-position{
-    margin-left:-25%!important ;
-  }
+  
   .home-background{
     height: 500px !important;
   }
@@ -12521,7 +12519,7 @@ body {
     
       }
       .supplier-slogan-position{
-        margin-left:-25%!important ;
+        padding: 20px;
       }
       .home-background{
         height: 500px !important;
