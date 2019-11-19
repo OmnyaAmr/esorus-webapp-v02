@@ -269,6 +269,7 @@ class Home extends Component {
                                             <Col
                                                 className='slogan7-text'
                                                 id='left-counters-mobile'
+                                                style={{paddingRight:"0" }}
                                             >
                                                 <AnimatedNumber
                                                     value={55}

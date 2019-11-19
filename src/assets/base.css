@@ -12212,6 +12212,9 @@ body {
   .buyers2-mobile{
     left: 0 !important;
   }
+  .buyers4-mobile{
+    margin-left: -3% !important;
+  }
   .slogan8-text{
     font-size:1.5rem;
     margin-top:1rem;
@@ -12270,28 +12273,48 @@ body {
       left: 0px !important;
     }
     .dez-logo{
-      margin-left: -5%;
+      margin-left: 10% !important;
     }
     .alfa-logo{
-      margin-left:-2%!important ;
+      margin-left:12%!important ;
       margin-top: 2%!important;
     }
     .lumi-logo{
-      margin-left: -8% !important;
+      margin-left: 10% !important;
     }
     .mizaj-logo{
       margin-top: 8% !important;
+      margin-left:12%!important ;
+
+    }
+    .tarek-logo{
+    margin-top: 12%;
+    margin-left: 36% !important;
+    margin-bottom: 10% !important;
+
+
+    }
+    .empor-logo{
+      margin-left:13%!important ;
+      margin-top:5%!important ;
+
+    }
+    .carnegie-logo{
+      margin-left:12%!important ;
+
     }
     .tag-logo{
-      margin-left: -15%;
+      margin-left: 5% !important;
+      margin-top: 2% !important;
+
     }
     .jass-logo{
-      margin-top: 8%;
-      margin-left: -8%!important;
+      margin-top: 10%;
+      margin-left: 12%!important;
     }
     .atlas-logo{
-      margin-left: -8%;
-      margin-top: 10%;
+      margin-left: 12%;
+      margin-top: 15% !important;
     }
   .dropdown-menu::before, .dropdown-menu::after {
     display: none; }
@@ -12478,12 +12501,17 @@ body {
       .counters-mobile{
         margin-left: 0.25rem;
       }
+
       .slogan2-text{
         font-size: 40px !important;
       }
       .buyers2-mobile{
         left: 0 !important;
       }
+      .buyers4-mobile{
+        left: 0 !important;
+      }
+      
       .slogan8-text{
         font-size:1.5rem;
         margin-top:1rem;
@@ -13434,6 +13462,10 @@ font-family: 'Poppins', sans-serif;
     font-weight: 400;
 
   }
+  .meet-our-buyer-position{
+  margin-top: 2%;
+
+  }
   .meet-our-text2{
     color: #343845;
     font-family: 'Poppins', sans-serif;
@@ -13467,6 +13499,15 @@ font-family: 'Poppins', sans-serif;
   .meet-out-row{
     margin-left: -2.6%;
   }
+  .carnegie-logo{
+    margin-top: 20%;
+    margin-left: 5%;
+
+  }
+  .tarek-logo{
+    margin-left: 20%;
+  }
+ 
   .join-now{
     display: flex;
     justify-content:center;
