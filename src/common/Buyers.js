@@ -15,6 +15,9 @@ import mizajLogo from '../assets/utils/images/Mizaj_Logo.png';
 import tagoLogo from '../assets/utils/images/tago-logo.png';
 import jassLogo from '../assets/utils/images/Jass.jpg';
 import atlasLogo from '../assets/utils/images/Atlas_Concorde.png';
+import emporLogo from '../assets/utils/images/empor-logo.png';
+import carnegieLogo from '../assets/utils/images/carnegie-logo.png';
+import tarekLogo from '../assets/utils/images/tarek-logo.png';
 
 class Buyers extends Component {
     constructor() {
@@ -32,19 +35,18 @@ class Buyers extends Component {
         let { prev } = this.props;
         let dezWidth;
         let dezHeight;
-        let alfaWidth;
-        let alfaHeight;
         let lumiWidth;
         let lumiHeight;
-        let mazajWidth;
-        let mazajHeight;
         let tagWidth;
         let tagHeight;
         let jassWidth;
         let jassHeight;
         let atlasWidth;
         let atlasHeight;
-
+        let emporWidth;
+        let emporHeight;
+        let carnegieWidth;
+        let carnegieHeight;
         if (enableBuyerBackground) {
             dezWidth = '360';
             dezHeight = '110';
@@ -56,6 +58,10 @@ class Buyers extends Component {
             jassHeight = '100';
             atlasWidth = '370';
             atlasHeight = '120';
+            emporWidth = '440';
+            emporHeight = '240';
+            carnegieWidth = '350';
+            carnegieHeight = '55';
         } else {
             dezWidth = '290';
             dezHeight = '80';
@@ -67,6 +73,10 @@ class Buyers extends Component {
             jassHeight = '80';
             atlasWidth = '280';
             atlasHeight = '90';
+            emporWidth = '300';
+            emporHeight = '140';
+            carnegieWidth = '320';
+            carnegieHeight = '50';
         }
 
         if (prev !== ROLE_SUPPLIER) {
@@ -121,16 +131,16 @@ class Buyers extends Component {
                                         suppliers.{' '}
                                     </p>
                                 ) : (
-                                    <p
-                                        className='buyer-text3'
-                                        style={{ fontSize: '12px' }}
-                                    >
-                                        A single place to find furniture
-                                        materials, get qoutes and purchase from
-                                        over a 1000 different qualified
-                                        suppliers.
+                                        <p
+                                            className='buyer-text3'
+                                            style={{ fontSize: '12px' }}
+                                        >
+                                            A single place to find furniture
+                                            materials, get qoutes and purchase from
+                                            over a 1000 different qualified
+                                            suppliers.
                                     </p>
-                                )}
+                                    )}
                             </Col>
                             <Col
                                 className='buyers2-mobile'
@@ -308,7 +318,7 @@ class Buyers extends Component {
                             </Col>
                         </Row>
                         <Row>
-                            <Col>
+                            <Col className='meet-our-buyer-position' >
                                 <h2 className='meet-our-text text-center'>
                                     Meet our network of Suppliers
                                 </h2>
@@ -404,6 +414,43 @@ class Buyers extends Component {
                                 </a>
                             </Col>
                         </Row>
+                        <Row className='meet-out-row'>
+                            <Col className='meet-out-col'>
+                                <a href='http://designemporiumegypt.com/Home.html'>
+                                    <img
+                                        className='ml-1'
+                                        src={emporLogo}
+                                        width={emporWidth}
+                                        height={emporHeight}
+                                        className='empor-logo'
+                                    />
+                                </a>
+                            </Col>
+                            <Col className='meet-out-col'>
+                                <a href='https://carnegiefabrics.com/'>
+                                    <img
+                                        className='ml-1'
+                                        src={carnegieLogo}
+                                        width={carnegieWidth}
+                                        height={carnegieHeight}
+                                        className='carnegie-logo'
+                                    />
+                                </a>
+                            </Col>
+                            <Col className='meet-out-col'>
+                                <a href='http://www.elnasrparquet.com/'>
+                                    <img
+                                        className='ml-1'
+                                        src={tarekLogo}
+                                        width='140'
+                                        height='210'
+                                        className='tarek-logo'
+
+                                    />
+                                </a>
+                            </Col>
+                        </Row>
+
                     </div>
                 </ReactCSSTransitionGroup>
             </Fragment>
