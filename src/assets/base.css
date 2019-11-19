@@ -12251,7 +12251,7 @@ body {
     width:100% !important;
   }
   .btn-escrus{
-    margin-top: -10px !important;
+    margin-top: 0 !important;
     width: 100% !important;
   }
   .app-main {
@@ -12526,7 +12526,6 @@ body {
         width:100% !important;
       }
       .btn-escrus{
-        margin-top: -10px !important;
         width: 100% !important;
       }
       .app-main {
