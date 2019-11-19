@@ -71,7 +71,7 @@ class Home extends Component {
         if (!isAuthenticated) {
             if (enableHomeBackground) {
                 content = (
-                    <div className='d-flex justify-content-center mt-4'>
+                    <div className='join-now mt-4'>
                         <input
                             className='form-control-escrus form-control-lg-escrus ml-1'
                             onChange={this.onChange}

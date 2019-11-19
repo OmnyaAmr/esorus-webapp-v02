@@ -12182,6 +12182,9 @@ body {
 
 
     @media (max-width: 991.98px) {
+      .click-away{
+        padding: 10px;
+      }
       .app-main-enhanced{
         padding-left:0 !important;
       }
@@ -12266,6 +12269,7 @@ body {
     }
     .slogan-position{
       margin-top:1rem !important;
+      left: 0px !important;
     }
     .dez-logo{
       margin-left: -5%;
@@ -12526,6 +12530,7 @@ body {
         width:100% !important;
       }
       .btn-escrus{
+        margin-top: 4px !important;
         width: 100% !important;
       }
       .app-main {
@@ -12705,7 +12710,11 @@ body {
     /*##################################################################################*/
 
 @media (max-width: 991.98px) {
-
+  .join-now{
+    display: flex;
+    flex-direction: column !important;
+    align-items:center;
+  }
   .bm-burger-button{
     position: fixed !important;
     visibility: visible !important;
@@ -13458,4 +13467,9 @@ font-family: 'Poppins', sans-serif;
   }
   .meet-out-row{
     margin-left: -2.6%;
+  }
+  .join-now{
+    display: flex;
+    justify-content:center;
+    flex-direction: row;
   }

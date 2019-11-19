@@ -71,7 +71,7 @@ class Buyers extends Component {
 
         if (prev !== ROLE_SUPPLIER) {
             content = (
-                <div>
+                <div className='click-away'>
                     {' '}
                     <p>
                         We’re just a click away, send us your request and our
