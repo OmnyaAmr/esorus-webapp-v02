@@ -12212,6 +12212,9 @@ body {
   .buyers2-mobile{
     left: 0 !important;
   }
+  .buyers4-mobile{
+    margin-left: -3% !important;
+  }
   .slogan8-text{
     font-size:1.5rem;
     margin-top:1rem;
@@ -12500,12 +12503,17 @@ body {
       .counters-mobile{
         margin-left: 0.25rem;
       }
+
       .slogan2-text{
         font-size: 40px !important;
       }
       .buyers2-mobile{
         left: 0 !important;
       }
+      .buyers4-mobile{
+        left: 0 !important;
+      }
+      
       .slogan8-text{
         font-size:1.5rem;
         margin-top:1rem;
@@ -13498,6 +13506,7 @@ font-family: 'Poppins', sans-serif;
   .tarek-logo{
     margin-left: 20%;
   }
+ 
   .join-now{
     display: flex;
     justify-content:center;

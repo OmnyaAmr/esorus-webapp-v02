@@ -143,7 +143,7 @@ class Buyers extends Component {
                                     )}
                             </Col>
                             <Col
-                                className='buyers2-mobile'
+                                className='buyers4-mobile'
                                 style={{ flexBasis: '100%' }}
                             >
                                 {content}

@@ -236,7 +236,7 @@ class Suppliers extends Component {
                             <Col>
                                 <h5 className='meet-our-text2 text-center'>
                                     We work with renowned Proffesional Buyers,
-                                    below is of our trusted Buyers
+                                    below is one of our trusted Buyers
                                 </h5>
                             </Col>
                         </Row>
