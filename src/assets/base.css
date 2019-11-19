@@ -12182,7 +12182,9 @@ body {
 
 
     @media (max-width: 991.98px) {
-
+      .app-main-enhanced{
+        padding-left:0 !important;
+      }
       .logo-src{
         visibility: visible !important;
       }
