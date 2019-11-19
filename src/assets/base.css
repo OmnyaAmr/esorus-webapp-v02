@@ -12456,8 +12456,6 @@ body {
 
     /* ENNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNND */
 
-
-
     /*##################################################################################*/
 
     @media (max-width: 1125px) {
@@ -12708,10 +12706,15 @@ body {
     /*##################################################################################*/
 
 @media (max-width: 991.98px) {
+  .logos{
+    flex-direction: column !important;
+  }
   .join-now{
     display: flex;
     flex-direction: column !important;
     align-items:center;
+    padding: inherit;
+    padding-left: 0 !important;
   }
   .bm-burger-button{
     position: fixed !important;
@@ -12863,7 +12866,7 @@ body {
 .slogan-buyer-position{
   position: absolute;
   top:20%;
-  left: 4%;
+  left: 6%;
 }
 
 .slogan-text{
@@ -13443,8 +13446,6 @@ font-family: 'Poppins', sans-serif;
   .meet-out-col{
     padding-left: 0 !important;
     padding-right: 0 !important;
-    
-
   }
   .alfa-logo{
     margin-top: -14%;
@@ -13470,4 +13471,29 @@ font-family: 'Poppins', sans-serif;
     display: flex;
     justify-content:center;
     flex-direction: row;
+  }
+
+  .logo-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logos{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .about{
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+  }
+
+  .counters{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
   }

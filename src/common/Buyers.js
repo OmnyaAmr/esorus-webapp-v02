@@ -105,7 +105,7 @@ class Buyers extends Component {
                             height: '700px'
                         }}
                     >
-                        <Row className='slogan-buyer-position ml-4'>
+                        <Row className='slogan-buyer-position'>
                             <Col>
                                 {' '}
                                 <h2 className='slogan8-text'>
@@ -323,87 +323,89 @@ class Buyers extends Component {
                                 </h5>
                             </Col>
                         </Row>
-                        <Row>
-                            <Col className='meet-out-col'>
-                                <a href='https://www.facebook.com/DezignablezArt/'>
-                                    <img
-                                        className='ml-1'
-                                        src={deizgLogo}
-                                        width={dezWidth}
-                                        height={dezHeight}
-                                        className='dez-logo'
-                                    />
-                                </a>
-                            </Col>
-                            <Col className='meet-out-col'>
-                                <a href=' http://www.alfa.furniture/'>
-                                    <img
-                                        className='ml-1'
-                                        src={alfaLogo}
-                                        width='280'
-                                        height='220'
-                                        className='alfa-logo'
-                                    />
-                                </a>
-                            </Col>
-                            <Col className='meet-out-col'>
-                                <a href='https://www.facebook.com/LumiereEgypt/'>
-                                    <img
-                                        className='ml-1'
-                                        src={lumiLogo}
-                                        width={lumiWidth}
-                                        height={lumiHeight}
-                                        className='lumi-logo'
-                                    />
-                                </a>
-                            </Col>
-                            <Col className='meet-out-col'>
-                                <a href='https://www.facebook.com/Mizajtileseg/'>
-                                    <img
-                                        className='ml-1'
-                                        src={mizajLogo}
-                                        width='270'
-                                        height='170'
-                                        className='mizaj-logo'
-                                    />
-                                </a>
-                            </Col>
-                        </Row>
-                        <Row className='meet-out-row'>
-                            <Col className='meet-out-col'>
-                                <a href='http://tagouryshouse.com/'>
-                                    <img
-                                        className='ml-1'
-                                        src={tagoLogo}
-                                        width={tagWidth}
-                                        height={tagHeight}
-                                        className='tag-logo'
-                                    />
-                                </a>
-                            </Col>
-                            <Col className='meet-out-col'>
-                                <a href='https://www.facebook.com/JWardaniDesign/'>
-                                    <img
-                                        className='ml-1'
-                                        src={jassLogo}
-                                        width={jassWidth}
-                                        height={jassHeight}
-                                        className='jass-logo'
-                                    />
-                                </a>
-                            </Col>
-                            <Col className='meet-out-col'>
-                                <a href='https://www.atlasconcorde.com/en/'>
-                                    <img
-                                        className='ml-1'
-                                        src={atlasLogo}
-                                        width={atlasWidth}
-                                        height={atlasHeight}
-                                        className='atlas-logo'
-                                    />
-                                </a>
-                            </Col>
-                        </Row>
+                        <div className='logo-container'>
+                            <div className='logos'>
+                                <div>
+                                    <a href='https://www.facebook.com/DezignablezArt/'>
+                                        <img
+                                            className='ml-1'
+                                            src={deizgLogo}
+                                            width={dezWidth}
+                                            height={dezHeight}
+                                            // className='dez-logo'
+                                        />
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href=' http://www.alfa.furniture/'>
+                                        <img
+                                            className='ml-1'
+                                            src={alfaLogo}
+                                            width='280'
+                                            height='220'
+                                            // className='alfa-logo'
+                                        />
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href='https://www.facebook.com/LumiereEgypt/'>
+                                        <img
+                                            className='ml-1'
+                                            src={lumiLogo}
+                                            width={lumiWidth}
+                                            height={lumiHeight}
+                                            // className='lumi-logo'
+                                        />
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href='https://www.facebook.com/Mizajtileseg/'>
+                                        <img
+                                            className='ml-1'
+                                            src={mizajLogo}
+                                            width='270'
+                                            height='170'
+                                            // className='mizaj-logo'
+                                        />
+                                    </a>
+                                </div>
+                            </div>
+                            <div className='logos'>
+                                <div>
+                                    <a href='http://tagouryshouse.com/'>
+                                        <img
+                                            className='ml-1'
+                                            src={tagoLogo}
+                                            width={tagWidth}
+                                            height={tagHeight}
+                                            // className='tag-logo'
+                                        />
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href='https://www.facebook.com/JWardaniDesign/'>
+                                        <img
+                                            className='ml-1'
+                                            src={jassLogo}
+                                            width={jassWidth}
+                                            height={jassHeight}
+                                            // className='jass-logo'
+                                        />
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href='https://www.atlasconcorde.com/en/'>
+                                        <img
+                                            className='ml-1'
+                                            src={atlasLogo}
+                                            width={atlasWidth}
+                                            height={atlasHeight}
+                                            // className='atlas-logo'
+                                        />
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </ReactCSSTransitionGroup>
             </Fragment>
