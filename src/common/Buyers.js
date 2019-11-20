@@ -19,6 +19,7 @@ import emporLogo from '../assets/utils/images/empor-logo.png';
 import carnegieLogo from '../assets/utils/images/carnegie-logo.png';
 import tarekLogo from '../assets/utils/images/tarek-logo.png';
 import mahalyLogo from '../assets/utils/images/mahaly-logo.png';
+import classnames from 'classnames';
 
 class Buyers extends Component {
     constructor() {
@@ -428,8 +429,10 @@ class Buyers extends Component {
                                 <div>
                                     <a href='http://designemporiumegypt.com/Home.html'>
                                         <img
-                                            className='ml-1'
-                                            src={emporLogo}
+                                            className={classnames(
+                                                { 'ml-5': enableBuyerBackground },
+                                                { 'ml-1': !enableBuyerBackground }
+                                            )} src={emporLogo}
                                             width={emporWidth}
                                             height={emporHeight}
                                         // className='atlas-logo'
@@ -439,7 +442,10 @@ class Buyers extends Component {
                                 <div>
                                     <a href='https://carnegiefabrics.com/'>
                                         <img
-                                            className='ml-1'
+                                            className={classnames(
+                                                { 'ml-5': enableBuyerBackground },
+                                                { 'ml-1': !enableBuyerBackground }
+                                            )}
                                             src={carnegieLogo}
                                             width={carnegieWidth}
                                             height={carnegieHeight}
@@ -450,8 +456,10 @@ class Buyers extends Component {
                                 <div>
                                     <a href='http://www.elnasrparquet.com/'>
                                         <img
-                                            className='ml-1'
-                                            src={tarekLogo}
+                                            className={classnames(
+                                                { 'ml-5': enableBuyerBackground },
+                                                { 'ml-1': !enableBuyerBackground }
+                                            )} src={tarekLogo}
                                             width='120'
                                             height='200'
                                         // className='atlas-logo'

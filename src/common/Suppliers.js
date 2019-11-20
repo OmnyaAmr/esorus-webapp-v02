@@ -239,7 +239,7 @@ class Suppliers extends Component {
                             <Col>
                                 <h5 className='meet-our-text2 text-center'>
                                     We work with renowned Proffesional Buyers,
-                                    below is one of our long term trusted Buyers
+                                    below is one of our Designers
                                 </h5>
                             </Col>
                         </Row>

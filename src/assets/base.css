@@ -12182,6 +12182,7 @@ body {
 
 
     @media (max-width: 991.98px) {
+
       .slogan-position{
         padding: 10% !important;
         display: flex; 
@@ -12487,7 +12488,7 @@ body {
     /*##################################################################################*/
 
     @media (max-width: 1125px) {
-      
+
       .logo-src{
         visibility: visible !important;
       }
@@ -13533,6 +13534,14 @@ font-family: 'Poppins', sans-serif;
     justify-content: space-between;
     align-items: center;
   }
+  .logos-test{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    
+  }
+
 
   .about{
     display: flex;

@@ -16,6 +16,8 @@ import { setLoading, setLoaded } from './loadActions';
 import validateSignupInput from '../validation/SigupValidation';
 import validateLoginInput from '../validation/LoginValidation';
 
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast } from 'react-toastify';
 export const SignUpUser = (userData, history) => dispatch => {
     dispatch({ type: FLUSH_ERRORS });
     let {
@@ -56,6 +58,10 @@ export const SignUpUser = (userData, history) => dispatch => {
         .post('/api/register', newUser)
         .then(res => {
             if (res) {
+                toast.warn("Please check your e-mail for the activation link of your account and use it to log in.", {
+                    position: toast.POSITION.UPPER_LEFT,
+                    hideProgressBar:true
+                  });
                 history.push('/dashboard/login');
                 dispatch(setLoaded());
                 dispatch({
@@ -84,6 +90,7 @@ export const loginUser = userData => dispatch => {
     axios
         .post('/api/authenticate', userData)
         .then(res => {
+
             dispatch({ type: FLUSH_ERRORS });
             //* Take the token and store it in Local Storage
             const { id_token } = res.data;
@@ -108,6 +115,7 @@ export const loginUser = userData => dispatch => {
         .catch(err => {
             dispatch({ type: GET_ERRORS, payload: err.response.data });
             dispatch(setLoaded());
+
         });
 };
 
