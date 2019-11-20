@@ -174,10 +174,10 @@ class Buyers extends Component {
                         <Row>
                             <Col>
                                 <div className='heading-section mb-5 pt-5 pl-md-5'>
-                                    <div className='pr-md-5 mr-md-5 text-md-left'>
+                                    <div className='text-center'>
                                         <h2
                                             style={{ color: 'black' }}
-                                            className='mb-4'
+                                            className='mb-4 align-self-center'
                                         >
                                             How it Works
                                         </h2>
