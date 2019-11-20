@@ -20,6 +20,7 @@ import { connect } from 'react-redux';
 import { SignUpUser } from '../actions/authActions';
 import { ROLE_PROFESSIONAL_BUYER, ROLE_SUPPLIER } from '../actions/types';
 
+
 class SignUp extends React.Component {
     constructor() {
         super();
@@ -55,6 +56,7 @@ class SignUp extends React.Component {
         e.preventDefault();
         let newUser = this.state;
         this.props.SignUpUser(newUser, this.props.history);
+
     }
     componentWillMount() {
         if (this.props.location.state) {

@@ -18,6 +18,8 @@ import atlasLogo from '../assets/utils/images/Atlas_Concorde.png';
 import emporLogo from '../assets/utils/images/empor-logo.png';
 import carnegieLogo from '../assets/utils/images/carnegie-logo.png';
 import tarekLogo from '../assets/utils/images/tarek-logo.png';
+import mahalyLogo from '../assets/utils/images/mahaly-logo.png';
+import classnames from 'classnames';
 
 class Buyers extends Component {
     constructor() {
@@ -47,6 +49,8 @@ class Buyers extends Component {
         let emporHeight;
         let carnegieWidth;
         let carnegieHeight;
+        let mahalyWidth;
+        let mahalyHeight;
         if (enableBuyerBackground) {
             dezWidth = '360';
             dezHeight = '110';
@@ -58,10 +62,13 @@ class Buyers extends Component {
             jassHeight = '100';
             atlasWidth = '370';
             atlasHeight = '120';
-            emporWidth = '440';
-            emporHeight = '240';
+            emporWidth = '250';
+            emporHeight = '200';
             carnegieWidth = '350';
             carnegieHeight = '55';
+            mahalyWidth = '360';
+            mahalyHeight = '100';
+
         } else {
             dezWidth = '290';
             dezHeight = '80';
@@ -73,10 +80,12 @@ class Buyers extends Component {
             jassHeight = '80';
             atlasWidth = '280';
             atlasHeight = '90';
-            emporWidth = '300';
+            emporWidth = '200';
             emporHeight = '140';
             carnegieWidth = '320';
             carnegieHeight = '50';
+            mahalyWidth = '320';
+            mahalyHeight = '100';
         }
 
         if (prev !== ROLE_SUPPLIER) {
@@ -131,16 +140,16 @@ class Buyers extends Component {
                                         suppliers.{' '}
                                     </p>
                                 ) : (
-                                    <p
-                                        className='buyer-text3'
-                                        style={{ fontSize: '12px' }}
-                                    >
-                                        A single place to find furniture
-                                        materials, get qoutes and purchase from
-                                        over a 1000 different qualified
-                                        suppliers.
+                                        <p
+                                            className='buyer-text3'
+                                            style={{ fontSize: '12px' }}
+                                        >
+                                            A single place to find furniture
+                                            materials, get qoutes and purchase from
+                                            over a 1000 different qualified
+                                            suppliers.
                                     </p>
-                                )}
+                                    )}
                             </Col>
                             <Col
                                 className='buyers4-mobile'
@@ -165,10 +174,17 @@ class Buyers extends Component {
                         <Row>
                             <Col>
                                 <div className='heading-section mb-5 pt-5 pl-md-5'>
-                                    <div className='pr-md-5 mr-md-5 text-md-left'>
+                                    <div 
+                                    
+                                    className={classnames(
+                                        { 'pr-md-5 mr-md-5 text-md-left': enableBuyerBackground },
+                                        { 'text-center': !enableBuyerBackground }
+                                    )}
+                                    
+                                    >
                                         <h2
                                             style={{ color: 'black' }}
-                                            className='mb-4'
+                                            className='mb-4 align-self-center'
                                         >
                                             How it Works
                                         </h2>
@@ -342,7 +358,7 @@ class Buyers extends Component {
                                             src={deizgLogo}
                                             width={dezWidth}
                                             height={dezHeight}
-                                            // className='dez-logo'
+                                        // className='dez-logo'
                                         />
                                     </a>
                                 </div>
@@ -353,7 +369,7 @@ class Buyers extends Component {
                                             src={alfaLogo}
                                             width='280'
                                             height='220'
-                                            // className='alfa-logo'
+                                        // className='alfa-logo'
                                         />
                                     </a>
                                 </div>
@@ -364,7 +380,7 @@ class Buyers extends Component {
                                             src={lumiLogo}
                                             width={lumiWidth}
                                             height={lumiHeight}
-                                            // className='lumi-logo'
+                                        // className='lumi-logo'
                                         />
                                     </a>
                                 </div>
@@ -375,7 +391,7 @@ class Buyers extends Component {
                                             src={mizajLogo}
                                             width='270'
                                             height='170'
-                                            // className='mizaj-logo'
+                                        // className='mizaj-logo'
                                         />
                                     </a>
                                 </div>
@@ -388,7 +404,7 @@ class Buyers extends Component {
                                             src={tagoLogo}
                                             width={tagWidth}
                                             height={tagHeight}
-                                            // className='tag-logo'
+                                        // className='tag-logo'
                                         />
                                     </a>
                                 </div>
@@ -399,7 +415,7 @@ class Buyers extends Component {
                                             src={jassLogo}
                                             width={jassWidth}
                                             height={jassHeight}
-                                            // className='jass-logo'
+                                        // className='jass-logo'
                                         />
                                     </a>
                                 </div>
@@ -410,7 +426,63 @@ class Buyers extends Component {
                                             src={atlasLogo}
                                             width={atlasWidth}
                                             height={atlasHeight}
-                                            // className='atlas-logo'
+                                        // className='atlas-logo'
+                                        />
+                                    </a>
+                                </div>
+
+                            </div>
+                            <div className='logos'>
+                                <div>
+                                    <a href='http://designemporiumegypt.com/Home.html'>
+                                        <img
+                                            className={classnames(
+                                                { 'ml-5': enableBuyerBackground },
+                                                { 'ml-1': !enableBuyerBackground }
+                                            )} src={emporLogo}
+                                            width={emporWidth}
+                                            height={emporHeight}
+                                        // className='atlas-logo'
+                                        />
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href='https://carnegiefabrics.com/'>
+                                        <img
+                                            className={classnames(
+                                                { 'ml-5': enableBuyerBackground },
+                                                { 'ml-1': !enableBuyerBackground }
+                                            )}
+                                            src={carnegieLogo}
+                                            width={carnegieWidth}
+                                            height={carnegieHeight}
+                                        // className='atlas-logo'
+                                        />
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href='http://www.elnasrparquet.com/'>
+                                        <img
+                                            className={classnames(
+                                                { 'ml-5': enableBuyerBackground },
+                                                { 'ml-1': !enableBuyerBackground }
+                                            )} src={tarekLogo}
+                                            width='120'
+                                            height='200'
+                                        // className='atlas-logo'
+                                        />
+                                    </a>
+                                </div>
+                            </div>
+                            <div className='logos'>
+                                <div>
+                                    <a href='https://mahally.net/'>
+                                        <img
+                                            className='ml-1'
+                                            src={mahalyLogo}
+                                            width={mahalyWidth}
+                                            height={mahalyHeight}
+                                        // className='atlas-logo'
                                         />
                                     </a>
                                 </div>
