@@ -151,8 +151,11 @@ class Suppliers extends Component {
                     </div>
 
                     <div className='app-main-enhanced'>
-                        <div className='pr-md-5 mr-md-5 text-md-left'>
-                            <h2 style={{ color: 'black' }} className='mb-4'>
+                        <div className='text-center'>
+                            <h2
+                                style={{ color: 'black' }}
+                                className='mb-4 align-self-center'
+                            >
                                 How can esorus help your brand?
                             </h2>
                         </div>

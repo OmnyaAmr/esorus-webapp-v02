@@ -134,7 +134,7 @@ class Home extends Component {
                             }}
                         >
                             {!isAuthenticated ? (
-                                <Row className='slogan-position ml-4'>
+                                <Row className='slogan-position'>
                                     <Col>
                                         <h2 className='slogan-text'>
                                             Interior Sourcing
@@ -146,7 +146,7 @@ class Home extends Component {
                                     </Col>
                                 </Row>
                             ) : (
-                                <Row className='slogan-auth-position ml-4'>
+                                <Row className='slogan-auth-position'>
                                     <Col>
                                         <h2 className='slogan-text'>
                                             Interior Sourcing
@@ -269,7 +269,7 @@ class Home extends Component {
                                             <Col
                                                 className='slogan7-text'
                                                 id='left-counters-mobile'
-                                                style={{paddingRight:"0" }}
+                                                style={{ paddingRight: '0' }}
                                             >
                                                 <AnimatedNumber
                                                     value={55}
