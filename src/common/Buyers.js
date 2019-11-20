@@ -174,7 +174,14 @@ class Buyers extends Component {
                         <Row>
                             <Col>
                                 <div className='heading-section mb-5 pt-5 pl-md-5'>
-                                    <div className='text-center'>
+                                    <div 
+                                    
+                                    className={classnames(
+                                        { 'pr-md-5 mr-md-5 text-md-left': enableBuyerBackground },
+                                        { 'text-center': !enableBuyerBackground }
+                                    )}
+                                    
+                                    >
                                         <h2
                                             style={{ color: 'black' }}
                                             className='mb-4 align-self-center'
