@@ -12182,6 +12182,9 @@ body {
 
 
     @media (max-width: 991.98px) {
+      .slogan-position{
+        padding: 10% !important;
+      }
       .click-away{
         padding: 10px;
       }
