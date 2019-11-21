@@ -97,14 +97,10 @@ class Confirmation extends Component {
                             <Col lg='6'>
                                 <Card className='main-card mb-3'>
                                     <CardBody>
-                                        <CardTitle>Alert</CardTitle>
-                                        <div className='bg-warning text-white text-center'>
-                                            <FormText
-                                                color='white'
-                                                className='text-uppercase'
-                                            >
+                                        <div className='text-white text-center bg-warning'>
+                                            <FormText color='white'>
                                                 <strong>
-                                                    Confirmation Required
+                                                    Activate Account
                                                 </strong>
                                             </FormText>
                                         </div>
@@ -112,98 +108,10 @@ class Confirmation extends Component {
                                         <div className='divider' />
 
                                         <p>
-                                        Message: For security reasons, please check your email to activate your account.
+                                            Message: For security reasons,
+                                            please check your email to activate
+                                            your account.
                                         </p>
-                                        <p>Hope to enjoy your being</p>
-                                        <Modal
-                                            isOpen={this.state.modal}
-                                            fade={true}
-                                            toggle={this.toggle}
-                                            centered
-                                        >
-
-                                            <ModalBody>
-                                                <Alert color='focus' style={{color:"#ecc503"}}>
-                                                    <h4 className='alert-heading'>
-                                                        <strong className='text-uppercase'>
-                                                            be careful
-                                                        </strong>
-                                                    </h4>
-                                                    <p>
-                                                        Kindly note that you
-                                                        will receive a
-                                                        confirmation link to
-                                                        that email you will
-                                                        specify, so make sure
-                                                        that you can access that
-                                                        email to be able to
-                                                        complete your
-                                                        registration .
-                                                    </p>
-                                                    <hr />
-                                                </Alert>
-                                                <Alert color='danger'>
-                                                    <Input
-                                                        type='text'
-                                                        name='email'
-                                                        className='form-control form-control-sm mb-2'
-                                                        placeholder='Your Old Email'
-                                                        onChange={this.onChange}
-                                                        invalid={
-                                                            !isEmpty(
-                                                                errors.email
-                                                            )
-                                                        }
-                                                    />
-                                                    <FormFeedback>
-                                                        {errors.email}
-                                                    </FormFeedback>
-                                                    <Input
-                                                        type='text'
-                                                        name='email2'
-                                                        className='form-control form-control-sm mb-2'
-                                                        placeholder='Your New Email'
-                                                        onChange={this.onChange}
-                                                        invalid={
-                                                            !isEmpty(
-                                                                errors.email2
-                                                            )
-                                                        }
-                                                    />
-                                                    <FormFeedback>
-                                                        {errors.email2}
-                                                    </FormFeedback>
-                                                </Alert>
-                                            </ModalBody>
-                                            <ModalFooter>
-                                                <Button
-                                                    color='link'
-                                                    onClick={this.onCancel}
-                                                >
-                                                    Cancel
-                                                </Button>
-                                                <Button
-                                                    color='primary'
-                                                    onClick={this.onChangeClick}
-                                                >
-                                                    Change
-                                                </Button>{' '}
-                                            </ModalFooter>
-                                        </Modal>
-                                        <input
-                                            type='button'
-                                            name='change'
-                                            className='btn-escrus-inv block log-in mb-3'
-                                            value='Change email'
-                                            onClick={this.onClick}
-                                        />
-                                        <input
-                                            type='button'
-                                            name='confirm'
-                                            className='btn-escrus block log-in'
-                                            value='Send again'
-                                            onClick={this.onConfirm}
-                                        />
                                     </CardBody>
                                 </Card>
                             </Col>
@@ -221,7 +129,6 @@ const mapStateToProps = state => ({
     errors: state.errors
 });
 
-export default connect(
-    mapStateToProps,
-    { changeEmail, confirmEmail }
-)(Confirmation);
+export default connect(mapStateToProps, { changeEmail, confirmEmail })(
+    Confirmation
+);
