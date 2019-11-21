@@ -4,7 +4,6 @@ import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import PerfectScrollbar from 'react-perfect-scrollbar';
 import { Row, Col, Container, Card } from 'reactstrap';
 import AnimatedNumber from 'react-animated-number';
-import { browserHistory } from 'react-router';
 
 class Home extends Component {
     constructor() {
@@ -146,7 +145,7 @@ class Home extends Component {
                                     </Col>
                                 </Row>
                             ) : (
-                                <Row className='slogan-auth-position'>
+                                <Row className='slogan-position'>
                                     <Col>
                                         <h2 className='slogan-text'>
                                             Interior Sourcing

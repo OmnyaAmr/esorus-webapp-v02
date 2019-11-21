@@ -7,7 +7,7 @@ let account = {
     label: 'Account',
     content: [
         {
-            label: 'Login',
+            label: 'Log In',
             to: '#/dashboard/login'
         },
         {
