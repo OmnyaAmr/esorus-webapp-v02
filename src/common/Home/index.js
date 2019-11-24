@@ -235,7 +235,7 @@ class Home extends Component {
                                                     }
                                                 />
                                                 <h4 className='slogan6-text'>
-                                                    Our Projects
+                                                    Projects
                                                 </h4>
                                             </Col>
                                             <Col className='slogan7-text'>

@@ -190,7 +190,7 @@ class Suppliers extends Component {
                                 </div>
                                 <div className='d-flex justify-content-center mt-4'>
                                     <p className=' supplier-text3 buttom-text text-center '>
-                                        You deciede who buyes your product.
+                                        You decide who buyes your product.
                                     </p>
                                 </div>
                             </Col>
