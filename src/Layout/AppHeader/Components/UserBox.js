@@ -49,7 +49,7 @@ class UserBox extends React.Component {
                                             className='btn-navBar'
                                             id='professional-buyers'
                                         >
-                                            Professional Buyers
+                                            Interioir Designers
                                         </button>
                                     </Link>
                                     <Link
@@ -103,7 +103,7 @@ class UserBox extends React.Component {
                                             className='btn-navBar'
                                             id='professional-buyers'
                                         >
-                                            Professional Buyers
+                                            Interioir Designers
                                         </button>
                                     </Link>
                                     <Link

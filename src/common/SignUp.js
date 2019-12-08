@@ -268,7 +268,7 @@ class SignUp extends React.Component {
                                                         Select your role ...
                                                     </option>
                                                     <option value='ROLE_PROFESSIONAL_BUYER'>
-                                                        Professional Buyer
+                                                        Interioir Designer
                                                     </option>
                                                     <option value='ROLE_SUPPLIER'>
                                                         Supplier
