@@ -158,7 +158,7 @@ class Home extends Component {
                                             <h2 className='slogan-text'>
                                                 Made Easy
                                         </h2>
-                                            <p >
+                                            <p className='home-desc-text'>
                                                 We act as your FF&E Personal Assistant and we help
                                                 you find furniture, materials, get qoutes and purchase
                                                 from over a 1000 different qualified suppliers.

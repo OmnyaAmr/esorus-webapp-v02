@@ -54,7 +54,7 @@ class Nav extends Component {
                     <Fragment>
                         <div>
                             <h5 className='app-sidebar__heading'>
-                                Professional Buyer
+                                Interior Designer
                                 {<h5>{user.name}</h5>}
                             </h5>
                         </div>
