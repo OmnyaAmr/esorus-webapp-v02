@@ -13551,7 +13551,14 @@ font-family: 'Poppins', sans-serif;
   .home-counters-row{
     margin-top: 7%;
   }
-
+  .buyers-icon-section{
+    margin-top: 5%;
+    background-color: #bfbfbf;
+    margin-left: -2.5%;
+  }
+  .clients-buyer-section{
+    margin-top: 5%;
+  }
   .counters{
     display: flex;
     flex-direction: row;

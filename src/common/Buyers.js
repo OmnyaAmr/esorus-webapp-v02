@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import { Row, Col } from 'reactstrap';
+import { Row, Col, Container } from 'reactstrap';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import { connect } from 'react-redux';
 import idea from '../assets/components/icons/idea.svg';
@@ -174,16 +174,16 @@ class Buyers extends Component {
                         <Row>
                             <Col>
                                 <div className='heading-section mb-5 pt-5 pl-md-5'>
-                                    <div 
-                                    
-                                    className={classnames(
-                                        { 'pr-md-5 mr-md-5 text-md-left': enableBuyerBackground },
-                                        { 'text-center': !enableBuyerBackground }
-                                    )}
-                                    
+                                    <div
+
+                                        className={classnames(
+                                            { 'pr-md-5 mr-md-5 text-md-left': enableBuyerBackground },
+                                            { 'text-center': !enableBuyerBackground }
+                                        )}
+
                                     >
                                         <h2
-                                            style={{ color: 'black' }}
+                                            style={{ color: '#ecc503' }}
                                             className='mb-4 align-self-center'
                                         >
                                             How it Works
@@ -247,12 +247,13 @@ class Buyers extends Component {
                                 {content}
                             </Col>
                         </Row>
-                        <Row>
+                        <Row className='buyers-icon-section'>
                             <Col className='buyers-mobile'>
                                 <div className='d-flex justify-content-center mt-4'>
                                     <img
                                         src={idea}
                                         width='50'
+                                        color='white'
                                         height='50'
                                         className='mb-2'
                                     />
@@ -333,161 +334,163 @@ class Buyers extends Component {
                                 </div>
                             </Col>
                         </Row>
-                        <Row>
-                            <Col className='meet-our-buyer-position'>
-                                <h2 className='meet-our-text text-center'>
-                                    Meet our network of Suppliers
+                        <Container className='clients-buyer-section'>
+                            <Row>
+                                <Col className='meet-our-buyer-position'>
+                                    <h2 className='meet-our-text text-center'>
+                                        Meet our network of Suppliers
                                 </h2>
-                            </Col>
-                        </Row>
-                        <Row>
-                            <Col>
-                                <h5 className='meet-our-text3 text-center'>
-                                    We have a wide range of Suppliers both local
-                                    and international, below are some of our
-                                    featured Suppliers
+                                </Col>
+                            </Row>
+                            <Row>
+                                <Col>
+                                    <h5 className='meet-our-text3 text-center'>
+                                        We have a wide range of Suppliers both local
+                                        and international, below are some of our
+                                        featured Suppliers
                                 </h5>
-                            </Col>
-                        </Row>
-                        <div className='logo-container'>
-                            <div className='logos'>
-                                <div>
-                                    <a href='https://www.facebook.com/DezignablezArt/'>
-                                        <img
-                                            className='ml-1'
-                                            src={deizgLogo}
-                                            width={dezWidth}
-                                            height={dezHeight}
-                                        // className='dez-logo'
-                                        />
-                                    </a>
+                                </Col>
+                            </Row>
+                            <div className='logo-container'>
+                                <div className='logos'>
+                                    <div>
+                                        <a href='https://www.facebook.com/DezignablezArt/'>
+                                            <img
+                                                className='ml-1'
+                                                src={deizgLogo}
+                                                width={dezWidth}
+                                                height={dezHeight}
+                                            // className='dez-logo'
+                                            />
+                                        </a>
+                                    </div>
+                                    <div>
+                                        <a href=' http://www.alfa.furniture/'>
+                                            <img
+                                                className='ml-1'
+                                                src={alfaLogo}
+                                                width='280'
+                                                height='220'
+                                            // className='alfa-logo'
+                                            />
+                                        </a>
+                                    </div>
+                                    <div>
+                                        <a href='https://www.facebook.com/LumiereEgypt/'>
+                                            <img
+                                                className='ml-1'
+                                                src={lumiLogo}
+                                                width={lumiWidth}
+                                                height={lumiHeight}
+                                            // className='lumi-logo'
+                                            />
+                                        </a>
+                                    </div>
+                                    <div>
+                                        <a href='https://www.facebook.com/Mizajtileseg/'>
+                                            <img
+                                                className='ml-1'
+                                                src={mizajLogo}
+                                                width='270'
+                                                height='170'
+                                            // className='mizaj-logo'
+                                            />
+                                        </a>
+                                    </div>
                                 </div>
-                                <div>
-                                    <a href=' http://www.alfa.furniture/'>
-                                        <img
-                                            className='ml-1'
-                                            src={alfaLogo}
-                                            width='280'
-                                            height='220'
-                                        // className='alfa-logo'
-                                        />
-                                    </a>
-                                </div>
-                                <div>
-                                    <a href='https://www.facebook.com/LumiereEgypt/'>
-                                        <img
-                                            className='ml-1'
-                                            src={lumiLogo}
-                                            width={lumiWidth}
-                                            height={lumiHeight}
-                                        // className='lumi-logo'
-                                        />
-                                    </a>
-                                </div>
-                                <div>
-                                    <a href='https://www.facebook.com/Mizajtileseg/'>
-                                        <img
-                                            className='ml-1'
-                                            src={mizajLogo}
-                                            width='270'
-                                            height='170'
-                                        // className='mizaj-logo'
-                                        />
-                                    </a>
-                                </div>
-                            </div>
-                            <div className='logos'>
-                                <div>
-                                    <a href='http://tagouryshouse.com/'>
-                                        <img
-                                            className='ml-1'
-                                            src={tagoLogo}
-                                            width={tagWidth}
-                                            height={tagHeight}
-                                        // className='tag-logo'
-                                        />
-                                    </a>
-                                </div>
-                                <div>
-                                    <a href='https://www.facebook.com/JWardaniDesign/'>
-                                        <img
-                                            className='ml-1'
-                                            src={jassLogo}
-                                            width={jassWidth}
-                                            height={jassHeight}
-                                        // className='jass-logo'
-                                        />
-                                    </a>
-                                </div>
-                                <div>
-                                    <a href='https://www.atlasconcorde.com/en/'>
-                                        <img
-                                            className='ml-1'
-                                            src={atlasLogo}
-                                            width={atlasWidth}
-                                            height={atlasHeight}
-                                        // className='atlas-logo'
-                                        />
-                                    </a>
-                                </div>
+                                <div className='logos'>
+                                    <div>
+                                        <a href='http://tagouryshouse.com/'>
+                                            <img
+                                                className='ml-1'
+                                                src={tagoLogo}
+                                                width={tagWidth}
+                                                height={tagHeight}
+                                            // className='tag-logo'
+                                            />
+                                        </a>
+                                    </div>
+                                    <div>
+                                        <a href='https://www.facebook.com/JWardaniDesign/'>
+                                            <img
+                                                className='ml-1'
+                                                src={jassLogo}
+                                                width={jassWidth}
+                                                height={jassHeight}
+                                            // className='jass-logo'
+                                            />
+                                        </a>
+                                    </div>
+                                    <div>
+                                        <a href='https://www.atlasconcorde.com/en/'>
+                                            <img
+                                                className='ml-1'
+                                                src={atlasLogo}
+                                                width={atlasWidth}
+                                                height={atlasHeight}
+                                            // className='atlas-logo'
+                                            />
+                                        </a>
+                                    </div>
 
+                                </div>
+                                <div className='logos'>
+                                    <div>
+                                        <a href='http://designemporiumegypt.com/Home.html'>
+                                            <img
+                                                className={classnames(
+                                                    { 'ml-5': enableBuyerBackground },
+                                                    { 'ml-1': !enableBuyerBackground }
+                                                )} src={emporLogo}
+                                                width={emporWidth}
+                                                height={emporHeight}
+                                            // className='atlas-logo'
+                                            />
+                                        </a>
+                                    </div>
+                                    <div>
+                                        <a href='https://carnegiefabrics.com/'>
+                                            <img
+                                                className={classnames(
+                                                    { 'ml-5': enableBuyerBackground },
+                                                    { 'ml-1': !enableBuyerBackground }
+                                                )}
+                                                src={carnegieLogo}
+                                                width={carnegieWidth}
+                                                height={carnegieHeight}
+                                            // className='atlas-logo'
+                                            />
+                                        </a>
+                                    </div>
+                                    <div>
+                                        <a href='http://www.elnasrparquet.com/'>
+                                            <img
+                                                className={classnames(
+                                                    { 'ml-5': enableBuyerBackground },
+                                                    { 'ml-1': !enableBuyerBackground }
+                                                )} src={tarekLogo}
+                                                width='120'
+                                                height='200'
+                                            // className='atlas-logo'
+                                            />
+                                        </a>
+                                    </div>
+                                </div>
+                                <div className='logos'>
+                                    <div>
+                                        <a href='https://mahally.net/'>
+                                            <img
+                                                className='ml-1'
+                                                src={mahalyLogo}
+                                                width={mahalyWidth}
+                                                height={mahalyHeight}
+                                            // className='atlas-logo'
+                                            />
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
-                            <div className='logos'>
-                                <div>
-                                    <a href='http://designemporiumegypt.com/Home.html'>
-                                        <img
-                                            className={classnames(
-                                                { 'ml-5': enableBuyerBackground },
-                                                { 'ml-1': !enableBuyerBackground }
-                                            )} src={emporLogo}
-                                            width={emporWidth}
-                                            height={emporHeight}
-                                        // className='atlas-logo'
-                                        />
-                                    </a>
-                                </div>
-                                <div>
-                                    <a href='https://carnegiefabrics.com/'>
-                                        <img
-                                            className={classnames(
-                                                { 'ml-5': enableBuyerBackground },
-                                                { 'ml-1': !enableBuyerBackground }
-                                            )}
-                                            src={carnegieLogo}
-                                            width={carnegieWidth}
-                                            height={carnegieHeight}
-                                        // className='atlas-logo'
-                                        />
-                                    </a>
-                                </div>
-                                <div>
-                                    <a href='http://www.elnasrparquet.com/'>
-                                        <img
-                                            className={classnames(
-                                                { 'ml-5': enableBuyerBackground },
-                                                { 'ml-1': !enableBuyerBackground }
-                                            )} src={tarekLogo}
-                                            width='120'
-                                            height='200'
-                                        // className='atlas-logo'
-                                        />
-                                    </a>
-                                </div>
-                            </div>
-                            <div className='logos'>
-                                <div>
-                                    <a href='https://mahally.net/'>
-                                        <img
-                                            className='ml-1'
-                                            src={mahalyLogo}
-                                            width={mahalyWidth}
-                                            height={mahalyHeight}
-                                        // className='atlas-logo'
-                                        />
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
+                        </Container>
                     </div>
                 </ReactCSSTransitionGroup>
             </Fragment>
