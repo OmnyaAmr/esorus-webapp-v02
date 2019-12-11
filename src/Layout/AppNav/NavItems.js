@@ -24,7 +24,7 @@ export const AuthNav = [
         label: 'Home',
         content: [
             {
-                label: 'Interioir Designers',
+                label: 'Interior Designers',
                 to: '#/dashboard/buyers'
             },
             {
@@ -42,7 +42,7 @@ export const UserNav = [
         label: 'esorus',
         content: [
             {
-                label: 'Interioir Designers',
+                label: 'Interior Designers',
                 to: '#/dashboard/buyers'
             },
             {
@@ -69,7 +69,7 @@ let InitialNavs = {
     label: 'Home',
     content: [
         {
-            label: 'Interioir Designers',
+            label: 'Interior Designers',
             to: '#/dashboard/buyers'
         },
         {

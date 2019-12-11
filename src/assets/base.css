@@ -13548,6 +13548,9 @@ font-family: 'Poppins', sans-serif;
     flex-direction: column;
     align-items:flex-start;
   }
+  .home-counters-row{
+    margin-top: 7%;
+  }
 
   .counters{
     display: flex;

@@ -174,7 +174,7 @@ class Suppliers extends Component {
                                 <div className='d-flex justify-content-center mt-4'>
                                     <p className=' supplier-text3 buttom-text text-center'>
                                         Gain access to our worldwide network of
-                                        Interioir Designers.
+                                        Interior Designers.
                                     </p>
                                 </div>
                             </Col>
@@ -231,7 +231,7 @@ class Suppliers extends Component {
                         <Row>
                             <Col>
                                 <h2 className='meet-our-text text-center'>
-                                    Meet our network of Interioir Designers
+                                    Meet our network of Interior Designers
                                 </h2>
                             </Col>
                         </Row>
