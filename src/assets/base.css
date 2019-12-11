@@ -12183,8 +12183,11 @@ body {
 
     @media (max-width: 991.98px) {
 
+      .home-desc-text{
+        font-size: 15px;
+        width:100% !important;
+      }
       .slogan-position{
-        padding: 10% !important;
         display: flex; 
         justify-content: center;
       }
@@ -13518,7 +13521,6 @@ font-family: 'Poppins', sans-serif;
  
   .join-now{
     display: flex;
-    justify-content:center;
     flex-direction: row;
   }
 
@@ -13556,8 +13558,16 @@ font-family: 'Poppins', sans-serif;
     background-color: #bfbfbf;
     margin-left: -2.5%;
   }
+
   .clients-buyer-section{
     margin-top: 5%;
+  }
+  .clients-supplier-section{
+    margin-top: 5%;
+  }
+  .home-desc-text{
+    width: 40%;
+    color: black;
   }
   .counters{
     display: flex;

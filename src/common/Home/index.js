@@ -81,7 +81,7 @@ class Home extends Component {
                         <input
                             type='button'
                             className='btn-escrus ml-1'
-                            value='Join Now'
+                            value='Get Started'
                             onClick={this.onClick}
                         />
                     </div>
@@ -102,7 +102,7 @@ class Home extends Component {
                             <input
                                 type='button'
                                 className='btn-escrus ml-1'
-                                value='Join Now'
+                                value='Get Started'
                                 onClick={this.onClick}
                             />
                         </div>
@@ -141,27 +141,38 @@ class Home extends Component {
                                         <h2 className='slogan-text'>
                                             Made Easy
                                         </h2>
+                                        <p className='home-desc-text'>
+                                            We act as your FF&E Personal Assistant and we help
+                                            you find furniture, materials, get qoutes and purchase
+                                            from over a 1000 different qualified suppliers.
+                                            </p>
                                         {content}
                                     </Col>
                                 </Row>
                             ) : (
-                                <Row className='slogan-position'>
-                                    <Col>
-                                        <h2 className='slogan-text'>
-                                            Interior Sourcing
+                                    <Row className='slogan-position'>
+                                        <Col>
+                                            <h2 className='slogan-text'>
+                                                Interior Sourcing
                                         </h2>
-                                        <h2 className='slogan-text'>
-                                            Made Easy
+                                            <h2 className='slogan-text'>
+                                                Made Easy
                                         </h2>
-                                    </Col>
-                                </Row>
-                            )}
+                                            <p >
+                                                We act as your FF&E Personal Assistant and we help
+                                                you find furniture, materials, get qoutes and purchase
+                                                from over a 1000 different qualified suppliers.
+                                            </p>
+
+                                        </Col>
+                                    </Row>
+                                )}
                         </div>
                     </PerfectScrollbar>
                 </div>
                 <div className='slogan2-position'>
                     <h1 className='slogan2-text ml-5'>
-                        We are <strong>reinventing</strong>
+                        We are <strong>automating</strong>
                     </h1>
                     <h1 className='slogan2-text ml-5'>
                         the interior sourcing process!
@@ -195,9 +206,9 @@ class Home extends Component {
                                                         perc === 100
                                                             ? {}
                                                             : {
-                                                                  backgroundColor:
-                                                                      'transparent'
-                                                              }
+                                                                backgroundColor:
+                                                                    'transparent'
+                                                            }
                                                     }
                                                     duration={5000}
                                                     formatValue={value =>
@@ -225,9 +236,9 @@ class Home extends Component {
                                                         perc === 100
                                                             ? {}
                                                             : {
-                                                                  backgroundColor:
-                                                                      'transparent'
-                                                              }
+                                                                backgroundColor:
+                                                                    'transparent'
+                                                            }
                                                     }
                                                     duration={5000}
                                                     formatValue={value =>
@@ -252,9 +263,9 @@ class Home extends Component {
                                                         perc === 100
                                                             ? {}
                                                             : {
-                                                                  backgroundColor:
-                                                                      'transparent'
-                                                              }
+                                                                backgroundColor:
+                                                                    'transparent'
+                                                            }
                                                     }
                                                     duration={5000}
                                                     formatValue={value =>
@@ -283,9 +294,9 @@ class Home extends Component {
                                                         perc === 100
                                                             ? {}
                                                             : {
-                                                                  backgroundColor:
-                                                                      'transparent'
-                                                              }
+                                                                backgroundColor:
+                                                                    'transparent'
+                                                            }
                                                     }
                                                     duration={5000}
                                                     formatValue={value =>

@@ -14,13 +14,7 @@ const AppMain = () => {
                     <div className='loader-container'>
                         <div className='loader-container-inner'>
                             <h6 className='mt-3'>
-                                Please wait while we load all the Dashboards
-                                examples
-                                <small>
-                                    Because this is a demonstration, we load at
-                                    once all the Dashboards examples. This
-                                    wouldn't happen in a real live app!
-                                </small>
+                                Please wait while your Dashboard is loading
                             </h6>
                         </div>
                     </div>

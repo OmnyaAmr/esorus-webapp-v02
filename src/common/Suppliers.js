@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import { Row, Col } from 'reactstrap';
+import { Row, Col, Container } from 'reactstrap';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import { connect } from 'react-redux';
 import PerfectScrollbar from 'react-perfect-scrollbar';
@@ -85,7 +85,7 @@ class Suppliers extends Component {
                         <input
                             type='button'
                             className='btn-escrus ml-1'
-                            value='Join Now'
+                            value='Get Started'
                             onClick={this.onClick}
                         />
                     </div>
@@ -106,7 +106,7 @@ class Suppliers extends Component {
                             <input
                                 type='button'
                                 className='btn-escrus '
-                                value='Join Now'
+                                value='Get Started'
                                 onClick={this.onClick}
                             />
                         </div>
@@ -150,7 +150,7 @@ class Suppliers extends Component {
                         </Row>
                     </div>
 
-                    <div className='app-main-enhanced'>
+                    <div className='app-main-enhanced' style={{ paddingTop: '9%' }}>
                         <div className='text-center'>
                             <h2
                                 style={{ color: 'black' }}
@@ -228,36 +228,38 @@ class Suppliers extends Component {
                                 </div>
                             </Col>
                         </Row>
-                        <Row>
-                            <Col>
-                                <h2 className='meet-our-text text-center'>
-                                    Meet our network of Interior Designers
+                        <Container className='clients-supplier-section'>
+                            <Row>
+                                <Col>
+                                    <h2 className='meet-our-text text-center'>
+                                        Meet our network of Interior Designers
                                 </h2>
-                            </Col>
-                        </Row>
-                        <Row>
-                            <Col>
-                                <h5 className='meet-our-text2 text-center'>
-                                    We work with renowned Proffesional Buyers,
-                                    below is one of our Designers
+                                </Col>
+                            </Row>
+                            <Row>
+                                <Col>
+                                    <h5 className='meet-our-text2 text-center'>
+                                        We work with renowned Proffesional Buyers,
+                                        below is one of our Designers
                                 </h5>
-                            </Col>
-                        </Row>
-                        <Row>
-                            <Col>
-                                <a href='http://www.encore-cf.com/'>
-                                    <div className='d-flex justify-content-center mt-4'>
-                                        <img
-                                            className='ml-1'
-                                            src={encoreLogo}
-                                            width={encoreWidth}
-                                            height={encoreHeight}
-                                            className='mb-2'
-                                        />
-                                    </div>
-                                </a>
-                            </Col>
-                        </Row>
+                                </Col>
+                            </Row>
+                            <Row>
+                                <Col>
+                                    <a href='http://www.encore-cf.com/'>
+                                        <div className='d-flex justify-content-center mt-4'>
+                                            <img
+                                                className='ml-1'
+                                                src={encoreLogo}
+                                                width={encoreWidth}
+                                                height={encoreHeight}
+                                                className='mb-2'
+                                            />
+                                        </div>
+                                    </a>
+                                </Col>
+                            </Row>
+                        </Container>
                     </div>
                 </ReactCSSTransitionGroup>
             </Fragment>
