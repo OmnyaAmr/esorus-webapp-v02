@@ -14,6 +14,7 @@ const validateReqeustInput = data => {
 	data.projectPhase = !isEmpty(data.projectPhase) ? data.projectPhase : '';
 	data.deliveryDate = !isEmpty(data.deliveryDate) ? data.deliveryDate : '';
 	data.boq = !isEmpty(data.boq) ? data.boq : '';
+	data.details = !isEmpty(data.details) ? data.details : '';
 	data.typeOfWorkNeeded = !isEmpty(data.typeOfWorkNeeded)
 		? data.typeOfWorkNeeded
 		: '';
@@ -41,7 +42,9 @@ const validateReqeustInput = data => {
 	if (Validator.isEmpty(data.projectPhase)) {
 		errors.projectPhase = 'Project phase is required';
 	}
-
+	if (Validator.isEmpty(data.details)) {
+		errors.details = 'Details is required';
+	}
 	if (Validator.isEmpty(data.deliveryDate)) {
 		errors.deliveryDate = 'Delivery date is required';
 	}

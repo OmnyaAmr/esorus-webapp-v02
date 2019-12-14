@@ -35,7 +35,9 @@ class Request extends Component {
             file: null,
             quantity: '',
             token: '',
-            uploadedPic: ''
+            uploadedPic: '',
+            boqfile: null,
+            reqs: ''
         };
         this.onClick = this.onClick.bind(this);
         this.onChange = this.onChange.bind(this);
@@ -112,7 +114,7 @@ class Request extends Component {
             </p>
             <Input
                 type='file'
-                name='file'
+                name='boqfile'
                 id='exampleFile'
                 accept='image/*, pdf'
                 onChange={event => {
@@ -393,7 +395,13 @@ class Request extends Component {
                                             onChange={this.onChange}
                                             id='details'
                                             value={this.state.details}
+                                            invalid={!isEmpty(errors.details)}
                                         />
+                                        {errors.details && (
+                                            <FormFeedback>
+                                                {errors.details}
+                                            </FormFeedback>
+                                        )}
                                     </FormGroup>
                                     <FormGroup row>
                                         <Label for='exampleFile' className="block">
@@ -458,6 +466,19 @@ class Request extends Component {
                                         )}
                                     </FormGroup>
                                     {boqContent}
+                                    <FormGroup row>
+                                        <Label>
+                                            We’re almost done, 
+                                            do you have special 
+                                            requirements?
+                                        </Label>
+                                        <Input
+                                            name="reqs"
+                                            value={this.state.reqs}
+                                            className='form-control-escrus'
+                                            onChange={this.onChange}
+                                        />
+                                    </FormGroup>
                                     <FormGroup row>
                                         <Label className="block">
                                             Lastly, 

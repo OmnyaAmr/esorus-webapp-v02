@@ -22,6 +22,7 @@ export const requestForm = (reqData, SRC) => dispatch => {
 
 	let formdata = new FormData();
 	formdata.append('file', reqData.file);
+
 	axios
 		.post('/api/upload-files', formdata)
 		.then(res => {
