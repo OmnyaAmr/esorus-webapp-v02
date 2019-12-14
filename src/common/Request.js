@@ -1,12 +1,10 @@
 import React, { Component, Fragment } from 'react';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import isEmpty from '../validation/is-empty';
-import axios from 'axios';
 import classnames from 'classnames';
 import {
     Card,
     CardBody,
-    CardTitle,
     Button,
     Input,
     FormGroup,
@@ -25,6 +23,7 @@ class Request extends Component {
         this.state = {
             name: '',
             email: '',
+            phone: '',
             professionalRole: '',
             projectType: '',
             projectPhase: '',
@@ -82,15 +81,13 @@ class Request extends Component {
         //HANDLE loading
         let { loading } = this.props.loading;
         if (loading) return <Spinner />;
-
         //HANDLE errors
         let { errors } = this.state;
-        let required = <small className='required'>*</small>;
         let boqContent;
         if (this.state.boq === 'false') {
             boqContent = (
                 <FormGroup row>
-                    <Label for='quantity'>Quantity{required}</Label>
+                    <Label for='quantity'>No problem, can you just write down the quantity?</Label>
                     <Input
                         className='form-control-escrus'
                         type='quantity'
@@ -103,6 +100,31 @@ class Request extends Component {
                     <FormFeedback>{errors.quantity}</FormFeedback>
                 </FormGroup>
             );
+        } else if (this.state.boq === 'true') {
+            boqContent = <FormGroup row>
+            <Label for='exampleFile' className="block">
+                Can you please upload it here?
+            </Label>
+            <p className="request-form-tip">
+                Your file has to be 
+                in any of the following 
+                formats: jpg, png or pdf
+            </p>
+            <Input
+                type='file'
+                name='file'
+                id='exampleFile'
+                accept='image/*, pdf'
+                onChange={event => {
+                    this.onUpload(event);
+                }}
+            />
+            {errors.boqfile && (
+                <FormFeedback>
+                    {errors.boqfile}
+                </FormFeedback>
+            )}
+        </FormGroup>
         }
 
         return (
@@ -116,17 +138,22 @@ class Request extends Component {
                     transitionLeave={false}
                 >
                     <div className='app-main-enhanced'>
-                        <Card className='container'>
+                        <Card className='container request-form'>
                             <CardBody>
-                                <CardTitle className='text-center slogan4-text'>
+                                <h4 className='text-center request-form-font'>
                                     Request Form
-                                </CardTitle>
+                                </h4>
+                                <p className="text-center requesst-form-font request-form-p">
+                                    Let’s get you started! Answer a 
+                                    few questions and our team will 
+                                    help you find what you’re looking for.
+                                </p>
                                 <Form
                                     className='form-esorus m-auto'
                                     onSubmit={this.onSubmit}
                                 >
                                     <FormGroup row>
-                                        <Label for='name'>Name{required}</Label>
+                                        <Label for='name'>Name</Label>
                                         <Input
                                             className='form-control-escrus'
                                             type='name'
@@ -143,7 +170,7 @@ class Request extends Component {
 
                                     <FormGroup row>
                                         <Label for='email'>
-                                            Email{required}
+                                            Email
                                         </Label>
                                         <Input
                                             className='form-control-escrus'
@@ -159,8 +186,26 @@ class Request extends Component {
                                         </FormFeedback>
                                     </FormGroup>
                                     <FormGroup row>
+                                        <Label className="block">Phone Number</Label>
+                                        <p className="request-form-tip" >
+                                            We promise we won’t 
+                                            spam you with calls, 
+                                            this is just incase something 
+                                            is missing in your request.
+                                        </p>
+                                        <Input 
+                                            className="form-control-escrus" 
+                                            name="phone" 
+                                            id="phone"
+                                            placeholder="required"
+                                            value={this.state.phone} 
+                                            onChange={this.onChange} 
+                                            invalid = {!isEmpty(errors.phone)} 
+                                        />
+                                    </FormGroup>
+                                    <FormGroup row>
                                         <Label for='professionalRole'>
-                                            Professional role{required}
+                                            What’s your Professional Role?
                                         </Label>
                                         <select
                                             name='professionalRole'
@@ -181,7 +226,7 @@ class Request extends Component {
                                                 Contractor
                                             </option>
                                             <option value='conslutant'>
-                                                Consultant
+                                                Consultant  
                                             </option>
                                             <option value='project_owner'>
                                                 Project owner
@@ -199,7 +244,7 @@ class Request extends Component {
                                     </FormGroup>
                                     <FormGroup row>
                                         <Label for='projectType'>
-                                            Project Type{required}
+                                            What type of Project do you need our help in?
                                         </Label>
                                         <select
                                             id='projectType'
@@ -254,7 +299,7 @@ class Request extends Component {
                                     </FormGroup>
                                     <FormGroup row>
                                         <Label for='projectPhase'>
-                                            Project Phase{required}
+                                            What Project phase are you in right now ?
                                         </Label>
                                         <select
                                             id='projectPhase'
@@ -296,7 +341,7 @@ class Request extends Component {
                                     </FormGroup>
                                     <FormGroup row>
                                         <Label for='typeOfWorkNeeded'>
-                                            What are you looking for ?{required}
+                                            What are you looking for ?
                                         </Label>
                                         <select
                                             id='typeOfWorkNeeded'
@@ -334,12 +379,33 @@ class Request extends Component {
                                         )}
                                     </FormGroup>
                                     <FormGroup row>
-                                        <Label for='exampleFile'>
-                                            Attach an image similar to what
-                                            you're looking for in any of the
-                                            following formats: jpg, png, pdf{' '}
-                                            {required}
+                                        <Label className="block">
+                                            Please describe what you’re looking for
                                         </Label>
+                                        <p className="request-form-tip">
+                                            We will understand 
+                                            if you wrote in any language, 
+                                            try to be as detailed as possible
+                                        </p>
+                                        <Input
+                                            className='form-control-escrus'
+                                            name='details'
+                                            onChange={this.onChange}
+                                            id='details'
+                                            value={this.state.details}
+                                        />
+                                    </FormGroup>
+                                    <FormGroup row>
+                                        <Label for='exampleFile' className="block">
+                                            Great! 
+                                            If you have a picture similar to what you’re looking for, 
+                                            please upload it.
+                                        </Label>
+                                        <p className="request-form-tip">
+                                            Your image has to be 
+                                            in any of the following 
+                                            formats: jpg, png or pdf
+                                        </p>
                                         <Input
                                             type='file'
                                             name='file'
@@ -355,20 +421,14 @@ class Request extends Component {
                                             </FormFeedback>
                                         )}
                                     </FormGroup>
-                                    <FormGroup row>
-                                        <Label>Additional Details</Label>
-                                        <Input
-                                            className='form-control-escrus'
-                                            name='details'
-                                            onChange={this.onChange}
-                                            id='details'
-                                            value={this.state.details}
-                                        />
-                                    </FormGroup>
+
                                     <FormGroup row>
                                         <Label className='block'>
-                                            Do you have a BoQ?{required}
+                                            Do you have a BoQ?
                                         </Label>
+                                        <p className="request-form-tip" >
+                                            Note: Bill of Quantity.
+                                        </p>
                                         <div className='form-check block'>
                                             <input
                                                 type='radio'
@@ -399,8 +459,15 @@ class Request extends Component {
                                     </FormGroup>
                                     {boqContent}
                                     <FormGroup row>
-                                        <Label>Delivery Date{required}</Label>
-                                        <Input
+                                        <Label className="block">
+                                            Lastly, 
+                                            when do you 
+                                            need it delivered?
+                                        </Label>
+                                        <p className="request-form-tip">
+                                            Note: If less than 3-5 days, it will have to be something in stock.
+                                        </p>
+                                        <input
                                             type='date'
                                             className={classnames(
                                                 'form-control-escrus',

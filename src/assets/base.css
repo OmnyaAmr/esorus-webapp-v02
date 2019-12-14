@@ -12182,7 +12182,9 @@ body {
 
 
     @media (max-width: 991.98px) {
-
+      .request-form{
+        width: 70%;
+      }
       .home-desc-text{
         font-size: 15px;
         width:100% !important;
@@ -12776,6 +12778,9 @@ body {
         text-align: left;
         margin: 0 !important; } }
 @media (max-width: 767.98px) {
+  .request-form{
+    width: 90% !important;
+  }
   .app-main .app-main__inner {
     padding: 15px 15px 0; }
 
@@ -13574,3 +13579,21 @@ font-family: 'Poppins', sans-serif;
     flex-direction: row;
     justify-content: space-around;
   }
+
+  .request-form-font{
+    font-family: 'Poppins-Meduim';
+  }
+.request-form-p{
+  color: #5E5E5E;
+  font-size: 1.2rem;
+}
+
+.request-form-tip{
+  color: #5E5E5E;
+  font-size: 0.9rem;
+  font-family: 'Poppins-Regular'
+}
+
+.request-form{
+  width: 70%;
+}
