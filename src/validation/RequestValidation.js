@@ -18,6 +18,7 @@ const validateReqeustInput = data => {
 	data.typeOfWorkNeeded = !isEmpty(data.typeOfWorkNeeded)
 		? data.typeOfWorkNeeded
 		: '';
+	data.other = !isEmpty(data.other) ? data.other : '';
 	if (Validator.isEmpty(data.name)) {
 		errors.name = 'Name is required';
 	}
@@ -63,6 +64,11 @@ const validateReqeustInput = data => {
 		}
 	}
 
+	if (data.professionalRole === 'other') {
+		if (Validator.isEmpty(data.other)) {
+			errors.professionalRole = 'Your role is required';
+		}
+	}
 	return {
 		errors,
 		isValid: isEmpty(errors),

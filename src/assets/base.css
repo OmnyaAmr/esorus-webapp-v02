@@ -13581,7 +13581,7 @@ font-family: 'Poppins', sans-serif;
   }
 
   .request-form-font{
-    font-family: 'Poppins-Meduim';
+    font-family: 'Poppins';
   }
 .request-form-p{
   color: #5E5E5E;
@@ -13591,9 +13591,13 @@ font-family: 'Poppins', sans-serif;
 .request-form-tip{
   color: #5E5E5E;
   font-size: 0.9rem;
-  font-family: 'Poppins-Regular'
+  font-family: 'Poppins'
 }
 
 .request-form{
   width: 70%;
+}
+
+.request-fields{
+  font-weight: bold;
 }

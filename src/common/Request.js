@@ -37,7 +37,8 @@ class Request extends Component {
             token: '',
             uploadedPic: '',
             boqfile: null,
-            reqs: ''
+            reqs: '',
+            other: ''
         };
         this.onClick = this.onClick.bind(this);
         this.onChange = this.onChange.bind(this);
@@ -155,7 +156,7 @@ class Request extends Component {
                                     onSubmit={this.onSubmit}
                                 >
                                     <FormGroup row>
-                                        <Label for='name'>Name</Label>
+                                        <Label for='name' className="request-fields">Name</Label>
                                         <Input
                                             className='form-control-escrus'
                                             type='name'
@@ -171,7 +172,7 @@ class Request extends Component {
                                     </FormGroup>
 
                                     <FormGroup row>
-                                        <Label for='email'>
+                                        <Label for='email' className="request-fields">
                                             Email
                                         </Label>
                                         <Input
@@ -188,7 +189,9 @@ class Request extends Component {
                                         </FormFeedback>
                                     </FormGroup>
                                     <FormGroup row>
-                                        <Label className="block">Phone Number</Label>
+                                        <Label className="block request-fields mb-0">
+                                            Phone Number
+                                        </Label>
                                         <p className="request-form-tip" >
                                             We promise we won’t 
                                             spam you with calls, 
@@ -199,14 +202,14 @@ class Request extends Component {
                                             className="form-control-escrus" 
                                             name="phone" 
                                             id="phone"
-                                            placeholder="required"
+                                            placeholder="Write your number here"
                                             value={this.state.phone} 
                                             onChange={this.onChange} 
                                             invalid = {!isEmpty(errors.phone)} 
                                         />
                                     </FormGroup>
                                     <FormGroup row>
-                                        <Label for='professionalRole'>
+                                        <Label for='professionalRole' className="request-fields">
                                             What’s your Professional Role?
                                         </Label>
                                         <select
@@ -231,21 +234,33 @@ class Request extends Component {
                                                 Consultant  
                                             </option>
                                             <option value='project_owner'>
-                                                Project owner
+                                                Interior Designer / Architect
                                             </option>
                                             <option value='freelancer'>
-                                                Freelancer intrior
-                                                designer/Architect
+                                                Freelance Interior Designer/ Architect
+                                            </option>
+                                            <option value='other'>
+                                                Other
                                             </option>
                                         </select>
-                                        {errors.role && (
+                                        {this.state.professionalRole === 'other' 
+                                        && 
+                                        (<Input 
+                                            className="form-control-escrus mt-2"
+                                            name="other" 
+                                            onChange={this.onChange}
+                                            value={this.state.other}
+                                            placeholder="Please specify"
+                                        />)}
+                                        
+                                        {errors.professionalRole && (
                                             <FormFeedback>
                                                 {errors.professionalRole}
                                             </FormFeedback>
                                         )}
                                     </FormGroup>
                                     <FormGroup row>
-                                        <Label for='projectType'>
+                                        <Label for='projectType' className="request-fields">
                                             What type of Project do you need our help in?
                                         </Label>
                                         <select
@@ -268,26 +283,26 @@ class Request extends Component {
                                                 Residential
                                             </option>
                                             <option value='restaurant'>
-                                                Restaurant/Cafe
+                                                Restaurant/ Cafe
                                             </option>
                                             <option value='retail_shop'>
-                                                Retial shop
+                                                Retial Shop
                                             </option>
                                             <option value='hotel'>Hotel</option>
                                             <option value='office_space'>
-                                                Office space
+                                                Office Space
                                             </option>
                                             <option value='beauty_salon'>
-                                                Spa/Beauty salon
+                                                Spa/ Beauty Salon
                                             </option>
                                             <option value='hospital'>
-                                                Hospital/Clinic
+                                                Hospital/ Clinic
                                             </option>
                                             <option value='education_center'>
-                                                School/Nursery/Education center
+                                                School/ Nursery/ Education Center
                                             </option>
                                             <option value='sport'>
-                                                Sport/Gym/Fitness center
+                                                Gym/ Fitness center
                                             </option>
                                             <option value='landscape'>
                                                 Landscape
@@ -300,7 +315,7 @@ class Request extends Component {
                                         )}
                                     </FormGroup>
                                     <FormGroup row>
-                                        <Label for='projectPhase'>
+                                        <Label for='projectPhase' className="request-fields">
                                             What Project phase are you in right now ?
                                         </Label>
                                         <select
@@ -320,16 +335,16 @@ class Request extends Component {
                                                 Select your project phase ...
                                             </option>
                                             <option value='inspiration'>
-                                                Still looking for inspirations
+                                                Still looking for inspiration
                                             </option>
                                             <option value='design_phase'>
-                                                Design phase
+                                                Design Phase
                                             </option>
                                             <option value='technical_phase'>
-                                                Technical phase
+                                                Technical Phase
                                             </option>
                                             <option value='budget_estimation'>
-                                                budget estimation
+                                                Budget Estimation
                                             </option>
                                             <option value='execution'>
                                                 Execution
@@ -342,7 +357,7 @@ class Request extends Component {
                                         )}
                                     </FormGroup>
                                     <FormGroup row>
-                                        <Label for='typeOfWorkNeeded'>
+                                        <Label for='typeOfWorkNeeded' className="request-fields">
                                             What are you looking for ?
                                         </Label>
                                         <select
@@ -381,7 +396,7 @@ class Request extends Component {
                                         )}
                                     </FormGroup>
                                     <FormGroup row>
-                                        <Label className="block">
+                                        <Label className="block request-fields mb-0">
                                             Please describe what you’re looking for
                                         </Label>
                                         <p className="request-form-tip">
@@ -404,7 +419,7 @@ class Request extends Component {
                                         )}
                                     </FormGroup>
                                     <FormGroup row>
-                                        <Label for='exampleFile' className="block">
+                                        <Label for='exampleFile' className="block request-fields mb-0">
                                             Great! 
                                             If you have a picture similar to what you’re looking for, 
                                             please upload it.
@@ -431,7 +446,7 @@ class Request extends Component {
                                     </FormGroup>
 
                                     <FormGroup row>
-                                        <Label className='block'>
+                                        <Label className='block request-fields'>
                                             Do you have a BoQ?
                                         </Label>
                                         <p className="request-form-tip" >
@@ -467,7 +482,7 @@ class Request extends Component {
                                     </FormGroup>
                                     {boqContent}
                                     <FormGroup row>
-                                        <Label>
+                                        <Label className="request-fields">
                                             We’re almost done, 
                                             do you have special 
                                             requirements?
@@ -480,7 +495,7 @@ class Request extends Component {
                                         />
                                     </FormGroup>
                                     <FormGroup row>
-                                        <Label className="block">
+                                        <Label className="block request-fields mb-0">
                                             Lastly, 
                                             when do you 
                                             need it delivered?
