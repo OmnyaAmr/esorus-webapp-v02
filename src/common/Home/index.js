@@ -71,13 +71,13 @@ class Home extends Component {
             if (enableHomeBackground) {
                 content = (
                     <div className='join-now mt-4'>
-                        <input
+                        {/* <input
                             className='form-control-escrus form-control-lg-escrus ml-1'
                             onChange={this.onChange}
                             value={this.state.email}
                             placeholder='Enter your email here'
                             name='email'
-                        />
+                        /> */}
                         <input
                             type='button'
                             className='btn-escrus ml-1'
@@ -135,29 +135,27 @@ class Home extends Component {
                             {!isAuthenticated ? (
                                 <Row className='slogan-position'>
                                     <Col>
-                                        <h2 className='slogan-text'>
+                                        <h1 className='slogan-text'>
                                             Interior Sourcing
-                                        </h2>
-                                        <h2 className='slogan-text'>
+                                        </h1>
+                                        <h1 className='slogan-text'>
                                             Made Easy
-                                        </h2>
-                                        <p className='home-desc-text'>
-                                            We act as your FF&E Personal Assistant and we help
-                                            you find furniture, materials, get qoutes and purchase
-                                            from over a 1000 different qualified suppliers.
-                                            </p>
+                                        </h1>
+                                        <p className="slogan22-text" >
+                                            Your FF&E Personal Assistant for sourcing and procurement.
+                                        </p>
                                         {content}
                                     </Col>
                                 </Row>
                             ) : (
                                     <Row className='slogan-position'>
                                         <Col>
-                                            <h2 className='slogan-text'>
+                                            <h1 className='slogan-text'>
                                                 Interior Sourcing
-                                        </h2>
-                                            <h2 className='slogan-text'>
+                                            </h1>
+                                            <h1 className='slogan-text'>
                                                 Made Easy
-                                        </h2>
+                                            </h1>
                                             <p className='home-desc-text'>
                                                 We act as your FF&E Personal Assistant and we help
                                                 you find furniture, materials, get qoutes and purchase

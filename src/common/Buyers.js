@@ -92,10 +92,10 @@ class Buyers extends Component {
             content = (
                 <div className='click-away'>
                     {' '}
-                    <p>
+                    <h5 className="slogan8-text">
                         We’re just a click away, send us your request and our
                         FF&E Team will assist you.
-                    </p>
+                    </h5>
                     <input
                         type='button'
                         className='btn-escrus mt-2'
@@ -127,11 +127,11 @@ class Buyers extends Component {
                         <Row className='slogan-buyer-position'>
                             <Col>
                                 {' '}
-                                <h2 className='slogan8-text'>
+                                <h1 className='slogan8-text'>
                                     FF&E Personal Assistant for Interior
-                                    Designers and <br />
+                                    Designers <br /> and 
                                     Professional Buyers{' '}
-                                </h2>
+                                </h1>
                                 {enableBuyerBackground ? (
                                     <p className='buyer-text3'>
                                         A single place to find furniture
@@ -234,6 +234,7 @@ class Buyers extends Component {
                                         width='500'
                                         height='500'
                                         className='mb-2'
+                                        alt="buyerpic"
                                     />
                                 </Col>
                             )}
@@ -428,7 +429,7 @@ class Buyers extends Component {
                                                 src={atlasLogo}
                                                 width={atlasWidth}
                                                 height={atlasHeight}
-                                            // className='atlas-logo'
+                                                alt="atlascorde"
                                             />
                                         </a>
                                     </div>

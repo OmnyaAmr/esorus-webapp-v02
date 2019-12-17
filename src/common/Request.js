@@ -155,208 +155,219 @@ class Request extends Component {
                                     className='form-esorus m-auto'
                                     onSubmit={this.onSubmit}
                                 >
-                                    <FormGroup row>
-                                        <Label for='name' className="request-fields">Name</Label>
-                                        <Input
-                                            className='form-control-escrus'
-                                            type='name'
-                                            name='name'
-                                            id='name'
-                                            value={this.state.name}
-                                            onChange={this.onChange}
-                                            invalid={!isEmpty(errors.name)}
-                                        />
-                                        <FormFeedback>
-                                            {errors.email}
-                                        </FormFeedback>
-                                    </FormGroup>
 
-                                    <FormGroup row>
-                                        <Label for='email' className="request-fields">
-                                            Email
-                                        </Label>
-                                        <Input
-                                            className='form-control-escrus'
-                                            type='email'
-                                            name='email'
-                                            id='email'
-                                            value={this.state.email}
-                                            onChange={this.onChange}
-                                            invalid={!isEmpty(errors.email)}
-                                        />
-                                        <FormFeedback>
-                                            {errors.email}
-                                        </FormFeedback>
-                                    </FormGroup>
-                                    <FormGroup row>
-                                        <Label className="block request-fields mb-0">
-                                            Phone Number
-                                        </Label>
-                                        <p className="request-form-tip" >
-                                            We promise we won’t 
-                                            spam you with calls, 
-                                            this is just incase something 
-                                            is missing in your request.
-                                        </p>
-                                        <Input 
-                                            className="form-control-escrus" 
-                                            name="phone" 
-                                            id="phone"
-                                            placeholder="Write your number here"
-                                            value={this.state.phone} 
-                                            onChange={this.onChange} 
-                                            invalid = {!isEmpty(errors.phone)} 
-                                        />
-                                    </FormGroup>
-                                    <FormGroup row>
-                                        <Label for='professionalRole' className="request-fields">
-                                            What’s your Professional Role?
-                                        </Label>
-                                        <select
-                                            name='professionalRole'
-                                            className={classnames(
-                                                'custom-select custom-select-md form-control-escrus',
-                                                {
-                                                    'is-invalid':
-                                                        errors.professionalRole
-                                                }
-                                            )}
-                                            onChange={this.onChange}
-                                            value={this.state.professionalRole}
-                                        >
-                                            <option value=''>
-                                                Select your role ...
-                                            </option>
-                                            <option value='contractor'>
-                                                Contractor
-                                            </option>
-                                            <option value='conslutant'>
-                                                Consultant  
-                                            </option>
-                                            <option value='project_owner'>
-                                                Interior Designer / Architect
-                                            </option>
-                                            <option value='freelancer'>
-                                                Freelance Interior Designer/ Architect
-                                            </option>
-                                            <option value='other'>
-                                                Other
-                                            </option>
-                                        </select>
-                                        {this.state.professionalRole === 'other' 
-                                        && 
-                                        (<Input 
-                                            className="form-control-escrus mt-2"
-                                            name="other" 
-                                            onChange={this.onChange}
-                                            value={this.state.other}
-                                            placeholder="Please specify"
-                                        />)}
-                                        
-                                        {errors.professionalRole && (
+                                    <div className="text-center mt-5 mb-5 request-header">
+                                        <h6 className="request-header-text mt-2">Your Information</h6>
+                                    </div>
+
+                                <div className="request-section mb-5">
+                                    <div className="request-subsection">
+                                        <FormGroup >
+                                            <Label for='name' className="request-fields">Name</Label>
+                                            <Input
+                                                className='form-control-escrus'
+                                                type='name'
+                                                name='name'
+                                                id='name'
+                                                value={this.state.name}
+                                                onChange={this.onChange}
+                                                invalid={!isEmpty(errors.name)}
+                                            />
                                             <FormFeedback>
-                                                {errors.professionalRole}
+                                                {errors.email}
                                             </FormFeedback>
-                                        )}
-                                    </FormGroup>
-                                    <FormGroup row>
-                                        <Label for='projectType' className="request-fields">
-                                            What type of Project do you need our help in?
-                                        </Label>
-                                        <select
-                                            id='projectType'
-                                            name='projectType'
-                                            className={classnames(
-                                                'custom-select custom-select-md form-control-escrus',
-                                                {
-                                                    'is-invalid':
-                                                        errors.projectType
-                                                }
-                                            )}
-                                            onChange={this.onChange}
-                                            value={this.state.projectType}
-                                        >
-                                            <option value=''>
-                                                Select your project type ...
-                                            </option>
-                                            <option value='residential'>
-                                                Residential
-                                            </option>
-                                            <option value='restaurant'>
-                                                Restaurant/ Cafe
-                                            </option>
-                                            <option value='retail_shop'>
-                                                Retial Shop
-                                            </option>
-                                            <option value='hotel'>Hotel</option>
-                                            <option value='office_space'>
-                                                Office Space
-                                            </option>
-                                            <option value='beauty_salon'>
-                                                Spa/ Beauty Salon
-                                            </option>
-                                            <option value='hospital'>
-                                                Hospital/ Clinic
-                                            </option>
-                                            <option value='education_center'>
-                                                School/ Nursery/ Education Center
-                                            </option>
-                                            <option value='sport'>
-                                                Gym/ Fitness center
-                                            </option>
-                                            <option value='landscape'>
-                                                Landscape
-                                            </option>
-                                        </select>
-                                        {errors.projectType && (
+                                        </FormGroup>
+
+                                        <FormGroup >
+                                            <Label for='email' className="request-fields">
+                                                Email
+                                            </Label>
+                                            <Input
+                                                className='form-control-escrus'
+                                                type='email'
+                                                name='email'
+                                                id='email'
+                                                value={this.state.email}
+                                                onChange={this.onChange}
+                                                invalid={!isEmpty(errors.email)}
+                                            />
                                             <FormFeedback>
-                                                {errors.projectType}
+                                                {errors.email}
                                             </FormFeedback>
-                                        )}
-                                    </FormGroup>
-                                    <FormGroup row>
-                                        <Label for='projectPhase' className="request-fields">
-                                            What Project phase are you in right now ?
-                                        </Label>
-                                        <select
-                                            id='projectPhase'
-                                            name='projectPhase'
-                                            className={classnames(
-                                                'custom-select custom-select-md form-control-escrus',
-                                                {
-                                                    'is-invalid':
-                                                        errors.projectPhase
-                                                }
+                                        </FormGroup>
+                                    </div>
+                                    <div className="request-subsection">
+                                        <FormGroup >
+                                            <Label className="request-fields ">
+                                                Phone Number
+                                            </Label>
+                                            <Input 
+                                                className='form-control-escrus'
+                                                name="phone" 
+                                                id="phone"
+                                                placeholder="Write your number here"
+                                                value={this.state.phone} 
+                                                onChange={this.onChange} 
+                                                invalid = {!isEmpty(errors.phone)} 
+                                            />
+                                        </FormGroup>
+
+                                        <FormGroup >
+                                            <Label for='professionalRole' className="request-fields">
+                                                Role
+                                            </Label>
+                                            <select
+                                                name='professionalRole'
+                                                className={classnames(
+                                                    'form-control-escrus',
+                                                    {
+                                                        'is-invalid':
+                                                            errors.professionalRole
+                                                    }
+                                                )}
+                                                onChange={this.onChange}
+                                                value={this.state.professionalRole}
+                                            >
+                                                <option value=''>
+                                                    Select one ...
+                                                </option>
+                                                <option value='contractor'>
+                                                    Contractor
+                                                </option>
+                                                <option value='conslutant'>
+                                                    Consultant  
+                                                </option>
+                                                <option value='project_owner'>
+                                                    Interior Designer / Architect
+                                                </option>
+                                                <option value='freelancer'>
+                                                    Freelance Interior Designer/ Architect
+                                                </option>
+                                                <option value='other'>
+                                                    Other
+                                                </option>
+                                            </select>
+                                            {this.state.professionalRole === 'other' 
+                                            && 
+                                            (<Input 
+                                                className="form-control-escrus mt-2"
+                                                name="other" 
+                                                onChange={this.onChange}
+                                                value={this.state.other}
+                                                placeholder="Please specify"
+                                            />)}
+                                            
+                                            {errors.professionalRole && (
+                                                <FormFeedback>
+                                                    {errors.professionalRole}
+                                                </FormFeedback>
                                             )}
-                                            onChange={this.onChange}
-                                            value={this.state.projectPhase}
-                                        >
-                                            <option value=''>
-                                                Select your project phase ...
-                                            </option>
-                                            <option value='inspiration'>
-                                                Still looking for inspiration
-                                            </option>
-                                            <option value='design_phase'>
-                                                Design Phase
-                                            </option>
-                                            <option value='technical_phase'>
-                                                Technical Phase
-                                            </option>
-                                            <option value='budget_estimation'>
-                                                Budget Estimation
-                                            </option>
-                                            <option value='execution'>
-                                                Execution
-                                            </option>
-                                        </select>
-                                        {errors.projectPhase && (
-                                            <FormFeedback>
-                                                {errors.projectPhase}
-                                            </FormFeedback>
-                                        )}
-                                    </FormGroup>
-                                    <FormGroup row>
+                                            </FormGroup>
+                                    </div>
+                                </div>
+                                <div className="text-center mb-5 request-header">
+                                        <h6 className="request-header-text mt-2">Project Information</h6>
+                                    </div>
+
+                                        <FormGroup className="mb-3">
+                                            <Label for='projectType' className="request-fields">
+                                                What type of Project do you need our help in?
+                                            </Label>
+                                            <select
+                                                id='projectType'
+                                                name='projectType'
+                                                className={classnames(
+                                                    'custom-select custom-select-md form-control-escrus',
+                                                    {
+                                                        'is-invalid':
+                                                            errors.projectType
+                                                    }
+                                                )}
+                                                onChange={this.onChange}
+                                                value={this.state.projectType}
+                                            >
+                                                <option value=''>
+                                                    Select one ...
+                                                </option>
+                                                <option value='residential'>
+                                                    Residential
+                                                </option>
+                                                <option value='restaurant'>
+                                                    Restaurant/ Cafe
+                                                </option>
+                                                <option value='retail_shop'>
+                                                    Retial Shop
+                                                </option>
+                                                <option value='hotel'>Hotel</option>
+                                                <option value='office_space'>
+                                                    Office Space
+                                                </option>
+                                                <option value='beauty_salon'>
+                                                    Spa/ Beauty Salon
+                                                </option>
+                                                <option value='hospital'>
+                                                    Hospital/ Clinic
+                                                </option>
+                                                <option value='education_center'>
+                                                    School/ Nursery/ Education Center
+                                                </option>
+                                                <option value='sport'>
+                                                    Gym/ Fitness center
+                                                </option>
+                                                <option value='landscape'>
+                                                    Landscape
+                                                </option>
+                                            </select>
+                                            {errors.projectType && (
+                                                <FormFeedback>
+                                                    {errors.projectType}
+                                                </FormFeedback>
+                                            )}
+                                        </FormGroup>
+                                        <FormGroup className="mb-3" >
+                                            <Label for='projectPhase' className="request-fields">
+                                                What Project phase are you in right now ?
+                                            </Label>
+                                            <select
+                                                id='projectPhase'
+                                                name='projectPhase'
+                                                className={classnames(
+                                                    'custom-select custom-select-md form-control-escrus',
+                                                    {
+                                                        'is-invalid':
+                                                            errors.projectPhase
+                                                    }
+                                                )}
+                                                onChange={this.onChange}
+                                                value={this.state.projectPhase}
+                                            >
+                                                <option value=''>
+                                                    Select one ...
+                                                </option>
+                                                <option value='inspiration'>
+                                                    Still looking for inspiration
+                                                </option>
+                                                <option value='design_phase'>
+                                                    Design Phase
+                                                </option>
+                                                <option value='technical_phase'>
+                                                    Technical Phase
+                                                </option>
+                                                <option value='budget_estimation'>
+                                                    Budget Estimation
+                                                </option>
+                                                <option value='execution'>
+                                                    Execution
+                                                </option>
+                                            </select>
+                                            {errors.projectPhase && (
+                                                <FormFeedback>
+                                                    {errors.projectPhase}
+                                                </FormFeedback>
+                                            )}
+                                        </FormGroup>
+                                    
+                                    <FormGroup className= "mb-5">
                                         <Label for='typeOfWorkNeeded' className="request-fields">
                                             What are you looking for ?
                                         </Label>
@@ -374,7 +385,7 @@ class Request extends Component {
                                             value={this.state.typeOfWorkNeeded}
                                         >
                                             <option value=''>
-                                                Select what you need ...
+                                                Select one ...
                                             </option>
                                             <option value='finishing'>
                                                 Finishing
@@ -395,7 +406,7 @@ class Request extends Component {
                                             </FormFeedback>
                                         )}
                                     </FormGroup>
-                                    <FormGroup row>
+                                    <FormGroup className="mb-3">
                                         <Label className="block request-fields mb-0">
                                             Please describe what you’re looking for
                                         </Label>
@@ -418,7 +429,7 @@ class Request extends Component {
                                             </FormFeedback>
                                         )}
                                     </FormGroup>
-                                    <FormGroup row>
+                                    <FormGroup className="mb-3">
                                         <Label for='exampleFile' className="block request-fields mb-0">
                                             Great! 
                                             If you have a picture similar to what you’re looking for, 
@@ -445,7 +456,7 @@ class Request extends Component {
                                         )}
                                     </FormGroup>
 
-                                    <FormGroup row>
+                                    <FormGroup className="mb-3">
                                         <Label className='block request-fields'>
                                             Do you have a BoQ?
                                         </Label>
@@ -481,11 +492,11 @@ class Request extends Component {
                                         )}
                                     </FormGroup>
                                     {boqContent}
-                                    <FormGroup row>
+                                    <FormGroup className="mb-3">
                                         <Label className="request-fields">
                                             We’re almost done, 
                                             do you have special 
-                                            requirements?
+                                            requirements for your request?
                                         </Label>
                                         <Input
                                             name="reqs"
@@ -494,7 +505,7 @@ class Request extends Component {
                                             onChange={this.onChange}
                                         />
                                     </FormGroup>
-                                    <FormGroup row>
+                                    <FormGroup className="mb-3">
                                         <Label className="block request-fields mb-0">
                                             Lastly, 
                                             when do you 
