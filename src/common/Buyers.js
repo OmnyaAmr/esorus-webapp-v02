@@ -91,11 +91,6 @@ class Buyers extends Component {
         if (prev !== ROLE_SUPPLIER) {
             content = (
                 <div className='click-away'>
-                    {' '}
-                    <h5 className="slogan8-text">
-                        We’re just a click away, send us your request and our
-                        FF&E Team will assist you.
-                    </h5>
                     <input
                         type='button'
                         className='btn-escrus mt-2'
@@ -166,6 +161,7 @@ class Buyers extends Component {
                                 width='100%'
                                 height='500'
                                 className='mb-2'
+                                alt="buyers"
                             />
                         )}
                     </Row>
@@ -225,6 +221,7 @@ class Buyers extends Component {
                                             </p>
                                         </div>
                                     </div>
+                                        <div>{content}</div>
                                 </div>
                             </Col>
                             {enableBuyerBackground && (
@@ -240,14 +237,6 @@ class Buyers extends Component {
                             )}
                         </Row>
 
-                        <Row>
-                            <Col
-                                className='buyers2-mobile'
-                                style={{ left: '50px' }}
-                            >
-                                {content}
-                            </Col>
-                        </Row>
                         <Row className='buyers-icon-section'>
                             <Col className='buyers-mobile'>
                                 <div className='d-flex justify-content-center mt-4'>
@@ -257,6 +246,7 @@ class Buyers extends Component {
                                         color='white'
                                         height='50'
                                         className='mb-2'
+                                        alt="buyer"
                                     />
                                 </div>
                                 <div className='d-flex justify-content-center mt-4'>
@@ -278,6 +268,7 @@ class Buyers extends Component {
                                         width='50'
                                         height='50'
                                         className='mb-2'
+                                        alt="buyer"
                                     />
                                 </div>
                                 <div className='d-flex justify-content-center mt-4'>
@@ -299,6 +290,7 @@ class Buyers extends Component {
                                         width='50'
                                         height='50'
                                         className='mb-2'
+                                        alt="buyer"
                                     />
                                 </div>
                                 <div className='d-flex justify-content-center mt-4'>
@@ -319,6 +311,7 @@ class Buyers extends Component {
                                         width='50'
                                         height='50'
                                         className='mb-2'
+                                        alt="buyers"
                                     />
                                 </div>
                                 <div className='d-flex justify-content-center mt-4'>
@@ -361,7 +354,7 @@ class Buyers extends Component {
                                                 src={deizgLogo}
                                                 width={dezWidth}
                                                 height={dezHeight}
-                                            // className='dez-logo'
+                                                alt="DeszignablezArt"
                                             />
                                         </a>
                                     </div>
@@ -372,7 +365,7 @@ class Buyers extends Component {
                                                 src={alfaLogo}
                                                 width='280'
                                                 height='220'
-                                            // className='alfa-logo'
+                                                alt="alfa"
                                             />
                                         </a>
                                     </div>
@@ -383,7 +376,7 @@ class Buyers extends Component {
                                                 src={lumiLogo}
                                                 width={lumiWidth}
                                                 height={lumiHeight}
-                                            // className='lumi-logo'
+                                                alt="lumiereEgypt"
                                             />
                                         </a>
                                     </div>
@@ -394,7 +387,7 @@ class Buyers extends Component {
                                                 src={mizajLogo}
                                                 width='270'
                                                 height='170'
-                                            // className='mizaj-logo'
+                                                alt = "Mazijtileseg"
                                             />
                                         </a>
                                     </div>
@@ -407,7 +400,7 @@ class Buyers extends Component {
                                                 src={tagoLogo}
                                                 width={tagWidth}
                                                 height={tagHeight}
-                                            // className='tag-logo'
+                                                alt="tagouryshouse"
                                             />
                                         </a>
                                     </div>
@@ -418,7 +411,7 @@ class Buyers extends Component {
                                                 src={jassLogo}
                                                 width={jassWidth}
                                                 height={jassHeight}
-                                            // className='jass-logo'
+                                                alt="JWardanDesign"
                                             />
                                         </a>
                                     </div>
@@ -445,7 +438,7 @@ class Buyers extends Component {
                                                 )} src={emporLogo}
                                                 width={emporWidth}
                                                 height={emporHeight}
-                                            // className='atlas-logo'
+                                                alt="designemporiumegypt"
                                             />
                                         </a>
                                     </div>
@@ -459,7 +452,7 @@ class Buyers extends Component {
                                                 src={carnegieLogo}
                                                 width={carnegieWidth}
                                                 height={carnegieHeight}
-                                            // className='atlas-logo'
+                                                alt="carnegiefabrics"
                                             />
                                         </a>
                                     </div>
@@ -472,7 +465,7 @@ class Buyers extends Component {
                                                 )} src={tarekLogo}
                                                 width='120'
                                                 height='200'
-                                            // className='atlas-logo'
+                                                alt="elnasrparquet"
                                             />
                                         </a>
                                     </div>
@@ -485,7 +478,7 @@ class Buyers extends Component {
                                                 src={mahalyLogo}
                                                 width={mahalyWidth}
                                                 height={mahalyHeight}
-                                            // className='atlas-logo'
+                                                alt="mahally"
                                             />
                                         </a>
                                     </div>

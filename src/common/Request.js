@@ -165,7 +165,7 @@ class Request extends Component {
                                         <FormGroup >
                                             <Label for='name' className="request-fields">Name</Label>
                                             <Input
-                                                className='form-control-escrus'
+                                                className='form-control-escrus request-input'
                                                 type='name'
                                                 name='name'
                                                 id='name'
@@ -183,7 +183,7 @@ class Request extends Component {
                                                 Email
                                             </Label>
                                             <Input
-                                                className='form-control-escrus'
+                                                className='form-control-escrus request-input'
                                                 type='email'
                                                 name='email'
                                                 id='email'
@@ -202,7 +202,7 @@ class Request extends Component {
                                                 Phone Number
                                             </Label>
                                             <Input 
-                                                className='form-control-escrus'
+                                                className='form-control-escrus request-input'
                                                 name="phone" 
                                                 id="phone"
                                                 placeholder="Write your number here"
@@ -219,7 +219,7 @@ class Request extends Component {
                                             <select
                                                 name='professionalRole'
                                                 className={classnames(
-                                                    'form-control-escrus',
+                                                    'form-control-escrus request-input',
                                                     {
                                                         'is-invalid':
                                                             errors.professionalRole
@@ -250,7 +250,7 @@ class Request extends Component {
                                             {this.state.professionalRole === 'other' 
                                             && 
                                             (<Input 
-                                                className="form-control-escrus mt-2"
+                                                className="form-control-escrus mt-2 request-input"
                                                 name="other" 
                                                 onChange={this.onChange}
                                                 value={this.state.other}
@@ -277,7 +277,7 @@ class Request extends Component {
                                                 id='projectType'
                                                 name='projectType'
                                                 className={classnames(
-                                                    'custom-select custom-select-md form-control-escrus',
+                                                    'custom-select custom-select-md form-control-escrus request-input',
                                                     {
                                                         'is-invalid':
                                                             errors.projectType
@@ -332,7 +332,7 @@ class Request extends Component {
                                                 id='projectPhase'
                                                 name='projectPhase'
                                                 className={classnames(
-                                                    'custom-select custom-select-md form-control-escrus',
+                                                    'custom-select custom-select-md form-control-escrus request-input',
                                                     {
                                                         'is-invalid':
                                                             errors.projectPhase
@@ -375,7 +375,7 @@ class Request extends Component {
                                             id='typeOfWorkNeeded'
                                             name='typeOfWorkNeeded'
                                             className={classnames(
-                                                'custom-select custom-select-md form-control-escrus',
+                                                'custom-select custom-select-md form-control-escrus request-input',
                                                 {
                                                     'is-invalid':
                                                         errors.typeOfWorkNeeded
@@ -416,7 +416,7 @@ class Request extends Component {
                                             try to be as detailed as possible
                                         </p>
                                         <Input
-                                            className='form-control-escrus'
+                                            className='form-control-escrus request-input'
                                             name='details'
                                             onChange={this.onChange}
                                             id='details'
@@ -501,7 +501,7 @@ class Request extends Component {
                                         <Input
                                             name="reqs"
                                             value={this.state.reqs}
-                                            className='form-control-escrus'
+                                            className='form-control-escrus request-input'
                                             onChange={this.onChange}
                                         />
                                     </FormGroup>
@@ -517,7 +517,7 @@ class Request extends Component {
                                         <input
                                             type='date'
                                             className={classnames(
-                                                'form-control-escrus',
+                                                'form-control-escrus request-input',
                                                 {
                                                     'is-invalid': !isEmpty(
                                                         errors.deliveryDate

@@ -13094,9 +13094,9 @@ font-family: 'Poppins', sans-serif;
         font-weight: 400;
         line-height: 1.5;
         color: #575249;
-        background-color: rgb(248, 240, 215);
+        background-color: rgb(255, 255, 255);
         background-clip: padding-box;
-        border: 1px solid #fff;
+        border: 1px solid rgb(255, 225, 127);
         border-radius: 0rem;
         transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
         @media screen and (prefers-reduced-motion: reduce) {
@@ -13643,4 +13643,9 @@ font-family: 'Poppins', sans-serif;
 .request-header-text{
   font-size: 1.3rem;
   
+}
+
+.request-input{
+  background-color: rgb(252, 244, 172) ;
+  border: none;
 }
