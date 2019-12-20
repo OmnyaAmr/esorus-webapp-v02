@@ -12180,8 +12180,11 @@ body {
     display: block; } }
     /*STAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA MOBILE VIEW  AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAART*/
 
-
     @media (max-width: 991.98px) {
+
+      .request-header-text{
+        font-size: 0.8rem !important;
+      }
 
       .request-subsection{
         display: flex;
@@ -12191,6 +12194,7 @@ body {
       .request-form{
         width: 70%;
       }
+
       .home-desc-text{
         font-size: 15px;
         width:100% !important;
