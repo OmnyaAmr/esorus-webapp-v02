@@ -211,7 +211,7 @@ class Home extends Component {
                                                 id='left-counters-mobile'
                                             >
                                                 <AnimatedNumber
-                                                    value={35}
+                                                    value={40}
                                                     style={{
                                                         transition:
                                                             '0.8s ease-out',
