@@ -132,8 +132,11 @@ class Buyers extends Component {
                                         A single place to find furniture
                                         materials, get qoutes and purchase from
                                         over a 1000 <br /> different qualified
-                                        suppliers.{' '}
+                                        suppliers.{' '} <br />
+                                        <br />
+                                        We’re just a click away, send us your request and our FF&E Team will assist you.
                                     </p>
+                                    
                                 ) : (
                                         <p
                                             className='buyer-text3'
@@ -143,6 +146,9 @@ class Buyers extends Component {
                                             materials, get qoutes and purchase from
                                             over a 1000 different qualified
                                             suppliers.
+                                            <br />
+                                            <br />
+                                            We’re just a click away, send us your request and our FF&E Team will assist you.
                                     </p>
                                     )}
                             </Col>
