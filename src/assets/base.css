@@ -12181,7 +12181,12 @@ body {
     /*STAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA MOBILE VIEW  AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAART*/
 
     @media (max-width: 991.98px) {
-
+      .request-form-tip{
+        font-size: 0.75rem !important;
+      }
+      .request-header{
+        width: 50% !important;
+      }
       .request-header-text{
         font-size: 0.8rem !important;
       }
@@ -13427,7 +13432,7 @@ font-family: 'Poppins', sans-serif;
   width: 100%;
   background-repeat: no-repeat;
   background-position: center;
-  padding-top:15%;
+  padding-top:10%;
   padding-bottom: 40px;
   padding-left:90px;
 }
@@ -13504,6 +13509,7 @@ font-family: 'Poppins', sans-serif;
     font-family: 'Poppins', sans-serif;
   }
   .meet-our-text3{
+    font-size: 1rem;
     color: #343845;
     font-family: 'Poppins', sans-serif;
     margin-top: 0.5%;

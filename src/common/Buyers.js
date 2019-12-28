@@ -20,20 +20,27 @@ import carnegieLogo from '../assets/utils/images/carnegie-logo.png';
 import tarekLogo from '../assets/utils/images/tarek-logo.png';
 import mahalyLogo from '../assets/utils/images/mahaly-logo.png';
 import classnames from 'classnames';
+import { Link } from 'react-router-dom';
 
 class Buyers extends Component {
     constructor() {
         super();
         this.state = { email: '' };
-        this.onClick = this.onClick.bind(this);
+        this.onClick1 = this.onClick1.bind(this);
+        this.onClick2 = this.onClick2.bind(this);
     }
-    onClick(e) {
+    onClick1(e) {
+        e.preventDefault();
+        location.href = 'https://forms.gle/4PFPJPC4Z1BFBV5X7'
+    }
+    onClick2(e) {
         e.preventDefault();
         this.props.history.push('/dashboard/request');
     }
     render() {
         let { enableBuyerBackground, buyersBackground } = this.props;
-        let content;
+        let content1;
+        let content2;
         let { prev } = this.props;
         let dezWidth;
         let dezHeight;
@@ -89,13 +96,25 @@ class Buyers extends Component {
         }
 
         if (prev !== ROLE_SUPPLIER) {
-            content = (
+            content1 = (
                 <div className='click-away'>
                     <input
                         type='button'
                         className='btn-escrus mt-2'
                         value='Source Now'
-                        onClick={this.onClick}
+                        onClick={this.onClick1}
+
+                    />
+                </div>
+            );
+            content2 = (
+                <div className='click-away'>
+                    <input
+                        type='button'
+                        className='btn-escrus mt-2'
+                        value='Source Now'
+                        onClick={this.onClick2}
+
                     />
                 </div>
             );
@@ -116,7 +135,8 @@ class Buyers extends Component {
                             backgroundImage: enableBuyerBackground
                                 ? 'url(' + buyersBackground + ')'
                                 : null,
-                            height: '700px'
+                            height: '700px',
+
                         }}
                     >
                         <Row className='slogan-buyer-position'>
@@ -124,7 +144,7 @@ class Buyers extends Component {
                                 {' '}
                                 <h1 className='slogan8-text'>
                                     FF&E Personal Assistant for Interior
-                                    Designers <br /> and 
+                                    Designers <br /> and
                                     Professional Buyers{' '}
                                 </h1>
                                 {enableBuyerBackground ? (
@@ -136,7 +156,7 @@ class Buyers extends Component {
                                         <br />
                                         We’re just a click away, send us your request and our FF&E Team will assist you.
                                     </p>
-                                    
+
                                 ) : (
                                         <p
                                             className='buyer-text3'
@@ -156,7 +176,7 @@ class Buyers extends Component {
                                 className='buyers4-mobile'
                                 style={{ flexBasis: '100%' }}
                             >
-                                {content}
+                                {content1}
                             </Col>
                         </Row>
                     </div>
@@ -172,7 +192,7 @@ class Buyers extends Component {
                         )}
                     </Row>
 
-                    <div className='app-main-enhanced'>
+                    <div className='app-main-enhanced' >
                         <Row>
                             <Col>
                                 <div className='heading-section mb-5 pt-5 pl-md-5'>
@@ -203,9 +223,10 @@ class Buyers extends Component {
                                                 project needs by signing up and
                                                 using the source now button.
                                             </p>
+                                            <div>{content2}</div>
                                         </div>
                                     </div>
-                                    <div className='services-wrap d-flex'>
+                                    <div className='services-wrap d-flex' style={{ marginTop: '23px' }}>
                                         <div className='media-body pl-md-0 pl-4 pr-4 order-md-first text-md-left'>
                                             <h3 className='heading'>
                                                 Receive Quotations
@@ -227,7 +248,7 @@ class Buyers extends Component {
                                             </p>
                                         </div>
                                     </div>
-                                        <div>{content}</div>
+
                                 </div>
                             </Col>
                             {enableBuyerBackground && (
@@ -393,7 +414,7 @@ class Buyers extends Component {
                                                 src={mizajLogo}
                                                 width='270'
                                                 height='170'
-                                                alt = "Mazijtileseg"
+                                                alt="Mazijtileseg"
                                             />
                                         </a>
                                     </div>
