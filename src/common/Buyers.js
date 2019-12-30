@@ -20,7 +20,6 @@ import carnegieLogo from '../assets/utils/images/carnegie-logo.png';
 import tarekLogo from '../assets/utils/images/tarek-logo.png';
 import mahalyLogo from '../assets/utils/images/mahaly-logo.png';
 import classnames from 'classnames';
-import { Link } from 'react-router-dom';
 
 class Buyers extends Component {
     constructor() {
@@ -31,7 +30,7 @@ class Buyers extends Component {
     }
     onClick1(e) {
         e.preventDefault();
-        location.href = 'https://forms.gle/4PFPJPC4Z1BFBV5X7'
+        location.href = 'https://forms.gle/4PFPJPC4Z1BFBV5X7';
     }
     onClick2(e) {
         e.preventDefault();
