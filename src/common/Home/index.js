@@ -2,7 +2,7 @@ import React, { Fragment, Component } from 'react';
 import { connect } from 'react-redux';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import PerfectScrollbar from 'react-perfect-scrollbar';
-import { Row, Col, Container, Card } from 'reactstrap';
+import { Row, Col, Container } from 'reactstrap';
 import AnimatedNumber from 'react-animated-number';
 
 class Home extends Component {
