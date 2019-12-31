@@ -23,3 +23,9 @@ export const CONFIRMATION_REQUIRED = 'CONFIRMATION_REQUIRED';
 
 export const ROLE_PROFESSIONAL_BUYER = 'ROLE_PROFESSIONAL_BUYER';
 export const ROLE_SUPPLIER = 'ROLE_SUPPLIER';
+
+// CONTENT
+
+export const BUYER = 'buyer_content';
+export const SUPPLIER = 'supplier_content';
+export const HOME = 'home_content';

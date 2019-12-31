@@ -4,6 +4,8 @@ import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import PerfectScrollbar from 'react-perfect-scrollbar';
 import { Row, Col, Container } from 'reactstrap';
 import AnimatedNumber from 'react-animated-number';
+import Spinner from '../Spinner';
+import {homeContent} from '../../actions/contentActions';
 
 class Home extends Component {
     constructor() {
@@ -11,10 +13,21 @@ class Home extends Component {
         this.state = {
             email: '',
             count: false,
-            value: 0
+            value: 0,
+            homeContent: []
         };
         this.onClick = this.onClick.bind(this);
         this.onChange = this.onChange.bind(this);
+    }
+
+    componentWillMount()
+    {
+        this.props.homeContent();
+    }
+
+    componentWillReceiveProps(nextProps)
+    {
+        this.setState({homeContent: nextProps.content.data});
     }
 
     componentDidMount() {
@@ -62,6 +75,13 @@ class Home extends Component {
     }
 
     render() {
+        // Content
+        let {homeContent} = this.state;
+
+        //HANDLE loading
+        let { loading } = this.props.loading;
+        if (loading) return <Spinner />;
+
         let { enableHomeBackground, homeBackground } = this.props;
         let { isAuthenticated } = this.props.auth;
 
@@ -127,13 +147,13 @@ class Home extends Component {
                                 <Row className='slogan-position'>
                                     <Col>
                                         <h1 className='slogan-text'>
-                                            Interior Sourcing
+                                            {homeContent[0] ? homeContent[0].value : ''}
                                         </h1>
                                         <h1 className='slogan-text'>
-                                            Made Easy
+                                            {homeContent[1] ? homeContent[1].value : ''}
                                         </h1>
                                         <p className="slogan22-text" >
-                                            Your FF&E Personal Assistant for sourcing and procurement.
+                                            {homeContent[2] ? homeContent[2].value : ''}
                                         </p>
                                         {content}
                                     </Col>
@@ -141,15 +161,15 @@ class Home extends Component {
                             ) : (
                                     <Row className='slogan-position'>
                                         <Col>
-                                            <h1 className='slogan-text'>
-                                                Interior Sourcing
-                                            </h1>
-                                            <h1 className='slogan-text'>
-                                                Made Easy
-                                            </h1>
-                                            <p className='slogan22-text'>
-                                                Your FF&E Personal Assistant for sourcing and procurement.
-                                            </p>
+                                        <h1 className='slogan-text'>
+                                            {homeContent[0] ? homeContent[0].value : ''}
+                                        </h1>
+                                        <h1 className='slogan-text'>
+                                            {homeContent[1] ? homeContent[1].value : ''}
+                                        </h1>
+                                        <p className="slogan22-text" >
+                                            {homeContent[2] ? homeContent[2].value : ''}
+                                        </p>
 
                                         </Col>
                                     </Row>
@@ -159,10 +179,10 @@ class Home extends Component {
                 </div>
                 <div className='slogan2-position'>
                     <h1 className='slogan2-text ml-5'>
-                        We are <strong>automating</strong>
+                        {homeContent[3] ? homeContent[3].value : ''}
                     </h1>
                     <h1 className='slogan2-text ml-5'>
-                        the interior sourcing process!
+                        {homeContent[4] ? homeContent[4].value : ''}
                     </h1>
                 </div>
                 <div className='review-background-escrus' id='aboutUs'>
@@ -173,16 +193,16 @@ class Home extends Component {
                                     <Row className='home-counters-row' id='about'>
                                         <Col>
                                             <h1 className='slogan5-text'>
-                                                SOME
+                                                {homeContent[5] ? homeContent[5].value : ''}
                                             </h1>
                                             <h1 className='slogan3-text'>
-                                                Interesting Facts
+                                                {homeContent[6] ? homeContent[6].value : ''}
                                             </h1>
                                         </Col>
                                         <Row className='counters-mobile'>
                                             <Col className='slogan7-text'>
                                                 <AnimatedNumber
-                                                    value={1000}
+                                                    value={homeContent[7] ? homeContent[7].value : '1000'}
                                                     style={{
                                                         transition:
                                                             '0.8s ease-out',
@@ -203,7 +223,7 @@ class Home extends Component {
                                                     }
                                                 />
                                                 <h4 className='slogan6-text'>
-                                                    Suppliers
+                                                {homeContent[8] ? homeContent[8].value : ''}
                                                 </h4>
                                             </Col>
                                             <Col
@@ -211,7 +231,7 @@ class Home extends Component {
                                                 id='left-counters-mobile'
                                             >
                                                 <AnimatedNumber
-                                                    value={40}
+                                                    value={homeContent[9] ? homeContent[9].value : ''}
                                                     style={{
                                                         transition:
                                                             '0.8s ease-out',
@@ -233,12 +253,12 @@ class Home extends Component {
                                                     }
                                                 />
                                                 <h4 className='slogan6-text'>
-                                                    Projects
+                                                {homeContent[10] ? homeContent[10].value : ''}
                                                 </h4>
                                             </Col>
                                             <Col className='slogan7-text'>
                                                 <AnimatedNumber
-                                                    value={10}
+                                                    value={homeContent[11] ? homeContent[11].value : ''}
                                                     style={{
                                                         transition:
                                                             '0.8s ease-out',
@@ -260,7 +280,7 @@ class Home extends Component {
                                                     }
                                                 />
                                                 <h4 className='slogan6-text'>
-                                                    Years Experience
+                                                {homeContent[12] ? homeContent[12].value : ''}
                                                 </h4>
                                             </Col>
                                             <Col
@@ -269,7 +289,7 @@ class Home extends Component {
                                                 style={{ paddingRight: '0' }}
                                             >
                                                 <AnimatedNumber
-                                                    value={55}
+                                                    value={homeContent[13] ? homeContent[13].value : ''}
                                                     style={{
                                                         transition:
                                                             '0.8s ease-out',
@@ -291,7 +311,7 @@ class Home extends Component {
                                                     }
                                                 />
                                                 <h4 className='slogan6-text'>
-                                                    Successful Matchmaking
+                                                {homeContent[14] ? homeContent[14].value : ''}
                                                 </h4>
                                             </Col>
                                         </Row>
@@ -305,7 +325,7 @@ class Home extends Component {
                         <Row className='pt-lg-4'>
                             <Col className='text-center' md={12}>
                                 <h2 className='mb-4 slogan8-text'>
-                                    Our satisfied client says
+                                    {homeContent[15] ? homeContent[15].value : ''}
                                 </h2>
                             </Col>
                         </Row>
@@ -317,6 +337,7 @@ class Home extends Component {
                                             <img
                                                 className='user-img mb-5'
                                                 src={require('../../assets/utils/images/person_1.jpeg')}
+                                                alt="user"
                                             ></img>
                                             <div className='text'>
                                                 <p className='mb-5'>
@@ -342,11 +363,10 @@ class Home extends Component {
                                                     more projects in the future.
                                                 </p>
                                                 <p className='name'>
-                                                    NORA EL FAKHARANY
+                                                    {homeContent[16] ? homeContent[16].value : ''}
                                                 </p>
                                                 <span className='position'>
-                                                    ENCORE INTERIOR DESIGN &
-                                                    CONSTRUCTION
+                                                    {homeContent[17] ? homeContent[17].value : ''}
                                                 </span>
                                             </div>
                                         </div>
@@ -364,9 +384,9 @@ class Home extends Component {
 const mapStateToProps = state => ({
     enableHomeBackground: state.ThemeOptions.enableHomeBackground,
     homeBackground: state.ThemeOptions.homeBackground,
-    auth: state.auth
+    auth: state.auth,
+    content: state.content.home,
+    loading: state.loading
 });
 
-export default connect(mapStateToProps)(Home);
-
-// We are reinventing the interior sourcing process!
+export default connect(mapStateToProps, {homeContent})(Home);
