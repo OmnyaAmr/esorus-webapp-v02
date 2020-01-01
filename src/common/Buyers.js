@@ -58,40 +58,40 @@ class Buyers extends Component {
         let mahalyWidth;
         let mahalyHeight;
         if (enableBuyerBackground) {
-            dezWidth = '360';
-            dezHeight = '200';
-            lumiWidth = '330';
-            lumiHeight = '150';
-            tagWidth = '370';
-            tagHeight = '270';
-            jassWidth = '350';
-            jassHeight = '280';
-            atlasWidth = '350';
-            atlasHeight = '220';
+            dezWidth = '250';
+            dezHeight = '250';
+            lumiWidth = '250';
+            lumiHeight = '250';
+            tagWidth = '250';
+            tagHeight = '250';
+            jassWidth = '250';
+            jassHeight = '250';
+            atlasWidth = '250';
+            atlasHeight = '250';
             emporWidth = '250';
             emporHeight = '250';
-            carnegieWidth = '300';
-            carnegieHeight = '200';
-            mahalyWidth = '360';
-            mahalyHeight = '200';
+            carnegieWidth = '250';
+            carnegieHeight = '250';
+            mahalyWidth = '250';
+            mahalyHeight = '250';
 
         } else {
-            dezWidth = '290';
-            dezHeight = '150';
-            lumiWidth = '280';
-            lumiHeight = '150';
-            tagWidth = '330';
-            tagHeight = '150';
-            jassWidth = '290';
-            jassHeight = '200';
+            dezWidth = '250';
+            dezHeight = '250';
+            lumiWidth = '250';
+            lumiHeight = '250';
+            tagWidth = '250';
+            tagHeight = '250';
+            jassWidth = '250';
+            jassHeight = '250';
             atlasWidth = '250';
-            atlasHeight = '190';
-            emporWidth = '230';
-            emporHeight = '240';
-            carnegieWidth = '320';
-            carnegieHeight = '200';
-            mahalyWidth = '320';
-            mahalyHeight = '150';
+            atlasHeight = '250';
+            emporWidth = '250';
+            emporHeight = '250';
+            carnegieWidth = '250';
+            carnegieHeight = '250';
+            mahalyWidth = '250';
+            mahalyHeight = '250';
         }
 
         if (prev !== ROLE_SUPPLIER) {
@@ -389,7 +389,7 @@ class Buyers extends Component {
                                             <img
                                                 className='ml-1'
                                                 src={alfaLogo}
-                                                width='280'
+                                                width='250'
                                                 height='250'
                                                 alt="alfa"
                                             />
@@ -411,8 +411,8 @@ class Buyers extends Component {
                                             <img
                                                 className='ml-1'
                                                 src={mizajLogo}
-                                                width='270'
-                                                height='170'
+                                                width='250'
+                                                height='250'
                                                 alt="Mazijtileseg"
                                             />
                                         </a>
@@ -452,29 +452,25 @@ class Buyers extends Component {
                                             />
                                         </a>
                                     </div>
-
-                                </div>
-                                <div className='logos'>
                                     <div>
                                         <a href='http://designemporiumegypt.com/Home.html' target="_blank">
                                             <img
-                                                className={classnames(
-                                                    { 'ml-5': enableBuyerBackground },
-                                                    { 'ml-1': !enableBuyerBackground }
-                                                )} src={emporLogo}
+                                                className='ml-1'
+
+                                                src={emporLogo}
                                                 width={emporWidth}
                                                 height={emporHeight}
                                                 alt="designemporiumegypt"
                                             />
                                         </a>
                                     </div>
+                                </div>
+                                <div className='logos'>
+
                                     <div>
                                         <a href='https://carnegiefabrics.com/' target="_blank">
                                             <img
-                                                className={classnames(
-                                                    { 'ml-5': enableBuyerBackground },
-                                                    { 'ml-1': !enableBuyerBackground }
-                                                )}
+                                                className='ml-1'
                                                 src={carnegieLogo}
                                                 width={carnegieWidth}
                                                 height={carnegieHeight}
@@ -485,18 +481,14 @@ class Buyers extends Component {
                                     <div>
                                         <a href='http://www.elnasrparquet.com/' target="_blank">
                                             <img
-                                                className={classnames(
-                                                    { 'ml-5': enableBuyerBackground },
-                                                    { 'ml-1': !enableBuyerBackground }
-                                                )} src={tarekLogo}
-                                                width='180'
-                                                height='200'
+                                                className='ml-1'
+                                                src={tarekLogo}
+                                                width='250'
+                                                height='250'
                                                 alt="elnasrparquet"
                                             />
                                         </a>
                                     </div>
-                                </div>
-                                <div className='logos'>
                                     <div>
                                         <a href='https://mahally.net/' target="_blank">
                                             <img
@@ -509,6 +501,7 @@ class Buyers extends Component {
                                         </a>
                                     </div>
                                 </div>
+
                             </div>
                         </Container>
                     </div>

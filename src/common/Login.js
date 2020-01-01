@@ -172,7 +172,7 @@ class Login extends React.Component {
                                                             this.onSignupClick
                                                         }
                                                     >
-                                                        Sign up
+                                                        Sign Up
                                                     </Button>
                                                 </Col>
                                             </Row>

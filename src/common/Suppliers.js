@@ -74,13 +74,7 @@ class Suppliers extends Component {
 			if (enableSupplierBackground) {
 				content = (
 					<div className="d-flex justify-content-left mt-4">
-						<input
-							className="form-control-escrus form-control-lg-escrus ml-1"
-							onChange={this.onChange}
-							value={this.state.email}
-							placeholder="Enter your email here"
-							name="email"
-						/>
+
 						<input
 							type="button"
 							className="btn-escrus ml-1"
