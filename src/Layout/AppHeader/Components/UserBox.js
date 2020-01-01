@@ -75,7 +75,7 @@ class UserBox extends React.Component {
 									id="sign-in"
 									style={{ width: '90px', height: '40px' }}
 								>
-									Log out
+									Log Out
 								</Button>
 								<UncontrolledTooltip
 									placement="bottom"

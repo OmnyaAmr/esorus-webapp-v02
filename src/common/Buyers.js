@@ -8,17 +8,17 @@ import data from '../assets/components/icons/data.svg';
 import startUp from '../assets/components/icons/startup.svg';
 import buyersPic from '../assets/utils/images/originals/buyersPic.jpg';
 import { ROLE_SUPPLIER } from '../actions/types';
-import deizgLogo from '../assets/utils/images/Dezignablez_logo.png';
-import alfaLogo from '../assets/utils/images/Alfa_Furniture_Logo.png';
-import lumiLogo from '../assets/utils/images/lumi_logo.png';
-import mizajLogo from '../assets/utils/images/Mizaj_Logo.png';
-import tagoLogo from '../assets/utils/images/tago-logo.png';
+import deizgLogo from '../assets/utils/images/Dezignablez_logo.jpg';
+import alfaLogo from '../assets/utils/images/Alfa_Furniture_Logo.jpg';
+import lumiLogo from '../assets/utils/images/lumi_logo.jpg';
+import mizajLogo from '../assets/utils/images/Mizaj_Logo.jpg';
+import tagoLogo from '../assets/utils/images/tago-logo.jpg';
 import jassLogo from '../assets/utils/images/Jass.jpg';
-import atlasLogo from '../assets/utils/images/Atlas_Concorde.png';
-import emporLogo from '../assets/utils/images/empor-logo.png';
-import carnegieLogo from '../assets/utils/images/carnegie-logo.png';
-import tarekLogo from '../assets/utils/images/tarek-logo.png';
-import mahalyLogo from '../assets/utils/images/mahaly-logo.png';
+import atlasLogo from '../assets/utils/images/Atlas_Concorde.jpg';
+import emporLogo from '../assets/utils/images/empor-logo.jpg';
+import carnegieLogo from '../assets/utils/images/carnegie-logo.jpg';
+import tarekLogo from '../assets/utils/images/tarek-logo.jpg';
+import mahalyLogo from '../assets/utils/images/mahaly-logo.jpg';
 import classnames from 'classnames';
 
 class Buyers extends Component {
@@ -59,39 +59,39 @@ class Buyers extends Component {
         let mahalyHeight;
         if (enableBuyerBackground) {
             dezWidth = '360';
-            dezHeight = '110';
+            dezHeight = '200';
             lumiWidth = '330';
-            lumiHeight = '120';
-            tagWidth = '400';
-            tagHeight = '200';
+            lumiHeight = '150';
+            tagWidth = '370';
+            tagHeight = '270';
             jassWidth = '350';
-            jassHeight = '100';
-            atlasWidth = '370';
-            atlasHeight = '120';
+            jassHeight = '280';
+            atlasWidth = '350';
+            atlasHeight = '220';
             emporWidth = '250';
-            emporHeight = '200';
-            carnegieWidth = '350';
-            carnegieHeight = '55';
+            emporHeight = '250';
+            carnegieWidth = '300';
+            carnegieHeight = '200';
             mahalyWidth = '360';
-            mahalyHeight = '100';
+            mahalyHeight = '200';
 
         } else {
             dezWidth = '290';
-            dezHeight = '80';
+            dezHeight = '150';
             lumiWidth = '280';
-            lumiHeight = '90';
+            lumiHeight = '150';
             tagWidth = '330';
             tagHeight = '150';
             jassWidth = '290';
-            jassHeight = '80';
-            atlasWidth = '280';
-            atlasHeight = '90';
-            emporWidth = '200';
-            emporHeight = '140';
+            jassHeight = '200';
+            atlasWidth = '250';
+            atlasHeight = '190';
+            emporWidth = '230';
+            emporHeight = '240';
             carnegieWidth = '320';
-            carnegieHeight = '50';
+            carnegieHeight = '200';
             mahalyWidth = '320';
-            mahalyHeight = '100';
+            mahalyHeight = '150';
         }
 
         if (prev !== ROLE_SUPPLIER) {
@@ -374,7 +374,7 @@ class Buyers extends Component {
                             <div className='logo-container'>
                                 <div className='logos'>
                                     <div>
-                                        <a href='https://www.facebook.com/DezignablezArt/'>
+                                        <a href='https://www.facebook.com/DezignablezArt/' target="_blank">
                                             <img
                                                 className='ml-1'
                                                 src={deizgLogo}
@@ -385,18 +385,18 @@ class Buyers extends Component {
                                         </a>
                                     </div>
                                     <div>
-                                        <a href=' http://www.alfa.furniture/'>
+                                        <a href=' http://www.alfa.furniture/' target="_blank">
                                             <img
                                                 className='ml-1'
                                                 src={alfaLogo}
                                                 width='280'
-                                                height='220'
+                                                height='250'
                                                 alt="alfa"
                                             />
                                         </a>
                                     </div>
                                     <div>
-                                        <a href='https://www.facebook.com/LumiereEgypt/'>
+                                        <a href='https://www.facebook.com/LumiereEgypt/' target="_blank">
                                             <img
                                                 className='ml-1'
                                                 src={lumiLogo}
@@ -407,7 +407,7 @@ class Buyers extends Component {
                                         </a>
                                     </div>
                                     <div>
-                                        <a href='https://www.facebook.com/Mizajtileseg/'>
+                                        <a href='https://www.facebook.com/Mizajtileseg/' target="_blank">
                                             <img
                                                 className='ml-1'
                                                 src={mizajLogo}
@@ -420,7 +420,7 @@ class Buyers extends Component {
                                 </div>
                                 <div className='logos'>
                                     <div>
-                                        <a href='http://tagouryshouse.com/'>
+                                        <a href='http://tagouryshouse.com/' target="_blank">
                                             <img
                                                 className='ml-1'
                                                 src={tagoLogo}
@@ -431,7 +431,7 @@ class Buyers extends Component {
                                         </a>
                                     </div>
                                     <div>
-                                        <a href='https://www.facebook.com/JWardaniDesign/'>
+                                        <a href='https://www.facebook.com/JWardaniDesign/' target="_blank">
                                             <img
                                                 className='ml-1'
                                                 src={jassLogo}
@@ -442,7 +442,7 @@ class Buyers extends Component {
                                         </a>
                                     </div>
                                     <div>
-                                        <a href='https://www.atlasconcorde.com/en/'>
+                                        <a href='https://www.atlasconcorde.com/en/' target="_blank">
                                             <img
                                                 className='ml-1'
                                                 src={atlasLogo}
@@ -456,7 +456,7 @@ class Buyers extends Component {
                                 </div>
                                 <div className='logos'>
                                     <div>
-                                        <a href='http://designemporiumegypt.com/Home.html'>
+                                        <a href='http://designemporiumegypt.com/Home.html' target="_blank">
                                             <img
                                                 className={classnames(
                                                     { 'ml-5': enableBuyerBackground },
@@ -469,7 +469,7 @@ class Buyers extends Component {
                                         </a>
                                     </div>
                                     <div>
-                                        <a href='https://carnegiefabrics.com/'>
+                                        <a href='https://carnegiefabrics.com/' target="_blank">
                                             <img
                                                 className={classnames(
                                                     { 'ml-5': enableBuyerBackground },
@@ -483,13 +483,13 @@ class Buyers extends Component {
                                         </a>
                                     </div>
                                     <div>
-                                        <a href='http://www.elnasrparquet.com/'>
+                                        <a href='http://www.elnasrparquet.com/' target="_blank">
                                             <img
                                                 className={classnames(
                                                     { 'ml-5': enableBuyerBackground },
                                                     { 'ml-1': !enableBuyerBackground }
                                                 )} src={tarekLogo}
-                                                width='120'
+                                                width='180'
                                                 height='200'
                                                 alt="elnasrparquet"
                                             />
@@ -498,7 +498,7 @@ class Buyers extends Component {
                                 </div>
                                 <div className='logos'>
                                     <div>
-                                        <a href='https://mahally.net/'>
+                                        <a href='https://mahally.net/' target="_blank">
                                             <img
                                                 className='ml-1'
                                                 src={mahalyLogo}

@@ -12935,7 +12935,7 @@ body {
 }
 
 .slogan22-text{
-  font-weight: 400;
+  font-weight: 600;
   font-size: 13.5px;
   font-family: 'Poppins', sans-serif;
   color: black;
@@ -13432,7 +13432,7 @@ font-family: 'Poppins', sans-serif;
   width: 100%;
   background-repeat: no-repeat;
   background-position: center;
-  padding-top:10%;
+  padding-top:5%;
   padding-bottom: 40px;
   padding-left:90px;
 }
@@ -13505,6 +13505,7 @@ font-family: 'Poppins', sans-serif;
 
   }
   .meet-our-text2{
+    font-size: 1rem;
     color: #343845;
     font-family: 'Poppins', sans-serif;
   }

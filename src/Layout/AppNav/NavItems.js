@@ -80,7 +80,7 @@ let InitialNavs = {
 };
 
 let logout = {
-    label: 'Log out',
+    label: 'Log Out',
     to: '#/dashboard/logout'
 };
 

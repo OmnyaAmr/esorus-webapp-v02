@@ -160,7 +160,7 @@ class Login extends React.Component {
                                             <Row>
                                                 <Col>
                                                     <Button className='btn-escrus block log-in mt-4 mb-2'>
-                                                        Log in
+                                                        Log In
                                                     </Button>
                                                 </Col>
                                             </Row>

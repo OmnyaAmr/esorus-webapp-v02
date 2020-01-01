@@ -248,7 +248,7 @@ class Suppliers extends Component {
 							</Row>
 							<Row>
 								<Col>
-									<a href="http://www.encore-cf.com/">
+									<a href="http://www.encore-cf.com/" target="_blank">
 										<div className="d-flex justify-content-center mt-4">
 											<img
 												className="ml-1 mb-2"
