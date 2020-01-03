@@ -6,7 +6,7 @@ const validateReqeustInput = data => {
 	data.name = !isEmpty(data.name) ? data.name : '';
 	data.quantity = !isEmpty(data.quantity) ? data.quantity : '';
 	data.email = !isEmpty(data.email) ? data.email : '';
-	data.phone = !isEmpty(data.phone) ? data.phone : '';
+	data.phoneNumber = !isEmpty(data.phoneNumber) ? data.phoneNumber : '';
 	data.professionalRole = !isEmpty(data.professionalRole)
 		? data.professionalRole
 		: '';
@@ -22,7 +22,7 @@ const validateReqeustInput = data => {
 	if (Validator.isEmpty(data.name)) {
 		errors.name = 'Name is required';
 	}
-	if (Validator.isEmpty(data.phone)) {
+	if (Validator.isEmpty(data.phoneNumber)) {
 		errors.phone = 'Phone is required';
 	}
 	if (Validator.isEmpty(data.email)) {

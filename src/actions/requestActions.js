@@ -24,28 +24,37 @@ export const requestForm = (reqData, SRC) => dispatch => {
 	formdata.append('file', reqData.file);
 
 	axios
-		.post('/api/upload-files', formdata)
+		.post('/api/upload-files?type=file', formdata)
 		.then(res => {
 			let uploadedPic = res.data.fileSystemName;
 			reqData.uploadedPic = uploadedPic;
-			axios
-				.post('/api/request-for-supplier', reqData)
-				.then(res => {
-					SRC.showToast(
-						'success',
-						'Congratulations .. Your request has been successfully registered !'
-					);
-					SRC.props.history.push('/dashboard/home');
-					dispatch(setLoaded());
-				})
-				.catch(err => {
-					console.log('Request Error: ', err.response.data);
-					dispatch({
-						type: GET_ERRORS,
-						payload: err.response.data,
+
+			let formdata = new FormData();
+			formdata.append('file', reqData.boqfile);
+			axios.post('/api/upload-files?type=boq', formdata).then(res => {
+				let uploadedBOQ = res.data.fileSystemName;
+				reqData.uploadedBOQ = uploadedBOQ;
+
+				axios
+					.post('/api/request-for-supplier', reqData)
+					.then(res => {
+						SRC.showToast(
+							'success',
+							'Congratulations .. Your request has been successfully registered !'
+						);
+						SRC.props.history.push('/dashboard/home');
+						dispatch(setLoaded());
+					})
+					.catch(err => {
+						console.log('Request Error: ', err.response.data);
+						dispatch({
+							type: GET_ERRORS,
+							payload: err.response.data,
+						});
 					});
-					dispatch(setLoaded());
-				});
+
+				dispatch(setLoaded());
+			});
 		})
 		.catch(err => {
 			dispatch({

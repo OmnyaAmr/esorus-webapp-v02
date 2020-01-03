@@ -23,7 +23,7 @@ class Request extends Component {
         this.state = {
             name: '',
             email: '',
-            phone: '',
+            phoneNumber: '',
             professionalRole: '',
             projectType: '',
             projectPhase: '',
@@ -203,12 +203,12 @@ class Request extends Component {
                                             </Label>
                                             <Input 
                                                 className='form-control-escrus request-input'
-                                                name="phone" 
-                                                id="phone"
+                                                name="phoneNumber" 
+                                                id="phoneNumber"
                                                 placeholder="Write your number here"
-                                                value={this.state.phone} 
+                                                value={this.state.phoneNumber} 
                                                 onChange={this.onChange} 
-                                                invalid = {!isEmpty(errors.phone)} 
+                                                invalid = {!isEmpty(errors.phoneNumber)} 
                                             />
                                         </FormGroup>
 
@@ -237,7 +237,7 @@ class Request extends Component {
                                                 <option value='conslutant'>
                                                     Consultant  
                                                 </option>
-                                                <option value='project_owner'>
+                                                <option value='architect'>
                                                     Interior Designer / Architect
                                                 </option>
                                                 <option value='freelancer'>
@@ -347,10 +347,10 @@ class Request extends Component {
                                                 <option value='inspiration'>
                                                     Still looking for inspiration
                                                 </option>
-                                                <option value='design_phase'>
+                                                <option value='design'>
                                                     Design Phase
                                                 </option>
-                                                <option value='technical_phase'>
+                                                <option value='technical'>
                                                     Technical Phase
                                                 </option>
                                                 <option value='budget_estimation'>
@@ -499,8 +499,8 @@ class Request extends Component {
                                             requirements for your request?
                                         </Label>
                                         <Input
-                                            name="reqs"
-                                            value={this.state.reqs}
+                                            name="special"
+                                            value={this.state.special}
                                             className='form-control-escrus request-input'
                                             onChange={this.onChange}
                                         />
