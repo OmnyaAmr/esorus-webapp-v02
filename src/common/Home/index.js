@@ -71,17 +71,17 @@ class Home extends Component {
             if (enableHomeBackground) {
                 content = (
                     <div className='join-now mt-4'>
-                        <input
+                        {/* <input
                             className='form-control-escrus form-control-lg-escrus ml-1'
                             onChange={this.onChange}
                             value={this.state.email}
                             placeholder='Enter your email here'
                             name='email'
-                        />
+                        /> */}
                         <input
                             type='button'
                             className='btn-escrus ml-1'
-                            value='Join Now'
+                            value='Get Started'
                             onClick={this.onClick}
                         />
                     </div>
@@ -91,18 +91,9 @@ class Home extends Component {
                     <div>
                         <div className='d-flex justify-content-center mt-4'>
                             <input
-                                className='form-control-escrus form-control-lg-escrus ml-1'
-                                onChange={this.onChange}
-                                value={this.state.email}
-                                placeholder='Enter your email here'
-                                name='email'
-                            />
-                        </div>
-                        <div className='d-flex justify-content-center mt-4'>
-                            <input
                                 type='button'
                                 className='btn-escrus ml-1'
-                                value='Join Now'
+                                value='Get Started'
                                 onClick={this.onClick}
                             />
                         </div>
@@ -135,33 +126,40 @@ class Home extends Component {
                             {!isAuthenticated ? (
                                 <Row className='slogan-position'>
                                     <Col>
-                                        <h2 className='slogan-text'>
+                                        <h1 className='slogan-text'>
                                             Interior Sourcing
-                                        </h2>
-                                        <h2 className='slogan-text'>
+                                        </h1>
+                                        <h1 className='slogan-text'>
                                             Made Easy
-                                        </h2>
+                                        </h1>
+                                        <p className="slogan22-text" >
+                                            Your FF&E Personal Assistant for sourcing and procurement.
+                                        </p>
                                         {content}
                                     </Col>
                                 </Row>
                             ) : (
-                                <Row className='slogan-position'>
-                                    <Col>
-                                        <h2 className='slogan-text'>
-                                            Interior Sourcing
-                                        </h2>
-                                        <h2 className='slogan-text'>
-                                            Made Easy
-                                        </h2>
-                                    </Col>
-                                </Row>
-                            )}
+                                    <Row className='slogan-position'>
+                                        <Col>
+                                            <h1 className='slogan-text'>
+                                                Interior Sourcing
+                                            </h1>
+                                            <h1 className='slogan-text'>
+                                                Made Easy
+                                            </h1>
+                                            <p className='slogan22-text'>
+                                                Your FF&E Personal Assistant for sourcing and procurement.
+                                            </p>
+
+                                        </Col>
+                                    </Row>
+                                )}
                         </div>
                     </PerfectScrollbar>
                 </div>
                 <div className='slogan2-position'>
                     <h1 className='slogan2-text ml-5'>
-                        We are <strong>reinventing</strong>
+                        We are <strong>automating</strong>
                     </h1>
                     <h1 className='slogan2-text ml-5'>
                         the interior sourcing process!
@@ -172,7 +170,7 @@ class Home extends Component {
                         <div className='align-self-center pt-lg-5'>
                             {this.state.count && (
                                 <Container>
-                                    <Row id='about'>
+                                    <Row className='home-counters-row' id='about'>
                                         <Col>
                                             <h1 className='slogan5-text'>
                                                 SOME
@@ -195,9 +193,9 @@ class Home extends Component {
                                                         perc === 100
                                                             ? {}
                                                             : {
-                                                                  backgroundColor:
-                                                                      'transparent'
-                                                              }
+                                                                backgroundColor:
+                                                                    'transparent'
+                                                            }
                                                     }
                                                     duration={5000}
                                                     formatValue={value =>
@@ -213,7 +211,7 @@ class Home extends Component {
                                                 id='left-counters-mobile'
                                             >
                                                 <AnimatedNumber
-                                                    value={35}
+                                                    value={40}
                                                     style={{
                                                         transition:
                                                             '0.8s ease-out',
@@ -225,9 +223,9 @@ class Home extends Component {
                                                         perc === 100
                                                             ? {}
                                                             : {
-                                                                  backgroundColor:
-                                                                      'transparent'
-                                                              }
+                                                                backgroundColor:
+                                                                    'transparent'
+                                                            }
                                                     }
                                                     duration={5000}
                                                     formatValue={value =>
@@ -235,7 +233,7 @@ class Home extends Component {
                                                     }
                                                 />
                                                 <h4 className='slogan6-text'>
-                                                    Our Projects
+                                                    Projects
                                                 </h4>
                                             </Col>
                                             <Col className='slogan7-text'>
@@ -252,9 +250,9 @@ class Home extends Component {
                                                         perc === 100
                                                             ? {}
                                                             : {
-                                                                  backgroundColor:
-                                                                      'transparent'
-                                                              }
+                                                                backgroundColor:
+                                                                    'transparent'
+                                                            }
                                                     }
                                                     duration={5000}
                                                     formatValue={value =>
@@ -283,9 +281,9 @@ class Home extends Component {
                                                         perc === 100
                                                             ? {}
                                                             : {
-                                                                  backgroundColor:
-                                                                      'transparent'
-                                                              }
+                                                                backgroundColor:
+                                                                    'transparent'
+                                                            }
                                                     }
                                                     duration={5000}
                                                     formatValue={value =>

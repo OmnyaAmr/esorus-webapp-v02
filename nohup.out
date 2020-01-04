@@ -1,0 +1,52 @@
+
+> architectui-react-theme-free@1.0.0 start /home/hesham_osman28/esorus-webapp-v02
+> cross-env NODE_PATH=./src node scripts/start.js
+
+The `setup` option is deprecated and will be removed in v3. Please update your config to use `before`
+Starting the development server...
+
+Compiled successfully!
+
+You can now view architectui-react-theme-free in the browser.
+
+  Local:            http://localhost:3000/
+  On Your Network:  http://10.128.0.4:3000/
+
+Note that the development build is not optimized.
+To create a production build, use npm run build.
+
+Proxy error: Could not proxy request /api/v1/pods from 34.66.90.228 to http://localhost:8080.
+See https://nodejs.org/api/errors.html#errors_common_system_errors for more information (ECONNRESET).
+
+Proxy error: Could not proxy request /api/v1/pods from 34.66.90.228 to http://localhost:8080.
+See https://nodejs.org/api/errors.html#errors_common_system_errors for more information (ECONNRESET).
+
+Proxy error: Could not proxy request /api/v1/pods from 34.66.90.228 to http://localhost:8080.
+See https://nodejs.org/api/errors.html#errors_common_system_errors for more information (ECONNRESET).
+
+Proxy error: Could not proxy request /api/v1/pods from 34.66.90.228 to http://localhost:8080.
+See https://nodejs.org/api/errors.html#errors_common_system_errors for more information (ECONNRESET).
+
+Proxy error: Could not proxy request /api/v1/pods from 34.66.90.228 to http://localhost:8080.
+See https://nodejs.org/api/errors.html#errors_common_system_errors for more information (ECONNRESET).
+
+Compiling...
+Compiled successfully!
+Compiling...
+Failed to compile.
+
+./src/index.js
+Syntax error: /home/hesham_osman28/esorus-webapp-v02/package.json: Error while parsing JSON - Unexpected token < in JSON at position 2
+    at JSON.parse (<anonymous>)
+Compiling...
+Compiled successfully!
+Compiling...
+Failed to compile.
+
+./src/index.js
+Syntax error: /home/hesham_osman28/esorus-webapp-v02/package.json: Error while parsing JSON - Unexpected token < in JSON at position 2
+    at JSON.parse (<anonymous>)
+Compiling...
+Compiled successfully!
+Compiling...
+Compiled successfully!

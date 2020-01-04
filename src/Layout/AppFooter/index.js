@@ -62,7 +62,7 @@ class AppFooter extends React.Component {
                                             className='pl-1'
                                             href='#/dashboard/buyers'
                                         >
-                                            Professional Buyers
+                                            Interior Designers
                                         </a>
                                     </li>
                                     <li className='mb-3'>

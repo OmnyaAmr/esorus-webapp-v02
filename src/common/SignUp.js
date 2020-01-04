@@ -268,7 +268,7 @@ class SignUp extends React.Component {
                                                         Select your role ...
                                                     </option>
                                                     <option value='ROLE_PROFESSIONAL_BUYER'>
-                                                        Professional Buyer
+                                                        Interior Designer
                                                     </option>
                                                     <option value='ROLE_SUPPLIER'>
                                                         Supplier
@@ -284,7 +284,7 @@ class SignUp extends React.Component {
 
                                             <FormGroup row>
                                                 <Button className='btn-escrus log-in block mt-4 mb-2'>
-                                                    Sign up
+                                                    Sign Up
                                                 </Button>
                                                 <Button
                                                     className='btn-escrus-inv block log-in'

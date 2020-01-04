@@ -1,0 +1,4 @@
+User-agent: *
+Disallaw: /cgi-bin/
+Disallaw: /images/
+Disallaw: /pages/thankyou.html
