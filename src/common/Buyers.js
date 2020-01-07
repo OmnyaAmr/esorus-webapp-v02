@@ -97,24 +97,22 @@ class Buyers extends Component {
         if (prev !== ROLE_SUPPLIER) {
             content1 = (
                 <div className='click-away'>
-                    <input
-                        type='button'
-                        className='btn-escrus mt-2'
-                        value='Source Now'
-                        onClick={this.onClick1}
-
-                    />
+                    <a
+                        className='btn btn-escrus text-center'
+                        href="https://forms.gle/4PFPJPC4Z1BFBV5X7"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >Source Now</a>
                 </div>
             );
             content2 = (
                 <div className='click-away'>
-                    <input
-                        type='button'
-                        className='btn-escrus mt-2'
-                        value='Source Now'
-                        onClick={this.onClick1}
-
-                    />
+                    <a
+                        className='btn btn-escrus text-center'
+                        href="https://forms.gle/4PFPJPC4Z1BFBV5X7"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >Source Now</a>
                 </div>
             );
         }

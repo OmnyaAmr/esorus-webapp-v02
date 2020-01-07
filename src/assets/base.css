@@ -12283,6 +12283,7 @@ body {
   .btn-escrus{
     margin-top: 0 !important;
     width: 100% !important;
+    
   }
   .app-main {
     display: block; }
@@ -12522,7 +12523,6 @@ body {
       }
       #left-counters-mobile{
        margin-left: -10%;
-       
       }
       .counters-mobile{
         margin-left: 0.25rem;
@@ -12582,6 +12582,7 @@ body {
       .btn-escrus{
         margin-top: 4px !important;
         width: 100% !important;
+
       }
       .app-main {
         display: block; }
@@ -13066,13 +13067,13 @@ font-family: 'Poppins', sans-serif;
 
 }  
 .btn-escrus {
-  text-align: center;
+  vertical-align: middle;
   border-color: #ecc503;
   background: #ecc503;
   box-shadow: none;
   border-radius: 0px;
-  height: 48px;
-  width: 98px; 
+  height: 45px;
+  width: 115px; 
   font-family: 'Poppins', sans-serif;
   font-weight: 600; }
   .btn-escrus:hover {
