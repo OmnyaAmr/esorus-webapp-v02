@@ -30,7 +30,7 @@ class Buyers extends Component {
     }
     onClick1(e) {
         e.preventDefault();
-        location.href = 'https://forms.gle/4PFPJPC4Z1BFBV5X7';
+        window.location.href = 'https://forms.gle/4PFPJPC4Z1BFBV5X7';
     }
     onClick2(e) {
         e.preventDefault();
