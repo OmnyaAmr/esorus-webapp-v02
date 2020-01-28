@@ -24,15 +24,8 @@
 				"url": {
 					"raw": "https://floating-sands-43700.herokuapp.com/api/register",
 					"protocol": "https",
-					"host": [
-						"floating-sands-43700",
-						"herokuapp",
-						"com"
-					],
-					"path": [
-						"api",
-						"register"
-					]
+					"host": ["floating-sands-43700", "herokuapp", "com"],
+					"path": ["api", "register"]
 				}
 			},
 			"response": []
@@ -45,14 +38,9 @@
 				"url": {
 					"raw": "http://localhost:8080/api/activate?key=XESCF6NRLU333y4NJpJA",
 					"protocol": "http",
-					"host": [
-						"localhost"
-					],
+					"host": ["localhost"],
 					"port": "8080",
-					"path": [
-						"api",
-						"activate"
-					],
+					"path": ["api", "activate"],
 					"query": [
 						{
 							"key": "key",
@@ -87,14 +75,9 @@
 				"url": {
 					"raw": "http://localhost:8080/api/authenticate",
 					"protocol": "http",
-					"host": [
-						"localhost"
-					],
+					"host": ["localhost"],
 					"port": "8080",
-					"path": [
-						"api",
-						"authenticate"
-					]
+					"path": ["api", "authenticate"]
 				}
 			},
 			"response": []
@@ -123,14 +106,9 @@
 				"url": {
 					"raw": "http://localhost:8080/api/upload-files",
 					"protocol": "http",
-					"host": [
-						"localhost"
-					],
+					"host": ["localhost"],
 					"port": "8080",
-					"path": [
-						"api",
-						"upload-files"
-					]
+					"path": ["api", "upload-files"]
 				}
 			},
 			"response": []
@@ -164,14 +142,9 @@
 				"url": {
 					"raw": "http://localhost:8080/api/request-for-supplier",
 					"protocol": "http",
-					"host": [
-						"localhost"
-					],
+					"host": ["localhost"],
 					"port": "8080",
-					"path": [
-						"api",
-						"request-for-supplier"
-					]
+					"path": ["api", "request-for-supplier"]
 				}
 			},
 			"response": []

@@ -6,9 +6,7 @@ const token = 'a8f5f167f44f4964e6c998dee827110c';
 
 export const homeContent = () => dispatch => {
 	dispatch(setLoading());
-
 	axios.defaults.headers.common['token'] = token;
-
 	axios
 		.get('/api/home/3')
 		.then(res => {
